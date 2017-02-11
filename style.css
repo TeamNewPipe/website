@@ -85,7 +85,6 @@
 }
 .features .icon > img {
 	float: right;
-	height: 100%;
 }
 .features .text {
 	float: left;
@@ -101,14 +100,7 @@
 .features [class^="col"] {
 	margin-bottom: 25px;
 }
-.row > div {
-	display: -ms-flex; 
-	display: -webkit-flex; 
-	display: flex;
-
-}
 .row > div  > * {
-	flex:1;
 	height: auto;
 }
 /* TEXT-2 */
