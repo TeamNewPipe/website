@@ -17,11 +17,35 @@
 	  padding-right: 60px;
 	}
 }
+.text-justify-xs {
+    text-align: justify;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .text-justify-sm {
+        text-align: justify;
+    }
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .text-justify-md {
+        text-align: justify;
+    }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .text-justify-lg {
+        text-align: justify;
+    }
+}
 .red {
 	color: red;
 }
 .fdroid {
 	width: 160px;
+}
+a:hover {
+	text-decoration: none;
 }
 
 /* Header */
@@ -108,6 +132,29 @@
 }
 
 
+/* TEXT-1 */
+
+.text-1 {
+	padding-top: 45px;
+	padding-bottom: 15px;
+}
+.text-1 a {
+	color: red;
+}
+.text-1-wrapper {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+@media (min-width: 768px){
+	.text-1 {
+		padding-top: 45px;
+	}
+	.text-1-wrapper {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
 /* Features */
 
 .features .heading-wrapper {
@@ -116,6 +163,7 @@
 .features .heading-wrapper h3 {
 	margin-top: 20px;
 	margin-bottom: 35px;
+	color: red;
 }
 .features-wrapper {
 	color: white;
@@ -155,6 +203,8 @@
 .row > div  > * {
 	height: auto;
 }
+
+
 /* TEXT-2 */
 
 .text-2 {
@@ -187,6 +237,8 @@ strong.extra {
 		padding-right: 15px;
 	}
 }
+
+
 /* Footer */
 
 .footer {
