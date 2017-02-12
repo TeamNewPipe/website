@@ -67,14 +67,16 @@ a:hover {
     width: 100%:
 }
 .header-wrapper .fdroid-wrapper {
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px -1px 8px black, 0px 3px 8px black;
+    -moz-box-shadow: 0px -1px 8px black, 0px 3px 8px black;
     box-shadow: 0px -1px 8px black, 0px 3px 8px black;
-    -moz-border-radius:5px; -webkit-border-radius:5; border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5;
+    border-radius:5px;
 }
 .header-wrapper .fdroid-wrapper:hover {
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px -1px 9px black, 0px 3px 9px black;
+    -moz-box-shadow: 0px -1px 9px black, 0px 3px 9px black;
     box-shadow: 0px -1px 9px black, 0px 3px 9px black;
 }
 .header-box-wrapper > .container {
@@ -90,6 +92,10 @@ a:hover {
     }
     .header-wrapper .fdroid-wrapper {
         text-align: center;
+    }
+    .header-wrapper .fdroid-wrapper {
+        width: 160px;
+        margin-left: calc(50% - 160px / 2);
     }
 }
 
