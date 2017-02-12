@@ -150,6 +150,16 @@ a:hover {
 }
 .navbar-nav {
     margin-right: 20px;
+    margin-top: 10px;
+}
+@media (max-width: 767px){
+	.nav.navbar-nav {
+		font-size: 20px;
+	}
+	.nav > li > a {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
 }
 
 

@@ -38,7 +38,7 @@ src: url("../fonts/icon-pack.eot");
   z-index: 20;
 }
 .navbar-brand{position:absolute;}.navbar-brand img{height:145px;}
-#navbar{margin-left: 160px;width:auto;}
+#navbar{width:auto;}
 
 
 
