@@ -192,9 +192,6 @@ a:hover {
 .features p {
     text-align: center;
 }
-.features .row {
-    
-}
 .features .icon {
     float: left;
     position: relative;
@@ -220,8 +217,13 @@ a:hover {
 .features [class^="col"] {
     margin-bottom: 25px;
 }
-.row > div  > * {
+.features .row > div  > * {
     height: auto;
+}
+@media (max-width: 767px){
+    .features .description {
+        margin-bottom: 10px;
+    }
 }
 
 
