@@ -1,6 +1,22 @@
 .container .container {
 	width:auto;
 }
+.container.container-double {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+@media (min-width: 768px){
+	.container.container-double {
+	  padding-left: 45px;
+	  padding-right: 45px;
+	}
+}
+@media (min-width: 992px){
+	.container.container-double {
+	  padding-left: 60px;
+	  padding-right: 60px;
+	}
+}
 .red {
 	color: red;
 }
@@ -18,19 +34,55 @@
 	font-weight: 500;
 }
 .header-text {
-	margin-left: 30px;
 	margin-bottom: 40px;
+	width: 100%;
 }
-.header-wrapper .fdroid {
+.header-wrapper .fdroid-wrapper {
 	position: relative;
 	bottom: -25px;
-	-webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,1);
-	-moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,1);
-	box-shadow: 0px 0px 18px 0px rgba(0,0,0,1);
+	width: 100%:
 }
+.header-wrapper .fdroid a {
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+	box-shadow: 0px 0px 4px black;
+}
+.header-wrapper .fdroid a:hover {
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+	-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+	box-shadow: 0px 0px 6px black;
+}
+.header-box-wrapper > .container {
+	position: relative;
+}
+
+@media (max-width: 767px){
+	.header-box-wrapper .pull-left {
+		float: none !important;
+	}
+	.header-wrapper .logo {
+		text-align: center;
+	}
+	.header-wrapper .fdroid-wrapper {
+		text-align: center;
+	}
+}
+
 @media (min-width: 768px){
 	.header-text {
 		margin-bottom: 100px;
+		width: auto;
+	}
+	.header-wrapper .fdroid-wrapper {
+		position: absolute;
+		bottom: -25px;
+	}
+	.header-box-wrapper .phone {
+		position: absolute;
+		right: 0;
+		height: 450px;
+		width: 275px;
+		background: white;
 	}
 }
 
