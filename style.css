@@ -129,7 +129,12 @@ strong.extra {
 	font-weight: bold;
 	font-size: 125%;
 }
-
+@media (max-width: 767px){
+	.text-2 .row {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
 /* Footer */
 
 .footer {
