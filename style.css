@@ -82,6 +82,25 @@ a:hover {
 .header-box-wrapper > .container {
     position: relative;
 }
+.header-box-wrapper .phone {
+    display: none;
+    position: absolute;
+    right: 60px;
+    height: 450px;
+    width: calc(350 / 713 * 450px);
+}
+.header-box-wrapper .phone > img {
+    height: 100%;
+    position: absolute;
+}
+.header-box-wrapper .phone > video {
+    height: 553px;
+    z-index: 1;
+    position: absolute;
+    top: -54px;
+    left: 7.7px;
+    width: calc(328 / 553 * 350px);
+}
 
 @media (max-width: 767px){
     .header-box-wrapper .pull-left {
@@ -109,11 +128,7 @@ a:hover {
         bottom: -25px;
     }
     .header-box-wrapper .phone {
-        position: absolute;
-        right: 0;
-        height: 450px;
-        width: 275px;
-        background: white;
+        display: inline;
     }
 }
 
