@@ -151,8 +151,19 @@ a:hover {
     background: none;
     border: none;
 }
+.navbar-inverse .navbar-brand {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	color: white;
+	font-size: 36px;
+	font-weight: 500;
+}
 .navbar-inverse .navbar-nav > li > a {
     color: white;
+}
+.navbar-toggle {
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 .navbar-nav {
     margin-right: 20px;
