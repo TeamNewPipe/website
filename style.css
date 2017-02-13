@@ -86,8 +86,14 @@ a:hover {
     display: none;
     position: absolute;
     right: 60px;
+    top: 82px;
     height: 450px;
     width: calc(350 / 713 * 450px);
+}
+.header-box-wrapper .logo {
+    width: auto;
+    position: absolute;
+    left: calc(50% - 41px);
 }
 .header-box-wrapper .phone > img {
     height: 100%;
