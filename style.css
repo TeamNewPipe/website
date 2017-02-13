@@ -114,6 +114,8 @@ a:hover {
     }
     .header-wrapper .logo {
         text-align: center;
+		position: relative;
+		left: 0;
     }
     .header-wrapper .fdroid-wrapper {
         text-align: center;
@@ -162,8 +164,8 @@ a:hover {
     color: white;
 }
 .navbar-toggle {
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 17px;
+	padding-bottom: 17px;
 }
 .navbar-nav {
     margin-right: 20px;
