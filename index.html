@@ -12,9 +12,9 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     
-    <!-- Parallax for scrolling background from http://pixelcog.github.io/parallax.js/ maybe better: https://free.nkdev.info/jarallax/ -->
+    <!-- Parallax for scrolling background from http://pixelcog.github.io/parallax.js/  maybe better: https://free.nkdev.info/jarallax/ -->
     <script src="js/parallax.min.js"></script>
-    <script src="fm.parallaxator.jquery.js"></script>
+	
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     
@@ -25,13 +25,12 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link rel="stylesheet" type="text/css" href="style.old.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="newpipe_icon.gif" type="image/gif" sizes="32x32"> 
+    <link rel="icon" href="img/logo_favicon.gif" type="image/gif" sizes="32x32"> 
     
 </head>
 <body>
-    <!-- header-wrapper --><div class="parallaxator">
+    <!-- header-wrapper -->
     <div class="header-wrapper parallax-window" data-parallax="scroll" data-image-src="img/bg_small.jpg" data-speed="0.6">
     
         <!-- navigation -->
@@ -46,7 +45,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <!--<a class="navbar-brand" href="#"><img src="" class="navbar-logo" /></a>-->
+                            <a class="navbar-brand visible-xs" href="#">NewPipe</a>
                         </div>
                         <div id="navbar" class="navbar-collapse collapse navbar-right">
                             <!--<div class="social-icons"><a href="https://www.facebook.com//"><span class="icon-facebook"></span></a><a href="https://www.youtube.com"><span class="icon-youtube2"></span></a></div>-->
@@ -65,12 +64,12 @@
         <div class="header-box-wrapper">
             <div class="container container-double">
                 <div class="header-text pull-left">
-                    <h1>NewPipe</h1>
-                    <br>
+                    <h1 class="hidden-xs">NewPipe</h1>
+                    <br class="hidden-xs">
                     <h3>the lightweight<br>YouTube experience<br>for Android</h3>
                 </div>
-                <div class="logo centered">
-                    <img src="img/newpipe_footer.png" />
+                <div class="logo">
+                    <img src="img/logo-white-border.png" />
                 </div>
                 <div class="fdroid-wrapper">
                     <a href="https://f-droid.org/repository/browse/?fdid=org.schabi.newpipe" target="_blank">
@@ -84,7 +83,7 @@
             </div>
         </div> <!-- header-box -->
         
-    </div> <!-- header-wrapper --></div>
+    </div> <!-- header-wrapper -->
     
     <div class="text-1">
         <div class="container container-double">
@@ -93,7 +92,7 @@
                     <div class="col-sm-6">
                         <p><strong>Do you like watching videos on YouTube <br class="">but looking for a simple app to do that?</strong></p>
                         <p class="text-justify-md"><span class="red">NewPipe</span> has been created with the purpose of getting the original YouTube experience on your smartphone without annoying ads and questionable permissions.</p>
-                        <p>The application is Open Source and you can check on it at <a href="#">GitHub</a>.</p>
+                        <p>The application is Open Source and you can check on it at <a href="https://github.com/TeamNewPipe/NewPipe/">GitHub</a>.</p>
                     </div>
                 </div>
             </div>
@@ -117,7 +116,7 @@
                 
                 <div class="container-fluid">
                     
-                    <p>the simple reasons why you will like the app</p>
+                    <p class="description">the simple reasons why you will like the app</p>
                     
                     <div class="row">
                         <div class="col-sm-6 col-xs-12">
@@ -200,7 +199,7 @@
     <footer class="footer">
         <div class="container">
             <div class="image-holder">
-                <img src="img/newpipe_footer.png" class="footer-logo" />
+                <img src="img/logo-white-border.png" class="footer-logo" />
             </div>
             <div class="footer-copyright text-center">
                 <span class="footer-links">
