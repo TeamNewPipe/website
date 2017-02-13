@@ -96,6 +96,9 @@ a:hover {
     left: calc(50% - 41px);
 	margin-top: 20px;
 }
+.header-box-wrapper .logo > img {
+	height: 90px;
+}
 .header-box-wrapper .phone > img {
     height: 100%;
     position: absolute;
@@ -319,8 +322,7 @@ strong.extra {
     top: -45px; /*-40px*/
 }
 .footer-logo {
-    /*height: 88px;*/
-    /*height: 100px;*/
+    height: 90px;
     margin:0;
     padding: 0;
 }
