@@ -149,6 +149,10 @@ a:hover {
 }
 .navbar-wrapper {
     position: relative;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 20;
 }
 .navbar-inverse {
     background: none;
@@ -167,6 +171,9 @@ a:hover {
 .navbar-toggle {
 	padding-top: 17px;
 	padding-bottom: 17px;
+}
+.navbar-brand {
+	position: absolute;
 }
 .navbar-nav {
     margin-right: 20px;
@@ -295,6 +302,8 @@ strong.extra {
 
 .footer {
     background: #AA1D1D/*#CD322E*/;
+	width: 100%;
+	min-height: 170px;
 }
 .footer-copyright {
     margin: 0 0 25px 0;
