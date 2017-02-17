@@ -243,11 +243,12 @@ a:hover {
     background: transparent;
 }
 .features .heading-wrapper {
+    background: white;
     text-align: center;
 }
 .features .heading-wrapper h3 {
-    margin-top: 20px;
-    margin-bottom: 35px;
+    margin-top: 30px;
+    margin-bottom: 15px;
     color: red;
 }
 .features-wrapper {
@@ -255,6 +256,9 @@ a:hover {
 }
 .features p {
     text-align: center;
+}
+.features .description {
+    margin: 10px 0 15px 0;
 }
 .features .icon {
     float: left;
