@@ -2,7 +2,7 @@ var headerHeight, featuresHeight, featuresPosition;
 
 function reset() {
     headerHeight = $('.header-wrapper').outerHeight();
-    /* check wheter height can encrease when navbar can be (un-)collapsed */
+    /* check whether the height can encrease as navbar can be (un-)collapsed */
     if($(window).width() > 767){
         $('.header-background').css('height', headerHeight + 'px');
     }
