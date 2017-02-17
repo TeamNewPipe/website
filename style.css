@@ -266,6 +266,7 @@ a:hover {
     top: 0;
     left:0;
     margin-right: 20px;
+    padding: 8px;
     height: auto;
     vertical-align: middle;
 }
