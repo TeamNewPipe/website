@@ -241,9 +241,6 @@ a:hover {
   left:0;
   z-index: -2;
 }
-.features {
-    background: transparent;
-}
 .features .heading-wrapper {
     background: white;
     text-align: center;
@@ -254,6 +251,7 @@ a:hover {
     color: red;
 }
 .features-wrapper {
+    background: rgba(126, 126, 126, 0.5);
     color: white;
 }
 .features p {
