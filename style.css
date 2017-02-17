@@ -54,6 +54,16 @@ a:hover {
     background: rgba(170, 29, 29, 0.5)/*#AA1D1D#CD322E*/;
     color: white;
 }
+.header-background {
+  background: url('img/bg_small.jpg') center center;
+  background-position: contain;
+  position: fixed;
+  width: 100%;
+  height: 350px; /*same height as jumbotron */
+  top:0;
+  left:0;
+  z-index: -1;
+}
 .header-wrapper h3 {
     font-weight: 500;
 }
@@ -196,6 +206,7 @@ a:hover {
 /* TEXT-1 */
 
 .text-1 {
+    background: white;
     padding-top: 45px;
     padding-bottom: 15px;
 }
@@ -218,6 +229,19 @@ a:hover {
 
 /* Features */
 
+.features-background {
+  background: url('img/bg_small.jpg') center center;
+  background-position: contain;
+  position: fixed;
+  width: 100%;
+  height: 350px; /*same height as jumbotron */
+  top:0;
+  left:0;
+  z-index: -2;
+}
+.features {
+    background: transparent;
+}
 .features .heading-wrapper {
     text-align: center;
 }
@@ -273,6 +297,7 @@ a:hover {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 70px;
+    background: white;
 }
 .text-2 a {
     color: red;

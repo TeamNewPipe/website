@@ -12,9 +12,6 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     
-    <!-- Parallax for scrolling background from http://pixelcog.github.io/parallax.js/  maybe better: https://free.nkdev.info/jarallax/ -->
-    <script src="js/parallax.min.js"></script>
-	
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     
@@ -30,8 +27,12 @@
     
 </head>
 <body>
+
+    <!-- parallax background for header -->
+    <div class="header-background"></div>
+    
     <!-- header-wrapper -->
-    <div class="header-wrapper parallax-window" data-parallax="scroll" data-image-src="img/bg_small.jpg" data-speed="0.6">
+    <div class="header-wrapper">
     
         <!-- navigation -->
         <div class="navbar-wrapper">
@@ -99,6 +100,9 @@
         </div>
     </div>
     
+    <!-- parallax background for features -->
+    <div class="features-background"></div>
+    
     <!-- features -->
     <div class="features">
         
@@ -110,7 +114,7 @@
         </div>
         
         <!-- features box -->
-        <div class="features-wrapper parallax-window" data-parallax="scroll" data-image-src="img/bg_small.jpg" data-speed="0.6" data-bleed="15">
+        <div class="features-wrapper">
             
             <div class="container list-box">
                 
@@ -215,6 +219,9 @@
     
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Script for parallax animations -->
+    <script src="js/parallax.js"></script>
     
 </body>
 </html>
