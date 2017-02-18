@@ -12,9 +12,6 @@
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     
-    <!-- Parallax for scrolling background from http://pixelcog.github.io/parallax.js/  maybe better: https://free.nkdev.info/jarallax/ -->
-    <script src="js/parallax.min.js"></script>
-	
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     
@@ -30,8 +27,12 @@
     
 </head>
 <body>
+
+    <!-- parallax background for header -->
+    <div class="header-background"></div>
+    
     <!-- header-wrapper -->
-    <div class="header-wrapper parallax-window" data-parallax="scroll" data-image-src="img/bg_small.jpg" data-speed="0.6">
+    <div class="header-wrapper">
     
         <!-- navigation -->
         <div class="navbar-wrapper">
@@ -85,6 +86,7 @@
         
     </div> <!-- header-wrapper -->
     
+    <!-- first text box --->
     <div class="text-1">
         <div class="container container-double">
             <div class="text-1-wrapper">
@@ -97,7 +99,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> <!-- first text box -->
+    
+    <!-- parallax background for features -->
+    <div class="features-background"></div>
     
     <!-- features -->
     <div class="features">
@@ -110,7 +115,7 @@
         </div>
         
         <!-- features box -->
-        <div class="features-wrapper parallax-window" data-parallax="scroll" data-image-src="img/bg_small.jpg" data-speed="0.6" data-bleed="15">
+        <div class="features-wrapper">
             
             <div class="container list-box">
                 
@@ -170,6 +175,7 @@
         
     </div> <!-- features -->
     
+    <!-- second tect box -->
     <div class="text-2 container">
         <div class="row">
             <div class="col-md-12">
@@ -194,8 +200,9 @@
         <p><a href="#"><button class="donate">Donate</button></a></p>
         <br>
         <p>Thank you in advance!</p>
-    </div>
+    </div> <!-- second text box -->
     
+    <!-- footer -->
     <footer class="footer">
         <div class="container">
             <div class="image-holder">
@@ -210,11 +217,14 @@
 			<!--<a class="footer-designed-by" href="" alt="">designed by </a> | <a href="impressum/">Impressum</a>-->
             </div>
         </div>
-    </footer>
+    </footer> <!-- footer -->
     
     
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    
+    <!-- Script for parallax animations -->
+    <script src="js/parallax.js"></script>
     
 </body>
 </html>
