@@ -24,6 +24,7 @@
     
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" href="img/logo_favicon.gif" type="image/gif" sizes="32x32"> 
+    <link rel="stylesheet" href="gallery.css">
     
 </head>
 <body>
@@ -117,59 +118,149 @@
         <!-- features box -->
         <div class="features">
             
-            <div class="container list-box">
+            <div class="gallery">
+            
+                <div class="gallery-controls">
+                    <div class="controls-left"><img src="img/arrow.png"/></div>
+                    <div class="controls-right"><img src="img/arrow.png"/></div>
+                    <!--<div class="controls-bottom"><a href="#item1"><img src="img/control-unactive.png"/></a><a href="#item2"><img src="img/control-active.png"/></a><img src="img/control-unactive.png"/></div>-->
+                    <div class="controls-bottom">
+                        <a href="#item1" class="selected"><div></div></a>
+                        <a href="#item2" class="unselected"><div></div></a>
+                        <a href="#item3" class="unselected"><div></div></a>
+                    </div>
+                </div>
+                <div class="gallery-element" name="item1">
+                    <div class="container list-box">
+                        
+                        <div class="container-fluid">
+                            
+                            <p class="description">the simple reasons why you will like the app</p>
+                            
+                            <div class="row">
+                                <a href="#item2">
+                                    <div class="col-sm-6 col-xs-12">
+                                        <div class="icon"><img src="img/icon.png" /></div>
+                                        <div class="text"><strong>YouTube videos</strong><br>simple way to watch videos<br>from the site and use its features</span></div>
+                                    </div>
+                                </a>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Extended Privacy</strong><br>does not use the YouTube API<br>nor the Google Play Services</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Background player</strong><br>use other apps with no hassle<br>while it plays your favourite songs</span></div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Ad-Free</strong><br>no anoying ads<br>watch only what you want</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Download media</strong><br>simply download YouTube<br>videos or audios to your device</span></div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Open Source</strong><br>how it works is not a secret<br>go and check it on GitHub</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Lightweight</strong><br>saving memory and battery life</span></div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Free</strong><br>you get the whole thing for free<br>no in-app purchases either</span></div>
+                                </div>
+                            </div>
+                            
+                        </div> <!-- container fluid -->
+                        
+                    </div> <!-- container list-box -->
+                </div>
                 
-                <div class="container-fluid">
-                    
-                    <p class="description">the simple reasons why you will like the app</p>
-                    
-                    <div class="row">
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="icon"><img src="img/icon.png" /></div>
-                            <div class="text"><strong>YouTube videos</strong><br>simple way to watch videos<br>from the site and use its features</span></div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="icon"><img src="img/icon.png" /></div>
-                            <div class="text"><strong>Extended Privacy</strong><br>does not use the YouTube API<br>nor the Google Play Services</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="icon"><img src="img/icon.png" /></div>
-                            <div class="text"><strong>Background player</strong><br>use other apps with no hassle<br>while it plays your favourite songs</span></div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="icon"><img src="img/icon.png" /></div>
-                            <div class="text"><strong>Ad-Free</strong><br>no anoying ads<br>watch only what you want</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="icon"><img src="img/icon.png" /></div>
-                            <div class="text"><strong>Download media</strong><br>simply download YouTube<br>videos or audios to your device</span></div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="icon"><img src="img/icon.png" /></div>
-                            <div class="text"><strong>Open Source</strong><br>how it works is not a secret<br>go and check it on GitHub</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="icon"><img src="img/icon.png" /></div>
-                            <div class="text"><strong>Lightweight</strong><br>saving memory and battery life</span></div>
-                        </div>
-                        <div class="col-sm-6 col-xs-12">
-                            <div class="icon"><img src="img/icon.png" /></div>
-                            <div class="text"><strong>Free</strong><br>you get the whole thing for free<br>no in-app purchases either</span></div>
-                        </div>
-                    </div>
-                    
-                </div> <!-- container fluid -->
+                <div class="gallery-element" name="item2" style="background: purple" >
+                    <div class="container list-box">
+                        
+                        <div class="container-fluid">
+                            
+                            <p class="description">the simple reasons why you will like the app</p>
+                            
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>YouTube videosss</strong><br>simple way to watch videos<br>from the site and use its features</span></div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Extended Privacy</strong><br>does not use the YouTube API<br>nor the Google Play Services</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Background player</strong><br>use other apps with no hassle<br>while it plays your favourite songs</span></div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Ad-Free</strong><br>no anoying ads<br>watch only what you want</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Download media</strong><br>simply download YouTube<br>videos or audios to your device</span></div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Open Source</strong><br>how it works is not a secret<br>go and check it on GitHub</span></div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Lightweight</strong><br>saving memory and battery life</span></div>
+                                </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <div class="icon"><img src="img/icon.png" /></div>
+                                    <div class="text"><strong>Free</strong><br>you get the whole thing for free<br>no in-app purchases either</span></div>
+                                </div>
+                            </div>
+                            
+                        </div> <!-- container fluid -->
+                        
+                    </div> <!-- container list-box -->
+                </div>
                 
-            </div> <!-- container list-box -->
+                <div class="gallery-element details-wrapper" name="item3" style="background: purple" >
+                    <div class="feature-details container">
+                        <div class="container">
+                            <div class="details-image">
+                                <img src="img/nexus6.png"/>
+                            </div>
+                            <div class="details-text container">
+                                <h3>Feature Details</h3>
+                                <p><strong>simple way to watch videos from the site and use its features</strong></p>
+                                <br>
+                                <p>We hope so! But don't forget, a lot of time and energy goes into this and we share it with you. We would like to offer you some ways you can support our work by donations. So we can get some</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> <!-- gallery -->
             
         </div> <!-- features -->
         
@@ -225,6 +316,7 @@
     
     <!-- Script for parallax animations -->
     <script src="js/parallax.js"></script>
+    <script src="js/gallery.js"></script>
     
 </body>
 </html>
