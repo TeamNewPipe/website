@@ -1,8 +1,12 @@
 :root {
-    --items-desktop: 3;
+    --items-desktop: 5;
+    --items-mobile: 4;
 }
 .features {
     overflow: hidden;
+}
+.list-box {
+    margin-bottom: 15px;
 }
 .gallery {
     position: relative;
@@ -21,6 +25,8 @@
     float: left;
     padding-bottom: 15px;
     flex: 1 1 100%;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .gallery-controls {
     position: absolute;
@@ -28,7 +34,6 @@
     left: 0;
     width: calc(100% / var(--items-desktop));
     height: 100%;
-    z-index: 0;
 }
 .gallery-controls .controls-left {
     position: relative;
@@ -81,35 +86,6 @@
     background-position: center center;
     background-size: contain;
 }
-@media (max-width: 766px){
-    :root{
-        --items-mobile: 2;
-    }
-    .gallery {
-        height: 100vh;
-    }
-    .gallery-element {
-        height: 100vh;
-    }
-    .gallery-controls {
-        z-index: 3;
-    }
-    .gallery-controls .controls-bottom {
-        display: none;
-    }
-    .gallery-element[name="item1"]{
-        display: none;
-    }
-    .gallery {
-        width: calc(var(--items-mobile) * 100%);
-    }
-    .gallery-element {
-        width: calc(100% / var(--items-mobile));
-    }
-    .gallery-controls {
-        width: calc(100% / var(--items-mobile));
-    }
-}
 .details-wrapper {
     vertical-align: middle;
     display: flex;
@@ -138,4 +114,37 @@
     float: left;
     width: 75%;
     max-width: 700px;
+}
+@media (max-width: 766px){
+    .gallery {
+        min-height: 100vh;
+        width: calc(var(--items-mobile) * 100%);
+    }
+    .gallery-element {
+        min-height: 100vh;
+    }
+    .gallery-controls .controls-bottom {
+        display: none;
+    }
+    .gallery-element[name="item1"]{
+        display: none;
+    }
+    .gallery-element {
+        width: calc(100% / var(--items-mobile));
+    }
+    .gallery-controls {
+        width: calc(100% / var(--items-mobile));
+    }
+    .feature-details, .list-box {
+        margin-bottom: 0;
+    }
+    .feature-details .details-image {
+        float: unset;
+        width: 100%;
+        text-align: center;
+    }
+    .feature-details .details-text {
+        float: unset;
+        width: 100%;
+    }
 }

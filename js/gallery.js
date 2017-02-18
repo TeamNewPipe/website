@@ -1,7 +1,8 @@
 var number = parseInt($('.controls-bottom a').last().attr('href').substr(5));
 var current = 1;
 $(document).ready(function() {
-    current = parseInt($('.controls-bottom .selected').first().attr('href').substr(5));
+    //current = parseInt($('.controls-bottom .selected').first().attr('href').substr(5));
+    current = galleryFirst();
 
     $('.gallery a').click(function() {
         if(current != parseInt($(this).attr('href').substr(5))){
@@ -38,29 +39,24 @@ function galleryFirst(){
 function galleryPrev(){
     if(current != galleryFirst()){
         current--;
-        var nextLeft = $('.gallery-element[name="item'+ (current) +'"]').position().left;
-        galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
     }
     else {
         current = number;
-        var nextLeft = $('.gallery-element[name="item'+ (number) +'"]').position().left;
-        galleryControllerBar($('.controls-bottom a[href="#item'+ (number) +'"]'));
     }
-    
+    var nextLeft = $('.gallery-element[name="item'+ (current) +'"]').position().left;
+    galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
     galleryScroll(nextLeft);
 }
 
 function galleryForw(){
     if(current != number){
         current++;
-        var nextLeft = $('.gallery-element[name="item'+ (current) +'"]').position().left;
-        galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
     }
     else {
         current = galleryFirst();
-        var nextLeft = $('.gallery-element[name="item'+ (current) +'"]').position().left;
-        galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
     }
+    var nextLeft = $('.gallery-element[name="item'+ (current) +'"]').position().left;
+    galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
     galleryScroll(nextLeft);
 }
 
@@ -89,7 +85,7 @@ function galleryResize() {
     }
     else {
         if(current == 1){
-            current = 2;
+            current = galleryFirst();
             galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
         }
         $('.gallery').css('marginLeft', -(current - 2) * width + 'px');
