@@ -104,6 +104,7 @@ a:hover {
     position: absolute;
     left: calc(50% - 41px);
 	margin-top: 20px;
+    margin-bottom: 10px;
 }
 .header-box-wrapper .logo > img {
 	height: 90px;
