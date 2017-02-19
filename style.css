@@ -104,6 +104,7 @@ a:hover {
     position: absolute;
     left: calc(50% - 41px);
 	margin-top: 20px;
+    margin-bottom: 10px;
 }
 .header-box-wrapper .logo > img {
 	height: 90px;
@@ -241,26 +242,24 @@ a:hover {
   left:0;
   z-index: -2;
 }
-.features .heading-wrapper {
+.features-wrapper .heading-wrapper {
     background: white;
     text-align: center;
 }
-.features .heading-wrapper h3 {
+.features-wrapper .heading-wrapper h3 {
     margin-top: 30px;
     margin-bottom: 15px;
     color: red;
 }
-.features-wrapper {
+.features-wrapper .features {
     background: rgba(126, 126, 126, 0.5);
     color: white;
 }
-.features p {
+.features-wrapper .features .description {
+    margin: 10px 0 15px 0;
     text-align: center;
 }
-.features .description {
-    margin: 10px 0 15px 0;
-}
-.features .icon {
+.features-wrapper .features .icon {
     float: left;
     position: relative;
     top: 0;
@@ -270,23 +269,23 @@ a:hover {
     height: auto;
     vertical-align: middle;
 }
-.features .icon > img {
+.features-wrapper .features .icon > img {
     float: right;
 }
-.features .text {
+.features-wrapper .features .text {
     float: left;
     width: 75%;
 }
-.features .text strong {
+.features-wrapper .features .text strong {
     font-size: 150%;
 }
-.list-box {
+.features-wrapper .features .list-box {
     max-width: 750px;
 }
-.features [class^="col"] {
+.features-wrapper .features [class^="col"] {
     margin-bottom: 25px;
 }
-.features .row > div  > * {
+.features-wrapper .row > div  > * {
     height: auto;
 }
 @media (max-width: 767px){
@@ -294,7 +293,7 @@ a:hover {
         background-position: center top;
         height: 100vh;
     }
-    .features .description {
+    .features-wrapper .features .description {
         margin-bottom: 10px;
     }
 }
