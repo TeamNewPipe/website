@@ -1,17 +1,14 @@
 var number = parseInt($('.controls-bottom a').last().attr('href').substr(5));
 var current = 1;
+
 $(document).ready(function() {
     
     /* Check if CSS variables are supported */
-    if(!window.CSS.supports('--items-desktop', 0) && !window.CSS.supports('--items-mobile', 0)){
-        var nd = $('.gallery-element[name*="item"]').length;
-        var nm = nd - 1;
-        var it = ['.gallery','.gallery-element','.gallery-controls'];
-        $(it[0]).css('width', 'calc(' + nd + '* 100%)');
-        
-        $(it[0]).css('width', 'calc(' + nd + '* 100%)');
-        document.querySelector('style').textContent +=             
-        ".gallery { width: calc(100% * " + nd + " );} .gallery-element, .gallery-controls { width: calc(100% / " + nd + " ); } @media (max-width:766px) { .gallery { width: calc(100% * " + nm + " );} .gallery-element, .gallery-controls { width: calc(100% / " + nm + " ); } }";
+    if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+        galleryAddStyle();
+    }
+    else if(!window.CSS.supports('--items-desktop', 0) && !window.CSS.supports('--items-mobile', 0)){
+        galleryAddStyle();
     }
     
     //current = parseInt($('.controls-bottom .selected').first().attr('href').substr(5));
@@ -104,4 +101,11 @@ function galleryResize() {
         $('.gallery').css('marginLeft', -(current - 2) * width + 'px');
         $('.gallery-controls').css('marginLeft', (current - 2) * width + 'px');
     }
+}
+
+function galleryAddStyle(){
+    var nd = $('.gallery-element[name*="item"]').length;
+    var nm = nd - 1;
+    document.querySelector('style').textContent +=             
+    ".gallery { width: calc(100% * " + nd + " );} .gallery-element, .gallery-controls { width: calc(100% / " + nd + " ); } @media (max-width:766px) { .gallery { width: calc(100% * " + nm + " );} .gallery-element, .gallery-controls { width: calc(100% / " + nm + " ); } }";
 }
