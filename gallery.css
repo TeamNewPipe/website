@@ -113,7 +113,10 @@
 .feature-details .details-text {
     float: left;
     width: 75%;
-    max-width: 700px;
+    max-width: 600px;
+}
+.feature-details .details-text .subtitle {
+    font-weight: bold;
 }
 @media (max-width: 766px){
     .gallery {
