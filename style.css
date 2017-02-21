@@ -39,7 +39,7 @@
     }
 }
 .red {
-    color: red;
+    color: #cd201f;
 }
 .f-droid {
     width: 160px;
@@ -213,7 +213,7 @@ a:hover {
     padding-bottom: 15px;
 }
 .text-1 a {
-    color: red;
+    color: #cd201f;
 }
 .text-1-wrapper {
     padding-left: 15px;
@@ -246,7 +246,7 @@ a:hover {
 .features-wrapper .heading-wrapper h3 {
     margin-top: 30px;
     margin-bottom: 15px;
-    color: red;
+    color: #cd201f;
 }
 .features-wrapper .features {
     background: rgba(126, 126, 126, 0.5);
@@ -307,7 +307,7 @@ a:hover {
     padding-bottom: 70px;
 }
 .text-2 a {
-    color: red;
+    color: #cd201f;
 }
 .text-2 a:hover {
     text-decoration: none;
