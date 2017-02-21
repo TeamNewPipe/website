@@ -312,6 +312,10 @@ a:hover {
 .text-2 a:hover {
     text-decoration: none;
 }
+.text-2 .f-droid-wrapper {
+    margin-top: 25px;
+    margin-bottom: 10px
+}
 strong.extra {
     font-size: 125%;
 }
