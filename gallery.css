@@ -1,6 +1,6 @@
 :root {
-    --items-desktop: 5;
-    --items-mobile: 4;
+    --items-desktop: 7;
+    --items-mobile: 6;
 }
 .features {
     overflow: hidden;
