@@ -201,6 +201,8 @@ a:hover {
 		padding-top: 20px;
 		padding-bottom: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-left: 0;
+        margin-left: 15px;
 	}
 }
 
@@ -298,13 +300,11 @@ a:hover {
 
 /* TEXT-2 */
 
-.text-2.container {
-    background: white;
-}
 .text-2 {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 70px;
+    background: white;
 }
 .text-2 a {
     color: #cd201f;
