@@ -39,7 +39,7 @@
     }
 }
 .red {
-    color: red;
+    color: #cd201f;
 }
 .f-droid {
     width: 160px;
@@ -56,7 +56,6 @@ a:hover {
 }
 .header-background {
   background: url('img/bg_small.jpg') center center;
-  background-position: contain;
   position: fixed;
   width: 100%;
   top:0;
@@ -73,7 +72,6 @@ a:hover {
 .header-wrapper .f-droid-wrapper {
     position: relative;
     bottom: -25px;
-    width: 100%:
 }
 .header-wrapper .f-droid-wrapper {
     -webkit-box-shadow: 0px -1px 8px black, 0px 3px 8px black;
@@ -203,6 +201,8 @@ a:hover {
 		padding-top: 20px;
 		padding-bottom: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-left: 0;
+        margin-left: 15px;
 	}
 }
 
@@ -215,7 +215,7 @@ a:hover {
     padding-bottom: 15px;
 }
 .text-1 a {
-    color: red;
+    color: #cd201f;
 }
 .text-1-wrapper {
     padding-left: 15px;
@@ -235,7 +235,6 @@ a:hover {
 
 .features-background {
   background: url('img/bg_small.jpg') center center;
-  background-position: contain;
   position: fixed;
   width: 100%;
   top:0;
@@ -249,7 +248,7 @@ a:hover {
 .features-wrapper .heading-wrapper h3 {
     margin-top: 30px;
     margin-bottom: 15px;
-    color: red;
+    color: #cd201f;
 }
 .features-wrapper .features {
     background: rgba(126, 126, 126, 0.5);
@@ -301,19 +300,21 @@ a:hover {
 
 /* TEXT-2 */
 
-.text-2.container {
-    background: white;
-}
 .text-2 {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 70px;
+    background: white;
 }
 .text-2 a {
-    color: red;
+    color: #cd201f;
 }
 .text-2 a:hover {
     text-decoration: none;
+}
+.text-2 .f-droid-wrapper {
+    margin-top: 25px;
+    margin-bottom: 10px
 }
 strong.extra {
     font-size: 125%;
