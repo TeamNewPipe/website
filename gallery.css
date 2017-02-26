@@ -130,8 +130,8 @@
         min-height: 100vh;
         width: calc(var(--items-mobile) * 100%);
     }
-    .gallery-element {
-        min-height: 100vh;
+    .gallery-controls {
+        width: calc(100% / var(--items-mobile));
     }
     .gallery-controls .controls-bottom {
         display: none;
@@ -141,9 +141,8 @@
     }
     .gallery-element {
         width: calc(100% / var(--items-mobile));
+        min-height: 100vh;
     }
-    .gallery-controls {
-        width: calc(100% / var(--items-mobile));
     }
     .feature-details, .list-box {
         margin-bottom: 0;
