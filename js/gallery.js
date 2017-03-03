@@ -1,4 +1,4 @@
-var number = parseInt($('.controls-bottom a').last().attr('href').substr(5));
+var number = $('.gallery-desktop-item').length;
 var current = 1;
 var resizeChange = false;
 
@@ -11,6 +11,9 @@ $(document).ready(function() {
     else if(!window.CSS.supports('--items-desktop', 0) && !window.CSS.supports('--items-mobile', 0)){
         galleryAddStyle();
     }
+    
+    /* Initialize gallery */
+    galleryAddControls();
     
     //current = parseInt($('.controls-bottom .selected').first().attr('href').substr(5));
     current = galleryFirst();
@@ -40,10 +43,10 @@ $(document).ready(function() {
 
 function galleryFirst(){
     if($(window).width() > 767){
-        return 1;
+        return parseInt($('.gallery-desktop-item').first().attr("name").substr(4));
     }
     else {
-        return 2;
+        return parseInt($('.gallery-mobile-item').first().attr("name").substr(4));
     }
 }
 
@@ -110,9 +113,21 @@ function galleryResize() {
     }
 }
 
+function galleryAddControls(){
+    $('.controls-bottom').empty();
+    for(var i = 1; i < number + 1; i++){
+        if(i == 1){
+            $('.controls-bottom').append('<a href="#item'+ i +'" class="selected"><div></div></a>');
+        }
+        else {
+            $('.controls-bottom').append('<a href="#item'+ i +'" class="unselected"><div></div></a>');
+        }
+    }
+}
+
 function galleryAddStyle(){
-    var nd = $('.gallery-element[name*="item"]').length;
-    var nm = nd - 1;
+    var nd = $('.gallery-desktop-item').length + 1;
+    var nm = $('.gallery-mobile-item').length + 1;
     document.querySelector('style').textContent +=             
     ".gallery { width: calc(100% * " + nd + " );} .gallery-element, .gallery-controls { width: calc(100% / " + nd + " ); } @media (max-width:766px) { .gallery { width: calc(100% * " + nm + " );} .gallery-element, .gallery-controls { width: calc(100% / " + nm + " ); } }";
 }

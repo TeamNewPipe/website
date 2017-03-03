@@ -27,6 +27,19 @@
     padding-left: 30px;
     padding-right: 30px;
 }
+.gallery-element.gallery-mobile-item {
+    display: none;
+}
+.gallery-element.gallery-desktop-item {
+    display: initial;
+}
+.gallery-element[name^=item] {
+    background: #858585; /* Fallback for browsers that do not support gradients */
+    background: -webkit-linear-gradient(left,rgba(133,133,133,1), rgba(170,170,170,1),rgba(133,133,133,1)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(133,133,133,1), rgba(170,170,170,1),rgba(133,133,133,1)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(133,133,133,1), rgba(170,170,170,1),rgba(133,133,133,1)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(133,133,133,1), rgba(170,170,170,1),rgba(133,133,133,1)); /*Standard*/
+}
 .gallery-controls {
     position: absolute;
     top: 0;
@@ -63,9 +76,10 @@
     bottom: 15px;
     width: 100%;
     text-align: center;
+    z-index: 2;
 }
 .gallery-controls .controls-bottom > * {
-    margin: 0 2.5px;
+    margin: 0 2.75px;
 }
 .gallery-controls .controls-bottom > a > div {
     display: inline-block;
@@ -136,13 +150,15 @@
     .gallery-controls .controls-bottom {
         display: none;
     }
-    .gallery-element[name="item1"]{
-        display: none;
-    }
     .gallery-element {
         width: calc(100% / var(--items-mobile));
         min-height: 100vh;
     }
+    .gallery-element.gallery-desktop-item {
+        display: none;
+    }
+    .gallery-element.gallery-mobile-item {
+        display: initial;
     }
     .feature-details, .list-box {
         margin-bottom: 0;
