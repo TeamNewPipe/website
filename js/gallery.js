@@ -1,4 +1,4 @@
-var number = $('.gallery-desktop-item').length;
+var items = $('.gallery-desktop-item').length;
 var current = 1;
 var resizeChange = false;
 
@@ -55,7 +55,7 @@ function galleryPrev(){
         current--;
     }
     else {
-        current = number;
+        current = items;
     }
     var nextLeft = $('.gallery-element[name="item'+ (current) +'"]').position().left;
     galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
@@ -64,7 +64,7 @@ function galleryPrev(){
 }
 
 function galleryForw(){
-    if(current != number){
+    if(current != items){
         current++;
     }
     else {
@@ -117,7 +117,7 @@ function galleryResize() {
 
 function galleryAddControls(){
     $('.controls-bottom').empty();
-    for(var i = 1; i < number + 1; i++){
+    for(var i = 1; i < items + 1; i++){
         if(i == 1){
             $('.controls-bottom').append('<a href="#item'+ i +'" class="selected"><div></div></a>');
         }
