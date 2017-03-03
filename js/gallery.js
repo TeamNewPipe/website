@@ -1,5 +1,6 @@
 var number = parseInt($('.controls-bottom a').last().attr('href').substr(5));
 var current = 1;
+var resizeChange = false;
 
 $(document).ready(function() {
     
@@ -79,17 +80,22 @@ function galleryScroll(x){
     }, 1000);
 }
 
-function galleryControllerBar(c){
+function galleryControllerBar(control){
     $('.controls-bottom a').addClass('unselected');
     $('.controls-bottom a').removeClass('selected');
-    $(c).addClass('selected');
-    $(c).removeClass('unselected');
+    $(control).addClass('selected');
+    $(control).removeClass('unselected');
 }
 
 function galleryResize() {
     width = $(window).width();
     height = $(window).height();
     if($(window).width() > 767){
+        if(resizeChange){
+            current = galleryFirst();
+            galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
+            resizeChange = false;
+        }
         $('.gallery').css('marginLeft', -(current - galleryFirst()) * width + 'px');
         $('.gallery-controls').css('marginLeft', (current - galleryFirst()) * width + 'px');
     }
@@ -97,6 +103,7 @@ function galleryResize() {
         if(current == 1){
             current = galleryFirst();
             galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
+            resizeChange = true;
         }
         $('.gallery').css('marginLeft', -(current - 2) * width + 'px');
         $('.gallery-controls').css('marginLeft', (current - 2) * width + 'px');
