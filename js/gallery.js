@@ -1,4 +1,4 @@
-var items = $('.gallery-desktop-item').length;
+var items;
 var current = 1;
 var resizeChange = false;
 
@@ -13,6 +13,7 @@ $(document).ready(function() {
     }
     
     /* Initialize gallery */
+    items = $('.gallery-desktop-item').length;
     galleryAddControls();
     
     //current = parseInt($('.controls-bottom .selected').first().attr('href').substr(5));
