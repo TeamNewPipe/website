@@ -60,6 +60,7 @@ function galleryPrev(){
     var nextLeft = $('.gallery-element[name="item'+ (current) +'"]').position().left;
     galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
     galleryScroll(nextLeft);
+    resizeChange = false;
 }
 
 function galleryForw(){
@@ -72,6 +73,7 @@ function galleryForw(){
     var nextLeft = $('.gallery-element[name="item'+ (current) +'"]').position().left;
     galleryControllerBar($('.controls-bottom a[href="#item'+ (current) +'"]'));
     galleryScroll(nextLeft);
+    resizeChange = false;
 }
 
 function galleryScroll(x){
