@@ -47,6 +47,13 @@
 a:hover {
     text-decoration: none;
 }
+.slides-container {
+    background-color: #afafb2;
+}
+.slides-container .slides-download {
+    margin-top: 12px;
+    margin-bottom:20px;
+}
 
 /* Header */
 
@@ -101,11 +108,11 @@ a:hover {
     width: auto;
     position: absolute;
     left: calc(50% - 41px);
-	margin-top: 20px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 .header-box-wrapper .logo > img {
-	height: 90px;
+    height: 90px;
 }
 .header-box-wrapper .phone > img {
     height: 100%;
@@ -126,8 +133,8 @@ a:hover {
     }
     .header-wrapper .logo {
         text-align: center;
-		position: relative;
-		left: 0;
+        position: relative;
+        left: 0;
     }
     .header-wrapper .f-droid-wrapper {
         text-align: center;
@@ -160,31 +167,31 @@ a:hover {
 }
 .navbar-wrapper {
     position: relative;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 20;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
 }
 .navbar-inverse {
     background: none;
     border: none;
 }
 .navbar-inverse .navbar-brand {
-	padding-top: 24px;
-	padding-bottom: 24px;
-	color: white;
-	font-size: 36px;
-	font-weight: 500;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    color: white;
+    font-size: 36px;
+    font-weight: 500;
 }
 .navbar-inverse .navbar-nav > li > a {
     color: white;
 }
 .navbar-toggle {
-	padding-top: 17px;
-	padding-bottom: 17px;
+    padding-top: 17px;
+    padding-bottom: 17px;
 }
 .navbar-brand {
-	position: absolute;
+    position: absolute;
 }
 .navbar-nav {
     margin-right: 20px;
@@ -194,16 +201,16 @@ a:hover {
     #navbar {
         width: 100%;
     }
-	.nav.navbar-nav {
-		font-size: 20px;
-	}
-	.nav > li > a {
-		padding-top: 20px;
-		padding-bottom: 20px;
+    .nav.navbar-nav {
+        font-size: 20px;
+    }
+    .nav > li > a {
+        padding-top: 20px;
+        padding-bottom: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         padding-left: 0;
         margin-left: 15px;
-	}
+    }
 }
 
 
@@ -341,8 +348,9 @@ strong.extra {
 
 .footer {
     background: #AA1D1D/*#CD322E*/;
-	width: 100%;
-	min-height: 170px;
+    width: 100%;
+    min-height: 170px;
+    margin-top: 64px;
 }
 .footer-copyright {
     margin: 0 0 25px 0;
