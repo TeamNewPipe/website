@@ -35,10 +35,10 @@
 }
 .gallery-element[name^=item] {
     background: #858585; /* Fallback for browsers that do not support gradients */
-    background: -webkit-linear-gradient(left,rgba(133,133,133,1), rgba(170,170,170,1),rgba(133,133,133,1)); /*Safari 5.1-6*/
-    background: -o-linear-gradient(right,rgba(133,133,133,1), rgba(170,170,170,1),rgba(133,133,133,1)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(right,rgba(133,133,133,1), rgba(170,170,170,1),rgba(133,133,133,1)); /*Fx 3.6-15*/
-    background: linear-gradient(to right, rgba(133,133,133,1), rgba(170,170,170,1),rgba(133,133,133,1)); /*Standard*/
+    background: -webkit-linear-gradient(left, rgba(133,133,133,1) 30px, rgba(170,170,170,1),rgba(133,133,133,1) -webkit-calc(100% - 30px)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right, rgba(133,133,133,1) 30px, rgba(170,170,170,1),rgba(133,133,133,1) calc(100% - 30px)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right, rgba(133,133,133,1) 30px, rgba(170,170,170,1),rgba(133,133,133,1) calc(100% - 30px)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(133,133,133,1) 30px, rgba(170,170,170,1),rgba(133,133,133,1) calc(100% - 30px)); /*Standard*/
 }
 .gallery-controls {
     position: absolute;
