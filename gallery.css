@@ -40,6 +40,9 @@
     background: -moz-linear-gradient(right, rgba(133,133,133,1) 30px, rgba(170,170,170,1),rgba(133,133,133,1) calc(100% - 30px)); /*Fx 3.6-15*/
     background: linear-gradient(to right, rgba(133,133,133,1) 30px, rgba(170,170,170,1),rgba(133,133,133,1) calc(100% - 30px)); /*Standard*/
 }
+.gallery-element.gallery-parallax-background {
+    background: transparent;
+}
 .gallery-controls {
     position: absolute;
     top: 0;
