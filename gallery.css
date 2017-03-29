@@ -22,6 +22,10 @@
   cursor: pointer;
 }
 
+.gallery-element-wrapper {
+  padding-bottom: 15px;
+}
+
 .gallery-element {
   width: 100%;
   float: left;
