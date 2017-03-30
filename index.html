@@ -89,7 +89,7 @@
                 </div>
                 <div class="phone">
                     <img src="img/nexus6.png" />
-                    <video src="img/footage.webm" autoplay="" loop=""></video>
+                    <video id="animation" src="img/footage.webm" preload='none' loop="" ></video>
                 </div>
             </div>
         </div> <!-- header-box -->
@@ -379,6 +379,29 @@
 
     <!-- Script for gallery animations -->
     <script src="js/gallery.js"></script>
+    
+    <!-- Load and play animation on medium and large screens -->
+    <script>
+        var loaded = false;
+        var playing = false;
+        var animation = $('#animation').get(0);
+        $(window).on("orientationchange load resize", function () {
+            if($(window).width() > 767 && !loaded){
+                animation.load();
+                loaded = true;
+                animation.play();
+                playing = true;
+            }
+            else if($(window).width() > 767 && !playing){
+                animation.play();
+                playing = true;
+            }
+            else if($(window).width() <= 767 && loaded && playing){
+                animation.pause();
+                playing = false;
+            }
+        });
+    </script>
 
 </body>
 </html>
