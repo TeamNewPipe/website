@@ -21,7 +21,7 @@ $(document).ready(function(){
     lastWindowWidth = $(window).width(); /* last windowWidth */
     if(lastWindowWidth <= 767){
         el.replaceWith(comment);
-        slider.reloadSlider({adaptiveHeight: true,adaptiveHeightSpeed:0});
+        slider.reloadSlider();
     }
     
     $(window).on("orientationchange load resize", function () {

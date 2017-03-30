@@ -5,4 +5,5 @@
 /* replace default controls */
 .bx-wrapper .bx-pager.bx-default-pager a.active{background-image:url(img/control-selected.png);}
 .bx-wrapper .bx-pager.bx-default-pager{position: absolute; margin-top: -60px;bottom:auto;}
+.bxslider {display:flex;}
 @media(min-width: 767px){.bx-wrapper,.bx-viewport{height: auto !important;}.bx-wrapper{width:auto !important;border:0;}}
