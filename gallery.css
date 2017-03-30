@@ -35,13 +35,13 @@
   /* Fallback for browsers not supporting gradients */
   background: #858585;
   /* Safari 5.1-6 */
-  background: -webkit-linear-gradient(left, #858585 30px, #aaaaaa, #858585 -webkit-calc(100% - 30px));
+  background: -webkit-linear-gradient(left, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,08) -webkit-calc(100% - 30px));
   /* Opera 11.1-12 */
-  background: -o-linear-gradient(right, #858585 30px, #aaaaaa, #858585 calc(100% - 30px));
+  background: -o-linear-gradient(right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
   /* Firefox 3.6-15 */
-  background: -moz-linear-gradient(right, #858585 30px, #aaaaaa, #858585 calc(100% - 30px));
+  background: -moz-linear-gradient(right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
   /* Standard */
-  background: linear-gradient(to right, #858585 30px, #aaaaaa, #858585 calc(100% - 30px));
+  background: linear-gradient(to right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
 }
 .gallery-element.gallery-parallax-background {
   background: transparent;
