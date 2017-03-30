@@ -13,6 +13,7 @@
   overflow: hidden;
   height: auto;
   display: flex;
+  border-bottom: 1px solid #aaaaaa;
 }
 .gallery a, .gallery a:hover {
   color: white;

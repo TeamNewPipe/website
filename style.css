@@ -287,6 +287,21 @@ a:hover {
 .features-wrapper .row > div  > * {
     height: auto;
 }
+.features .presentation {
+    padding-top: 15px;
+}
+.features .presentation .moreInfo {
+    background: #aaaaaa;
+    border: none;
+    margin: 1.5px 2px;
+    padding: 6px 8.5px;
+    color: white;
+    border-radius: 15px;
+}
+.features .presentation .moreInfo:hover {
+    margin: 0;
+    padding: 7.5px 10.5px;
+}
 @media (max-width: 767px){
     .features-background {
         background-position: center top;
