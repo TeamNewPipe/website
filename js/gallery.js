@@ -18,7 +18,7 @@ $(document).ready(function(){
     /* do not display slides at small screens that are only used for large screens */
     el = $('.gallery-element-wrapper.gallery-desktop-item');
     comment = document.createComment(el.get(0).outerHTML);
-    lastWindowWidth = $(window).width(); /* last windowWidth */
+    lastWindowWidth = $(window).width();
     if(lastWindowWidth <= 767){
         el.replaceWith(comment);
         slider.reloadSlider();
