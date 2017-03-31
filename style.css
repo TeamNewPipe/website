@@ -90,7 +90,7 @@ a:hover {
     position: relative;
 }
 .header-box-wrapper .phone {
-    display: none;
+    display: inline;
     position: absolute;
     right: 60px;
     top: 20px;
@@ -146,9 +146,6 @@ a:hover {
     .header-wrapper .f-droid-wrapper {
         position: absolute;
         bottom: -25px;
-    }
-    .header-box-wrapper .phone {
-        display: inline;
     }
 }
 
