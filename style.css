@@ -55,7 +55,7 @@ a:hover {
     color: white;
 }
 .header-background {
-  background: url('img/large2.jpg') center center;
+  background: url('img/bg_large2.jpg') center center;
   position: fixed;
   width: 100%;
   top:0;
@@ -134,7 +134,9 @@ a:hover {
     }
     .header-wrapper .f-droid-wrapper {
         width: 160px;
-        margin-left: calc(50% - 160px / 2);
+        margin: auto;
+        left: 0;
+        right: 0;
     }
 }
 
