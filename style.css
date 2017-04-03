@@ -367,16 +367,14 @@ strong.extra {
 .footer .image-holder {
     text-align: center;
     position: relative;
-    top: -45px; /*-40px*/
+    top: -45px;
 }
 .footer-logo {
     height: 90px;
     margin:0;
     padding: 0;
 }
-/*.footer-links a+a:before {
-    content: ' | ';
-}*/
+
 @media (max-width: 767px){
     .navbar-header > .navbar-toggle, .navbar-header > .navbar-toggle:hover, .navbar-header > .navbar-toggle:focus {
         border: none;
@@ -391,10 +389,11 @@ strong.extra {
         float: left;
         border: none;
     }
-}
-@media only screen and (min-width: 768px){
-    .social-icons {
-        display: inherit;
-        visibility: inherit;
+    .footer-links {
+        line-height: 200%;
+    }
+    .footer-links a {
+        padding-top: 3px;
+        padding-bottom: 3px;
     }
 }
