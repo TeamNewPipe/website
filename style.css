@@ -207,8 +207,8 @@ a:hover {
 /* TEXT-1 */
 
 .text-1 {
-    background: white;
-    padding-top: 45px;
+    background: #f4f2f5;
+    padding-top: 50px;
     padding-bottom: 15px;
 }
 .text-1 a {
@@ -239,7 +239,7 @@ a:hover {
   z-index: -2;
 }
 .features-wrapper .heading-wrapper {
-    background: white;
+    background: #f4f2f5;
     text-align: center;
 }
 .features-wrapper .heading-wrapper h3 {
@@ -316,7 +316,7 @@ a:hover {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 70px;
-    background: white;
+    background: #f4f2f5;
 }
 .text-2 a {
     color: #cd201f;
@@ -331,15 +331,22 @@ a:hover {
 strong.extra {
     font-size: 125%;
 }
+.separator {
+    border-top: 2px solid white;
+}
 .donate {
     border: none;
     box-shadow: none;
-    background: #FBB03B;
+    background: #cd201f;
     padding: 15px 30px;
-    border-radius: 5px;
-    color: black;
+    border-radius: 8px;
+    color: white;
     font-weight: bold;
     font-size: 125%;
+    transition: background 0.75s;
+}
+.donate:hover, .donate:focus {
+    background: #AA1D1D;
 }
 @media (max-width: 767px){
     .text-2 .row {
