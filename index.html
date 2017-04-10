@@ -8,7 +8,10 @@
     <meta name="keywords" content="NewPipe, YouTube, Android">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-
+    
+    <link rel="icon" href="img/logo_favicon.gif" type="image/gif" sizes="32x32">
+    
+    
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 
@@ -24,13 +27,15 @@
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-
-
+    
+    <!-- bxSlider  -->
+    <link href="jquery.bxslider.min.css" rel="stylesheet" />
+    <script src="jquery.bxslider.min.js"></script>
+    
+    
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="icon" href="img/logo_favicon.gif" type="image/gif" sizes="32x32">
     <link rel="stylesheet" href="gallery.css">
-    <!-- empty style tags for browsers not supporting CSS-variables -->
-    <style></style>
+
 </head>
 <body>
 
@@ -46,7 +51,7 @@
                 <nav class="navbar navbar-inverse navbar-static-top">
                     <div class="container">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" onclick="reset();parallax();" >
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" onclick="parallax_reset();parallax();" >
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -82,22 +87,22 @@
                         <img src="img/f-droid.svg" class="f-droid" alt="F-Droid" />
                     </a>
                 </div>
-                <div class="phone">
+                <div class="phone hidden-xs">
                     <img src="img/nexus6.png" />
-                    <video src="img/footage.webm" autoplay="" loop=""></video>
+                    <video id="animation" src="img/footage.webm" preload='none' loop="" ></video>
                 </div>
             </div>
         </div> <!-- header-box -->
 
     </div> <!-- header-wrapper -->
-
-    <!-- first text box --->
+    
+    <!-- first text box -->
     <div class="text-1">
         <div class="container container-double">
             <div class="text-1-wrapper">
                 <div class="row">
                     <div class="col-sm-6">
-                        <p><strong>Do you like watching videos on YouTube <br class="">but looking for a simple app to do that?</strong></p>
+                        <p><strong>Do you like watching videos on YouTube<br>but looking for a simple app to do that?</strong></p>
                         <p class="text-justify-md"><span class="red">NewPipe</span> has been created with the purpose of getting the original YouTube experience on your smartphone without annoying ads and questionable permissions.</p>
                         <p>The application is Open Source and you can check on it at <a href="https://github.com/TeamNewPipe/NewPipe/">GitHub</a>.</p>
                     </div>
@@ -108,8 +113,8 @@
 
     <!-- parallax background for features -->
     <div class="features-background"></div>
-
-    <!-- features -->
+    
+    <!-- features wrapper -->
     <div class="features-wrapper">
 
         <!-- features heading -->
@@ -121,206 +126,204 @@
 
         <!-- features box -->
         <div class="features">
-
+            
+            <!-- gallery --->
             <div class="gallery">
-
-                <div class="gallery-controls">
-                    <div class="controls-left"><img src="img/arrow.png"/></div>
-                    <div class="controls-right"><img src="img/arrow.png"/></div>
-                    <!--<div class="controls-bottom"><a href="#item1"><img src="img/control-unactive.png"/></a><a href="#item2"><img src="img/control-active.png"/></a><img src="img/control-unactive.png"/></div>-->
-                    <div class="controls-bottom">
-                        <a href="#item1" class="selected"><div></div></a>
-                        <a href="#item2" class="unselected"><div></div></a>
-                        <a href="#item3" class="unselected"><div></div></a>
-                        <a href="#item4" class="unselected"><div></div></a>
-                        <a href="#item5" class="unselected"><div></div></a>
-                        <a href="#item6" class="unselected"><div></div></a>
-                        <a href="#item7" class="unselected"><div></div></a>
+            
+                <div class="bxslider">
+                
+                    <div class="gallery-element-wrapper gallery-desktop-item">
+                        <div class="gallery-element gallery-parallax-background">
+                            <div class="container list-box">
+                                
+                                <div class="container-fluid">
+                                    
+                                    <p class="description">the simple reasons why you will like the app</p>
+                                    
+                                    <div class="row">
+                                        <a class="change-slide" onclick="gallery_slide(1)">
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="icon"><img src="img/icon.png" /></div>
+                                                <div class="text"><strong>YouTube videos</strong><br>simple way to watch videos<br>from the site and use its features</div>
+                                            </div>
+                                        </a>
+                                        <a class="change-slide" onclick="gallery_slide(1)">
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="icon"><img src="img/icon.png" /></div>
+                                                <div class="text"><strong>Extended Privacy</strong><br>does not use the YouTube API<br>nor the Google Play Services</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <a class="change-slide" onclick="gallery_slide(1)">
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="icon"><img src="img/icon.png" /></div>
+                                                <div class="text"><strong>Background player</strong><br>use other apps with no hassle<br>while it plays your favourite songs</div>
+                                            </div>
+                                        </a>
+                                        <a class="change-slide" onclick="gallery_slide(1)">
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="icon"><img src="img/icon.png" /></div>
+                                                <div class="text"><strong>Ad-Free</strong><br>no anoying ads<br>watch only what you want</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <a class="change-slide" onclick="gallery_slide(1)">
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="icon"><img src="img/icon.png" /></div>
+                                                <div class="text"><strong>Download media</strong><br>simply download YouTube<br>videos or audios to your device</div>
+                                            </div>
+                                        </a>
+                                        <a class="change-slide" onclick="gallery_slide(1)">
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="icon"><img src="img/icon.png" /></div>
+                                                <div class="text"><strong>Open Source</strong><br>how it works is not a secret<br>go and check it on GitHub</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <a class="change-slide" onclick="gallery_slide(1)">
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="icon"><img src="img/icon.png" /></div>
+                                                <div class="text"><strong>Lightweight</strong><br>saving memory and battery life</div>
+                                            </div>
+                                        </a>
+                                        <!--<a class="change-slide" onclick="gallery_slide(1)">-->
+                                            <div class="col-sm-6 col-xs-12">
+                                                <div class="icon"><img src="img/icon.png" /></div>
+                                                <div class="text"><strong>Free</strong><br>you get the whole thing for free<br>no in-app purchases either</div>
+                                            </div>
+                                        <!--</a>-->
+                                    </div>
+                                    
+                                </div> <!-- container fluid -->
+                                
+                            </div> <!-- container list-box -->
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+                  
+                    <div class="gallery-element-wrapper">
+                        <div class="gallery-element details-wrapper">
+                            <div class="feature-details container">
+                                <div class="container">
+                                    <div class="details-flex">
+                                        <div class="details-image">
+                                            <img src="img/nexus6.png"/>
+                                        </div>
+                                        <div class="details-text container">
+                                            <h3>Extended Privacy</h3>
+                                            <p class="subtitle">NewPipe does not use the YouTube API nor the Google Play Services.</p>
+                                            <br>
+                                            <p>This means that we do not share any data (except the video URL) with YouTube or Google. Also, the app does not save any data from you or use services that analyze your usage behavior.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+                    
+                    <div class="gallery-element-wrapper">
+                        <div class="gallery-element details-wrapper">
+                            <div class="feature-details container">
+                                <div class="container">
+                                    <div class="details-flex">
+                                        <div class="details-image">
+                                            <img src="img/screenshot_5.png"/>
+                                        </div>
+                                        <div class="details-text container">
+                                            <h3>Background player</h3>
+                                            <p class="subtitle">Use other apps with no hassle while NewPipe plays your favourite songs.</p>
+                                            <br>
+                                            <p>We have added a background player to NewPipe. You can do whatever you want - your music keeps playing.</p>
+                                            <p>And even better for you: we only download the audio, so you don't waste data volume.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+                                
+                    <div class="gallery-element-wrapper">
+                        <div class="gallery-element details-wrapper">
+                            <div class="feature-details container">
+                                <div class="container">
+                                    <div class="details-flex">
+                                        <div class="details-image">
+                                            <img src="img/nexus6.png"/>
+                                        </div>
+                                        <div class="details-text container">
+                                            <h3>Download media</h3>
+                                            <p class="subtitle">simply download YouTube videos or audios to your device</p>
+                                            <br>
+                                            <p class="text-justify">With NewPipe you can not only watch YouTube videos, but also download them. The app offers different file formats and resolutions for the audios and videos.<br>The download center provides you a good overview of your downloads and their progress.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+                                
+                    <div class="gallery-element-wrapper">
+                        <div class="gallery-element details-wrapper">
+                            <div class="feature-details container">
+                                <div class="container">
+                                    <div class="details-flex">
+                                        <div class="details-image">
+                                            <img src="img/nexus6.png"/>
+                                        </div>
+                                        <div class="details-text container">
+                                            <h3>Open Source</h3>
+                                            <p class="subtitle">How it works is not a secret.</p>
+                                            <br>
+                                            <p>[No proprietary software]<br>[You can see source code]<br>[You can contribute]<br>[???Who we are???]</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+                                
+                    <div class="gallery-element-wrapper">
+                        <div class="gallery-element details-wrapper">
+                            <div class="feature-details container">
+                                <div class="container">
+                                    <div class="details-flex">
+                                        <div class="details-image">
+                                            <img src="img/nexus6.png"/>
+                                        </div>
+                                        <div class="details-text container">
+                                            <h3>Dark mode</h3>
+                                            <p class="subtitle">costumize NewPipe</p>
+                                            <br>
+                                            <p class="text-justify">Watch videos with NewPipe whenever you want: at day or at night.<br>To increase your comfort at night, NewPipe has a dark mode. Go to settings and easily turn the dark mode on. It's fancy and good for your eyes.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+                    
+                </div> <!-- bxSlider -->
+                
+            </div> <!-- gallery -->
+            
+            <!-- presentation box --->
+            <div class="presentation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+                            <p><strong class="extra">You want to know even more about NewPipe?</strong></p>
+                            <p>Check out our presentation from the 33C3</p>
+                            <p><a href="pdf/NewPipe_presentation.pdf"><button class="moreInfo">more info</button></a></p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="gallery-element" name="item1">
-                    <div class="container list-box">
-
-                        <div class="container-fluid">
-
-                            <p class="description">the simple reasons why you will like the app</p>
-
-                            <div class="row">
-                                <a href="#item2">
-                                    <div class="col-sm-6 col-xs-12">
-                                        <div class="icon"><img src="img/icon.png" /></div>
-                                        <div class="text"><strong>YouTube videos</strong><br>simple way to watch videos<br>from the site and use its features</span></div>
-                                    </div>
-                                </a>
-                                <a href="#item3">
-                                    <div class="col-sm-6 col-xs-12">
-                                        <div class="icon"><img src="img/icon.png" /></div>
-                                        <div class="text"><strong>Extended Privacy</strong><br>does not use the YouTube API<br>nor the Google Play Services</span></div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="row">
-                                <a href="#item4">
-                                    <div class="col-sm-6 col-xs-12">
-                                        <div class="icon"><img src="img/icon.png" /></div>
-                                        <div class="text"><strong>Background player</strong><br>use other apps with no hassle<br>while it plays your favourite songs</span></div>
-                                    </div>
-                                </a>
-                                <a href="#item5">
-                                    <div class="col-sm-6 col-xs-12">
-                                        <div class="icon"><img src="img/icon.png" /></div>
-                                        <div class="text"><strong>Ad-Free</strong><br>no anoying ads<br>watch only what you want</span></div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="row">
-                                <a href="#item6">
-                                    <div class="col-sm-6 col-xs-12">
-                                        <div class="icon"><img src="img/icon.png" /></div>
-                                        <div class="text"><strong>Download media</strong><br>simply download YouTube<br>videos or audios to your device</span></div>
-                                    </div>
-                                </a>
-                                <a href="#item7">
-                                    <div class="col-sm-6 col-xs-12">
-                                        <div class="icon"><img src="img/icon.png" /></div>
-                                        <div class="text"><strong>Open Source</strong><br>how it works is not a secret<br>go and check it on GitHub</span></div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="row">
-                                <a href="#item8">
-                                    <div class="col-sm-6 col-xs-12">
-                                        <div class="icon"><img src="img/icon.png" /></div>
-                                        <div class="text"><strong>Lightweight</strong><br>saving memory and battery life</span></div>
-                                    </div>
-                                </a>
-                                <a href="#item9">
-                                    <div class="col-sm-6 col-xs-12">
-                                        <div class="icon"><img src="img/icon.png" /></div>
-                                        <div class="text"><strong>Free</strong><br>you get the whole thing for free<br>no in-app purchases either</span></div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div> <!-- container fluid -->
-
-                    </div> <!-- container list-box -->
-                </div> <!-- gallery-element -->
-
-                <div class="gallery-element details-wrapper" name="item2" style="background: purple" >
-                    <div class="feature-details container">
-                        <div class="container">
-                            <div class="details-flex">
-                                <div class="details-image">
-                                    <img src="img/nexus6.png"/>
-                                </div>
-                                <div class="details-text container">
-                                    <h3>YouTube videos</h3>
-                                    <p class="subtitle">NewPipe is a simple way to watch videos from YouTube and use its features.</p>
-                                    <br>
-                                    <p>[Text will be added later]</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- gallery-element -->
-
-                <div class="gallery-element details-wrapper" name="item3" style="background: purple" >
-                    <div class="feature-details container">
-                        <div class="container">
-                            <div class="details-flex">
-                                <div class="details-image">
-                                    <img src="img/nexus6.png"/>
-                                </div>
-                                <div class="details-text container">
-                                    <h3>Extended Privacy</h3>
-                                    <p class="subtitle">NewPipe does not use the YouTube API nor the Google Play Services.</p>
-                                    <br>
-                                    <p>This means that we do not share any data (except the video URL) with YouTube or Google. Also, the app does not save any data from you or use services that analyze your usage behavior.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- gallery-element -->
-
-                <div class="gallery-element details-wrapper" name="item4" style="background: purple" >
-                    <div class="feature-details container">
-                        <div class="container">
-                            <div class="details-flex">
-                                <div class="details-image">
-                                    <img src="img/nexus6.png"/>
-                                </div>
-                                <div class="details-text container">
-                                    <h3>Background player</h3>
-                                    <p class="subtitle">Use other apps with no hassle while NewPipe plays your favourite songs.</p>
-                                    <br>
-                                    <p>[Text will be added later]</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- gallery-element -->
-
-                <div class="gallery-element details-wrapper" name="item5" style="background: purple" >
-                    <div class="feature-details container">
-                        <div class="container">
-                            <div class="details-flex">
-                                <div class="details-image">
-                                    <img src="img/nexus6.png"/>
-                                </div>
-                                <div class="details-text container">
-                                    <h3>Download media</h3>
-                                    <p class="subtitle">simply download YouTube videos or audios to your device</p>
-                                    <br>
-                                    <p class="text-justify">With NewPipe you can not only watch YouTube videos, but also download them. The app offers different file formats and resolutions for the audios and videos.<br>The download center provides you a good overview about your downloads and their progress.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- gallery-element -->
-
-                <div class="gallery-element details-wrapper" name="item6" style="background: purple" >
-                    <div class="feature-details container">
-                        <div class="container">
-                            <div class="details-flex">
-                                <div class="details-image">
-                                    <img src="img/nexus6.png"/>
-                                </div>
-                                <div class="details-text container">
-                                    <h3>Open Source</h3>
-                                    <p class="subtitle">How it works is not a secret.</p>
-                                    <br>
-                                    <p>[No proprietary software]<br>[You can see source code]<br>[You can contribute]<br>[???Who we are???]</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- gallery-element -->
-
-                <div class="gallery-element details-wrapper" name="item7" style="background: purple" >
-                    <div class="feature-details container">
-                        <div class="container">
-                            <div class="details-flex">
-                                <div class="details-image">
-                                    <img src="img/nexus6.png"/>
-                                </div>
-                                <div class="details-text container">
-                                    <h3>Dark mode</h3>
-                                    <p class="subtitle">costumize NewPipe</p>
-                                    <br>
-                                    <p class="text-justify">Watch videos with NewPipe whenever you want: at day or at night.<br>To increase your comfort at night, NewPipe has a dark mode. Go to settings and easily turn the dark mode on. It's fancy and good for your eyes.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- gallery-element -->
-
-            </div> <!-- gallery -->
-
+            </div> <!-- presentation -->
+            
         </div> <!-- features -->
 
     </div> <!-- features-wrapper -->
@@ -328,15 +331,26 @@
     <!-- second text box -->
     <div class="text-2">
         <div class="container">
+        
+            <!-- download -->
             <div class="row">
                 <div class="col-md-12">
-                    <p><strong class="extra">Like the idea?<br>Download <a href="#">NewPipe</a> from <a href="https://f-droid.org/repository/browse/?fdid=org.schabi.newpipe">F-Droid</a></strong></p>
+                    <p><strong class="extra">Like the idea?<br>Download <a class="red">NewPipe</a> from <a href="https://f-droid.org/repository/browse/?fdid=org.schabi.newpipe">F-Droid</a></strong></p>
                     <br>
                     <p>F-Droid is a trusted catalogue of Free and Open Source applications for Android.</p>
                     <p class="f-droid-wrapper"><a href="https://f-droid.org/repository/browse/?fdid=org.schabi.newpipe" target="_blank"><img src="img/f-droid.svg" class="f-droid" alt="F-Droid" /></a></p>
-                    <br><br>
+                    <br class="hidden-xs" ><br class="hidden-xs" >
                 </div>
             </div>
+            
+            <!-- separator -->
+            <div class="row">
+                <div class="col-md-12">
+                    <hr class="visible-xs separator" />
+                </div>
+            </div>
+            
+            <!-- donate -->
             <div class="row">
                 <div class="col-md-12">
                     <p><strong class="extra">Do we look fancy?</strong></p>
@@ -344,13 +358,15 @@
                 </div>
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-justify">
                     <p>We hope so! But don't forget, a lot of time and energy goes into this and we share it with you. We would like to offer you some ways you can support our work by donations. So we can get some <strong class="red">extra snacks during work!</strong></p>
+                    <br>
+                </div>
+                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+                    <p><a href="#"><button class="donate">Donate</button></a></p>
+                    <br>
+                    <p>Thank you in advance!</p>
                 </div>
             </div>
-
-            <br>
-            <p><a href="#"><button class="donate">Donate</button></a></p>
-            <br>
-            <p>Thank you in advance!</p>
+            
         </div>
     </div> <!-- second text box -->
 
@@ -371,11 +387,13 @@
                 <img src="img/logo-white-border.png" class="footer-logo" />
             </div>
             <div class="footer-copyright text-center">
-                <span class="footer-links">
-                    <a href="#">Support</a> | <a href="#">Privacy & Cookies</a><span class="hidden-xs"> | </span><br class="visible-xs-inline"><a href="#">Privacy Statement for Android</a> | <a href="#">Security</a>
-                </span>
-                <br><br>
-                <span class="copyright">Copyright © NewPipe. All rights reserved.</span>
+                <p>
+                    <span class="footer-links">
+                        <a href="#">Support</a><span class="hidden-xs"> | </span><br class="visible-xs-inline"><a href="#">Privacy & Cookies</a><span class="hidden-xs"> | </span><br class="visible-xs-inline"><a href="#">Privacy Statement for Android</a><span class="hidden-xs"> | </span><br class="visible-xs-inline"><a href="#">Security</a>
+                    </span>
+                    <br><br>
+                    <span class="copyright">Copyright © NewPipe. All rights reserved.</span>
+                </p>
             </div>
         </div>
     </footer> <!-- footer -->
@@ -386,7 +404,32 @@
 
     <!-- Script for parallax animations -->
     <script src="js/parallax.js"></script>
+
+    <!-- Script for gallery animations -->
     <script src="js/gallery.js"></script>
+    
+    <!-- Load and play animation on medium and large screens -->
+    <script>
+        var loaded = false;
+        var playing = false;
+        var animation = $('#animation').get(0);
+        $(window).on("orientationchange load resize", function () {
+            if($(window).width() > 767 && !loaded){
+                animation.load();
+                loaded = true;
+                animation.play();
+                playing = true;
+            }
+            else if($(window).width() > 767 && !playing){
+                animation.play();
+                playing = true;
+            }
+            else if($(window).width() <= 767 && loaded && playing){
+                animation.pause();
+                playing = false;
+            }
+        });
+    </script>
 
 </body>
 </html>

@@ -58,11 +58,11 @@ a:hover {
 /* Header */
 
 .header-wrapper {
-    background: rgba(170, 29, 29, 0.5)/*#AA1D1D#CD322E*/;
+    background: rgba(170, 29, 29, 0.85);
     color: white;
 }
 .header-background {
-  background: url('img/bg_small.jpg') center center;
+  background: url('img/bg_large2.jpg') center center;
   position: fixed;
   width: 100%;
   top:0;
@@ -97,7 +97,7 @@ a:hover {
     position: relative;
 }
 .header-box-wrapper .phone {
-    display: none;
+    display: inline;
     position: absolute;
     right: 60px;
     top: 20px;
@@ -141,7 +141,9 @@ a:hover {
     }
     .header-wrapper .f-droid-wrapper {
         width: 160px;
-        margin-left: calc(50% - 160px / 2);
+        margin: auto;
+        left: 0;
+        right: 0;
     }
 }
 
@@ -153,9 +155,6 @@ a:hover {
     .header-wrapper .f-droid-wrapper {
         position: absolute;
         bottom: -25px;
-    }
-    .header-box-wrapper .phone {
-        display: inline;
     }
 }
 
@@ -217,8 +216,8 @@ a:hover {
 /* TEXT-1 */
 
 .text-1 {
-    background: white;
-    padding-top: 45px;
+    background: #f4f2f5;
+    padding-top: 50px;
     padding-bottom: 15px;
 }
 .text-1 a {
@@ -241,7 +240,7 @@ a:hover {
 /* Features */
 
 .features-background {
-  background: url('img/bg_small.jpg') center center;
+  background: url('img/bg_large2.jpg') center center;
   position: fixed;
   width: 100%;
   top:0;
@@ -249,7 +248,7 @@ a:hover {
   z-index: -2;
 }
 .features-wrapper .heading-wrapper {
-    background: white;
+    background: #f4f2f5;
     text-align: center;
 }
 .features-wrapper .heading-wrapper h3 {
@@ -258,7 +257,7 @@ a:hover {
     color: #cd201f;
 }
 .features-wrapper .features {
-    background: rgba(126, 126, 126, 0.5);
+    background: rgba(126, 126, 126, 0.85);
     color: white;
 }
 .features-wrapper .features .description {
@@ -294,6 +293,21 @@ a:hover {
 .features-wrapper .row > div  > * {
     height: auto;
 }
+.features .presentation {
+    padding-top: 15px;
+}
+.features .presentation .moreInfo {
+    background: #aaaaaa;
+    border: none;
+    margin: 1.5px 2px;
+    padding: 6px 8.5px;
+    color: white;
+    border-radius: 15px;
+}
+.features .presentation .moreInfo:hover {
+    margin: 0;
+    padding: 7.5px 10.5px;
+}
 @media (max-width: 767px){
     .features-background {
         background-position: center top;
@@ -311,7 +325,7 @@ a:hover {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 70px;
-    background: white;
+    background: #f4f2f5;
 }
 .text-2 a {
     color: #cd201f;
@@ -326,15 +340,22 @@ a:hover {
 strong.extra {
     font-size: 125%;
 }
+.separator {
+    border-top: 2px solid white;
+}
 .donate {
     border: none;
     box-shadow: none;
-    background: #FBB03B;
+    background: #cd201f;
     padding: 15px 30px;
-    border-radius: 5px;
-    color: black;
+    border-radius: 8px;
+    color: white;
     font-weight: bold;
     font-size: 125%;
+    transition: background 0.75s;
+}
+.donate:hover, .donate:focus {
+    background: #AA1D1D;
 }
 @media (max-width: 767px){
     .text-2 .row {
@@ -363,16 +384,14 @@ strong.extra {
 .footer .image-holder {
     text-align: center;
     position: relative;
-    top: -45px; /*-40px*/
+    top: -45px;
 }
 .footer-logo {
     height: 90px;
     margin:0;
     padding: 0;
 }
-/*.footer-links a+a:before {
-    content: ' | ';
-}*/
+
 @media (max-width: 767px){
     .navbar-header > .navbar-toggle, .navbar-header > .navbar-toggle:hover, .navbar-header > .navbar-toggle:focus {
         border: none;
@@ -387,10 +406,11 @@ strong.extra {
         float: left;
         border: none;
     }
-}
-@media only screen and (min-width: 768px){
-    .social-icons {
-        display: inherit;
-        visibility: inherit;
+    .footer-links {
+        line-height: 200%;
+    }
+    .footer-links a {
+        padding-top: 3px;
+        padding-bottom: 3px;
     }
 }

@@ -1,6 +1,6 @@
 var headerHeight, featuresHeight, featuresPosition;
 
-function reset() {
+function parallax_reset() {
     headerHeight = $('.header-wrapper').outerHeight();
     /* check whether the height can encrease as navbar can be (un-)collapsed */
     if($(window).width() > 767){
@@ -27,9 +27,12 @@ $(window).scroll(function(e) {
 });
 
 $(window).resize(function(e) {
-    reset();
-    parallax();
+    /* timeout because gallery_resize needs some time to execute - only nacessary until parallax is pure CSS without JS */
+    window.setTimeout(function(){
+        parallax_reset();
+        parallax();
+    },100);
 });
 
-reset();
+parallax_reset();
 parallax();
