@@ -289,21 +289,6 @@ a:hover {
 .features-wrapper .row > div  > * {
     height: auto;
 }
-.features .presentation {
-    padding-top: 15px;
-}
-.features .presentation .moreInfo {
-    background: #aaaaaa;
-    border: none;
-    margin: 1.5px 2px;
-    padding: 6px 8.5px;
-    color: white;
-    border-radius: 15px;
-}
-.features .presentation .moreInfo:hover {
-    margin: 0;
-    padding: 7.5px 10.5px;
-}
 @media (max-width: 767px){
     .features-background {
         background-position: center top;
@@ -320,8 +305,8 @@ a:hover {
 .text-2 {
     text-align: center;
     padding-top: 40px;
-    padding-bottom: 70px;
-    background: #f4f2f5;
+    padding-bottom: 30px;
+    background: #f3eff2;
 }
 .text-2 a {
     color: #cd201f;
@@ -354,6 +339,9 @@ strong.extra {
     background: #AA1D1D;
 }
 @media (max-width: 767px){
+    .text-2 {
+        padding-bottom: 30px;
+    }
     .text-2 .row {
         padding-left: 15px;
         padding-right: 15px;
@@ -364,19 +352,42 @@ strong.extra {
 /* Slides */
 
 .slides-container {
-    background-color: #d0d0d0;
+    padding-top: 20px;
+    background-color: #d0cdcd;
+    border-top: 2px solid white;
 }
 .slides-container a {
     color: #cd201f;
 }
 .slides-container h3 {
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 125%;
+    font-weight: 700;
 }
 .slides-container .slides-download {
-    margin-top: 12px;
-    margin-bottom:20px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
-
+.slides-container embed.slides {
+    display: none;
+}
+@media (min-width: 768px) {
+    .slides-container {
+        padding-top: 0;
+        border-top: none;
+    }
+    .slides-container h3 {
+        margin-bottom: 15px;
+    }
+    .slides-container .slides-download {
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    .slides-container embed.slides {
+        display: initial;
+    }
+}
 
 /* Footer */
 
@@ -399,7 +410,7 @@ strong.extra {
 }
 .footer .image-puffer {
     padding-bottom: 70px;
-    background-color:#d0d0d0;
+    background-color:#d0cdcd;
 }
 .footer-logo {
     height: 90px;
