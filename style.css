@@ -302,6 +302,13 @@ a:hover {
     -webkit-text-stroke: 1.5px white;
     -webkit-font-smoothing: antialiased;
 }
+/* .fa-eye icon has more padding on the  top as on the bottom of it and is smaller than the other icons */
+.features-wrapper .features .icon .fa-eye-wrapper {
+    margin-top: -2px;
+}
+.features-wrapper .features .icon .fa-eye {
+    font-size: 2.5em;
+}
 .features-wrapper .features .text {
     float: left;
     width: 75%;
@@ -406,7 +413,7 @@ strong.extra {
     margin: 0 0 25px 0;
 }
 
-.footer, .footer-links, .footer-links a, .footer-links a:hover, .footer .copyright {
+.footer, .footer-links, .footer-links a, .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
     color: white;
     text-decoration: none;
 }
