@@ -54,7 +54,7 @@ a:hover {
     color: white;
 }
 .header-background {
-  background: url('img/bg_large2.jpg') center center;
+  background: url('../img/bg_large2.jpg') center center;
   position: fixed;
   width: 100%;
   top:0;
@@ -166,8 +166,9 @@ a:hover {
     border: none;
 }
 .navbar-inverse .navbar-brand {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    margin: 8px 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
     color: white;
     font-size: 36px;
     font-weight: 500;
@@ -187,8 +188,9 @@ a:hover {
     margin-top: 10px;
 }
 @media (max-width: 767px){
-    #navbar {
-        width: 100%;
+    .navbar-header > .navbar-toggle, .navbar-header > .navbar-toggle:hover, .navbar-header > .navbar-toggle:focus {
+        border: none;
+        background: none;
     }
     .nav.navbar-nav {
         font-size: 20px;
@@ -199,6 +201,16 @@ a:hover {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         padding-left: 0;
         margin-left: 15px;
+    }
+    #navbar {
+        width: 100%;
+        float: left;
+        border: none;
+    }
+    .navbar-collapse {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin-bottom: 15px;
     }
 }
 
@@ -230,7 +242,7 @@ a:hover {
 /* Features */
 
 .features-background {
-  background: url('img/bg_large2.jpg') center center;
+  background: url('../img/bg_large2.jpg') center center;
   position: fixed;
   width: 100%;
   top:0;
@@ -238,7 +250,7 @@ a:hover {
   z-index: -2;
 }
 .features-wrapper .heading-wrapper {
-    background: #f4f2f5;
+    background: #f3eff2;
     text-align: center;
 }
 .features-wrapper .heading-wrapper h3 {
@@ -419,6 +431,7 @@ strong.extra {
     }
 }
 
+
 /* Footer */
 
 .footer {
@@ -448,19 +461,6 @@ strong.extra {
     padding: 0;
 }
 @media (max-width: 767px){
-    .navbar-header > .navbar-toggle, .navbar-header > .navbar-toggle:hover, .navbar-header > .navbar-toggle:focus {
-        border: none;
-        background: none;
-    }
-    .navbar-collapse {
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        margin-bottom: 15px;
-    }
-    #navbar {
-        float: left;
-        border: none;
-    }
     .footer-links {
         line-height: 200%;
     }
