@@ -36,6 +36,26 @@
         text-align: justify;
     }
 }
+.row.is-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.row.is-flex > [class*='col-'] {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
 .red {
     color: #cd201f;
 }
@@ -54,7 +74,7 @@ a:hover {
     color: white;
 }
 .header-background {
-  background: url('img/bg_large2.jpg') center center;
+  background: url('../img/bg_large2.jpg') center center;
   position: fixed;
   width: 100%;
   top:0;
@@ -166,8 +186,9 @@ a:hover {
     border: none;
 }
 .navbar-inverse .navbar-brand {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    margin: 8px 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
     color: white;
     font-size: 36px;
     font-weight: 500;
@@ -187,8 +208,9 @@ a:hover {
     margin-top: 10px;
 }
 @media (max-width: 767px){
-    #navbar {
-        width: 100%;
+    .navbar-header > .navbar-toggle, .navbar-header > .navbar-toggle:hover, .navbar-header > .navbar-toggle:focus {
+        border: none;
+        background: none;
     }
     .nav.navbar-nav {
         font-size: 20px;
@@ -199,6 +221,16 @@ a:hover {
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         padding-left: 0;
         margin-left: 15px;
+    }
+    #navbar {
+        width: 100%;
+        float: left;
+        border: none;
+    }
+    .navbar-collapse {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin-bottom: 15px;
     }
 }
 
@@ -219,7 +251,7 @@ a:hover {
 }
 @media (min-width: 768px){
     .text-1 {
-        padding-top: 45px;
+        padding-top: 55px;
     }
     .text-1-wrapper {
         padding-left: 0px;
@@ -230,7 +262,7 @@ a:hover {
 /* Features */
 
 .features-background {
-  background: url('img/bg_large2.jpg') center center;
+  background: url('../img/bg_large2.jpg') center center;
   position: fixed;
   width: 100%;
   top:0;
@@ -238,7 +270,7 @@ a:hover {
   z-index: -2;
 }
 .features-wrapper .heading-wrapper {
-    background: #f4f2f5;
+    background: #f3eff2;
     text-align: center;
 }
 .features-wrapper .heading-wrapper h3 {
@@ -379,45 +411,40 @@ strong.extra {
 }
 
 
-/* Slides */
+/* News */
 
-.slides-container {
-    padding-top: 20px;
+.news-container {
     background-color: #d0cdcd;
     border-top: 2px solid white;
+    color: #333;
 }
-.slides-container a {
+.news-container a {
     color: #cd201f;
 }
-.slides-container h3 {
-    margin-top: 20px;
-    margin-bottom: 0;
-    font-size: 125%;
-    font-weight: 700;
+.news-container h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #cd201f;
 }
-.slides-container .slides-download {
+.news-container .slides-download {
     margin-top: 0;
     margin-bottom: 20px;
 }
-.slides-container embed.slides {
-    display: none;
-}
 @media (min-width: 768px) {
-    .slides-container {
-        padding-top: 0;
+    .news-container {
         border-top: none;
+        padding-top: 0px;
     }
-    .slides-container h3 {
-        margin-bottom: 15px;
+    .news-container h3 {
+        margin-top: 30px;
+        margin-bottom: 20px;
     }
-    .slides-container .slides-download {
+    .news-container .slides-download {
         margin-top: 15px;
         margin-bottom: 20px;
     }
-    .slides-container embed.slides {
-        display: initial;
-    }
 }
+
 
 /* Footer */
 
@@ -448,19 +475,6 @@ strong.extra {
     padding: 0;
 }
 @media (max-width: 767px){
-    .navbar-header > .navbar-toggle, .navbar-header > .navbar-toggle:hover, .navbar-header > .navbar-toggle:focus {
-        border: none;
-        background: none;
-    }
-    .navbar-collapse {
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        margin-bottom: 15px;
-    }
-    #navbar {
-        float: left;
-        border: none;
-    }
     .footer-links {
         line-height: 200%;
     }
