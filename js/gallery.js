@@ -33,8 +33,7 @@ $(document).ready(function(){
 
 function gallery_slide(s){
     /* TODO: https://github.com/TeamNewPipe/website/issues/22 */
-    return;
-    slider.goToSlide(s);
+    //slider.goToSlide(s);
 }
 
 function gallery_resize(){
@@ -95,5 +94,5 @@ $(window).on("load orientationchange resize", function () {
         visibleDescription = null;
     }
     if(visibleDescription != null) 
-        $(visibleDescription).show();;
+        $(visibleDescription).show();
 });
