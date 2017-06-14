@@ -109,3 +109,46 @@
     padding-right: 0px;
   }
 }
+/* Extra small size since Bootstrap 4 
+   We use Bootstrap 3 but this size was added to Bootstrap 4 for a good reason. It adresses phones with portait mode. */
+@media (max-width: 543px) {
+    .features-wrapper .features .icon {
+        margin-right: 15px;
+    }
+    .features-wrapper .features .text {
+        float: left;
+        width: calc(100% - 4em - 15px);
+    }
+    .features-wrapper .features .text > p {
+        line-height: 4em;
+        margin: 0;
+    }
+    .features-wrapper .features .text > p.description-text {
+        line-height: 1.42857143;
+        padding-top: 25px;
+        display: none;
+        text-align: left;
+    }
+    .gallery-element {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .list-box, .list-box > .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .bx-viewport {
+        height: auto !important;
+    }
+}
+
+/*  Hide gallery controls until detailed descriptions are avalible 
+    so only the first 'slide' is accessible.
+    More info / TODO: https://github.com/TeamNewPipe/website/issues/22
+ */
+.bx-controls {
+    display: none;
+}
+/*.gallery a.change-slide {
+    cursor: default;
+}*/

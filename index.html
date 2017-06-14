@@ -138,26 +138,28 @@
 
                                 <div class="container-fluid">
 
-                                    <p class="description">The simple reasons why you will like the app.</p>
+                                    <p class="description">The simple reasons why you will like the app.<span class="visible-xxs"><br>Click them to get more infos!</span></p>
 
                                     <div class="row">
                                         <a class="change-slide" onclick="gallery_slide(1)">
-                                            <div class="col-sm-6 col-xs-12">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#ytb-videos-des')">
                                                 <div class="icon">
                                                     <p><i class="fa fa-play fa-2x" aria-hidden="true"></i></p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>YouTube videos</strong><br>Simple way to watch videos<br>from the site and use its features.</p>
+                                                    <p><strong>YouTube videos</strong></p>
+                                                    <p class="description-text" id="ytb-videos-des">Simple way to watch videos <br class="hidden-xxs">from the site and use its features.</p>
                                                 </div>
                                             </div>
                                         </a>
                                         <a class="change-slide" onclick="gallery_slide(1)">
-                                            <div class="col-sm-6 col-xs-12">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#ext-privacy-des')">
                                                 <div class="icon">
                                                     <p><i class="fa fa-lock fa-3x" aria-hidden="true"></i></p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>Extended Privacy</strong><br>Does not use the YouTube API<br>nor the Google Play Services.</p>
+                                                    <p><strong>Extended Privacy</strong></p>
+                                                    <p class="description-text" id="ext-privacy-des">Does not use the YouTube API <br class="hidden-xxs">nor the Google Play Services.</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -165,17 +167,18 @@
 
                                     <div class="row">
                                         <a class="change-slide" onclick="gallery_slide(1)">
-                                            <div class="col-sm-6 col-xs-12">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#bg-player-des')">
                                                 <div class="icon">
                                                     <p><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>Background player</strong><br>Use other apps with no hassle<br>while it plays your favourite songs.</p>
+                                                    <p><strong>Background player</strong></p>
+                                                    <p class="description-text" id="bg-player-des">Use other apps with no hassle <br class="hidden-xxs">while it plays your favourite songs.</p>
                                                 </div>
                                             </div>
                                         </a>
                                         <a class="change-slide" onclick="gallery_slide(1)">
-                                            <div class="col-sm-6 col-xs-12">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#ad-free-des')">
                                                 <div class="icon">
                                                     <p>
                                                         <span class="fa-stack fa-lg">
@@ -185,7 +188,8 @@
                                                     </p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>Ad-Free</strong><br>No anoying ads<br>watch only what you want.</p>
+                                                    <p><strong>Ad-Free</strong></p>
+                                                    <p class="description-text" id="ad-free-des">No anoying ads <br class="hidden-xxs">watch only what you want.</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -193,22 +197,24 @@
 
                                     <div class="row">
                                         <a class="change-slide" onclick="gallery_slide(1)">
-                                            <div class="col-sm-6 col-xs-12">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#download-des')">
                                                 <div class="icon">
                                                     <p><i class="fa fa-download fa-2x" aria-hidden="true"></i></p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>Download media</strong><br>Simply download YouTube<br>videos or audios to your device.</p>
+                                                    <p><strong>Download media</strong></p>
+                                                    <p class="description-text" id="download-des">Simply download YouTube <br class="hidden-xxs">videos or audios to your device.</p>
                                                 </div>
                                             </div>
                                         </a>
                                         <a class="change-slide" onclick="gallery_slide(1)">
-                                            <div class="col-sm-6 col-xs-12">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#open-src-des')">
                                                 <div class="icon">
                                                     <p class="fa-eye-wrapper"><i class="fa fa-eye fa-2x" aria-hidden="true" style="font-size: 2.5em"></i></p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>Open Source</strong><br>How it works it not a secret<br>go and check it on GitHub.</p>
+                                                    <p><strong>Open Source</strong></p>
+                                                    <p class="description-text" id="open-src-des">How it works it not a secret <br class="hidden-xxs">go and check it on GitHub.</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -216,17 +222,18 @@
 
                                     <div class="row">
                                         <a class="change-slide" onclick="gallery_slide(1)">
-                                            <div class="col-sm-6 col-xs-12">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#leightweight-des')">
                                                 <div class="icon">
                                                     <p><img src="img/feather.png" class="fa fa-lg" /></p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>Lightweight</strong><br>Saving memory and battery life.</p>
+                                                    <p><strong>Lightweight</strong></p>
+                                                    <p class="description-text" id="leightweight-des">Saving memory and battery life.</p>
                                                 </div>
                                             </div>
                                         </a>
-                                        <!--<a class="change-slide" onclick="gallery_slide(1)">-->
-                                            <div class="col-sm-6 col-xs-12">
+                                        <a class="change-slide" onclick="gallery_slide(1)">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#free-des')">
                                                 <div class="icon">
                                                     <p>
                                                         <span class="fa-stack fa-lg">
@@ -236,10 +243,11 @@
                                                     </p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>Free</strong><br>You get the whole thing for free<br>no in-app purchases either.</p>
+                                                    <p><strong>Free</strong></p>
+                                                    <p class="description-text" id="free-des">You get the whole thing for free <br class="hidden-xxs">no in-app purchases either.</p>
                                                 </div>
                                             </div>
-                                        <!--</a>-->
+                                        </a>
                                     </div>
 
                                 </div> <!-- container fluid -->
