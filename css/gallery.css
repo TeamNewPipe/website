@@ -88,6 +88,9 @@
     min-height: 100vh;
   }
 
+  #features-tiles {
+      margin-bottom: 37px;
+  }
   .feature-details, .list-box {
     margin-bottom: 0;
   }
@@ -108,6 +111,28 @@
     padding-left: 0px;
     padding-right: 0px;
   }
+}
+@media (max-width: 992px) {
+    .bx-wrapper a.bx-prev, .bx-wrapper a.bx-prev:hover, .bx-wrapper a.bx-prev:focus {
+        padding-left: 0px;
+        background: url(../img/control-prev.png) 0px 15px no-repeat;
+    }
+    .bx-wrapper a.bx-next, .bx-wrapper a.bx-next:hover, .bx-wrapper a.bx-next:focus {
+        padding-right: 0px;
+        background: url(../img/control-next.png) 0px 15px no-repeat;
+        padding-left: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .bx-wrapper a.bx-prev, .bx-wrapper a.bx-prev:hover, .bx-wrapper a.bx-prev:focus {
+        padding-left: 30px;
+        background: url(../img/control-prev.png) 15px 15px no-repeat;
+    }
+    .bx-wrapper a.bx-next, .bx-wrapper a.bx-next:hover, .bx-wrapper a.bx-next:focus {
+        padding-right: 30px;
+        background: url(../img/control-next.png) 15px 15px no-repeat;
+        padding-left: 15px;
+    }
 }
 /* Extra small size since Bootstrap 4 
    We use Bootstrap 3 but this size was added to Bootstrap 4 for a good reason. It adresses phones with portait mode. */
@@ -140,15 +165,13 @@
     .bx-viewport {
         height: auto !important;
     }
+    .bx-wrapper a.bx-prev, .bx-wrapper a.bx-prev:hover, .bx-wrapper a.bx-prev:focus {
+        padding-left: 7.5px;
+        background: url(../img/control-prev.png) 7.5px 15px no-repeat;
+    }
+    .bx-wrapper a.bx-next, .bx-wrapper a.bx-next:hover, .bx-wrapper a.bx-next:focus {
+        padding-right: 7.5px;
+        background: url(../img/control-next.png) 0px 15px no-repeat;
+        padding-left: 15px;
+    }
 }
-
-/*  Hide gallery controls until detailed descriptions are avalible 
-    so only the first 'slide' is accessible.
-    More info / TODO: https://github.com/TeamNewPipe/website/issues/22
- */
-.bx-controls {
-    display: none;
-}
-/*.gallery a.change-slide {
-    cursor: default;
-}*/

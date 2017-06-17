@@ -13,60 +13,24 @@ $(document).ready(function(){
         mode: 'horizontal',
         responsive: true,
         adaptiveHeight: false,
-        controls: false,
-        touchEnabled: false
-    });
-    
-    /* do not display slides at small screens that are only used for large screens */
-    el = $('.gallery-element-wrapper.gallery-desktop-item');
-    comment = document.createComment(el.get(0).outerHTML);
-    lastWindowWidth = $(window).width();
-    /*if(lastWindowWidth <= 767){
-        el.replaceWith(comment);
-        slider.reloadSlider();
-    }*/
-    
-    $(window).on("orientationchange load resize", function () {
-        gallery_resize();
+        touchEnabled: ($(window).width() > 544) ? true : false
     });
 });
 
+$(window).on("orientationchange load resize", function () {
+    gallery_resize();
+});
+
 function gallery_slide(s){
-    /* TODO: https://github.com/TeamNewPipe/website/issues/22 */
-    //slider.goToSlide(s);
+    if($(window).width() > 543)
+        slider.goToSlide(s);
 }
 
 function gallery_resize(){
-    el = $('.gallery-element-wrapper.gallery-desktop-item');
-    /* TODO: https://github.com/TeamNewPipe/website/issues/22 */
-    /* small screens */
-    /*if($(window).width() <= 767 && lastWindowWidth > 767){
-        lastWindowWidth = $(window).width();
-        el.replaceWith(comment);
-        slider.reloadSlider({
-            startSlide: (slider.getCurrentSlide() == 0) ? slider.getCurrentSlide() : slider.getCurrentSlide() - 1,
-            adaptiveHeight: true
-        });
-    }
-    
-    /* medium and large screens */
-   /* else if($(window).width() > 767 && lastWindowWidth <= 767) {
-        lastWindowWidth = $(window).width();
-        $(comment).parent().prepend(comment.nodeValue);
-        $(comment).remove();
-        slider.reloadSlider({
-            startSlide: (slider.getCurrentSlide() + 1)
-        });
-    }
-    
-    /* prevent template's bug, which does not allow responsive behavior in some browsers */
-    //else {
-        slider.reloadSlider({
-            controls: false,
-            startSlide:slider.getCurrentSlide(),
-            touchEnabled: false
-        });
-    //}
+    slider.reloadSlider({
+        touchEnabled: ($(window).width() > 544) ? true : false,
+        startSlide:slider.getCurrentSlide()
+    });
 }
 
 /* Bootstrap 3 collapse function has some bugs wich cause ugly toggles */
@@ -85,6 +49,7 @@ function collapseDescription(dest) {
         }
     }
 }
+
 $(window).on("load orientationchange resize", function () {
     if($(window).width() > 543){
         $('.text .description-text').show();
