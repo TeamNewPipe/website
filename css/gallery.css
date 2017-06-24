@@ -47,7 +47,6 @@
 .feature-details {
   position: relative;
   padding: 15px;
-  display: table-cell;
   vertical-align: middle;
 }
 .feature-details > .container {
@@ -62,10 +61,19 @@
   margin-left: 0;
   margin-right: 0;
 }
-.feature-details .details-image > img {
+.feature-details .details-image img {
   max-width: 100%;
   max-height: 350px;
   display: initial;
+}
+.feature-details .details-image.image-slideshow img {
+    display: none;
+}
+.feature-details .details-image.image-slideshow img.active {
+    display: inline;
+}
+.feature-details .details-image .banner {
+    border-radius: 8px;
 }
 .feature-details .details-text {
   width: 75%;

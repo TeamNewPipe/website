@@ -61,3 +61,24 @@ $(window).on("load orientationchange resize", function () {
     if(visibleDescription != null) 
         $(visibleDescription).show();
 });
+
+/* slideshow */
+function slideshow(){
+    $(".details-image.image-slideshow").each(function(){
+        var currentIndex = 0;
+        $(this).children().each(function(index){
+            if($(this).hasClass("active")){
+                $(this).removeClass("active");
+                currentIndex = index;
+            }
+            else if(currentIndex + 1 == index){
+                $(this).addClass("active");
+            }
+        });
+        if(currentIndex == $(this).children().length - 1){
+            $(this).children().eq(0).addClass("active");
+        }
+    });
+
+    setTimeout(function(){slideshow();}, 5000);
+}
