@@ -1,70 +1,76 @@
 .list-box {
-  margin-bottom: 15px;
-  width: auto;
+    margin-bottom: 15px;
+    width: auto;
 }
 
 .gallery {
-  width: auto;
-  overflow: hidden;
-  height: auto;
-  display: flex;
-  border-bottom: 1px solid #aaaaaa;
+    width: auto;
+    overflow: hidden;
+    height: auto;
+    display: flex;
+    border-bottom: 1px solid #aaaaaa;
 }
 .gallery a, .gallery a:hover {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 .gallery a.change-slide {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .gallery-element {
-  width: 100%;
-  height: 100%;
-  float: left;
-  padding-left: 30px;
-  padding-right: 30px;
-  /* Fallback for browsers not supporting gradients */
-  background: #858585;
-  /* Safari 5.1-6 */
-  background: -webkit-linear-gradient(left, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,08) -webkit-calc(100% - 30px));
-  /* Opera 11.1-12 */
-  background: -o-linear-gradient(right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
-  /* Firefox 3.6-15 */
-  background: -moz-linear-gradient(right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
-  /* Standard */
-  background: linear-gradient(to right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
+    width: 100%;
+    height: 100%;
+    float: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    background: #858585;
+    background: -webkit-linear-gradient(left, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,08) -webkit-calc(100% - 30px));
+    background: -o-linear-gradient(right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
+    background: -moz-linear-gradient(right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
+    background: linear-gradient(to right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
 }
 .gallery-element.gallery-parallax-background {
-  background: transparent;
+    background: transparent;
 }
 
 .details-wrapper {
-  vertical-align: middle;
-  display: flex;
+    vertical-align: middle;
+    display: flex;
 }
-
 .feature-details {
-  position: relative;
-  padding: 15px;
-  vertical-align: middle;
+    position: relative;
+    padding: 15px;
+    vertical-align: middle;
 }
 .feature-details > .container {
-  display: unset;
+    display: unset;
 }
 .feature-details .details-flex {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 .feature-details .details-image {
-  margin-left: 0;
-  margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 .feature-details .details-image img {
-  max-width: 100%;
-  max-height: 350px;
-  display: initial;
+    max-width: 100%;
+    max-height: 350px;
+    display: initial;
+}
+.feature-details .details-image figure {
+    position: relative;
+}
+.feature-details .details-image figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left:0;
+    background: rgba(120,120,120,0.5);
+    font-size: 10px;
+    padding: 1px 3px;
 }
 .feature-details .details-image.image-slideshow img {
     display: none;
@@ -76,72 +82,56 @@
     border-radius: 8px;
 }
 .feature-details .details-text {
-  width: 75%;
-  max-width: 660px;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 50px;
-  padding-right: 30px;
+    width: 75%;
+    max-width: 660px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 50px;
+    padding-right: 30px;
 }
 .feature-details .details-text .subtitle {
-  font-weight: bold;
+    font-weight: bold;
 }
 
-@media (max-width: 766px) {
-  .gallery {
-    min-height: 100vh;
-  }
+@media (max-width: 767px) {
+    .gallery {
+        min-height: 100vh;
+    }
 
-  .gallery-element {
-    min-height: 100vh;
-  }
+    .gallery-element {
+        min-height: 100vh;
+    }
 
-  #features-tiles {
-      margin-bottom: 37px;
-  }
-  .feature-details, .list-box {
-    margin-bottom: 0;
-  }
+    #features-tiles {
+        margin-bottom: 37px;
+    }
+    .feature-details, .list-box {
+        margin-bottom: 0;
+    }
 
-  .feature-details .details-flex {
-    flex-wrap: wrap;
-  }
+    .feature-details .details-flex {
+        flex-wrap: wrap;
+    }
 
-  .feature-details .details-image {
-    float: unset;
-    width: 100%;
-    text-align: center;
-  }
-
-  .feature-details .details-text {
-    float: unset;
-    width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-@media (max-width: 992px) {
-    .bx-wrapper a.bx-prev, .bx-wrapper a.bx-prev:hover, .bx-wrapper a.bx-prev:focus {
+    .feature-details .details-image {
+        float: unset;
+        width: 100%;
+        text-align: center;
+    }
+    .feature-details .details-image figure > figcaption {
+        position: static;
+        background: none;
+        font-size: 10px;
+        padding: 1px 3px;
+    }
+    .feature-details .details-text {
+        float: unset;
+        width: 100%;
         padding-left: 0px;
-        background: url(../img/control-prev.png) 0px 15px no-repeat;
-    }
-    .bx-wrapper a.bx-next, .bx-wrapper a.bx-next:hover, .bx-wrapper a.bx-next:focus {
         padding-right: 0px;
-        background: url(../img/control-next.png) 0px 15px no-repeat;
-        padding-left: 15px;
     }
 }
-@media (max-width: 768px) {
-    .bx-wrapper a.bx-prev, .bx-wrapper a.bx-prev:hover, .bx-wrapper a.bx-prev:focus {
-        padding-left: 30px;
-        background: url(../img/control-prev.png) 15px 15px no-repeat;
-    }
-    .bx-wrapper a.bx-next, .bx-wrapper a.bx-next:hover, .bx-wrapper a.bx-next:focus {
-        padding-right: 30px;
-        background: url(../img/control-next.png) 15px 15px no-repeat;
-        padding-left: 15px;
-    }
-}
+
 /* Extra small size since Bootstrap 4 
    We use Bootstrap 3 but this size was added to Bootstrap 4 for a good reason. It adresses phones with portait mode. */
 @media (max-width: 543px) {
@@ -170,6 +160,32 @@
         padding-left: 0;
         padding-right: 0;
     }
+}
+
+/* Override bxSlider's stles */
+@media (max-width: 992px) {
+    .bx-wrapper a.bx-prev, .bx-wrapper a.bx-prev:hover, .bx-wrapper a.bx-prev:focus {
+        padding-left: 0px;
+        background: url(../img/control-prev.png) 0px 15px no-repeat;
+    }
+    .bx-wrapper a.bx-next, .bx-wrapper a.bx-next:hover, .bx-wrapper a.bx-next:focus {
+        padding-right: 0px;
+        background: url(../img/control-next.png) 0px 15px no-repeat;
+        padding-left: 15px;
+    }
+}
+@media (max-width: 767px) {
+    .bx-wrapper a.bx-prev, .bx-wrapper a.bx-prev:hover, .bx-wrapper a.bx-prev:focus {
+        padding-left: 30px;
+        background: url(../img/control-prev.png) 15px 15px no-repeat;
+    }
+    .bx-wrapper a.bx-next, .bx-wrapper a.bx-next:hover, .bx-wrapper a.bx-next:focus {
+        padding-right: 30px;
+        background: url(../img/control-next.png) 15px 15px no-repeat;
+        padding-left: 15px;
+    }
+}
+@media (max-width: 546px){
     .bx-viewport {
         height: auto !important;
     }
