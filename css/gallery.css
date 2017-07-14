@@ -60,18 +60,6 @@
     max-height: 350px;
     display: initial;
 }
-.feature-details .details-image figure {
-    position: relative;
-}
-.feature-details .details-image figure > figcaption {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left:0;
-    background: rgba(120,120,120,0.5);
-    font-size: 10px;
-    padding: 1px 3px;
-}
 .feature-details .details-image.image-slideshow img {
     display: none;
 }

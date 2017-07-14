@@ -21,8 +21,9 @@ $(window).on("orientationchange load resize", function () {
     gallery_resize();
 });
 
-function gallery_slide(s){
-    if($(window).width() > 543)
+
+function gallery_slide(s,dbclick){
+    if($(window).width() > 543 || dbclick)
         slider.goToSlide(s);
 }
 
