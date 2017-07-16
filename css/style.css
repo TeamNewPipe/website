@@ -17,7 +17,18 @@
         padding-right: 60px;
     }
 }
-
+.hidden-xxs {
+    display: none;
+}
+/* Extra small devices (phones portrait) */
+@media (min-width: 544px){
+    .visible-xxs {
+        display: none;
+    }
+    .hidden-xxs {
+        display: block;
+    }
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .text-justify-sm {
@@ -181,20 +192,54 @@ a:hover {
     left: 0;
     z-index: 20;
 }
+.navbar-full-bg {
+    background: #AA1D1D;
+}
+.navbar-collapse {
+    border-top-width: 0px; 
+}
 .navbar-inverse {
     background: none;
     border: none;
 }
 .navbar-inverse .navbar-brand {
-    margin: 8px 0;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     color: white;
     font-size: 36px;
     font-weight: 500;
+    line-height: 28px;
+}
+.navbar-inverse .navbar-brand .navbar-logo {
+    height: 36px;
+    position: absolute;
+    margin-top: calc((36px - 14px) / -2);
+}
+.navbar-full-bg .navbar-inverse .navbar-brand {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    height: auto;
+}
+.navbar-full-bg .navbar-inverse .navbar-brand > span {
+    line-height: 18px;
+    font-size: 18px;
+    margin-top: -2px;
+    margin-bottom: -2px;
+    margin-left: 46px;
+}
+.navbar-full-bg .navbar-inverse .navbar-nav {
+    margin-right: 0;
 }
 .navbar-inverse .navbar-nav > li > a {
     color: white;
+    line-height: 14px;
 }
 .navbar-toggle {
     padding-top: 17px;
@@ -206,14 +251,17 @@ a:hover {
 .navbar-nav {
     margin-right: 20px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 @media (max-width: 767px){
-    .navbar-header > .navbar-toggle, .navbar-header > .navbar-toggle:hover, .navbar-header > .navbar-toggle:focus {
-        border: none;
-        background: none;
+    #navbar {
+        width: 100%;
     }
     .nav.navbar-nav {
         font-size: 20px;
+    }
+    .navbar-brand {
+        margin-left: 15px;
     }
     .nav > li > a {
         padding-top: 20px;
@@ -222,15 +270,17 @@ a:hover {
         padding-left: 0;
         margin-left: 15px;
     }
-    #navbar {
-        width: 100%;
-        float: left;
+    .navbar-header > .navbar-toggle, .navbar-header > .navbar-toggle:hover, .navbar-header > .navbar-toggle:focus {
         border: none;
+        background: none;
     }
     .navbar-collapse {
         -webkit-box-shadow: none;
         box-shadow: none;
         margin-bottom: 15px;
+    }
+    .navbar-full-bg .navbar-collapse {
+        margin-bottom: 24px;
     }
 }
 
@@ -358,6 +408,9 @@ a:hover {
     }
     .features-wrapper .features .description {
         margin-bottom: 10px;
+    }
+    .features-wrapper .features .description {
+        margin: 20px 0 30px 0;
     }
 }
 

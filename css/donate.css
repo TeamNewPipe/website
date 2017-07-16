@@ -1,0 +1,109 @@
+main {
+    background: #f3eff2;
+}
+main h3 {
+    margin-top: 32.5px;
+    margin-bottom: 35px;
+}
+main h3.with-subtitle {
+    margin-bottom: 10px;
+}
+main .row [class^="col"] {
+    margin-bottom: 25px;
+}
+@media (min-width: 768px){
+    main h3.with-subtitle {
+        margin-bottom: 0;
+    }
+    main .row [class^="col"] {
+        padding: 0 30px;
+    }
+}
+
+#keep-running .row [class^="col"] {
+    text-align: justify;
+}
+
+#quotesCarousel h4 {
+    font-style: italic;
+}
+#quotesCarousel .carousel-control.left, .carousel-control.right {
+    background-image: none;
+    color: #333;
+    line-height: -moz;
+    text-align: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#quotesCarousel .carousel-control.left > div, .carousel-control.right > div {
+    width: auto;
+}
+#quotesCarousel .carousel-inner > .item {
+    margin-bottom: 40px;
+}
+#quotesCarousel .carousel-indicators {
+    bottom: 0px;
+    margin-bottom: 10px;
+}
+#quotesCarousel .carousel-indicators .active {
+    background-color: #333;
+}
+#quotesCarousel .carousel-indicators li {
+    border: 1px solid #333;
+}
+
+#donate {
+    background: #d0cdcd;
+    padding-bottom: 15px;
+}
+#donate .heading {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+#donate .donate {
+    margin-bottom: 5px;
+}
+#donate .fa-angle-right:before {
+    vertical-align: middle;
+}
+#donate samp {
+    background: #f3eff2;
+    padding: 3px 5px;
+}
+#donate .row [class^="col"] {
+    padding: 15px;
+    margin-bottom: 0;
+}
+#donate .input-group.active > * {
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+#donate .modal-footer h3 {
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+@media (max-width: 767px){
+    #donate .row form [class^="col"]:nth-child(odd) {
+        padding: 0 7.5px 0 15px;
+        margin-bottom: 15px;
+    }
+    #donate .row form [class^="col"]:nth-child(even) {
+        padding: 0 15px 0 7.5px;
+        margin-bottom: 15px;
+    }
+    #donate .row form [class^="col"]:last-child {
+        padding: 0 15px;
+        margin-bottom: 15px;
+    }
+}
+
+#thanks {
+    background: #a6a4a4;
+    color: white;
+}
+
+.footer .image-puffer {
+    background: #a6a4a4;
+}
