@@ -17,7 +17,18 @@
         padding-right: 60px;
     }
 }
-
+.hidden-xxs {
+    display: none;
+}
+/* Extra small devices (phones portrait) */
+@media (min-width: 544px){
+    .visible-xxs {
+        display: none;
+    }
+    .hidden-xxs {
+        display: block;
+    }
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .text-justify-sm {
@@ -358,6 +369,9 @@ a:hover {
     }
     .features-wrapper .features .description {
         margin-bottom: 10px;
+    }
+    .features-wrapper .features .description {
+        margin: 20px 0 30px 0;
     }
 }
 
