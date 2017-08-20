@@ -477,7 +477,7 @@ strong.extra {
 .footer-copyright {
     margin: 0 0 25px 0;
 }
-.footer, .footer-links, .footer-links a, .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
+.footer, .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
     color: white;
     text-decoration: none;
 }
@@ -494,13 +494,4 @@ strong.extra {
     height: 90px;
     margin:0;
     padding: 0;
-}
-@media (max-width: 767px){
-    .footer-links {
-        line-height: 200%;
-    }
-    .footer-links a {
-        padding-top: 3px;
-        padding-bottom: 3px;
-    }
 }
