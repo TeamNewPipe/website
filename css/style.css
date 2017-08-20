@@ -76,7 +76,9 @@
 a:hover {
     text-decoration: none;
 }
-
+img.border-white {
+    border: 3px solid white;
+}
 
 /* Header */
 
@@ -85,7 +87,7 @@ a:hover {
     color: white;
 }
 .header-background {
-  background: url('../img/bg_large2.jpg') center center;
+  background: url('../img/bg_tiles.jpg') center center;
   position: fixed;
   width: 100%;
   top:0;
@@ -273,7 +275,7 @@ a:hover {
 /* Features */
 
 .features-background {
-  background: url('../img/bg_large2.jpg') center center;
+  background: url('../img/bg_tiles.jpg') center center;
   position: fixed;
   width: 100%;
   top:0;
@@ -366,6 +368,11 @@ a:hover {
     .features-background {
         background-position: center top;
         height: 100vh;
+        background: none;
+    }
+    .features-wrapper {
+        background: url("../img/bg_tiles.jpg");
+        background-attachment: fixed;
     }
     .features-wrapper .features .description {
         margin-bottom: 10px;
@@ -470,7 +477,7 @@ strong.extra {
 .footer-copyright {
     margin: 0 0 25px 0;
 }
-.footer, .footer-links, .footer-links a, .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
+.footer, .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
     color: white;
     text-decoration: none;
 }
@@ -487,13 +494,4 @@ strong.extra {
     height: 90px;
     margin:0;
     padding: 0;
-}
-@media (max-width: 767px){
-    .footer-links {
-        line-height: 200%;
-    }
-    .footer-links a {
-        padding-top: 3px;
-        padding-bottom: 3px;
-    }
 }
