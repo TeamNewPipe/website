@@ -15,12 +15,13 @@ $(document).ready(function(){
         adaptiveHeight: false,
         touchEnabled: ($(window).width() > 544) ? true : false
     });
+
+    slideshow();
 });
 
 $(window).on("orientationchange load resize", function () {
     gallery_resize();
 });
-
 
 function gallery_slide(s,dbclick){
     if($(window).width() > 543 || dbclick)
@@ -63,7 +64,6 @@ $(window).on("load orientationchange resize", function () {
         $(visibleDescription).show();
 });
 
-/* slideshow */
 function slideshow(){
     $(".details-image.image-slideshow").each(function(){
         var currentIndex = 0;
