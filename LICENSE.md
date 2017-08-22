@@ -48,7 +48,7 @@ Copyright Dave Gandy.
 The fonts are licensed under the terms of the SIL Open Font License.
 
 The source code (CSS files etc.) is licensed under the terms of the MIT
-license.fontawesome.io/license/
+license.
 
 The details can be found on the [Font Awesome
 homepage](http://fontawesome.io/license/).
@@ -56,7 +56,7 @@ homepage](http://fontawesome.io/license/).
 You can fetch a copy of these licenses from the "licenses" directory
 inside this repository as well as from the
 [SIL homepage](http://scripts.sil.org/OFL) and the [Open Source Initiative's
-homepage](https://opensource.org/licenses/MIT)
+homepage](https://opensource.org/licenses/MIT).
 
 
 
