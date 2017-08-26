@@ -1,5 +1,5 @@
 .container .container {
-    width:auto;
+    width: auto;
 }
 .container.container-double {
     padding-left: 30px;
@@ -90,8 +90,8 @@ img.border-white {
   background: url('../img/bg_tiles.jpg') center center;
   position: fixed;
   width: 100%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 .header-wrapper h3 {
@@ -106,17 +106,17 @@ img.border-white {
     bottom: -25px;
 }
 .header-wrapper .f-droid-wrapper {
-    -webkit-box-shadow: 0px -1px 8px black, 0px 3px 8px black;
-    -moz-box-shadow: 0px -1px 8px black, 0px 3px 8px black;
-    box-shadow: 0px -1px 8px black, 0px 3px 8px black;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5;
-    border-radius:5px;
+    -webkit-box-shadow: 0 -1px 8px black, 0 3px 8px black;
+    -moz-box-shadow: 0 -1px 8px black, 0 3px 8px black;
+    box-shadow: 0 -1px 8px black, 0 3px 8px black;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
 }
 .header-wrapper .f-droid-wrapper:hover {
-    -webkit-box-shadow: 0px -1px 9px black, 0px 3px 9px black;
-    -moz-box-shadow: 0px -1px 9px black, 0px 3px 9px black;
-    box-shadow: 0px -1px 9px black, 0px 3px 9px black;
+    -webkit-box-shadow: 0 -1px 9px black, 0 3px 9px black;
+    -moz-box-shadow: 0 -1px 9px black, 0 3px 9px black;
+    box-shadow: 0 -1px 9px black, 0 3px 9px black;
 }
 .header-box-wrapper > .container {
     position: relative;
@@ -144,12 +144,13 @@ img.border-white {
     position: absolute;
 }
 .header-box-wrapper .phone > video {
-    height: 553px;
+    height: 554px;
     z-index: 1;
     position: absolute;
     top: -54px;
     left: 7.7px;
     width: calc(328 / 553 * 350px);
+    background: transparent;
 }
 @media (max-width: 767px){
     .header-box-wrapper .pull-left {
@@ -252,7 +253,7 @@ img.border-white {
 
 .text-1 {
     background: #f3eff2;
-    padding-top: 50px;
+    padding-top: 55px;
     padding-bottom: 15px;
 }
 .text-1 a {
@@ -267,8 +268,8 @@ img.border-white {
         padding-top: 55px;
     }
     .text-1-wrapper {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -278,8 +279,8 @@ img.border-white {
   background: url('../img/bg_tiles.jpg') center center;
   position: fixed;
   width: 100%;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   z-index: -2;
 }
 .features-wrapper .heading-wrapper {
@@ -454,7 +455,7 @@ strong.extra {
 @media (min-width: 768px) {
     .news-container {
         border-top: none;
-        padding-top: 0px;
+        padding-top: 0;
     }
     .news-container h3 {
         margin-top: 30px;
@@ -480,6 +481,11 @@ strong.extra {
 .footer, .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
     color: white;
     text-decoration: none;
+    position: relative;
+}
+.footer .copyright a {
+    padding-bottom: 1px;
+    font-weight: bold;
 }
 .footer .image-holder {
     text-align: center;
@@ -492,6 +498,34 @@ strong.extra {
 }
 .footer-logo {
     height: 90px;
-    margin:0;
+    margin: 0;
     padding: 0;
+}
+@media (min-width: 767px){
+    .footer .copyright a {
+        font-weight: normal;
+    }
+    .footer .copyright a:after {
+        content: '';
+        bottom: 0;
+        left: 50%;
+        position: absolute;
+        height: 1px;
+        width: 0;
+        background: white;
+        -webkit-transition: width 0.25s, left 0.25s;
+        -moz-transition: width 0.25s, left 0.25s;
+        -o-transition: width 0.25s, left 0.25s;
+        -ms-transition: width 0.25s, left 0.25s;
+        transition: width 0.25s, left 0.25s;
+    }
+    .footer .copyright:hover a:after {
+        content: '';
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        height: 1px;
+        width: 100%;
+
+    }
 }
