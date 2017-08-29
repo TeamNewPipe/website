@@ -216,6 +216,9 @@ img.border-white {
     background: none;
     border: none;
 }
+.navbar-brand img.border-white {
+    border: 2px solid white;
+}
 .navbar-inverse .navbar-brand {
     padding-top: 24px;
     padding-bottom: 24px;
