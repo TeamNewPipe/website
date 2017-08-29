@@ -7,7 +7,7 @@ function parallax_reset() {
         $('.header-background').css('height', headerHeight + 'px');
     }
     else {
-        $('.header-background').css('height', '100vh');
+        if(headerHeight < $(window).height()) $('.header-background').css('height', '100vh');
     }
     featuresHeight = $('.features-wrapper').outerHeight(true);
     featuresPosition = $('.features-wrapper').position().top;
@@ -35,4 +35,4 @@ $(window).resize(function(e) {
 });
 
 parallax_reset();
-parallax();
+if($(window).width() > 767) parallax();
