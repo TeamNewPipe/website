@@ -44,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../"><img src="../img/logo-white-border.png" class="navbar-logo pull-left" /><span class="pull-left">NewPipe</span></a>
+                <a class="navbar-brand" href="../"><img src="../img/logo.svg" class="navbar-logo pull-left img-circle border-white" /><span class="pull-left">NewPipe</span></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
@@ -65,7 +65,7 @@
             <h3 class="text-center">Want to keep NewPipe running?</h3>
             <div class="row">
                 <div class="col-sm-10 col-sm-push-1 col-md-6 col-md-push-0">
-                    <p class="red"><strong><img src="../img/cup-hot.png" style="width: 1em; vertical-align: 0;">&nbsp;&nbsp;Buy our devs a coffee</strong></p>
+                    <p class="red"><strong><img src="../img/cup-hot.svg" style="width: 1em; vertical-align: 0;">&nbsp;&nbsp;Buy our devs a coffee</strong></p>
                     <p>When you give our devs some snacks during work the will work faster and more efficient. As you know it is impossible to work with an empty stomach.</p>
                 </div>
                 <div class="col-sm-10 col-sm-push-1 col-md-6 col-md-push-0">
@@ -81,16 +81,14 @@
         <div class="container container-double">
             <div class="row">
                 <div class="col-md-8 col-md-push-2">
-                    <div id="quotesCarousel" class="carousel slide" data-interval="6000">
+                    <div id="quotesCarousel" class="carousel slide" data-interval="6000" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#quotesCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#quotesCarousel" data-slide-to="1"></li>
-                            <li data-target="#quotesCarousel" data-slide-to="2"></li>
                         </ol>
                         <!-- Carousel items -->
                         <div class="carousel-inner">
                             <div class="active item text-center">
-                                <h4>Every donation encreases our motivation.</h4>
+                                <h4>Every donation encrease our motivation.</h4>
                                 <p>Tobias Groza</p>
                             </div>
                         </div>
@@ -103,83 +101,50 @@
         </div>
     </div> <!-- Quotes -->
 
-    <!-- Donate -->
-    <div id="donate">
+    <!-- parallax background for header -->
+    <div class="features-background"></div>
+    <div class="phone-background">
         <div class="container container-double">
-            <h3 class="text-center with-subtitle red">How do you want to donate?</h3>
-            <p class="text-center">You can either donate via Bitcoin or via Bountysource.</p>
-            <br><br>
-            <div class="row">
-
-                <div class="col-md-10 col-md-push-1">
-                    <div class="row">
-                        <form>
-                            <div class="col-xs-6 col-sm-3 col-md-2">
-                                <input class="form-control btn btn-default selectAmount" type="button"  value="2$" />
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-2">
-                                <input class="form-control btn btn-default selectAmount" type="button"  value="5$" />
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-2">
-                                <input class="form-control btn btn-default selectAmount" type="button"  value="7$" />
-                            </div>
-                            <div class="col-xs-6 col-sm-3 col-md-2">
-                                <input class="form-control btn btn-default selectAmount" type="button"  value="10$" />
-                            </div>
-                            <div class="clearfix visible-xs visible-sm"></div>
-                            <div class="col-md-1 visible-md visible-lg text-center" style="line-height: 34px; color: white;">
-                                <i class="fa fa-angle-right fa-2x" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-sm-12 col-md-3">
-                                <div class="input-group">
-                                    <input class="form-control selectAmount" type="number" value="15.00" step="0.10" min="1.00" pattern="[0-9]+," id="costumAmount" />
-                                    <div class="input-group-addon">$</div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="clearfix  visible-md-block"></div>
-                <div class="col-sm-6">
-                    <button class="center-block donate" data-toggle="modal" data-target="#donateBitcoinModal">Bitcoin</button>
-                    <p class="text-center">One-time donation</p>
-                </div>
-                <div class="col-sm-6">
-                    <button class="center-block donate">Bountysource</button>
-                    <p class="text-center">Boost an upcoming feature</p>
-                </div>
-                
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="../img/phone_with_logo.png"/>
             </div>
         </div>
+        </div>
+    </div>
+    <div class="features-wrapper">
+        <div id="donate2">
+            <div class="container container-double">
+                <div class="row">
+                    <div class="col-sm-offset-4 col-sm-8  col-xs-12">
+                        <h3 class="with-subtitle">How do you want to donate?</h3>
+                        <p class="subtitle">You can either donate via Bitcoin or via Bountysource.</p>
+                    </div>
+                    <div class="col-sm-offset-4 col-sm-4 col-xs-12">
 
-        <!-- Modal / Popup -->
-        <div id="donateBitcoinModal" class="modal fade" role="dialog">
-            <div class="modal-dialog">
+                            <button class="donate" onclick="$('#bitcoin-donation').toggle()">Bitcoin</button>
+                            <br>
+                            One-time donation
+                        <div id="bitcoin-donation" class="block">
+                            <p>
+                                <a href="bitcoin:16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh">
+                                    <img src="../img/bitcoin_address.png" />
+                                </a>
+                            </p>
+                            <p>Please Donate To Bitcoin Address: </p>
+                            <samp>16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh</samp>
+                        </div>
+                    </div>
+                    <div class="col-sm-4  col-xs-12">
+                        <button class=" donate">Bountysource</button>
+                        <br>
+                        Boost an upcoming feature
+                    </div>
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Donation via Bitcoin</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p class="text-center">
-                            <a href="bitcoin:16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh?amount=0.01">
-                                <img src="https://camo.githubusercontent.com/91b09ab1369d0d9ff64d380cd26444643fd19b00/68747470733a2f2f626974636f696e2e6f72672f696d672f69636f6e732f6c6f676f746f702e737667" />&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/TeamNewPipe/NewPipe/raw/master/assets/16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh.png" />
-                            </a>
-                        </p>
-                        <p>Please Donate To Bitcoin Address: <samp>16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh</samp></p>
-                    </div>
-                    <div class="modal-footer">
-                        <h3 class="pull-left">Thank you!</h3>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
                 </div>
-
             </div>
-        </div> <!-- Modal / Popup -->
-
-    </div> <!-- Donate -->
+        </div>
+    </div>
 
     <!-- Thanks -->
     <div id="thanks">
@@ -199,11 +164,11 @@
     <div class="image-puffer"></div>
     <div class="container">
         <div class="image-holder">
-            <img src="../img/logo-white-border.png" class="footer-logo" />
+            <img src="../img/logo.svg" class="footer-logo img-circle border-white" />
         </div>
         <div class="footer-copyright text-center">
             <p>
-                <span class="copyright">Copyright &copy; NewPipe. All rights reserved. <a href="LICENSE.txt" target="_blank">Learn more.</a></span>
+                <span class="copyright">Copyright &copy; Team NewPipe. Please refer to our <a href="../LICENSE.html" target="_blank">licensing page</a> for more information.</span>
             </p>
         </div>
     </div>
@@ -213,25 +178,12 @@
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 
-<script type="text/javascript">
-/* initialize carousel */
-$("#quotesCarousel").carousel();
+<!-- Script for parallax animations -->
+<script src="../js/parallax_donate.js"></script>
 
-var selectedAmount = 5;
-$(".selectAmount").click(function() {
-    selectedAmount = $(this).val();
-    $(".selectAmount").removeClass("active");
-    $(".input-group.active").removeClass("active");
-    if($(this).is("#costumAmount")) {
-        $(this).parent().addClass("active");
-    }
-    else {
-        $(this).addClass("active");
-    }
-});
-$("#costumAmount").change( function(){
-    selectedAmount = $(this).val();
-});
+<script type="text/javascript">
+    /* initialize carousel */
+    $("#quotesCarousel").carousel();
 </script>
 
 </body>

@@ -1,5 +1,17 @@
+body {
+    position: relative;
+    z-index: -10;
+}
+
+#header {
+    padding: 7.5px 0;
+}
+
 main {
-    background: #f3eff2;
+    pointer-events: none;
+}
+main * {
+    pointer-events: auto;
 }
 main h3 {
     margin-top: 32.5px;
@@ -20,10 +32,18 @@ main .row [class^="col"] {
     }
 }
 
+#keep-running {
+    background: #f3eff2;
+    padding: 30px 0;
+}
 #keep-running .row [class^="col"] {
     text-align: justify;
 }
 
+#quotes {
+    background: #f3eff2;
+    padding: 0 0 30px 0;
+}
 #quotesCarousel h4 {
     font-style: italic;
 }
@@ -53,57 +73,80 @@ main .row [class^="col"] {
     border: 1px solid #333;
 }
 
-#donate {
-    background: #d0cdcd;
-    padding-bottom: 15px;
-}
-#donate .heading {
-    color: white;
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-#donate .donate {
-    margin-bottom: 5px;
-}
-#donate .fa-angle-right:before {
-    vertical-align: middle;
-}
-#donate samp {
-    background: #f3eff2;
-    padding: 3px 5px;
-}
-#donate .row [class^="col"] {
-    padding: 15px;
-    margin-bottom: 0;
-}
-#donate .input-group.active > * {
-    background-color: #e6e6e6;
-    border-color: #adadad;
-}
-#donate .modal-footer h3 {
-    margin-top: 4px;
-    margin-bottom: 0;
-}
-@media (max-width: 767px){
-    #donate .row form [class^="col"]:nth-child(odd) {
-        padding: 0 7.5px 0 15px;
-        margin-bottom: 15px;
-    }
-    #donate .row form [class^="col"]:nth-child(even) {
-        padding: 0 15px 0 7.5px;
-        margin-bottom: 15px;
-    }
-    #donate .row form [class^="col"]:last-child {
-        padding: 0 15px;
-        margin-bottom: 15px;
-    }
-}
 
 #thanks {
-    background: #a6a4a4;
-    color: white;
+    background: #d0cdcd;
+    padding-top: 30px;
 }
-
-.footer .image-puffer {
-    background: #a6a4a4;
+#thanks h3 {
+    font-weight: bold;
+}
+#donate2 {
+    padding: 90px 0;
+    color: white;
+    background: rgba(90, 90, 90, 0.85);
+}
+.phone-background .row [class^="col"] {
+    padding: 0 0 0 15px;
+    margin: 0;
+}
+@media (max-width: 992px){
+    .phone-background .row [class^="col"] {
+        padding: 0;
+        margin: 0;
+    }
+}
+@media (max-width: 767px) {
+    #donate2 {
+        padding: 30px 0;
+    }
+    #donate2 * {
+        text-align: center;
+    }
+    #donate2 .subtitle {
+        margin-bottom: 45px;
+    }
+}
+#bitcoin-donation {
+    display: none;
+    margin: 30px 0 15px 0;
+    position: relative;
+}
+#bitcoin-donation samp {
+    background: #AA1D1D;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+@media (max-width: 767px) {
+    #bitcoin-donation {
+        margin-bottom: 15px;
+    }
+}
+.features-background {
+    -position: absolute;
+    z-index: -8;
+}
+.features-background img {
+    width: 300px;
+    display: none;
+    bottom: 0;
+    position: relative;
+}
+.features-wrapper {
+    z-index: -4;
+    position: relative;
+}
+.phone-background {
+    height: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -2;
+}
+.phone-background, .phone-background * {
+    pointer-events: none;
+}
+.phone-background img {
+    max-width: 230px;
+    display: none;
+    position: relative;
 }

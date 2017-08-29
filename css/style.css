@@ -47,6 +47,17 @@
         text-align: justify;
     }
 }
+.center-block-xs {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px)  {
+    .center-block-xs {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 .row.is-flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -67,7 +78,7 @@
     -ms-flex-direction: column;
     flex-direction: column;
 }
-.red {
+.red, .red:hover {
     color: #cd201f;
 }
 .f-droid {
@@ -108,7 +119,7 @@ a:hover {
     -moz-box-shadow: 0px -1px 8px black, 0px 3px 8px black;
     box-shadow: 0px -1px 8px black, 0px 3px 8px black;
     -moz-border-radius:5px;
-    -webkit-border-radius:5;
+    -webkit-border-radius:5px;
     border-radius:5px;
 }
 .header-wrapper .f-droid-wrapper:hover {
@@ -196,7 +207,7 @@ a:hover {
     background: #AA1D1D;
 }
 .navbar-collapse {
-    border-top-width: 0px; 
+    border-top-width: 0;
 }
 .navbar-inverse {
     background: none;
@@ -262,6 +273,7 @@ a:hover {
     }
     .navbar-brand {
         margin-left: 15px;
+        padding-left: 0;
     }
     .nav > li > a {
         padding-top: 20px;
@@ -304,8 +316,8 @@ a:hover {
         padding-top: 55px;
     }
     .text-1-wrapper {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -403,7 +415,6 @@ a:hover {
 }
 @media (max-width: 767px){
     .features-background {
-        background-position: center top;
         height: 100vh;
     }
     .features-wrapper .features .description {
@@ -486,7 +497,7 @@ strong.extra {
 @media (min-width: 768px) {
     .news-container {
         border-top: none;
-        padding-top: 0px;
+        padding-top: 0;
     }
     .news-container h3 {
         margin-top: 30px;
@@ -512,6 +523,29 @@ strong.extra {
 .footer, .footer-links, .footer-links a, .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
     color: white;
     text-decoration: none;
+    position: relative;
+}
+.footer .copyright a {
+    padding-bottom: 1px;
+}
+.footer .copyright a:after {
+    content: '';
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background: white;
+    transition: width 0.25s, left 0.25s;
+}
+.footer .copyright:hover a:after {
+    content: '';
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+
 }
 .footer .image-holder {
     text-align: center;
