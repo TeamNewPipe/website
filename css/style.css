@@ -434,6 +434,7 @@ strong.extra {
     margin-bottom: -5px;
 }
 body.modal-open {
+    overflow-y: scroll;
     padding-right: 0 !important;
 }
 @media (max-width: 767px){

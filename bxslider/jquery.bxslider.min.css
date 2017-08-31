@@ -7,4 +7,5 @@
 .bx-wrapper .bx-pager.bx-default-pager{position: absolute; margin-top: -60px;bottom:auto;}
 .bxslider {display:flex;}
 .bx-controls-direction .container{position:absolute;top:0;left:0;right:0;height:100%;pointer-events:none;}
+.bx-wrapper .bx-controls-direction a{z-index: 100;}
 @media(min-width: 767px){.bx-wrapper,.bx-viewport{height: auto !important;}.bx-wrapper{width:auto !important;border:0;}}
