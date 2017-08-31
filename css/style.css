@@ -422,6 +422,20 @@ strong.extra {
 .donate:hover, .donate:focus {
     background: #AA1D1D;
 }
+#donateBitcoinModal samp {
+    background: #f3eff2;
+    padding: 3px 5px;
+}
+#donateBitcoinModal .modal-footer h4 {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+#donateBitcoinModal .small {
+    margin-bottom: -5px;
+}
+body.modal-open {
+    padding-right: 0 !important;
+}
 @media (max-width: 767px){
     .text-2 {
         padding-bottom: 30px;
