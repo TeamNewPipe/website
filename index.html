@@ -448,11 +448,35 @@
                     <br>
                 </div>
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
-                    <p><a href="#"><button class="donate">Donate</button></a></p>
+                    <p><a><button class="donate" data-toggle="modal" data-target="#donateBitcoinModal">Donate</button></a></p>
                     <br>
                     <p>Thank you in advance!</p>
                 </div>
-            </div>
+            </div> <!-- donate -->
+            
+            <!-- Modal / Popup -->
+            <div id="donateBitcoinModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Donation via Bitcoin</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-center">
+                                <img src="https://github.com/TeamNewPipe/NewPipe/raw/master/assets/16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh.png" />
+                            </p>
+                            <p>Please donate to this Bitcoin address: <samp>16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh</samp><br><br></p>
+                            <p class="small">We are currently working on a new donation page supporting more donation services.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <h4 class="pull-left">Thank you!</h4>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Modal / Popup -->
 
         </div>
     </div> <!-- second text box -->
