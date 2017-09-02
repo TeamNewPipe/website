@@ -99,12 +99,12 @@ img.border-white {
     color: white;
 }
 .header-background {
-  background: url('../img/bg_tiles.jpg') center center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
+    background: url('../img/bg_tiles.jpg') center center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 .header-wrapper h3 {
     font-weight: 500;
@@ -303,6 +303,29 @@ img.border-white {
     }
 }
 
+/********************
+  CONTENT TEMPLATES
+  ******************/
+
+.background-light-gray {
+    background: #f3eff2;
+}
+
+.background-gray {
+    background: #d0cdcd;
+}
+
+.background-dark-gray {
+
+}
+
+.background-red {
+    background: #cd201f;
+}
+
+.background-dark-red {
+    background: #AA1D1D;
+}
 
 /* TEXT-1 */
 
@@ -335,12 +358,12 @@ img.border-white {
 /* Features */
 
 .features-background {
-  background: url('../img/bg_tiles.jpg') center center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -2;
+    background: url('../img/bg_tiles.jpg') center center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
 }
 .features-wrapper .heading-wrapper {
     background: #f3eff2;
@@ -631,7 +654,6 @@ body.modal-open {
 }
 .footer .image-puffer {
     padding-bottom: 70px;
-    background-color:#d0cdcd;
 }
 .footer-logo {
     height: 90px;
