@@ -1,3 +1,9 @@
+.background-fade {
+    background-image: 
+        linear-gradient(to right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.0) calc((100% - 1170px) / 2)),
+        linear-gradient(to right, rgba(0,0,0,0.0) calc(100% - ((100% - 1170px) / 2)), rgba(0,0,0,0.2) 100% );
+}
+
 /* Sidebar */
 .sidebar {
     display: block;
