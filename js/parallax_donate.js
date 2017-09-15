@@ -2,7 +2,7 @@ var  featuresHeight, featuresPosition, windowHeight, bitcoinHeight;
 
 function parallax_reset() {
     var collapsed;
-    
+
     if($('#bitcoin-donation').css('display') == 'none' ) {
         collapsed = true;
         $('#bitcoin-donation').toggle();
@@ -18,7 +18,6 @@ function parallax_reset() {
     if(collapsed != null) {
         $('#bitcoin-donation').toggle();
     }
-
 }
 
 function parallax() {
@@ -28,8 +27,7 @@ function parallax() {
         $('.features-background').css('height', (featuresHeight + featuresPosition + bitcoinHeight - scrolled) + 'px');
     else
         $('.features-background').css('height', (featuresHeight + featuresPosition + bitcoinHeight + windowHeight - scrolled) + 'px');
-    $('.phone-background').css('top', featuresPosition + bitcoinHeight + featuresHeight/2 - scrolled*0.9 + 'px');
-
+    //$('.phone-background').css('top', featuresPosition + bitcoinHeight + featuresHeight/2 - scrolled*0.9 + 'px');
 }
 
 $(window).scroll(function(e) {
@@ -41,16 +39,16 @@ $(window).scroll(function(e) {
 $(window).resize(function(e) {
     parallax_reset();
     parallax();
-    if($(window).width() < 767){
+    /*if($(window).width() < 767){
         $('.phone-background img').hide();
     }
     else {
         $('.phone-background img').show();
-    }
+    }*/
 });
 
 $(window).on("load", function() {
     parallax_reset();
     parallax();
-    if($(window).width() > 767) $('.phone-background img').show();
+    //if($(window).width() > 767) $('.phone-background img').show();
 });

@@ -150,3 +150,14 @@ main .row [class^="col"] {
     display: none;
     position: relative;
 }
+@media (min-width: 768px) {
+    .phone-background img {
+        display: block;
+        margin-top: 30px;
+    }
+}
+@media (min-width: 992px) {
+    .phone-background img {
+        margin-top: 45px;
+    }
+}
