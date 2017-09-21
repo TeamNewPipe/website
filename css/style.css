@@ -422,6 +422,9 @@ strong.extra {
 .donate:hover, .donate:focus {
     background: #AA1D1D;
 }
+#donateBitcoinModal .modal-content {
+    background: #f3eff2;
+}
 #donateBitcoinModal samp {
     background: #f3eff2;
     padding: 3px 5px;
@@ -491,7 +494,7 @@ body.modal-open {
     min-height: 170px;
 }
 .footer-copyright {
-    margin: 0 0 25px 0;
+    margin: 0 0 30px 0;
 }
 .footer, .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
     color: white;
@@ -522,7 +525,7 @@ body.modal-open {
     }
     .footer .copyright a:after {
         content: '';
-        bottom: 0;
+        bottom: 1px;
         left: 50%;
         position: absolute;
         height: 1px;
@@ -535,12 +538,8 @@ body.modal-open {
         transition: width 0.25s, left 0.25s;
     }
     .footer .copyright:hover a:after {
-        content: '';
-        bottom: 0;
         left: 0;
-        position: absolute;
         height: 1px;
         width: 100%;
-
     }
 }
