@@ -43,6 +43,7 @@ main .row [class^="col"] {
 #quotes {
     background: #f3eff2;
     padding: 0 0 30px 0;
+    display: none;
 }
 #quotesCarousel h4 {
     font-style: italic;
