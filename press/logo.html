@@ -34,7 +34,7 @@
 <body>
 
 <!-- Header -->
-<div class="navbar-wrapper navbar-full-bg navbar-static-top" id="header">
+<div class="navbar-wrapper navbar-full-bg navbar-fixed-top" id="header">
     <div class="container">
         <nav class="navbar navbar-inverse">
             <div class="navbar-header">
@@ -58,40 +58,67 @@
     </div>
 </div> <!-- Header -->
 
-
-
 <div class="site-content height-full-parent background-gray background-fade">
     <div class="container height-full-parent height-full">
         <div class="row is-flex height-full-child">
 
-        
+            
+
             <!-- content -->
             <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3 border-right">
                 <div class="extra-space"></div>
                 <main class="content">
-                    <div id="welcome" class="background-gray">
+                    <div id="welcome">
                         <div class="container">
-                            <h3 class="red">Welcome to NewPipe's press kit!</h3>
-                            <p class="subtitle">This is the right place to find any information about NewPipe.</p>
+                            <h3 class="start">Logos & Icons</h3>
+                            <div class="alert alert-warning" role="alert">
+                                <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> With downloading a media file from this website you agree with using it in terms of the given license.
+                            </div>
+                            <div class="row is-flex media-gallery">
+                                <div class="col-md-6" onclick="viewMediaFile(this)" data-toggle="modal" data-target="#mediaFileView" >
+                                    <div class="media-file">
+                                        <img src="../img/logo.svg" class="image-responsive" onclick="viewMediaFile(this)" />
+                                    </div>
+                                    <div class="media-description">
+                                        <p class="media-name">Team NewPipe logo</p>
+                                        <p class="media-description-text">This is the officeal logo of Team NewPipe.</p>
+                                        <p class="media-download"><strong>Download:</strong> <a href="../img/logo.svg" download="NewPipe_logo.svg">SVG</a> | <a href="../img/logo.svg" download="NewPipe_logo_400x400.png">PNG <span class="size">(400 x 400 pixels)</span></a> | <a href="../img/logo.svg" download="NewPipe_logo_200x200.png">PNG <span class="size">(200 x 200 pixels)</span></a></p>
+                                        <p class="author"><strong>Author:</strong> Christian Schabesberger</p>
+                                        <p class="license"><strong>License:</strong> GPLv3</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" onclick="viewMediaFile(this)" data-toggle="modal" data-target="#mediaFileView" >
+                                    <div class="media-file">
+                                        <img src="../img/logo_app.svg" class="image-responsive" onclick="viewMediaFile(this)" />
+                                        
+                                    </div>
+                                    <div class="media-description" data-toggle="" data-target="">
+                                        <p class="media-name">NewPipe app icon</p>
+                                        <p class="media-description-text">This NewPipe logo used on Android devices and in app stores.</p>
+                                        <p class="media-download"><strong>Download:</strong> <a href="../img/logo.svg" download="">SVG</a> | <a href="../img/logo.svg" download="">PNG <span class="size">(400 x 400 pixels)</span></a> | <a href="../img/logo.svg" download="">PNG <span class="size">(200 x 200 pixels)</span></a></p>
+                                        <p class="author"><strong>Author:</strong> Christian Schabesberger</p>
+                                        <p class="license"><strong>License:</strong> GPLv3</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
                             
-                            <h4>Quick info</h4>
-                            <p>NewPipe is a</p>
                         </div>
                     </div>
                 </main>
             </div> <!-- content -->
-        
+
+            
             <!-- sidebar -->
             <div class="col-xs-12 col-sm-pull-8 col-sm-4 col-md-3 col-md-pull-9 sidebar" id="sidebar" >
                 <div class="extra-space"></div>
                 <div class="list-group">
                     <h3 class="list-group-item active red">Press Kit</h3>
-                    <a href="#" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Factsheet</a>
+                    <a href="index.html" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Factsheet</a>
                     <a href="#" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Links & References</a>
                     <span class="list-group-item active"><span class="icon"></span>Media</span>
-                    <a href="logo.html" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Logos & Icons</a>
+                    <a href="logo.html" class="list-group-item red"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Logos & Icons</a>
                     <a href="screenshots.html" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Screenshots</a>
-                    <a href="logo.html" class="list-group-item active"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Contact us!</a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -111,12 +138,33 @@
                 <div class="image-puffer"></div>
             </div> <!-- sidebar -->
 
-
         </div>
     </div>
 </div>
+    <!--<div id="mediaGallery" class="modal-dialog modal-lg media-gallery-detail" class="modal fade" role="dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Donation via Bitcoin</h4>
+            </div>
+            <div class="modal-body">
+                <p class="text-center">
+                    <img src="https://github.com/TeamNewPipe/NewPipe/raw/master/assets/16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh.png" />
+                </p>
+                <p>Please donate to this Bitcoin address: <samp>16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh</samp><br><br></p>
+                <p class="small">We are currently working on a new donation page supporting more donation services.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+</div> <!-- Modal / Popup -->
 
-
+<!-- Modal -->
+<div id="mediaFileView" class="modal fade" role="dialog" data-dismiss="modal">
+    <img id="mediaFullScreen" src="../img/logo.svg" class="img-full-width" data-dismiss="modal"/>
+    <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" ></i>
+</div> <!-- Modal -->
 
 <!-- footer -->
 <footer class="footer">
@@ -136,6 +184,7 @@
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/mediabiew.js"></script>
 
 </body>
 </html>

@@ -200,12 +200,15 @@ img.border-white {
 .navbar {
     margin-bottom: 0;
 }
-.navbar-wrapper {
+.navbar-wrapper ~ .navbar-static-top {
     position: relative;
     top: 0;
     right: 0;
     left: 0;
     z-index: 20;
+}
+.modal-open .navbar-fixed-top .navbar-toggle {
+    visibility: hidden;
 }
 .navbar-full-bg {
     background: #AA1D1D;
@@ -313,6 +316,7 @@ img.border-white {
 
 .background-gray {
     background: #d0cdcd;
+    color: #555;
 }
 
 .background-dark-gray {
