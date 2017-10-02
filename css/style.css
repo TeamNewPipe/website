@@ -207,7 +207,7 @@ img.border-white {
     left: 0;
     z-index: 20;
 }
-.modal-open .navbar-fixed-top .navbar-toggle {
+.modal-open /*.navbar-fixed-top*/ .navbar-toggle {
     visibility: hidden;
 }
 .navbar-full-bg {

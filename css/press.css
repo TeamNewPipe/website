@@ -94,6 +94,7 @@ main.content {
 }
 .media-gallery > div {
     border-bottom: 2px solid white;
+    border-bottom: 1px solid #f3eff2;
     padding: 15px 0;
     width: 100%;
 }
@@ -106,8 +107,9 @@ main.content {
 @media (min-width: 767px) {
     .media-gallery > .col-md-6 {
         border-right: 2px solid white;
-    padding: 25px 15px 15px 15px;
-    width: 50%;
+        border-right: 1px solid #f3eff2;
+        padding: 25px 15px 15px 15px;
+        width: 50%;
     }
     .media-gallery > .col-md-4 {
         width: calc(100% / 3);
@@ -147,13 +149,15 @@ main.content {
     }
 }
 .img-full-width {
-    width: 85%;
     max-width: 85vw;
     max-height: 85vh;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) !important;
+}
+.img-full-width.icon-image {
+    width: 85%;
 }
 
 .media-download .size {
