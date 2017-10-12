@@ -80,6 +80,7 @@ img.border-white {
     border: 3px solid white;
 }
 
+
 /* Header */
 
 .header-wrapper {
@@ -273,6 +274,7 @@ img.border-white {
     }
 }
 
+
 /* Features */
 
 .features-background {
@@ -293,7 +295,7 @@ img.border-white {
     color: #cd201f;
 }
 .features-wrapper .features {
-    background: rgba(126, 126, 126, 0.85);
+    background: rgba(115, 115, 115, 0.88);
     color: white;
 }
 .features-wrapper .features .description {
@@ -307,21 +309,38 @@ img.border-white {
     left:0;
     margin-right: 20px;
     padding: 0;
-    height: 4em;
-    width: 4em;
-    line-height: 4em;
+    height: 64px;
+    width: 64px;
+    line-height: 64px;
     text-align: center;
     background: white;
     border-radius: 8px;
     -webkit-box-shadow: 2px 2px 6px 4px rgba(0,0,0,0.6);
     -moz-box-shadow: 2px 2px 6px 4px rgba(0,0,0,0.6);
     box-shadow: 2px 2px 6px 4px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+.features-wrapper .features .icon .fa-2x, .features-wrapper .features .icon .glyphicon {
+    font-size: 31px;
+}
+.features-wrapper .features .icon .text-center {
+    font-family: Arial;
+    vertical-align: -5px;
 }
 .features-wrapper .features .icon p, .features-wrapper .features .icon span {
     padding: 0;
     margin: 0;
 }
-.features-wrapper .features .icon i, .features-wrapper .features .icon img {
+.features-wrapper .features .icon .cross-out:nth-child(odd) {
+    width: calc(91px); /* sqrt of (64px pow 4), Pythagoras' theorem */
+    transform: rotate(315deg);
+    transform-origin: 0% 0%;
+    height: 4px;
+    background: #cd201f;
+    position: absolute;
+    bottom: -2px;
+}
+.features-wrapper .features .icon i, .features-wrapper .features .icon img, .features-wrapper .features .icon .glyphicon {
     color: #cd201f;
     vertical-align: middle;
     text-align: center;
@@ -338,6 +357,9 @@ img.border-white {
     -webkit-text-stroke: 1.5px white;
     -webkit-font-smoothing: antialiased;
 }
+.fa-money {
+    vertical-align: 2px;
+}
 /* .fa-eye icon has more padding on the  top as on the bottom of it and is smaller than the other icons */
 .features-wrapper .features .icon .fa-eye-wrapper {
     margin-top: -2px;
@@ -347,7 +369,7 @@ img.border-white {
 }
 .features-wrapper .features .text {
     float: left;
-    width: 75%;
+    width: calc(100% - 64px - 20px);
 }
 .features-wrapper .features .text p {
     /* pull text to top of the parent div: 1.5 as factor needed because font-size: 150% (see .features-wrapper .features .text strong) */
@@ -380,6 +402,27 @@ img.border-white {
     }
     .features-wrapper .features .description {
         margin: 20px 0 30px 0;
+    }
+}
+/* Extra small size since Bootstrap 4 
+   We use Bootstrap 3 but this size was added to Bootstrap 4 for a good reason. It adresses phones with portait mode. */
+@media (max-width: 543px) {
+    .features-wrapper .features .icon {
+        margin-right: 15px;
+    }
+    .features-wrapper .features .text {
+        float: left;
+        width: calc(100% - 64px - 15px);
+    }
+    .features-wrapper .features .text > p {
+        line-height: 64px;
+        margin: 0;
+    }
+    .features-wrapper .features .text > p.description-text {
+        line-height: 1.42857143;
+        padding-top: 25px;
+        display: none;
+        text-align: left;
     }
 }
 

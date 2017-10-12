@@ -14,6 +14,7 @@
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- TODO: add local JQuery if JQuery is not defined -->
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -138,7 +139,7 @@
 
                                 <div class="container-fluid">
 
-                                    <p class="description">The simple reasons why you will like the app.<span class="visible-xxs"><br>Click them to get more infos!</span></p>
+                                    <p class="description">Top reasons users love NewPipe:<span class="visible-xxs"><br>Click them to get more infos!</span></p>
 
                                     <div class="row">
                                         <!--<a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(1,true)">-->
@@ -198,24 +199,10 @@
                                                 </div>
                                                 <div class="text">
                                                     <p><strong>Subscriptions</strong></p>
-                                                    <p class="description-text" id="subscribtions-des">Never miss videos from your <br class="hidden-xxs">favourite channels again.</p>
+                                                    <p class="description-text" id="subscribtions-des">Never miss new content <br class="hidden-xxs">from your favourite channels.</p>
                                                 </div>
                                             </div>
                                         </a>
-                                        <a class="change-slide" onclick="gallery_slide(5,false)" ondblclick="gallery_slide(5,true)">
-                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#open-src-des')">
-                                                <div class="icon">
-                                                    <p class="fa-eye-wrapper"><i class="fa fa-eye fa-2x" aria-hidden="true" style="font-size: 2.5em"></i></p>
-                                                </div>
-                                                <div class="text">
-                                                    <p><strong>Open Source</strong></p>
-                                                    <p class="description-text" id="open-src-des">How it works is not a secret <br class="hidden-xxs">go and check it on GitHub.</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="row">
                                         <!--<a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(1,true)">-->
                                             <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#history-des')">
                                                 <div class="icon">
@@ -227,14 +214,26 @@
                                                 </div>
                                             </div>
                                         <!--</a>-->
-                                        <a class="change-slide" onclick="gallery_slide(5,false)" ondblclick="gallery_slide(5,true)">
+                                    </div>
+
+                                    <div class="row">
+                                        <a class="change-slide" onclick="gallery_slide(8,false)" ondblclick="gallery_slide(5,true)">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#open-src-des')">
+                                                <div class="icon">
+                                                    <p class="fa-eye-wrapper"><i class="fa fa-eye fa-2x" aria-hidden="true" style="font-size: 2.5em"></i></p>
+                                                </div>
+                                                <div class="text">
+                                                    <p><strong>Open Source</strong></p>
+                                                    <p class="description-text" id="open-src-des">How it works is not a secret.<br class="hidden-xxs">Go and check it on GitHub.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="change-slide" onclick="gallery_slide(8,false)" ondblclick="gallery_slide(5,true)">
                                             <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#free-des')">
                                                 <div class="icon">
                                                     <p>
-                                                        <span class="fa-stack fa-lg">
-                                                            <i class="fa fa-ban fa-stack-2x fa-icon-light" aria-hidden="true"></i>
-                                                            <i class="fa fa-usd fa-stack-1x" aria-hidden="true"></i>
-                                                        </span>
+                                                        <div class="cross-out"></div>
+                                                        <i class="glyphicon glyphicon-usd fa-2x" aria-hidden="true"></i>
                                                     </p>
                                                 </div>
                                                 <div class="text">
@@ -335,30 +334,6 @@
                             </div>
                         </div>
                     </div> <!-- gallery-element-wrapper -->
-                    
-                    <div class="gallery-element-wrapper">
-                        <div class="gallery-element details-wrapper">
-                            <div class="feature-details container">
-                                <div class="container">
-                                    <div class="details-flex">
-                                        <div class="details-image">
-                                            <a href="https://github.com/TeamNewPipe/NewPipe/" target="_blank">
-                                                <img src="img/GitHub.png" class="banner" />
-                                            </a>
-                                        </div>
-                                        <div class="details-text container">
-                                            <h3>Open Source</h3>
-                                            <p class="subtitle">How it works is not a secret</p>
-                                            <br>
-                                            <p class="text-justify">NewPipe does not use the YouTube API nor the Google Play Services. This is one reason why the app is free of proprietary software.</p>
-                                            <p class="text-justify">You don't believe us? NewPipe's full source code is available on GitHub. Go and check it out. The app is developed by a small but growing community. If you have found an issue (we don't hope so) or want to help us develop new features, get in touch with us.</p>
-                                            <p>Our awesome community and your donations keep NewPipe free.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- gallery-element-wrapper -->
 
                     <div class="gallery-element-wrapper">
                         <div class="gallery-element details-wrapper">
@@ -417,6 +392,30 @@
                                             <br>
                                             <p class="text-justify">Watch videos with NewPipe whenever you want: at day or at night.</p>
                                             <p class="text-justify">To increase your comfort at night, NewPipe has a dark mode. Go to settings and easily turn the dark mode on. It's fancy and good for your eyes. You want it still darker? Then you must try our black theme!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+
+                    <div class="gallery-element-wrapper">
+                        <div class="gallery-element details-wrapper">
+                            <div class="feature-details container">
+                                <div class="container">
+                                    <div class="details-flex">
+                                        <div class="details-image">
+                                            <a href="https://github.com/TeamNewPipe/NewPipe/" target="_blank">
+                                                <img src="img/GitHub.png" class="banner" />
+                                            </a>
+                                        </div>
+                                        <div class="details-text container">
+                                            <h3>Open Source</h3>
+                                            <p class="subtitle">How it works is not a secret</p>
+                                            <br>
+                                            <p class="text-justify">NewPipe does not use the YouTube API nor the Google Play Services. This is one reason why the app is free of proprietary software.</p>
+                                            <p class="text-justify">You don't believe us? NewPipe's full source code is available on GitHub. Go and check it out. The app is developed by a small but growing community. If you have found an issue (we don't hope so) or want to help us develop new features, get in touch with us.</p>
+                                            <p>Our awesome community and your donations keep NewPipe free.</p>
                                         </div>
                                     </div>
                                 </div>
