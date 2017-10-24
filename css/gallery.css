@@ -1,5 +1,5 @@
 .list-box {
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     width: auto;
 }
 
@@ -25,10 +25,10 @@
     padding-left: 30px;
     padding-right: 30px;
     background: #858585;
-    background: -webkit-linear-gradient(left, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,08) -webkit-calc(100% - 30px));
-    background: -o-linear-gradient(right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
-    background: -moz-linear-gradient(right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
-    background: linear-gradient(to right, rgba(85,85,85,0.8) 30px, rgba(170,170,170,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
+    background: -webkit-linear-gradient(left, rgba(85,85,85,0.8) 30px, rgba(150,150,150,0.8), rgba(85,85,85,08) -webkit-calc(100% - 30px));
+    background: -o-linear-gradient(right, rgba(85,85,85,0.8) 30px, rgba(150,150,160,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
+    background: -moz-linear-gradient(right, rgba(85,85,85,0.8) 30px, rgba(150,150,150,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
+    background: linear-gradient(to right, rgba(85,85,85,0.8) 30px, rgba(150,150,150,0.8), rgba(85,85,85,0.8) calc(100% - 30px));
 }
 .gallery-element.gallery-parallax-background {
     background: transparent;
@@ -123,23 +123,6 @@
 /* Extra small size since Bootstrap 4 
    We use Bootstrap 3 but this size was added to Bootstrap 4 for a good reason. It adresses phones with portait mode. */
 @media (max-width: 543px) {
-    .features-wrapper .features .icon {
-        margin-right: 15px;
-    }
-    .features-wrapper .features .text {
-        float: left;
-        width: calc(100% - 4em - 15px);
-    }
-    .features-wrapper .features .text > p {
-        line-height: 4em;
-        margin: 0;
-    }
-    .features-wrapper .features .text > p.description-text {
-        line-height: 1.42857143;
-        padding-top: 25px;
-        display: none;
-        text-align: left;
-    }
     .gallery-element {
         padding-left: 30px;
         padding-right: 30px;

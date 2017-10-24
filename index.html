@@ -14,6 +14,7 @@
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <!-- TODO: add local JQuery if JQuery is not defined -->
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -138,20 +139,20 @@
 
                                 <div class="container-fluid">
 
-                                    <p class="description">The simple reasons why you will like the app.<span class="visible-xxs"><br>Click them to get more infos!</span></p>
+                                    <p class="description">Top reasons users love NewPipe:<span class="visible-xxs"><br>Click them to get more infos!</span></p>
 
                                     <div class="row">
-                                        <a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(1,true)">
+                                        <!--<a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(1,true)">-->
                                             <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#ytb-videos-des')">
                                                 <div class="icon">
                                                     <p><i class="fa fa-play fa-2x" aria-hidden="true"></i></p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>YouTube videos</strong></p>
+                                                    <p><strong>YouTube Videos</strong></p>
                                                     <p class="description-text" id="ytb-videos-des">Simple way to watch videos <br class="hidden-xxs">from the site and use its features.</p>
                                                 </div>
                                             </div>
-                                        </a>
+                                        <!--</a>-->
                                         <a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(1,true)">
                                             <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#ext-privacy-des')">
                                                 <div class="icon">
@@ -172,79 +173,72 @@
                                                     <p><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>Background player</strong></p>
+                                                    <p><strong>Background Player</strong></p>
                                                     <p class="description-text" id="bg-player-des">Use other apps with no hassle <br class="hidden-xxs">while it plays your favourite songs.</p>
                                                 </div>
                                             </div>
                                         </a>
-                                        <!--<a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(2,true)">-->
-                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#ad-free-des')">
-                                                <div class="icon">
-                                                    <p>
-                                                        <span class="fa-stack fa-lg">
-                                                            <i class="fa fa-ban fa-stack-2x fa-icon-light" aria-hidden="true"></i>
-                                                            <i class="fa fa-stack-1x text-center" aria-hidden="true">ads</i>
-                                                        </span>
-                                                    </p>
-                                                </div>
-                                                <div class="text">
-                                                    <p><strong>Ad-Free</strong></p>
-                                                    <p class="description-text" id="ad-free-des">No anoying ads <br class="hidden-xxs">watch only what you want.</p>
-                                                </div>
-                                            </div>
-                                        <!--</a>-->
-                                    </div>
-
-                                    <div class="row">
                                         <a class="change-slide" onclick="gallery_slide(3,false)" ondblclick="gallery_slide(3,true)">
                                             <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#download-des')">
                                                 <div class="icon">
                                                     <p><i class="fa fa-download fa-2x" aria-hidden="true"></i></p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>Download media</strong></p>
-                                                    <p class="description-text" id="download-des">Simply download YouTube <br class="hidden-xxs">videos or audios to your device.</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="change-slide" onclick="gallery_slide(4,false)" ondblclick="gallery_slide(4,true)">
-                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#open-src-des')">
-                                                <div class="icon">
-                                                    <p class="fa-eye-wrapper"><i class="fa fa-eye fa-2x" aria-hidden="true" style="font-size: 2.5em"></i></p>
-                                                </div>
-                                                <div class="text">
-                                                    <p><strong>Open Source</strong></p>
-                                                    <p class="description-text" id="open-src-des">How it works it not a secret <br class="hidden-xxs">go and check it on GitHub.</p>
+                                                    <p><strong>Download Media</strong></p>
+                                                    <p class="description-text" id="download-des">Simply download YouTube <br class="hidden-xxs">videos or audio to your device.</p>
                                                 </div>
                                             </div>
                                         </a>
                                     </div>
 
                                     <div class="row">
-                                        <!--<a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(1,true)">-->
-                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#leightweight-des')">
+                                        <a class="change-slide" onclick="gallery_slide(4,false)" ondblclick="gallery_slide(4,true)">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#subscribtions-des')">
                                                 <div class="icon">
-                                                    <p><img src="img/feather.png" class="fa fa-lg" /></p>
+                                                    <p><i class="fa fa-rss fa-2x" aria-hidden="true"></i></p>
                                                 </div>
                                                 <div class="text">
-                                                    <p><strong>Lightweight</strong></p>
-                                                    <p class="description-text" id="leightweight-des">Saving memory and battery life.</p>
+                                                    <p><strong>Subscriptions</strong></p>
+                                                    <p class="description-text" id="subscribtions-des">Never miss new content <br class="hidden-xxs">from your favourite channels.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <!--<a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(1,true)">-->
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#history-des')">
+                                                <div class="icon">
+                                                    <p><i class="fa fa-history fa-2x" aria-hidden="true"></i></p>
+                                                </div>
+                                                <div class="text">
+                                                    <p><strong>History</strong></p>
+                                                    <p class="description-text" id="history-des">Go back in time and <br class="hidden-xxs">enjoy your favourites again.</p>
                                                 </div>
                                             </div>
                                         <!--</a>-->
-                                        <a class="change-slide" onclick="gallery_slide(4,false)" ondblclick="gallery_slide(4,true)">
+                                    </div>
+
+                                    <div class="row">
+                                        <a class="change-slide" onclick="gallery_slide(8,false)" ondblclick="gallery_slide(5,true)">
+                                            <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#open-src-des')">
+                                                <div class="icon">
+                                                    <p class="fa-eye-wrapper"><i class="fa fa-eye fa-2x" aria-hidden="true" style="font-size: 2.5em"></i></p>
+                                                </div>
+                                                <div class="text">
+                                                    <p><strong>Open Source</strong></p>
+                                                    <p class="description-text" id="open-src-des">How it works is not a secret.<br class="hidden-xxs">Go and check it on GitHub.</p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a class="change-slide" onclick="gallery_slide(8,false)" ondblclick="gallery_slide(5,true)">
                                             <div class="col-sm-6 col-xs-12" onclick="collapseDescription('#free-des')">
                                                 <div class="icon">
                                                     <p>
-                                                        <span class="fa-stack fa-lg">
-                                                            <i class="fa fa-ban fa-stack-2x fa-icon-light" aria-hidden="true"></i>
-                                                            <i class="fa fa-usd fa-stack-1x" aria-hidden="true"></i>
-                                                        </span>
+                                                        <div class="cross-out"></div>
+                                                        <i class="glyphicon glyphicon-usd fa-2x" aria-hidden="true"></i>
                                                     </p>
                                                 </div>
                                                 <div class="text">
                                                     <p><strong>Free</strong></p>
-                                                    <p class="description-text" id="free-des">You get the whole thing for free <br class="hidden-xxs">no in-app purchases either.</p>
+                                                    <p class="description-text" id="free-des">You get the whole thing for free. <br class="hidden-xxs">No in-app purchases or adds either.</p>
                                                 </div>
                                             </div>
                                         </a>
@@ -268,7 +262,7 @@
                                             <h3>Extended Privacy</h3>
                                             <p class="subtitle">NewPipe does not use the YouTube API nor the Google Play Services.</p>
                                             <br>
-                                            <p>This means that we do not share any data (except the video URL) with YouTube or Google. Also, the app does not save any data from you or use services that analyze your usage behavior.</p>
+                                            <p class="text-justify">This means that we do not share any data (except the video URL) with YouTube or Google. Also, the app does not save any data from you or use services that analyse your usage behaviour.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -285,11 +279,11 @@
                                             <img src="img/screenshot_4.png"/>
                                         </div>
                                         <div class="details-text container">
-                                            <h3>Background player</h3>
+                                            <h3>Background Player</h3>
                                             <p class="subtitle">Use other apps with no hassle while NewPipe plays your favourite songs.</p>
                                             <br>
-                                            <p>We have added a background player to NewPipe. You can do whatever you want - your music keeps playing.</p>
-                                            <p>And even better for you: we only download the audio, so you don't waste data volume.</p>
+                                            <p class="text-justify">We have added a background player to NewPipe. You can do whatever you want — your music keeps playing.</p>
+                                            <p class="text-justify">And even better for you: we only download the audio, so you don't waste data volume.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -303,15 +297,101 @@
                                 <div class="container">
                                     <div class="details-flex">
                                         <div class="details-image image-slideshow">
-                                            <img src="img/screenshot_7.png"/>
+                                            <img src="img/screenshot_7.png" class="active" />
                                             <img src="img/screenshot_8.png"/>
                                         </div>
                                         <div class="details-text container">
-                                            <h3>Download media</h3>
-                                            <p class="subtitle">simply download YouTube videos or audios to your device</p>
+                                            <h3>Download Media</h3>
+                                            <p class="subtitle">Simply download YouTube videos or audio to your device</p>
                                             <br>
-                                            <p class="text-justify">With NewPipe you can not only watch YouTube videos, but also download them. The app offers different file formats and resolutions for the audios and videos.</p>
-                                            <p>The download center provides you a good overview of your downloads and their progress.</p>
+                                            <p class="text-justify">With NewPipe you can not only watch YouTube videos, but also download them. The app offers different file formats and resolutions for the audio and videos.</p>
+                                            <p class="text-justify">The download centre provides you a good overview of your downloads and their progress.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+
+                    <div class="gallery-element-wrapper">
+                        <div class="gallery-element details-wrapper">
+                            <div class="feature-details container">
+                                <div class="container">
+                                    <div class="details-flex">
+                                        <div class="details-image image-slideshow">
+                                            <img src="img/screenshot_6.png" class="active" />
+                                            <img src="img/screenshot_12.png"/>
+                                        </div>
+                                        <div class="details-text container">
+                                            <h3>Subscriptions</h3>
+                                            <p class="subtitle">Never miss videos from your favourite channels again.</p>
+                                            <br>
+                                            <p class="text-justify">You can now follow channels with just one click. Keep up to date with your favourite channels. With just a few clicks we'll assemble all the news for you.</p>
+                                            <p class="text-justify">We save your subscriptions locally. That means you can use this feature - just like the whole app - without a Google Account.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+
+                    <div class="gallery-element-wrapper">
+                        <div class="gallery-element details-wrapper">
+                            <div class="feature-details container">
+                                <div class="container">
+                                    <div class="details-flex">
+                                        <div class="details-image">
+                                            <img src="img/screenshot_5.png"/>
+                                        </div>
+                                        <div class="details-text container">
+                                            <h3>Video Pop-Up</h3>
+                                            <p class="subtitle">See your videos everywhere</p>
+                                            <br>
+                                            <p class="text-justify">Want to check your emails while watching a video? No problem!</p>
+                                            <p class="text-justify">With the pop-up mode you can do whatever you want and keep watching videos. The pop-up is movable and resizable — it won't be in your way. We promise.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+
+                    <div class="gallery-element-wrapper">
+                        <div class="gallery-element details-wrapper">
+                            <div class="feature-details container">
+                                <div class="container">
+                                    <div class="details-flex">
+                                        <div class="details-image">
+                                            <img src="img/screenshot_2.png"/>
+                                        </div>
+                                        <div class="details-text container">
+                                            <h3>4K Support</h3>
+                                            <p class="subtitle">Enjoy your videos in brilliant quality</p>
+                                            <br>
+                                            <p class="text-justify">You have one of these super high-resolution phones? Good for you! With NewPipe you can enjoy videos with up to 4K and 60fps and get the best out of your hardware.</p>
+                                            <p class="text-justify">You just have a normal phone? No problem! NewPipe offers you tons of resolutions and codecs. Choose the one that fits to your device and save data volume.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- gallery-element-wrapper -->
+
+                    <div class="gallery-element-wrapper">
+                        <div class="gallery-element details-wrapper">
+                            <div class="feature-details container">
+                                <div class="container">
+                                    <div class="details-flex">
+                                        <div class="details-image image-slideshow">
+                                            <img src="img/screenshot_2.png" class="active" />
+                                            <img src="img/screenshot_3.png" />
+                                        </div>
+                                        <div class="details-text container">
+                                            <h3>Multiple Themes</h3>
+                                            <p class="subtitle">Customize NewPipe</p>
+                                            <br>
+                                            <p class="text-justify">Watch videos with NewPipe whenever you want: at day or at night.</p>
+                                            <p class="text-justify">To increase your comfort at night, NewPipe has a dark mode. Go to settings and easily turn the dark mode on. It's fancy and good for your eyes. You want it still darker? Then you must try our black theme!</p>
                                         </div>
                                     </div>
                                 </div>
@@ -331,75 +411,11 @@
                                         </div>
                                         <div class="details-text container">
                                             <h3>Open Source</h3>
-                                            <p class="subtitle">How it works is not a secret.</p>
+                                            <p class="subtitle">How it works is not a secret</p>
                                             <br>
-                                            <p>NewPipe does not use the YouTube API nor the Google Play Services. This is one reason why the app is free of proprietary software.</p>
-                                            <p>You don't believe us? NewPipe's full source code is avalible on GitHub. Go and check it out. The app is developed by a small but growing community. If you have found an issue (we don't hope so) or want to help us developing new features, get in touch with us.</p>
+                                            <p class="text-justify">NewPipe does not use the YouTube API nor the Google Play Services. This is one reason why the app is free of proprietary software.</p>
+                                            <p class="text-justify">You don't believe us? NewPipe's full source code is available on GitHub. Go and check it out. The app is developed by a small but growing community. If you have found an issue (we don't hope so) or want to help us develop new features, get in touch with us.</p>
                                             <p>Our awesome community and your donations keep NewPipe free.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- gallery-element-wrapper -->
-
-                    <div class="gallery-element-wrapper">
-                        <div class="gallery-element details-wrapper">
-                            <div class="feature-details container">
-                                <div class="container">
-                                    <div class="details-flex">
-                                        <div class="details-image image-slideshow">
-                                            <img src="img/screenshot_2.png" class="active" />
-                                            <img src="img/screenshot_3.png" />
-                                        </div>
-                                        <div class="details-text container">
-                                            <h3>Dark mode</h3>
-                                            <p class="subtitle">costumize NewPipe</p>
-                                            <br>
-                                            <p class="text-justify">Watch videos with NewPipe whenever you want: at day or at night.</p>
-                                            <p>To increase your comfort at night, NewPipe has a dark mode. Go to settings and easily turn the dark mode on. It's fancy and good for your eyes.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- gallery-element-wrapper -->
-
-                    <div class="gallery-element-wrapper">
-                        <div class="gallery-element details-wrapper">
-                            <div class="feature-details container">
-                                <div class="container">
-                                    <div class="details-flex">
-                                        <div class="details-image">
-                                            <img src="img/screenshot_5.png"/>
-                                        </div>
-                                        <div class="details-text container">
-                                            <h3>Video popup</h3>
-                                            <p class="subtitle">see your videos everywhere</p>
-                                            <br>
-                                            <p class="text-justify">Want to check your emails while wathing a video? No problem!</p>
-                                            <p>With the popup mode you can do whatever you want and keep watching videos. The popup is move- and rezisable - it won't be in your way. We promise.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- gallery-element-wrapper -->
-
-                    <div class="gallery-element-wrapper">
-                        <div class="gallery-element details-wrapper">
-                            <div class="feature-details container">
-                                <div class="container">
-                                    <div class="details-flex">
-                                        <div class="details-image">
-                                            <img src="img/screenshot_2.png"/>
-                                        </div>
-                                        <div class="details-text container">
-                                            <h3>4k support</h3>
-                                            <p class="subtitle">enjoy your videos in brilliant quality</p>
-                                            <br>
-                                            <p class="text-justify">You have one of these super high-resulution phones? Good for you! With NewPipe you can enjoy videos with up to 4k and 60fps and get the best out of your hardware.</p>
-                                            <p>You just have a normal phone? No problem! NewPipe offers you tons of resolutions and codecs. Chosse the one that fits to your device and save data volume.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -444,7 +460,7 @@
                     <br>
                 </div>
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-justify">
-                    <p>We hope so! But don't forget, a lot of time and energy goes into this and we share it with you. We would like to offer you some ways you can support our work by donations. So we can get some <strong class="red">extra snacks during work!</strong></p>
+                    <p>We hope so! But don't forget, a lot of time and energy goes into this, and we share it with you. We would like to offer you some ways you can support our work by donations. So we can get some <strong class="red">extra snacks during work!</strong></p>
                     <br>
                 </div>
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
@@ -452,7 +468,31 @@
                     <br>
                     <p>Thank you in advance!</p>
                 </div>
-            </div>
+            </div> <!-- donate -->
+            
+            <!-- Modal / Popup -->
+            <div id="donateBitcoinModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Donation via Bitcoin</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-center">
+                                <img src="https://github.com/TeamNewPipe/NewPipe/raw/master/assets/16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh.png" />
+                            </p>
+                            <p>Please donate to this Bitcoin address: <samp>16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh</samp><br><br></p>
+                            <p class="small">We are currently working on a new donation page supporting more donation services.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <h4 class="pull-left">Thank you!</h4>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Modal / Popup -->
 
         </div>
     </div> <!-- second text box -->
