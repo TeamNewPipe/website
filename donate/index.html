@@ -116,31 +116,33 @@
         <div id="donate">
             <div class="container container-double">
                 <div class="row">
-                    <div class="col-sm-offset-4 col-sm-4  col-xs-12">
-                        <h3 class="with-subtitle text-center">What are you waiting for?</h3>
-                        <p class="subtitle text-center">Help us to bring NewPipe forward.</p>
-                    </div>
-                    <div class="col-sm-offset-4 col-sm-4 col-xs-12 text-center">
-
-                            <button class="donate" onclick="$('#bitcoin-donation').toggle()">Donate</button>
-                            <div class="clearfix"></div>
-                            <!--One-time donation-->
-                        <div id="bitcoin-donation" class="block">
-                            <p>
-                                <a href="bitcoin:16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh">
-                                    <img src="../img/bitcoin_address.png" />
-                                </a>
-                            </p>
-                            <p>Please Donate To Bitcoin Address: </p>
-                            <samp>16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh</samp>
+                    <div class="col-sm-offset-4">
+                        <div class="row" id="sorted-row">
+                            <div class="col-sm-12" id="donate-title">
+                                <h3 class="with-subtitle">What are you waiting for?</h3>
+                                <p class="subtitle">Help us to bring NewPipe forward!</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-12" id="bitcoin-donation-button">
+                                    <button class="donate" onclick="$('#bitcoin-donation').toggle()">Donate</button>
+                                    <div class="clearfix"></div>
+                                    <span>One-time donation</span>
+                            </div>
+                            <div class="col-sm-6 col-xs-12" id="bountysource-donation">
+                                <a href="https://www.bountysource.com/teams/newpipe/issues" target="_blank"><button class="donate">Bountysource</button></a>
+                                <div class="clearfix"></div>
+                                <span>Boost an upcoming feature</span>
+                            </div>
+                            <div class="col-sm-12 col-xs-12" id="bitcoin-donation">
+                                <p>
+                                    <a href="bitcoin:16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh">
+                                        <img src="../img/bitcoin_address.png" />
+                                    </a>
+                                </p>
+                                <p>Please Donate To Bitcoin Address: </p>
+                                <samp>16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh</samp>
+                            </div>
                         </div>
-                    </div>
-                    <!--<div class="col-sm-4  col-xs-12">
-                        <a href="https://www.bountysource.com/teams/newpipe/issues" target="_blank"><button class="donate">Bountysource</button></a>
-                        <div class="clearfix"></div>
-                        Boost an upcoming feature
-                    </div>-->
-
+                    </div>                    
                 </div>
             </div>
         </div>

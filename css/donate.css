@@ -64,7 +64,7 @@ main .row [class^="col"] {
     margin-bottom: 40px;
 }
 #quotesCarousel .carousel-indicators {
-    bottom: 0px;
+    bottom: 0;
     margin-bottom: 10px;
 }
 #quotesCarousel .carousel-indicators .active {
@@ -100,6 +100,22 @@ main .row [class^="col"] {
     padding: 0 0 0 15px;
     margin: 0;
 }
+#donate-title {
+    margin-bottom: 30px;
+}
+#bitcoin-donation-button {
+    margin-bottom: 30px;
+}
+#bitcoin-donation {
+    display: none;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+#bitcoin-donation samp {
+    background: #AA1D1D;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
 @media (max-width: 992px){
     .phone-background .row [class^="col"] {
         padding: 0;
@@ -116,20 +132,17 @@ main .row [class^="col"] {
     #donate .subtitle {
         margin-bottom: 45px;
     }
-}
-#bitcoin-donation {
-    display: none;
-    margin: 30px 0 15px 0;
-    position: relative;
-}
-#bitcoin-donation samp {
-    background: #AA1D1D;
-    border-radius: 5px;
-    padding: 6px 10px;
-}
-@media (max-width: 767px) {
+    #sorted-row {
+        display: flex;
+        flex-direction: column;
+    }
     #bitcoin-donation {
-        margin-bottom: 15px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    #bountysource-donation {
+        order: 2;
+        margin-top: 20px;
     }
 }
 .features-background {
