@@ -127,11 +127,15 @@ main.content {
 .media-gallery .media-file > * {
     margin-left: auto;
     margin-right: auto;
-    max-width: 180px;
+    max-height: 180px;
     display: block;
 }
 .media-gallery /*.media-file > **/[data-toggle=modal], .media-gallery .media-file > img[onclick*="viewMediaFile"] {
     cursor: pointer;
+}
+.media-name {
+    font-weight: bold;
+    font-size: 16px;
 }
 #mediaFileView .fa-times {
     color: white;
@@ -174,4 +178,10 @@ h3.start {
     color: #AA5D1D;
     margin-bottom: 45px;
     background:#ffc023;
+}
+@media (min-width: 767px){
+#welcome ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
 }
