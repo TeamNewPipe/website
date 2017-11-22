@@ -197,6 +197,9 @@ img.border-white {
 
 /* Navigation */
 
+#header.navbar-full-bg {
+    padding: 7px 0;
+}
 .navbar {
     margin-bottom: 0;
 }
@@ -275,6 +278,9 @@ img.border-white {
     margin-bottom: 10px;
 }
 @media (max-width: 767px){
+    #header.navbar-full-bg {
+        padding: 0;
+    }
     #navbar {
         width: 100%;
     }

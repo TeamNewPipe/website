@@ -23,7 +23,10 @@ body.modal-open {
     padding: 0!important;
     overflow-y: scroll;
 }
+
+
 /* Sidebar */
+
 .sidebar {
     display: block;
 }
@@ -68,13 +71,22 @@ body.modal-open {
 .sidebar .list-group .list-group-item.red {
     color: #cd201f;
 }
+.sidebar .search-container {
+    width: 80%;
+}
 @media (max-width: 767px){
     .sidebar {
         border-top: 2px solid white;
         padding-left: 30px;
         padding-right: 30px;
     }
+    .sidebar .search-container {
+        width: 100%;
+    }
 }
+
+
+/* Content */
 
 .site-content {
     border-top: 2px solid white;
@@ -86,6 +98,9 @@ body.modal-open {
 }
 main.content {
     padding-bottom: 15px;
+}
+main.content a {
+    color: #cd201f;
 }
 .media-gallery {
     position: relative;
@@ -178,6 +193,9 @@ h3.start {
     color: #AA5D1D;
     margin-bottom: 45px;
     background:#ffc023;
+}
+.large {
+    font-size: 16px;
 }
 @media (min-width: 767px){
 #welcome ul {
