@@ -145,6 +145,10 @@ main.content a {
     max-height: 180px;
     display: block;
 }
+#screenshots .media-gallery .media-file > * {
+    margin-left: 0;
+    margin-right: 0;
+}
 .media-gallery /*.media-file > **/[data-toggle=modal], .media-gallery .media-file > img[onclick*="viewMediaFile"] {
     cursor: pointer;
 }
