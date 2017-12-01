@@ -9,7 +9,7 @@
         linear-gradient(to right, rgba(0,0,0,0.0) calc(100% - ((100% - 1170px) / 2)), rgba(0,0,0,0.1) 100% );
 }
 .navbar-fixed-top ~ .site-content {
-    margin-top: 64px;
+    margin-top: 78px;
 }
 .navbar-fixed-top {
     border-bottom: 2px solid white;
