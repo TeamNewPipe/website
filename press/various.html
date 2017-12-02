@@ -34,7 +34,7 @@
 <body>
 
 <!-- Header -->
-<div class="navbar-wrapper navbar-full-bg navbar-static-top" id="header">
+<div class="navbar-wrapper navbar-full-bg navbar-fixed-top" id="header">
     <div class="container">
         <nav class="navbar navbar-inverse">
             <div class="navbar-header">
@@ -58,8 +58,6 @@
     </div>
 </div> <!-- Header -->
 
-
-
 <div class="site-content height-full-parent background-gray background-fade">
     <div class="container height-full-parent height-full">
         <div class="row is-flex height-full-child">
@@ -69,13 +67,28 @@
             <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3 border-right">
                 <div class="extra-space"></div>
                 <main class="content">
-                    <div id="welcome" class="background-gray">
+                    <div id="welcome">
                         <div class="container">
-                            <h3 class="red">References & Links</h3>
-                            <p class="subtitle">This is the right place to find any information about NewPipe.</p>
-                            
-                            <h4>Quick info</h4>
-                            <p>NewPipe is a</p>
+                            <h3 class="start">Additional media</h3>
+                            <div class="alert alert-warning" role="alert">
+                                <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> With downloading a media file from this website you agree with using it in terms of the given license.
+                            </div>
+                            <div class="row is-flex media-gallery">
+                                <div class="col-md-6" onclick="viewMediaFile(this)" data-toggle="modal" data-target="#mediaFileView" >
+                                    <div class="media-file">
+                                        <img src="../img/thumbnail_c33_presentation.png" class="image-responsive" onclick="viewMediaFile(this)" />
+                                    </div>
+                                    <div class="media-description">
+                                        <p class="media-name">C33 Presentation</p>
+                                        <p class="media-description-text">This presentation was given on C33 (Chaos Computer Club 2016)</p>
+                                        <p class="media-download" data-toggle="modal" data-target="#mediaFileView"><strong>Download:</strong> <a href="../pdf/c33_presentation.pdf" download="NewPipe_C33_Presentation.svg"><i class="fa fa-download"></i> PDF</a> <span class="size">(2.18MB)</span></p>
+                                        <p class="author"><strong>Author:</strong> Christian Schabesberger</p>
+                                        <p class="media-pages"><strong>Pages:</strong> 23</p>
+                                        <p class="license"><strong>License:</strong> CC BY-NC-SA</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
 
                             <p id="last-modified">Last modified: December 2017</p>
 
@@ -84,16 +97,18 @@
                 </main>
             </div> <!-- content -->
 
+            
             <!-- sidebar -->
             <div class="col-xs-12 col-sm-pull-8 col-sm-4 col-md-3 col-md-pull-9 sidebar" id="sidebar" >
                 <div class="extra-space"></div>
                 <div class="list-group">
                     <h3 class="list-group-item active red">Press Kit</h3>
-                    <a href="../press/" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Factsheet</a>
-                    <a href="#" class="list-group-item red"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Links & References</a>
+                    <a href="index.html" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Factsheet</a>
+                    <a href="announcements.html" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Links & References</a>
                     <span class="list-group-item active"><span class="icon"></span>Media</span>
                     <a href="logo.html" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Logos & Icons</a>
                     <a href="screenshots.html" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Screenshots</a>
+                    <a href="various.html" class="list-group-item red"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Additional Media</a>
                     <a href="contact.html" class="list-group-item active"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Contact</a>
                 </div>
 
@@ -104,7 +119,7 @@
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </span>
-                            <input type="text" class="form-control" id="search-box"  name="s" placeholder="Search for...">
+                            <input type="text" class="form-control" id="search-box"  name="s" placeholder="Search">
                         </div><!-- input-group -->
                     </form>
                 </div>
@@ -114,12 +129,15 @@
                 <div class="image-puffer"></div>
             </div> <!-- sidebar -->
 
-
         </div>
     </div>
 </div>
 
-
+<!-- Modal -->
+<div id="mediaFileView" class="modal fade" role="dialog" data-dismiss="modal">
+    <img id="mediaFullScreen" src="../img/logo.svg" class="img-full-width screenshot-image" data-dismiss="modal"/>
+    <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" ></i>
+</div> <!-- Modal -->
 
 <!-- footer -->
 <footer class="footer">
@@ -139,6 +157,7 @@
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="../js/mediaview.js"></script>
 
 </body>
 </html>
