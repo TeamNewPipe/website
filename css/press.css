@@ -212,6 +212,11 @@ h3.start {
 .large {
     font-size: 16px;
 }
+#last-modified {
+    font-size: 12px;
+    margin-top: 45px;
+    text-align: right;
+}
 #welcome h4 {
     margin-top: 25px;
 }
