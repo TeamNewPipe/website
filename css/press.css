@@ -9,7 +9,7 @@
         linear-gradient(to right, rgba(0,0,0,0.0) calc(100% - ((100% - 1170px) / 2)), rgba(0,0,0,0.1) 100% );
 }
 .navbar-fixed-top ~ .site-content {
-    margin-top: 78px;
+    margin-top: 64px;
 }
 .navbar-fixed-top {
     border-bottom: 2px solid white;
@@ -17,6 +17,9 @@
 @media (min-width: 767px) {
     .navbar-fixed-top {
         border-bottom-width: 0;
+    }
+    .navbar-fixed-top ~ .site-content {
+        margin-top: 78px;
     }
 }
 body.modal-open {
@@ -114,7 +117,7 @@ main.content a {
     width: 100%;
 }
 .media-gallery > .col-md-6:nth-last-child(1) {
-        border-bottom-width: 0px;
+        border-bottom-width: 0;
     }
 .media-gallery a {
     color: #cd201f;
@@ -130,10 +133,10 @@ main.content a {
         width: calc(100% / 3);
     }
     .media-gallery > div:nth-child(even) {
-        border-right-width: 0px;
+        border-right-width: 0;
     }
     .media-gallery > .col-md-6:nth-last-child(2) {
-        border-bottom-width: 0px;
+        border-bottom-width: 0;
     }
 }
 .media-gallery .media-file {
@@ -146,8 +149,7 @@ main.content a {
     display: block;
 }
 #screenshots .media-gallery .media-file > * {
-    margin-left: 0;
-    margin-right: 0;
+    max-height: 260px;
 }
 .media-gallery /*.media-file > **/[data-toggle=modal], .media-gallery .media-file > img[onclick*="viewMediaFile"] {
     cursor: pointer;
@@ -163,12 +165,21 @@ main.content a {
     top: 25px;
     cursor: pointer;
 }
+#screenshots #mediaFileView .fa-times {
+    display: none;
+}
 #mediaFileView .fa-times:before {
     height: 14px;
 }
 @media (min-width: 767px) {
     #mediaFileView .fa-times {
-        right: 25px;
+        right: 40px;
+        top: 32px;
+        display: inline-block;
+    }
+    #screenshots .media-gallery .media-file > * {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 .img-full-width {
@@ -201,9 +212,12 @@ h3.start {
 .large {
     font-size: 16px;
 }
-@media (min-width: 767px){
-#welcome ul {
-    list-style-position: inside;
-    padding-left: 0;
+#welcome h4 {
+    margin-top: 25px;
 }
+@media (min-width: 767px){
+    #welcome ul {
+        list-style-position: inside;
+        padding-left: 0;
+    }
 }
