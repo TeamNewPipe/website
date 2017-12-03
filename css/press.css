@@ -226,3 +226,10 @@ h3.start {
         padding-left: 0;
     }
 }
+#announcements article {
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+#announcements article .press-date{
+    font-size: 80%;
+}
