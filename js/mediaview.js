@@ -7,7 +7,7 @@ function viewMediaFile(m) {
 // prevent opening #mediaFileView (modal) when a download link is clicked
 $('#mediaFileView').on('show.bs.modal', function (e) {
   var button = e.relatedTarget;
-  if($(button).hasClass('media-download')) {
+  if($(button).hasClass('media-download') || $(button).hasClass('author')) {
     e.stopPropegation();
   }  
 });
