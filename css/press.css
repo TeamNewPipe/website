@@ -204,6 +204,9 @@ h3.start {
     margin-bottom: 45px;
     color: #cd201f;
 }
+p.subtitle {
+    margin-bottom: 20px;
+}
 .alert-warning {
     color: #AA5D1D;
     margin-bottom: 45px;
@@ -211,6 +214,9 @@ h3.start {
 }
 .large {
     font-size: 16px;
+}
+.large-linebreak {
+    margin-bottom: 25px;
 }
 #last-modified {
     font-size: 12px;
@@ -220,6 +226,9 @@ h3.start {
 #welcome h4 {
     margin-top: 25px;
 }
+#welcome p {
+    text-align: justify;
+}
 @media (min-width: 767px){
     #welcome ul {
         list-style-position: inside;
@@ -227,8 +236,10 @@ h3.start {
     }
 }
 #announcements article {
-    padding-bottom: 15px;
-    padding-top: 5px;
+    padding: 5px 0 5px 13px;
+    border: 2px solid #fff;
+    margin-bottom: 25px;
+    position: relative;
 }
 #announcements article .press-date{
     font-size: 80%;
