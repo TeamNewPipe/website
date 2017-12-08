@@ -1,0 +1,18 @@
+<div class="search-container text-center">
+    <div class="row">
+        <div class="col-lg-6 col-lg-push-3">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" id="search-submit" type="submit" onclick="search('manual')"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </span>
+                <input type="text" class="form-control" id="search-box" name="s" placeholder="Search for">
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div>
+</div>
+<div id="search-results"></div>
+
+<!-- Scripts to perform a search -->
+<script src="{{ site.baseurl  }}/lunrjs/searchData.js"></script>
+<script src="{{ site.baseurl  }}/lunrjs/lunr.min.js"></script>
+<script src="{{ site.baseurl  }}/lunrjs/search.js"></script>

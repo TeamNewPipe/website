@@ -203,12 +203,17 @@ img.border-white {
 .navbar {
     margin-bottom: 0;
 }
-.navbar-wrapper ~ .navbar-static-top {
+.navbar-wrapper {
     position: relative;
+}
+.navbar-wrapper.navbar-static-top {
     top: 0;
     right: 0;
     left: 0;
     z-index: 20;
+}
+.navbar-wrapper.navbar-fixed-top {
+    position: fixed;
 }
 .modal-open /*.navbar-fixed-top*/ .navbar-toggle {
     visibility: hidden;

@@ -1,3 +1,6 @@
+/************
+***SHADOWS***
+************/
 .background-gray.background-fade {
     background-image: 
         linear-gradient(to right, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.0) calc((100% - 1170px) / 2)),
@@ -8,12 +11,24 @@
         linear-gradient(to right, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.0) calc((100% - 1170px) / 2)),
         linear-gradient(to right, rgba(0,0,0,0.0) calc(100% - ((100% - 1170px) / 2)), rgba(0,0,0,0.1) 100% );
 }
+#header {
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.175);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.175);
+    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.175);
+}
+.footer .shadow-top {
+    -webkit-box-shadow: 0px -4px 4px 0px rgba(0,0,0,0.175);
+    -moz-box-shadow: 0px -4px 4px 0px rgba(0,0,0,0.175);
+    box-shadow: 0px -4px 4px 0px rgba(0,0,0,0.175);
+}
 .navbar-fixed-top ~ .site-content {
     margin-top: 64px;
 }
 .navbar-fixed-top {
     border-bottom: 2px solid white;
 }
+
+
 @media (min-width: 767px) {
     .navbar-fixed-top {
         border-bottom-width: 0;
@@ -93,6 +108,9 @@ body.modal-open {
 
 .site-content {
     border-top: 2px solid white;
+}
+.site-content .container .container {
+    width: 100%;
 }
 @media (min-width: 767px) {
     .site-content {
@@ -236,7 +254,7 @@ p.subtitle {
     }
 }
 #announcements article {
-    padding: 5px 0 5px 13px;
+    padding: 5px 13px 5px 13px;
     border: 2px solid #fff;
     margin-bottom: 25px;
     position: relative;

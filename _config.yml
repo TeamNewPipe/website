@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
-baseurl: "" # /NewPipeBlog1/_site/blog # the subpath of your site, e.g. /blog
+baseurl: "" # /press/_site # the subpath of your site, e.g. /blog
 url: "" # http://186.182.2.102/ # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  TeamNewPipe
@@ -35,7 +35,7 @@ exclude:
   - Gemfile.lock
   - .htacess
   
-permalink: /:categories/:title/
+permalink: /:title/
 
 paginate: 4
 paginate_path: "/posts:num/"
