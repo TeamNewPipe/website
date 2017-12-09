@@ -1,3 +1,7 @@
+/**
+ * Handle fullsize images with Bootstrap modal
+ **/
+
 // set the media to display in #mediaFileView
 function viewMediaFile(m) {
     var img = document.getElementById("mediaFullScreen");
@@ -10,4 +14,11 @@ $('#mediaFileView').on('show.bs.modal', function (e) {
   if($(button).hasClass('media-download') || $(button).hasClass('author')) {
     e.stopPropegation();
   }  
+});
+
+// close #mediaFileView (modal) with escape key
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) { // escape key := keycode `27`
+        $('#mediaFileView').modal('hide');
+    }
 });

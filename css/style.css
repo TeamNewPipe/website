@@ -645,13 +645,13 @@ body.modal-open {
 }
 .footer .copyright a:after {
     content: '';
-    bottom: 0;
+    bottom: 1px;
     left: 50%;
     position: absolute;
     height: 1px;
     width: 0;
     background: white;
-    transition: width 0.25s, left 0.25s;
+    transition: width 0.25s linear, left 0.25s;
 }
 .footer .copyright:hover a:after {
     content: '';
