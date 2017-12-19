@@ -10,9 +10,7 @@ metatitle: "Media - NewPipe a free YouTube client"
     <div id="welcome">
         <div class="container">
             <h3 class="start">Additional media</h3>
-            <div class="alert alert-warning" role="alert">
-                <span class="glyphicon glyphicon-alert" aria-hidden="true"></span> With downloading a media file from this website you agree with using it in terms of the given license.
-            </div>
+            {% include download-license-warning.html %}
             <div class="row is-flex media-gallery">
                 <div class="col-md-6" onclick="viewMediaFile(this)" data-toggle="modal" data-target="#mediaFileView" >
                     <div class="media-file">
