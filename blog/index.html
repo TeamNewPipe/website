@@ -1,0 +1,54 @@
+---
+# You don't need to edit this file, it's empty on purpose.
+# Edit theme's home layout instead if you wanna make some changes
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+title: a free YouTube client - HOME
+layout: blog_with-sidebar
+description: Welcome to NewPipe!
+---
+{% for post in paginator.posts %}
+<!--{{ post.author }}-->
+<div class="border-box anchor-right-full-parent">
+    <h4><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h4>
+    <p><span>{{ post.date | date_to_string }}, by {{ post.author }}</span></p><br>
+    {{ post.content | truncatewords:100}}
+    <p><a href="{{ post.url }}">Read more...</a></p>
+    <p class="categories">
+        {% for category in post.categories %}
+        <a href="{{ site.baseurl }}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
+        {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
+        {% endfor %}
+    </p>
+    <div class="anchor-right-full"></div>
+</div>
+{% endfor %}
+
+<div class="clearfix"></div>
+
+{% if paginator.total_pages > 1 %}
+<nav aria-label="Page navigation" class="pagination-container text-center" >
+    <ul class="pagination">
+        {% if paginator.previous_page %}
+        <li><a href="{{ paginator.previous_page_path }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+        {% else %}
+        <li><a aria-label="Previous" class="disabled"><span aria-hidden="true">&laquo;</span></a></li>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+        <li><a class="active disabled">{{ page }}</a></li>
+        {% elsif page == 1 %}
+        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+        {% else %}
+        <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+        {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+        <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"  aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+        {% else %}
+        <li><a class="disabled"><span aria-hidden="true">&raquo;</span></a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}

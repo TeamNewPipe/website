@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    font-family: Arial;
 }
 .container .container {
     width: auto;
@@ -234,6 +235,10 @@ img.border-white {
 .navbar-brand img.border-white {
     border: 2px solid white;
 }
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    background: none;
+    font-weight: bold;
+}
 .navbar-inverse .navbar-brand {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -309,6 +314,9 @@ img.border-white {
     .navbar-header > .navbar-toggle, .navbar-header > .navbar-toggle:hover, .navbar-header > .navbar-toggle:focus {
         border: none;
         background: none;
+    }
+    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+        font-weight: normal;
     }
     .navbar-collapse {
         -webkit-box-shadow: none;

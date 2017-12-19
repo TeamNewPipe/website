@@ -28,8 +28,14 @@ markdown: kramdown
 theme: minima
 gems:
   - jekyll-feed
+  - jekyll-paginate
 exclude:
   - Gemfile
   - Gemfile.lock
+  - press_old/
   
-permalink: /:title/
+permalink: /blog/:categories/:title/
+paginate: 4
+paginate_path: "/blog/posts:num/"
+
+

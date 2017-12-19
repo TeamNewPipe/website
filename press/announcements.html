@@ -1,5 +1,5 @@
 ---
-layout:    "sidebar-small"
+layout:    "press_sidebar-small"
 title:     "Announcements"
 date:      2017-12-07 10:30:00
 metatitle: "Announcements - NewPipe a free YouTube client"
@@ -11,38 +11,13 @@ metatitle: "Announcements - NewPipe a free YouTube client"
             <h3 class="red">Announcements</h3>
             <p class="subtitle">This is a collection of our press announcements including new features, presentations, public meetings and general important information.</p>
 
+            {% for post in site.categories["announcement"] %}
             <article>
-                <h4>Version 1.0.0 released</h4>
-                <p class="press-date">00.00.0000</p>
-                <p>Information</p>
+                <h4>{{ post.title }}</h4>
+                <p class="press-date">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %}, {{ post.author }}{% endif %}</p>
+                {{ post.content }}
             </article>
-
-            <article>
-                <h4>Beta versions now available</h4>
-                <p class="press-date">00.00.0000</p>
-                <p>Information</p>
-            </article>
-
-            <article>
-                <h4>Subscription support</h4>
-                <p class="press-date">00.00.0000</p>
-                <p>Information</p>
-            </article>
-
-            <article>
-                <h4>NewPipe Extractor now available</h4>
-                <p class="press-date">04.03.2016</p>
-                <p>As announced on our c33 presentation, the backend of NewPipe is now available separatly and called NewPipe Extractor. The extractor is the core part of NewPipe and now platform independent. </p>
-            </article>
-
-            <article>
-                <h4>Presentation on c33</h4>
-                <p class="press-date">xx.12.2016</p>
-                <p>On 28th December 2016 theScrabi gave a speech at C33C. The goal of the presentation at the Chaos Computer Club was</p>
-                <p>He introduced the audience to the basic concept of NewPipe. This consists of filtering all information from the YouTube website and working completely without Google's proprietary libraries. If you want more information about this presentation, please <a href="{{ site.baseurl }}/pdf/NewPipe_presentation.pdf" download>download</a> it.</p>
-                <p>theScrabi also announced to separate NewPipe's core from the frontend to make it available for all platforms and other OpenSource projects. Part of the roadmap for the next years is also to support multiple services like SoundCloud and Vevo.</p>
-                <p>Visit our <a target="_blank" href="https://events.ccc.de/congress/2016/wiki/Session:NewPipe">session page</a> on the c33 wiki for more information.</p>
-            </article>
+            {% endfor %}
 
             <p id="last-modified">Last modified: December 2017</p>
 

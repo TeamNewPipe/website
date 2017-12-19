@@ -1,0 +1,57 @@
+---
+
+---
+
+{% include press_head.html %}
+
+{% include press_header.html %}
+
+<div class="site-content height-full-parent background-gray background-fade">
+    <div class="container height-full-parent height-full">
+        <div class="row is-flex height-full-child">
+
+            <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-9 col-md-push-3 border-right" id="content-container">
+                <div class="extra-space"></div>
+
+                    <!-- content -->
+                    {{ content }} <!-- content -->
+
+            </div>
+
+            <!-- sidebar -->
+            <div class="col-xs-12 col-sm-pull-8 col-sm-4 col-md-3 col-md-pull-9 sidebar" id="sidebar" >
+                <div class="extra-space"></div>
+                <div class="list-group">
+                    <h3 class="list-group-item active red">Press Kit</h3>
+                    <a href="{{ site.baseurl }}/press/" class="list-group-item{% if page.url == '/press/' %} red{% endif %}"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Factsheet</a>
+                    <a href="{{ site.baseurl }}/press/announcements/" class="list-group-item{% if page.url == '/press/announcements/' %} red{% endif %}"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Announcements</a>
+                    <span class="list-group-item active"><span class="icon"></span>Media</span>
+                    <a href="{{ site.baseurl }}/press/logo/" class="list-group-item{% if page.url == '/press/logo/' %} red{% endif %}"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Logos & Icons</a>
+                    <a href="{{ site.baseurl }}/press/screenshots/" class="list-group-item{% if page.url == '/press/screenshots/' %} red{% endif %}"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Screenshots</a>
+                    <a href="{{ site.baseurl }}/press/various/" class="list-group-item{% if page.url == '/press/various/' %} red{% endif %}"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Additional Media</a>
+                    <a href="{{ site.baseurl }}/press/contact/" class="list-group-item active{% if page.url == '/press/contact/' %} red{% endif %}"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>Contact</a>
+                </div>
+
+                <div class="clearfix"></div>
+                <div class="search-container">
+                    <form action="{{ site.baseurl }}/press/search/" method="get">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </span>
+                            <input type="text" class="form-control" id="search-box-sidebar"  name="s" placeholder="Search">
+                        </div><!-- input-group -->
+                    </form>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="image-puffer"></div>
+            </div> <!-- sidebar -->
+
+
+        </div>
+    </div>
+</div>
+
+{% include press_footer.html %}

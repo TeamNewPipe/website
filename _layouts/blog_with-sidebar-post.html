@@ -1,0 +1,29 @@
+{% include blog_head.html %}
+
+{% include blog_nav.html %}
+
+<div class="post-collection height-full-parent">
+    <div class="container height-full-parent height-full">
+        <div class="row is-flex height-full-child">
+            <div class="col-xs-12 col-sm-8 col-md-9 single-post border-left border-right">
+
+                <div class="extra-space"></div>
+
+                {{ content }}
+
+                {% include blog_comments.html %}
+
+                <div class="clearfix"></div>
+
+                <div class="image-puffer"></div>
+            </div>
+
+            {% include blog_sidebar.html %}
+
+        </div>
+    </div>
+</div>
+
+{% include blog_footer.html %}
+
+{% include blog_page_end.html %}

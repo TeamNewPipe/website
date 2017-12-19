@@ -1,0 +1,15 @@
+---
+layout: blog_with-sidebar
+---
+
+<h3>Search</h3>
+
+{% include blog_search.html %}
+
+<script>
+$("#search-box").on('keyup', function (e) {
+    if (e.keyCode == 13) { // Enter key
+        search('manual');
+    }
+});
+</script>

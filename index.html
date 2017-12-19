@@ -1,3 +1,6 @@
+---
+
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,11 +12,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
-    <link rel="icon" href="img/logo_favicon.gif" type="image/gif" sizes="64x64">
+    <link rel="icon" href="{{ site.baseurl }}/img/favicon.gif" type="image/gif" sizes="64x64">
 
 
     <!-- JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
     <!-- TODO: add local JQuery if JQuery is not defined -->
 
     <!-- Bootstrap -->
@@ -22,20 +25,20 @@
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="{{ site.baseurl }}/js/html5shiv.min.js"></script>
+      <script src="{{ site.baseurl }}/js/respond.min.js"></script>
     <![endif]-->
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css">
 
     <!-- bxSlider  -->
-    <link href="bxslider/jquery.bxslider.min.css" rel="stylesheet" />
-    <script src="bxslider/jquery.bxslider.min.js"></script>
+    <link href="{{ site.baseurl }}/bxslider/jquery.bxslider.min.css" rel="stylesheet" />
+    <script src="{{ site.baseurl }}/bxslider/jquery.bxslider.min.js"></script>
 
 
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/gallery.css">
 
 </head>
 <body>
@@ -62,7 +65,8 @@
                         </div>
                         <div id="navbar" class="navbar-collapse collapse navbar-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="press"/>Press</a></li>
+                                <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+                                <li><a href="{{ site.baseurl }}/press/">Press</a></li>
                                 <li><a href="https://github.com/TeamNewPipe/NewPipe/">GitHub</a></li>
                                 <li><a href="https://github.com/TeamNewPipe/NewPipe/releases/">Releases</a></li>
                                 <li><a href="https://github.com/TeamNewPipe/NewPipe/issues/">Issues</a></li>
@@ -82,16 +86,16 @@
                     <h3>the lightweight<br>YouTube experience<br>for Android</h3>
                 </div>
                 <div class="logo">
-                    <img src="img/logo.svg" class="img-circle border-white" />
+                    <img src="{{ site.baseurl }}/img/logo.svg" class="img-circle border-white" />
                 </div>
                 <div class="f-droid-wrapper">
                     <a href="https://f-droid.org/packages/org.schabi.newpipe/" target="_blank">
-                        <img src="img/f-droid.svg" class="f-droid" alt="F-Droid" />
+                        <img src="{{ site.baseurl }}/img/f-droid.svg" class="f-droid" alt="F-Droid" />
                     </a>
                 </div>
                 <div class="phone hidden-xs">
-                    <img src="img/nexus6.png" />
-                    <video id="animation" src="img/footage.webm" preload='none' loop="" ></video>
+                    <img src="{{ site.baseurl }}/img/nexus6.png" />
+                    <video id="animation" src="{{ site.baseurl }}/img/footage.webm" preload='none' loop="" ></video>
                 </div>
             </div>
         </div> <!-- header-box -->
@@ -257,7 +261,7 @@
                                 <div class="container">
                                     <div class="details-flex">
                                         <div class="details-image">
-                                            <img src="img/Privacy_written_in_tiles.jpg"/>
+                                            <img src="{{ site.baseurl }}/img/Privacy_written_in_tiles.jpg"/>
                                         </div>
                                         <div class="details-text container">
                                             <h3>Extended Privacy</h3>
@@ -277,7 +281,7 @@
                                 <div class="container">
                                     <div class="details-flex">
                                         <div class="details-image">
-                                            <img src="img/screenshot_4.png"/>
+                                            <img src="{{ site.baseurl }}/img/screenshot_4.png"/>
                                         </div>
                                         <div class="details-text container">
                                             <h3>Background Player</h3>
@@ -298,8 +302,8 @@
                                 <div class="container">
                                     <div class="details-flex">
                                         <div class="details-image image-slideshow">
-                                            <img src="img/screenshot_7.png" class="active" />
-                                            <img src="img/screenshot_8.png"/>
+                                            <img src="{{ site.baseurl }}/img/screenshot_7.png" class="active" />
+                                            <img src="{{ site.baseurl }}/img/screenshot_8.png"/>
                                         </div>
                                         <div class="details-text container">
                                             <h3>Download Media</h3>
@@ -320,8 +324,8 @@
                                 <div class="container">
                                     <div class="details-flex">
                                         <div class="details-image image-slideshow">
-                                            <img src="img/screenshot_6.png" class="active" />
-                                            <img src="img/screenshot_12.png"/>
+                                            <img src="{{ site.baseurl }}/img/screenshot_6.png" class="active" />
+                                            <img src="{{ site.baseurl }}/img/screenshot_12.png"/>
                                         </div>
                                         <div class="details-text container">
                                             <h3>Subscriptions</h3>
@@ -342,7 +346,7 @@
                                 <div class="container">
                                     <div class="details-flex">
                                         <div class="details-image">
-                                            <img src="img/screenshot_5.png"/>
+                                            <img src="{{ site.baseurl }}/img/screenshot_5.png"/>
                                         </div>
                                         <div class="details-text container">
                                             <h3>Video Pop-Up</h3>
@@ -363,7 +367,7 @@
                                 <div class="container">
                                     <div class="details-flex">
                                         <div class="details-image">
-                                            <img src="img/screenshot_2.png"/>
+                                            <img src="{{ site.baseurl }}/img/screenshot_2.png"/>
                                         </div>
                                         <div class="details-text container">
                                             <h3>4K Support</h3>
@@ -384,8 +388,8 @@
                                 <div class="container">
                                     <div class="details-flex">
                                         <div class="details-image image-slideshow">
-                                            <img src="img/screenshot_2.png" class="active" />
-                                            <img src="img/screenshot_3.png" />
+                                            <img src="{{ site.baseurl }}/img/screenshot_2.png" class="active" />
+                                            <img src="{{ site.baseurl }}/img/screenshot_3.png" />
                                         </div>
                                         <div class="details-text container">
                                             <h3>Multiple Themes</h3>
@@ -407,7 +411,7 @@
                                     <div class="details-flex">
                                         <div class="details-image">
                                             <a href="https://github.com/TeamNewPipe/NewPipe/" target="_blank">
-                                                <img src="img/GitHub.png" class="banner" />
+                                                <img src="{{ site.baseurl }}/img/GitHub.png" class="banner" />
                                             </a>
                                         </div>
                                         <div class="details-text container">
@@ -442,7 +446,7 @@
                     <p><strong class="extra">Like the idea?<br>Download <a class="red">NewPipe</a> from <a href="https://f-droid.org/" target="_blank">F-Droid</a></strong></p>
                     <br>
                     <p>F-Droid is a trusted catalogue of Free and Open Source applications for Android.</p>
-                    <p class="f-droid-wrapper"><a href="https://f-droid.org/packages/org.schabi.newpipe/" target="_blank"><img src="img/f-droid.svg" class="f-droid" alt="F-Droid" /></a></p>
+                    <p class="f-droid-wrapper"><a href="https://f-droid.org/packages/org.schabi.newpipe/" target="_blank"><img src="{{ site.baseurl }}/img/f-droid.svg" class="f-droid" alt="F-Droid" /></a></p>
                     <br class="hidden-xs" ><br class="hidden-xs" >
                 </div>
             </div>
@@ -465,7 +469,7 @@
                     <br>
                 </div>
                 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
-                    <p><a href="donate/"><button class="donate">Donate</button></a></p>
+                    <p><a href="{{ site.baseurl }}/donate/"><button class="donate">Donate</button></a></p>
                     <br>
                     <p>Thank you in advance!</p>
                 </div>
@@ -492,7 +496,7 @@
                         <strong class="extra">Slides from <a href="https://events.ccc.de/congress/2016/wiki/Session:NewPipe">33C3</a></strong>
                     </p>
                     <p class="text-center slides-download">
-                        <a href="pdf/c33_presentation.pdf" download="NewPipe_C33_Presentation.pdf">Download as PDF</a>
+                        <a href="{{ site.baseurl }}/pdf/c33_presentation.pdf" download="NewPipe_C33_Presentation.pdf">Download as PDF</a>
                     </p>
                 </div>
             </div> <!-- slides -->
@@ -505,7 +509,7 @@
         <div class="image-puffer background-gray"></div>
         <div class="container">
             <div class="image-holder">
-                <img src="img/logo.svg" class="footer-logo img-circle border-white" />
+                <img src="{{ site.baseurl }}/img/logo.svg" class="footer-logo img-circle border-white" />
             </div>
             <div class="footer-copyright text-center">
                 <p>
@@ -517,13 +521,13 @@
 
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Script for parallax animations -->
-    <script src="js/parallax.js"></script>
+    <script src="{{ site.baseurl }}/js/parallax.js"></script>
 
     <!-- Script for gallery animations -->
-    <script src="js/gallery.js"></script>
+    <script src="{{ site.baseurl }}/js/gallery.js"></script>
 
     <!-- Load and play animation on medium and large screens -->
     <script>

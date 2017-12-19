@@ -1,0 +1,28 @@
+---
+layout: blog_with-sidebar-post
+---
+
+
+<h3>All  {{ page.title | capitalize }}s</h3>
+
+{% unless page.content == '' %}
+  <p>{{ page.content }}</p>
+{% endunless %}
+
+{% for post in site.categories[page.category] %}
+<div class="category post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h4 class="post-title">{{ post.title }}</h4>
+        {% if post.subtitle %}
+        <h5 class="post-subtitle">{{ post.subtitle }}</h5>
+        {% endif %}
+    </a>
+    <p class="post-meta">
+      Posted  
+      {% if post.author %}
+        by {{ post.author }}
+      {% endif %} 
+      on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+</div>
+{% endfor %}
