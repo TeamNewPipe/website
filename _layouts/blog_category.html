@@ -9,7 +9,11 @@
 
                 <div class="extra-space"></div>
 
+                {% if page.title == "pinned" %}
+                <h3>All pinned posts</h3>
+                {% else %}
                 <h3>All {{ page.title | capitalize }}s</h3>
+                {% endif %}
 
                 {% unless page.content == '' %}
                 <p>{{ page.content }}</p>
