@@ -16,7 +16,13 @@ function displaySearchResults(results, store) {
             var item = store[results[i].ref];
             appendString += '<div class="border-box"><h4><a href="' + item.url + '">' + item.title + '</a></h4>';
             appendString += '<p><span>' + item.date + '</span></p><br>';
-            appendString += item.content.split(/\s+/)/*.slice(0, 200)*/.join(" ") + '...<br>';
+            var cont = item.content.replace(/{% raw %}{{ site.baseurl }}{% endraw %}/g, "{{ site.baseurl }}");
+            cont = cont.replace(/{% raw %}{% include press_download-license-warning.html %}{% endraw %}/g, "");
+            var div = document.createElement('div');
+            console.log(cont);
+            div.innerHTML=html = cont.split(/\s+/).slice(0, 400).join(" ");
+            appendString += div.innerHTML;
+            //appendString += item.content.split(/\s+/).slice(0, 400).join(" ") + '...<br>';
             appendString += '<p><a href="' + item.url + '">Read more...</a></p>';
             appendString += "</div>";
         }

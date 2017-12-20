@@ -271,3 +271,12 @@ p.subtitle {
 #announcements article .press-date{
     font-size: 80%;
 }
+
+/* Search */
+#search-results {
+    margin-top: 40px;
+}
+#search-results > .border-box  main h3.start,
+#search-results > .border-box .download-license-warning {
+    display: none;
+}
