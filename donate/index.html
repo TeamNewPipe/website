@@ -1,15 +1,18 @@
+---
+
+---
 <!DOCTYPE html>
 <html>
 <head>
     <title>Donate for NewPipe - a free YouTube client</title>
 
-    <meta name="author" content="theScrabi, NewPipe">
-    <meta name="description" content="Welcome to the Website of NewPipe the leightweight YouTube experience for Android.">
+    <meta name="author" content="Christian Schabesberger, NewPipe">
+    <meta name="description" content="Welcome to the donation page of NewPipe the lightweight YouTube experience for Android.">
     <meta name="keywords" content="NewPipe, YouTube, Android">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
-    <link rel="icon" href="../img/logo_favicon.gif" type="image/gif" sizes="32x32" />
+    <link rel="icon" href="{{ site.baseurl }}/img/logo_favicon.gif" type="image/gif" sizes="32x32" />
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -25,10 +28,10 @@
     <![endif]-->
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css" />
 
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <link rel="stylesheet" type="text/css" href="../css/donate.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/donate.css" />
 
 </head>
 <body>
@@ -44,11 +47,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../"><img src="../img/logo.svg" class="navbar-logo pull-left img-circle border-white" /><span class="pull-left">NewPipe</span></a>
+                <a class="navbar-brand" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/logo.svg" class="navbar-logo pull-left img-circle border-white" /><span class="pull-left">NewPipe</span></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="{{ site.baseurl }}/">Home</a></li>
+                    <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+                    <li><a href="{{ site.baseurl }}/press/">Press</a></li>
                     <li><a href="https://github.com/TeamNewPipe/NewPipe/">GitHub</a></li>
                     <li><a href="https://github.com/TeamNewPipe/NewPipe/releases/">Releases</a></li>
                     <li><a href="https://github.com/TeamNewPipe/NewPipe/issues/">Issues</a></li>
@@ -107,7 +112,7 @@
         <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                <img src="../img/phone_with_logo.png" />
+                <img src="{{ site.baseurl }}/img/phone_with_logo.png" />
             </div>
         </div>
         </div>
@@ -135,7 +140,7 @@
                             <div class="col-sm-12 col-xs-12" id="bitcoin-donation">
                                 <p>
                                     <a href="bitcoin:16A9J59ahMRqkLSZjhYj33n9j3fMztFxnh">
-                                        <img src="../img/bitcoin_address.png" />
+                                        <img src="{{ site.baseurl }}/img/bitcoin_address.png" />
                                     </a>
                                 </p>
                                 <p>Please Donate To Bitcoin Address: </p>
@@ -163,14 +168,14 @@
 
 <!-- footer -->
 <footer class="footer">
-    <div class="image-puffer"></div>
+    <div class="image-puffer background-gray"></div>
     <div class="container">
         <div class="image-holder">
-            <img src="../img/logo.svg" class="footer-logo img-circle border-white" />
+            <img src="{{ site.baseurl }}/img/logo.svg" class="footer-logo img-circle border-white" />
         </div>
         <div class="footer-copyright text-center">
             <p>
-                <span class="copyright">Copyright &copy; Team NewPipe. Please refer to our <a href="../LICENSE.html" target="_blank">licensing page</a> for more information.</span>
+                <span class="copyright">Copyright &copy; Team NewPipe. Please refer to our <a href="{{ site.baseurl }}/LICENSE.html" target="_blank">licensing page</a> for more information.</span>
             </p>
         </div>
     </div>
@@ -178,10 +183,10 @@
 
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="../bootstrap/js/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Script for parallax animations -->
-<script src="../js/parallax_donate.js"></script>
+<script src="{{ site.baseurl }}/js/parallax_donate.js"></script>
 
 <script type="text/javascript">
     /* initialize carousel */

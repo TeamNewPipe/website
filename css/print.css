@@ -1,0 +1,37 @@
+@media all {
+    .page-break	{ display: none; }
+}
+
+@media print {
+    /*
+     * Hide typical header and footer when printing from within a browser
+     * containing date, time, url, page number etc.
+     * (also possible with moznomarginboxes attribute in HTML tag
+     * but not accepted by all browsers)
+     */
+    @page { margin: 0; }
+    body { margin: 1.6cm; }
+    .page-break	{ display: block; page-break-before: always; }
+    .extra-space, .main {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    html, body, #page {
+        height: auto;
+    }
+    #header, #footer, #sidebar {
+        display: none;
+    }
+    .navbar-fixed-top ~ .site-content {
+        margin-top: 0;
+    }
+    #content-container {
+        width: 100% !important;
+        left: 0;
+    }
+    .download-license-warning {
+        display: none;
+    }
+}

@@ -1,0 +1,39 @@
+---
+layout: blog_with-sidebar
+permalink: /blog/404.html
+title: 404 Error
+---
+
+<div class="text-center">
+    <h1>404 Error</h1>
+    <p class="lead">Page not found<br><br><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i></p>
+    <br>
+
+    <h3>Maybe this search can help you</h3>
+    <div class="search-container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-push-3">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" id="search-submit" type="submit" onclick="search('manual')"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </span>
+                    <input type="text" class="form-control" id="search-box" name="s" placeholder="Search for...">
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div>
+    </div>
+</div>
+
+<div id="search-results"></div>
+
+<!-- scripts to perform perform search -->
+<script src="{{ site.baseurl }}/js/blog_searchData.js"></script>
+<script src="{{ site.baseurl }}/js/lunr.min.js"></script>
+<script src="{{ site.baseurl }}/js/blog_search.js"></script>
+<!-- search for words in false url -->
+<script>
+var searchTerm = document.location.pathname;
+searchTerm = searchTerm.replace(/\//g, " ");
+document.getElementById('search-box').setAttribute("value", searchTerm);
+search("manual");
+</script>

@@ -1,0 +1,27 @@
+---
+layout: press_sidebar-full
+permalink: /press/404.html
+metatitle: "404 - NewPipe a free YouTube client"
+---
+
+<div class="text-center">
+    <h3 class="red">404 Error</h3>
+    <p class="large">Page not found<br><br><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i></p>
+    <p>We are sorry for the inconvenience.</p>
+    <p>If you visited a link from within this website please inform us about this issue.</p>
+    <br>
+
+    <h3>Maybe this search helps you</h3>
+
+    {% include press_search.html %}
+
+</div>
+
+
+<!-- search for words in false url -->
+<script>
+    var searchTerm = document.location.pathname;
+    searchTerm = searchTerm.replace(/\//g, " ");
+    document.getElementById('search-box').setAttribute("value", searchTerm);
+    search("manual");
+</script>

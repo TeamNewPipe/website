@@ -3,10 +3,6 @@ body {
     z-index: -10;
 }
 
-#header {
-    padding: 7.5px 0;
-}
-
 main {
     pointer-events: none;
 }

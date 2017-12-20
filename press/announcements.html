@@ -1,0 +1,26 @@
+---
+layout:    "press_sidebar-small"
+title:     "Announcements"
+date:      2017-12-07 10:30:00
+metatitle: "Announcements - NewPipe a free YouTube client"
+---
+
+<main class="content">
+    <div id="announcements" class="background-gray">
+        <div class="container">
+            <h3 class="red">Announcements</h3>
+            <p class="subtitle">This is a collection of our press announcements including new features, presentations, public meetings and general important information.</p>
+
+            {% for post in site.categories["announcement"] %}
+            <article>
+                <h4>{{ post.title }}</h4>
+                <p class="press-date">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %}, {{ post.author }}{% endif %}</p>
+                {{ post.content }}
+            </article>
+            {% endfor %}
+
+            <p id="last-modified">Last modified: December 2017</p>
+
+        </div>
+    </div>
+</main>

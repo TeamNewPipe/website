@@ -1,3 +1,7 @@
+body, html {
+    height: 100%;
+    font-family: Arial;
+}
 .container .container {
     width: auto;
 }
@@ -99,12 +103,12 @@ img.border-white {
     color: white;
 }
 .header-background {
-  background: url('../img/bg_tiles.jpg') center center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
+    background: url('../img/bg_tiles.jpg') center center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 .header-wrapper h3 {
     font-weight: 500;
@@ -197,15 +201,26 @@ img.border-white {
 
 /* Navigation */
 
+#header.navbar-full-bg {
+    padding: 7px 0;
+}
 .navbar {
     margin-bottom: 0;
 }
 .navbar-wrapper {
     position: relative;
+}
+.navbar-wrapper.navbar-static-top {
     top: 0;
     right: 0;
     left: 0;
     z-index: 20;
+}
+.navbar-wrapper.navbar-fixed-top {
+    position: fixed;
+}
+.modal-open /*.navbar-fixed-top*/ .navbar-toggle {
+    visibility: hidden;
 }
 .navbar-full-bg {
     background: #AA1D1D;
@@ -219,6 +234,10 @@ img.border-white {
 }
 .navbar-brand img.border-white {
     border: 2px solid white;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    background: none;
+    font-weight: bold;
 }
 .navbar-inverse .navbar-brand {
     padding-top: 24px;
@@ -272,6 +291,9 @@ img.border-white {
     margin-bottom: 10px;
 }
 @media (max-width: 767px){
+    #header.navbar-full-bg {
+        padding: 0;
+    }
     #navbar {
         width: 100%;
     }
@@ -293,6 +315,9 @@ img.border-white {
         border: none;
         background: none;
     }
+    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+        font-weight: normal;
+    }
     .navbar-collapse {
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -303,6 +328,30 @@ img.border-white {
     }
 }
 
+/********************
+  CONTENT TEMPLATES
+  ******************/
+
+.background-light-gray {
+    background: #f3eff2;
+}
+
+.background-gray {
+    background: #d0cdcd;
+    color: #555;
+}
+
+.background-dark-gray {
+
+}
+
+.background-red {
+    background: #cd201f;
+}
+
+.background-dark-red {
+    background: #AA1D1D;
+}
 
 /* TEXT-1 */
 
@@ -335,12 +384,12 @@ img.border-white {
 /* Features */
 
 .features-background {
-  background: url('../img/bg_tiles.jpg') center center;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -2;
+    background: url('../img/bg_tiles.jpg') center center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
 }
 .features-wrapper .heading-wrapper {
     background: #f3eff2;
@@ -607,13 +656,13 @@ body.modal-open {
 }
 .footer .copyright a:after {
     content: '';
-    bottom: 0;
+    bottom: 1px;
     left: 50%;
     position: absolute;
     height: 1px;
     width: 0;
     background: white;
-    transition: width 0.25s, left 0.25s;
+    transition: width 0.25s linear, left 0.25s;
 }
 .footer .copyright:hover a:after {
     content: '';
@@ -631,7 +680,6 @@ body.modal-open {
 }
 .footer .image-puffer {
     padding-bottom: 70px;
-    background-color:#d0cdcd;
 }
 .footer-logo {
     height: 90px;
@@ -661,4 +709,27 @@ body.modal-open {
         height: 1px;
         width: 100%;
     }
+}
+
+
+/* sticky footer */
+
+#page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #d0cdcd;
+}
+#header, #footer {
+    flex: none;
+}
+
+.height-full-parent {
+    display: -ms-flex; display: -webkit-flex; display: flex;
+}
+.height-full-child {
+    flex: 1;
+}
+.site-content {
+    flex: 1 0 auto;
 }
