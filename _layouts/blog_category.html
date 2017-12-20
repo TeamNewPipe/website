@@ -1,28 +1,53 @@
 ---
-layout: blog_with-sidebar-post
 ---
 
+{% include blog_head.html %}
 
-<h3>All  {{ page.title | capitalize }}s</h3>
+{% include blog_nav.html %}
 
-{% unless page.content == '' %}
-  <p>{{ page.content }}</p>
-{% endunless %}
+<div class="post-collection height-full-parent">
+    <div class="container height-full-parent height-full">
+        <div class="row is-flex height-full-child">
+            <div class="col-xs-12 col-sm-8 col-md-9 single-post border-left border-right">
 
-{% for post in site.categories[page.category] %}
-<div class="category post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h4 class="post-title">{{ post.title }}</h4>
-        {% if post.subtitle %}
-        <h5 class="post-subtitle">{{ post.subtitle }}</h5>
-        {% endif %}
-    </a>
-    <p class="post-meta">
-      Posted  
-      {% if post.author %}
-        by {{ post.author }}
-      {% endif %} 
-      on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
+                <div class="extra-space"></div>
+
+                <h3>All  {{ page.title | capitalize }}s</h3>
+
+                {% unless page.content == '' %}
+                <p>{{ page.content }}</p>
+                {% endunless %}
+
+                {% for post in site.categories[page.category] %}
+                <div class="category post-preview">
+                    <a href="{{ post.url | prepend: site.baseurl }}">
+                        <h4 class="post-title">{{ post.title }}</h4>
+                        {% if post.subtitle %}
+                        <h5 class="post-subtitle">{{ post.subtitle }}</h5>
+                        {% endif %}
+                    </a>
+                    <p class="post-meta">
+                        Posted
+                        {% if post.author %}
+                        by {{ post.author }}
+                        {% endif %}
+                        on {{ post.date | date: "%B %-d, %Y" }}
+                    </p>
+                </div>
+                {% endfor %}
+
+                <div class="clearfix"></div>
+
+                <div class="image-puffer"></div>
+            </div>
+
+            {% include blog_sidebar.html %}
+
+        </div>
+    </div>
 </div>
-{% endfor %}
+
+{% include blog_footer.html %}
+
+{% include blog_page_end.html %}
+
