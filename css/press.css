@@ -276,7 +276,27 @@ p.subtitle {
 #search-results {
     margin-top: 40px;
 }
-#search-results > .border-box  main h3.start,
-#search-results > .border-box .download-license-warning {
+#search-results > .border-box {
+    padding-bottom: 15px;
+}
+#search-results > .border-box * {
+    background: none !important;
+}
+#search-results > .border-box .search-result-meta {
+    margin-bottom: 15px;
+ }
+#search-results > .border-box .search-result-meta a {
+    color: #cd201f;
+}
+#search-results > .border-box .search-result-content {
+    margin-bottom: 15px;
+    border-left: 2px solid white;
+}
+#search-results > .border-box .search-result-content main h3.start,
+#search-results > .border-box .search-result-content .download-license-warning {
     display: none;
+}
+#search-results > .border-box .search-result-content .media-gallery [data-toggle="modal"],
+#search-results > .border-box .search-result-content .media-gallery .media-file > img[onclick*="viewMediaFile"]{
+    cursor: default;
 }

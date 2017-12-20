@@ -14,16 +14,16 @@ function displaySearchResults(results, store) {
 
         for (var i = 0; i < results.length; i++) {  // Iterate over the results
             var item = store[results[i].ref];
-            appendString += '<div class="border-box"><h4><a href="' + item.url + '">' + item.title + '</a></h4>';
-            appendString += '<p><span>' + item.date + '</span></p><br>';
+            appendString += '<div class="border-box"><div class="search-result-meta"><h4><a href="' + item.url + '">' + item.title + '</a></h4>';
+            appendString += '<p><span>' + item.date + '</span></p></div>';
             var cont = item.content.replace(/{% raw %}{{ site.baseurl }}{% endraw %}/g, "{{ site.baseurl }}");
             cont = cont.replace(/{% raw %}{% include press_download-license-warning.html %}{% endraw %}/g, "");
             var div = document.createElement('div');
             console.log(cont);
             div.innerHTML=html = cont.split(/\s+/).slice(0, 400).join(" ");
-            appendString += div.innerHTML;
+            appendString += '<div class="search-result-content">' + div.innerHTML + '</div>';
             //appendString += item.content.split(/\s+/).slice(0, 400).join(" ") + '...<br>';
-            appendString += '<p><a href="' + item.url + '">Read more...</a></p>';
+            appendString += '<div class="search-result-meta"><p><a href="' + item.url + '"><i class="fa fa-caret-right" aria-hidden="true"></i> View the whole page</a></p></div>';
             appendString += "</div>";
         }
 
