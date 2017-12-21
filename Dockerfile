@@ -1,12 +1,18 @@
 FROM jekyll/jekyll as builder
 
+COPY Gemfile /srv/jekyll
+
+RUN bundle install
+
 COPY . /srv/jekyll
 
-RUN chown -R jekyll: /srv/jekyll && \
+ARG ISSO_ADDRESS
+
+RUN bash -xc "chown -R jekyll: /srv/jekyll && \
     cd /srv/jekyll && \
     jekyll clean && \
     jekyll build && \
-    mv _site/ /data
+    mv _site/ /data"
 
 
 FROM nginx:1.13-alpine

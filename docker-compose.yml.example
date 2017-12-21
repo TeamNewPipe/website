@@ -1,7 +1,25 @@
 version: '2'
 
 services:
+services:
   web:
-    build: .
+    build:
+      context: .
+      args:
+        # ISSO_ADDRESS is the address of the isso installation
+        ISSO_ADDRESS: http://127.0.0.1:8081
     ports:
       - 127.0.0.1:8080:80
+
+  isso:
+    image: sheogorath/isso-docker:0.10.6
+    ports:
+      - 127.0.0.1:8081:80
+    environment:
+      # ISSO_HOST is the address of the blog
+      ISSO_HOST: "http://127.0.0.1:8080"
+      #ISSO_NAME: "comments.example.net"
+      #ISSO_MAX_AGE: "30m"
+      #ISSO_REPLY_TO_SELF: "false"
+      #ISSO_REQUIRE_EMAIL: "false"
+      ISSO_REQUIRE_AUTHOR: "true"
