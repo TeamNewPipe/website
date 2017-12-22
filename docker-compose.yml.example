@@ -1,7 +1,6 @@
 version: '2'
 
 services:
-services:
   web:
     build:
       context: .
