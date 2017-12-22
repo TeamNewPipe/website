@@ -22,3 +22,8 @@ services:
       #ISSO_REPLY_TO_SELF: "false"
       #ISSO_REQUIRE_EMAIL: "false"
       ISSO_REQUIRE_AUTHOR: "true"
+    volumes:
+      - isso-data:/data
+
+volumes:
+  isso-data:
