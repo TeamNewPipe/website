@@ -470,7 +470,8 @@ strong.extra {
 /* Posts */
 .postImg {
     width:200px;
-    padding: 5px;
+    padding-right:15px;
+    padding-bottom:15px;
     float: left;
 }
 .navbar-fixed-top ~ .post-collection {
