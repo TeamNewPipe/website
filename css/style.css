@@ -160,10 +160,10 @@ img.border-white {
     position: absolute;
 }
 .header-box-wrapper .phone > video {
-    height: 554px;
-    z-index: 1;
+    height: 556px;
+    transform: scale(1.009);
     position: absolute;
-    top: -54px;
+    top: -53px;
     left: 7.7px;
     width: calc(328 / 553 * 350px);
     background: transparent;
