@@ -1,6 +1,10 @@
-body, html {
+html, body {
     height: 100%;
     font-family: Arial;
+}
+body.modal-open {
+    padding: 0!important;
+    overflow-y: scroll;
 }
 .container .container {
     width: auto;

@@ -16,7 +16,21 @@ layout: blog_with-sidebar-post
     </header>
 
     <div class="post-content text-justify-sm" itemprop="articleBody">
+        {% if page.image %}
+        <div class="row">
+            <div class="col-md-3 col-img" onclick="viewMediaFile(this)" data-toggle="modal" data-target="#mediaFileView">
+                {% assign image = site.data.images[page.image] %}
+                <img src="/img/{{ image.url }}" class="img-responsive postImg" />
+                By <a href="{{ image.origin }}">{{ image.author }}</a>
+                {% if image.license %} under {{ image.license }}{% endif %}
+            </div>
+            <div class="col-md-9">
+                {{ content }}
+            </div>
+        </div>
+        {% else %}
         {{ content }}
+        {% endif %}
     </div>
 
     <div class="post-categories">
@@ -26,5 +40,13 @@ layout: blog_with-sidebar-post
         {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
         {% endfor %}
     </div>
+
+    <!-- Modal -->
+    <div id="mediaFileView" class="modal fade" role="dialog" data-dismiss="modal">
+        <img id="mediaFullScreen" src="" class="img-full-width screenshot-image" data-dismiss="modal"/>
+        <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" ></i>
+    </div> <!-- Modal -->
+
+    <script src="{{ site.baseurl }}/js/mediaview.js"></script>
 
 </article>

@@ -37,10 +37,7 @@
         margin-top: 78px;
     }
 }
-body.modal-open {
-    padding: 0!important;
-    overflow-y: scroll;
-}
+
 
 
 /* Sidebar */
@@ -106,6 +103,12 @@ body.modal-open {
 
 /* Content */
 
+.hidden-press {
+    display: none;
+}
+.visible-press {
+    display: block;
+}
 .site-content {
     border-top: 2px solid white;
 }
