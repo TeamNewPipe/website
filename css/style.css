@@ -99,11 +99,11 @@ img.border-white {
 /* Header */
 
 .header-wrapper {
-    background: rgba(170, 29, 29, 0.85);
     color: white;
 }
 .header-background {
-    background: url('../img/bg_tiles.jpg') center center;
+    background: url('../img/background_header.png') center center;
+    background-size: cover;
     position: fixed;
     width: 100%;
     top: 0;

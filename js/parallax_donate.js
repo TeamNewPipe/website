@@ -3,7 +3,7 @@ var  featuresHeight, featuresPosition, windowHeight, bitcoinHeight;
 function parallax_reset() {
     var collapsed;
 
-    if($('#bitcoin-donation').css('display') == 'none' ) {
+    if ($('#bitcoin-donation').css('display') == 'none' ) {
         collapsed = true;
         $('#bitcoin-donation').toggle();
         bitcoinHeight = $('#bitcoin-donation').outerHeight(true);
@@ -15,7 +15,7 @@ function parallax_reset() {
     featuresPosition = $('.features-wrapper').position().top;
     $('.features-background').css('height', featuresHeight + 'px');
 
-    if(collapsed != null) {
+    if (collapsed != null) {
         $('#bitcoin-donation').toggle();
     }
 }
@@ -23,7 +23,7 @@ function parallax_reset() {
 function parallax() {
     var scrolled = $(window).scrollTop();
     //console.log(featuresHeight + " " + featuresPosition + " " + bitcoinHeight + " " + windowHeight  + " " +  scrolled  + " " + (featuresHeight - scrolled + featuresPosition));
-    if($(document).height() <= $(window).height())
+    if ($(document).height() <= $(window).height())
         $('.features-background').css('height', (featuresHeight + featuresPosition + bitcoinHeight - scrolled) + 'px');
     else
         $('.features-background').css('height', (featuresHeight + featuresPosition + bitcoinHeight + windowHeight - scrolled) + 'px');
@@ -31,7 +31,7 @@ function parallax() {
 }
 
 $(window).scroll(function(e) {
-    if($(window).width() > 767){
+    if ($(window).width() > 767){
         parallax();
     }
 });

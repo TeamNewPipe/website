@@ -3,11 +3,11 @@ var headerHeight, featuresHeight, featuresPosition;
 function parallax_reset() {
     headerHeight = $('.header-wrapper').outerHeight(true);
     /* check whether the height can encrease as navbar can be (un-)collapsed */
-    if($(window).width() > 767){
-        $('.header-background').css('height', headerHeight + 'px');
+    if ($(window).width() > 767){
+        $('.header-background').css('height', (headerHeight + 20) + 'px');
     }
     else {
-        if(headerHeight < $(window).height()) $('.header-background').css('height', '100vh');
+        if (headerHeight < $(window).height()) $('.header-background').css('height', '100vh');
     }
     featuresHeight = $('.features-wrapper').outerHeight(true);
     featuresPosition = $('.features-wrapper').position().top;
@@ -16,12 +16,12 @@ function parallax_reset() {
 
 function parallax() {
     var scrolled = $(window).scrollTop();
-    $('.header-background').css('height', (headerHeight - scrolled) + 'px');
+    $('.header-background').css('height', (headerHeight + 20 - scrolled) + 'px');
     $('.features-background').css('height', (featuresHeight - scrolled + featuresPosition) + 'px');
 }
 
 $(window).scroll(function(e) {
-    if($(window).width() > 767){
+    if ($(window).width() > 767){
         parallax();
     }
 });
@@ -35,4 +35,4 @@ $(window).resize(function(e) {
 });
 
 parallax_reset();
-if($(window).width() > 767) parallax();
+if ($(window).width() > 767) parallax();
