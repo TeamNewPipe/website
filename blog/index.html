@@ -12,7 +12,20 @@ short: All posts
 <div class="border-box anchor-right-full-parent">
     <h4><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h4>
     <p><span>{{ post.date | date_to_string }}, by {{ post.author }}</span></p><br>
-    {{ post.content | truncatewords:100}}
+    {% if post.image %}
+    <div class="row">
+        <a href="{{ BASE_PATH }}{{ post.url }}">
+            <div class="col-md-3 col-img">
+                <img src="/img/{{ site.data.images[post.image].url }}" class="img-responsive postImg" />
+            </div>
+        </a>
+        <div class="col-md-9">
+            {{ post.content | truncatewords:100 }}
+        </div>
+    </div>
+    {% else %}
+    {{ post.content | truncatewords:100 }}
+    {% endif %}
     <p><a href="{{ post.url }}">Read more...</a></p>
     <p class="categories">
         {% for category in post.categories %}

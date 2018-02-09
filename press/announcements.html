@@ -15,7 +15,22 @@ metatitle: "Announcements - NewPipe a free YouTube client"
             <article>
                 <h4>{{ post.title }}</h4>
                 <p class="press-date">{{ post.date | date: "%B %-d, %Y" }}{% if post.author %}, {{ post.author }}{% endif %}</p>
+                {% if post.image and post.imageHidePress == true %}
                 {{ post.content }}
+                {% else if post.image %}
+                <div class="row">
+                    <a href="{{ BASE_PATH }}{{ post.url }}">
+                        <div class="col-md-3 col-img">
+                            <img src="/img/{{ site.data.images[post.image].url }}" class="img-responsive postImg" />
+                        </div>
+                    </a>
+                    <div class="col-md-9">
+                        {{ post.content }}
+                    </div>
+                </div>
+                {% else %}
+                {{ post.content }}
+                {% endif %}
             </article>
             {% endfor %}
 
