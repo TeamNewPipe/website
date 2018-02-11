@@ -21,11 +21,11 @@ metatitle: "Press information - NewPipe a free YouTube client"
                 <div class="col-sm-9">41</div>
             </div>-->
             <ul style="list-style-position: outside;">
-                <li>Current version: 0.11.0</li>
+                <li>Current stable version: <span id="current-version">0.11.5 (Effective 11th February 2018)</span></li>
                 <li>Initial release: 4. September 2015</li>
                 <li>Founder: Christian Schabesberger</li>
-                <li>Available translations: 43<br>You can find a list with all current supported languages at <a href="https://hosted.weblate.org/projects/newpipe/#languages" target="_blank"></a>Weblate.</li>
-                <li>Contributors: 160</li>
+                <li>Available translations: 43<br>You can find a list with all current supported languages at <a href="https://hosted.weblate.org/projects/newpipe/#languages" target="_blank">Weblate</a>.</li>
+                <li>Contributors: 186</li>
                 <li>App store: <a href="https://f-droid.org/packages/org.schabi.newpipe/" target="_blank">F-Droid</a></li>
             </ul>
             <p>Because NewPipe and F-Droid guarantee high privacy standards to their users, we cannot give you any information about the number of downloads, active installations or the countries where our users come from, because we do not collect it.</p><!-- But there is a little information about these common indicators for an app popularity: ... -->
@@ -36,8 +36,13 @@ metatitle: "Press information - NewPipe a free YouTube client"
             <h4>About Team NewPipe</h4>
             <p>Team NewPipe are the main developers of the NewPipe app and the NewPipe Extractor. At December 2017 they counted eight developers who work voluntarily on this Open Source project. All work of NewPipe's developers is independent and is not funded by any company or governmental institution but by single donations of private persons.</p>
 
-            <p id="last-modified">Last modified: December 2017</p>
+            <p id="last-modified">Last modified: February 2018</p>
 
         </div>
     </div>
 </main>
+
+<script type="text/javascript" src="/js/github-api.js"></script>
+<script type="text/javascript">
+    document.getElementById("current-version").innerHTML = latestVersion(true);
+</script>
