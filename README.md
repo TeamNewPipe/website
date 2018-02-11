@@ -13,6 +13,11 @@ Install Jekyll and Bundler gems through RubyGems:
 ~ $ gem install jekyll bundler
 ```
 
+Navigate to the root directory of this project, dev environment:
+```
+bundle install
+```
+
 Navigate to this directory and build the site on the preview server:
 ```
 ~ $ jekyll serve
