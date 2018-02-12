@@ -21,7 +21,7 @@ short: All posts
             </div>
         </a>
         <div class="col-md-9">
-            {% if post.excerpt-separator %}
+            {% if post.excerpt_separator %}
                 {{ post.excerpt }}
             {% else %}
                 {{ post.content | truncatewords:100 }}
@@ -30,7 +30,7 @@ short: All posts
         </div>
     </div>
     {% else %}
-        {% if post.excerpt-separator %}
+        {% if post.excerpt_separator %}
             {{ post.excerpt }}
         {% else %}
             {{ post.content | truncatewords:100 }}
