@@ -1,9 +1,15 @@
 new:
     url: new.png
-    license:
-    origin:
-34C3:
+    author: Schabi
+    origin: https://github.com/theScrabi
+
+34c3-logo:
     url: 34c3_logo.png
     name: 34C3 logo
     author: Gregor Sedlag
     origin: https://engelsystem.de/img/34c3_logo.png
+
+34c3-press:
+    url: 34c3-press.png
+    author: Schabi
+    origin: https://github.com/theScrabi
