@@ -1,8 +1,13 @@
 FROM jekyll/jekyll as builder
 
 COPY Gemfile /srv/jekyll
-
 RUN bundle install
+
+COPY Gemfile.lock /srv/jekyll
+RUN bash -xc "chown jekyll: Gemfile.lock && \
+    cd /srv/jekyll && \
+    gem install bundler && \
+    bundle update"
 
 COPY . /srv/jekyll
 
@@ -13,7 +18,6 @@ RUN bash -xc "chown -R jekyll: /srv/jekyll && \
     jekyll clean && \
     jekyll build && \
     mv _site/ /data"
-
 
 FROM nginx:1.13-alpine
 
