@@ -6,6 +6,7 @@ title: a free YouTube client - HOME
 layout: blog_with-sidebar
 description: Welcome to NewPipe!
 short: All posts
+
 ---
 {% for post in paginator.posts %}
 <!--{{ post.author }}-->
@@ -20,13 +21,23 @@ short: All posts
             </div>
         </a>
         <div class="col-md-9">
-            {{ post.content | truncatewords:100 }}
+            {% if post.excerpt-separator %}
+                {{ post.excerpt }}
+            {% else %}
+                {{ post.content | truncatewords:100 }}
+            {% endif %}
+            <p><a href="{{ post.url }}">Read more...</a></p>
         </div>
     </div>
     {% else %}
-    {{ post.content | truncatewords:100 }}
+        {% if post.excerpt-separator %}
+            {{ post.excerpt }}
+        {% else %}
+            {{ post.content | truncatewords:100 }}
+        {% endif %}
+        <p><a href="{{ post.url }}">Read more...</a></p>
     {% endif %}
-    <p><a href="{{ post.url }}">Read more...</a></p>
+
     <p class="categories">
         {% for category in post.categories %}
         <a href="{{ site.baseurl }}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
