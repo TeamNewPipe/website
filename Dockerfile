@@ -14,7 +14,7 @@ COPY . /srv/jekyll
 ARG ISSO_ADDRESS
 
 RUN bash -xc "chown -R jekyll: /srv/jekyll && \
-    bundle install jekyll && \
+    bundle update jekyll && \
     cd /srv/jekyll && \
     jekyll clean && \
     jekyll build && \
