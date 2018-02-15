@@ -28,7 +28,8 @@ window.store = {
           {%- if forloop.index < 3 -%}{{ excs | append : '</p>'}}{%- endif -%}
         {%- endfor -%}
       {%- endcapture -%}{{ e |jsonify }}
-      {%- endif -%},
+    {%- endif -%},
+    "image": "{% if post.image %}/img/{{ site.data.images[post.image].url }}{% endif %}",
     "url": "{{ post.url | xml_escape }}"
   }{%- unless forloop.last -%},{%- endunless -%}
 {% endfor %}

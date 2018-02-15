@@ -13,10 +13,24 @@ function displaySearchResults(results, store) {
         for (var i = 0; i < results.length; i++) {  // Iterate over the results
             var item = store[results[i].ref];
             appendString += '<div class="border-box anchor-right-full-parent">'
-                    + '<h4><a href="' + item.url + '">' + item.title + '</a></h4>'
-                    + '<p><span>' + item.date+ ', by ' + item.author + '</span></p><br>'
-                    + item.excerpt + '<br>'
+                + '<h4><a href="' + item.url + '">' + item.title + '</a></h4>'
+                + '<p><span>' + item.date+ ', by ' + item.author + '</span></p><br>';
+            if (item.image != "") {
+                appendString += '<div class="row">\n'
+                    + '        <a href="{{ BASE_PATH }}{{ post.url }}">\n'
+                    + '            <div class="col-md-3 col-img">\n'
+                    + '                <img src="' + item.image + '" class="img-responsive postImg" />\n'
+                    + '            </div>\n'
+                    + '        </a>\n'
+                    + '        <div class="col-md-9">'
+                    + '            ' + item.excerpt
+                    + '<p><a href="' + item.url + '">Read more...</a></p>'
+                    + '        </div>'
+                    + '    </div>';
+            } else {
+                appendString += item.excerpt
                     + '<p><a href="' + item.url + '">Read more...</a></p>';
+            }
             if(item.category.length != 0){
                 appendString += '<p class="categories">';
                 for(var c = 0; c < item.category.length; c++){
@@ -27,7 +41,7 @@ function displaySearchResults(results, store) {
                 appendString += "</p>";
             }
             appendString += '<div class="anchor-right-full"></div>'
-                          + '</div>';
+                + '</div>';
         }
 
         searchResults.innerHTML = appendString;
