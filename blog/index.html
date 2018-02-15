@@ -24,7 +24,10 @@ short: All posts
             {% if post.excerpt_separator %}
                 {{ post.excerpt }}
             {% else %}
-                {{ post.content | truncatewords:100 }}
+                {%- assign exc = post.content | normalize_whitespace | split: '</p>' -%}
+                {%- for excs in exc -%}
+                {%- if forloop.index < 3 -%}{{ excs | append : '</p>'}}{%- endif -%}
+                {%- endfor -%}
             {% endif %}
             <p><a href="{{ post.url }}">Read more...</a></p>
         </div>
