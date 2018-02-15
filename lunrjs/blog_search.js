@@ -13,21 +13,35 @@ function displaySearchResults(results, store) {
         for (var i = 0; i < results.length; i++) {  // Iterate over the results
             var item = store[results[i].ref];
             appendString += '<div class="border-box anchor-right-full-parent">'
-                          + '<h4><a href="' + item.url + '">' + item.title + '</a></h4>'
-                          +  '<p><span>' + item.date+ ', by ' + item.author + '</span></p><br>'
-                          + item.content.split(/\s+/).slice(0,100).join(" ") + '...<br>'
-                          + '<p><a href="' + item.url + '">Read more...</a></p>';
+                + '<h4><a href="' + item.url + '">' + item.title + '</a></h4>'
+                + '<p><span>' + item.date+ ', by ' + item.author + '</span></p><br>';
+            if (item.image != "") {
+                appendString += '<div class="row">\n'
+                    + '        <a href="{{ BASE_PATH }}{{ post.url }}">\n'
+                    + '            <div class="col-md-3 col-img">\n'
+                    + '                <img src="' + item.image + '" class="img-responsive postImg" />\n'
+                    + '            </div>\n'
+                    + '        </a>\n'
+                    + '        <div class="col-md-9">'
+                    + '            ' + item.excerpt
+                    + '<p><a href="' + item.url + '">Read more...</a></p>'
+                    + '        </div>'
+                    + '    </div>';
+            } else {
+                appendString += item.excerpt
+                    + '<p><a href="' + item.url + '">Read more...</a></p>';
+            }
             if(item.category.length != 0){
                 appendString += '<p class="categories">';
                 for(var c = 0; c < item.category.length; c++){
-                    appendString += '<a href="/' + siteBaseUrl +  item.category[c].toLowerCase() + '"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;' +  item.category[c] + '</a>';
+                    appendString += '<a href="/' + siteBaseUrl + item.category[c].toLowerCase() + '"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;' + item.category[c] + '</a>';
                     if(item.category.length - c != 1) //not the last item
                         appendString += " &nbsp;|&nbsp; ";
                 }
                 appendString += "</p>";
             }
             appendString += '<div class="anchor-right-full"></div>'
-                          + '</div>';
+                + '</div>';
         }
 
         searchResults.innerHTML = appendString;
@@ -68,6 +82,7 @@ function search(type){
             this.field('category', { boost: 5 });
             this.field('date');
             this.field('content');
+            this.field('excerpt', { boost: 2 });
         });
 
         for (var key in window.store) { // Add the data to lunr
@@ -77,7 +92,8 @@ function search(type){
                 'author': window.store[key].author,
                 'category': window.store[key].category,
                 'date': window.store[key].date,
-                'content': window.store[key].content
+                'content': window.store[key].content,
+                'excerpt': window.store[key].excerpt
             });
 
             var results = idx.search(searchTerm); // Get lunr to perform a search
