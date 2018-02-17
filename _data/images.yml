@@ -15,7 +15,7 @@ new:
     origin: https://github.com/theScrabi
 
 newpipe-beta:
-  url: logo_beta_192.png
+  url: logo_beta.svg
   name: NewPipe Beta logo
   author: Schabi
   origin: https://github.com/theScrabi
