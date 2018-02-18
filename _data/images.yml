@@ -13,3 +13,9 @@ new:
     url: 34c3-press.png
     author: Schabi
     origin: https://github.com/theScrabi
+
+newpipe-beta:
+  url: logo_app_beta.svg
+  name: NewPipe Beta logo
+  author: Schabi
+  origin: https://github.com/theScrabi
