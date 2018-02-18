@@ -53,9 +53,12 @@ These categories are implemented right now:
 - announcement
 - talk
 - download
+- pinned
  
- Every post which has the `announcement` category will also be shown in `press/announcements/`.
- 
+Every post which has the `announcement` category will also be shown in `press/announcements/`.
+
+Posts with the `pinned` category appear on the right sidebar as _Also interesting_.
+
 New categories can be implemented via an extra HTML page named `categoryName.html` and placed in `blog/`.
 The new page should look like this:
  
@@ -66,9 +69,18 @@ title: categoryName
 category: categoryName
 ---
 ```
+
+##### Post image
+
+Images which are going to be displayed as a "header" of the post, need to be registered in [_data/images.yml](_data/images.yml).
+
+`image`          - Displays an image at the left side of the post. Use the key you registered in [_data/images.yml](_data/images.yml).
+
+`imageHidePress` - Hides the image in the announcement page of the pres kit.
+
 ##### Page metadata
 
-`metatitle` - The title to display in the browser `<title></title`
+`metatitle` - The title to display in the browser `<title></title>`
 
 `metades`   - The description to display as `<meta name="description">`
 
