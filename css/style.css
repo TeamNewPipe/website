@@ -10,6 +10,7 @@ body.modal-open {
     body.feature-fullscreen {
         margin-left: -100%;
         margin-right: 100%;
+        overflow: hidden;
     }
 }
 .container .container {
@@ -451,10 +452,12 @@ img.border-white {
     border: none;
     color: #cd201f;
     padding: 17px 30px;
+    display: flex;
 }
 #features2 #features-sidebar .list-group > .active > .list-group-item {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
+    border-radius: 0;
     padding-top: 16px;
     padding-bottom: 16px;
 }
@@ -464,6 +467,9 @@ img.border-white {
     font-size: 25px;
     line-height: 25px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #features2 #features-sidebar .list-group .list-group-item span.icon .fa.fa-4k {
     font-size: 21px;
