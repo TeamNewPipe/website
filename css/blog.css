@@ -204,7 +204,9 @@ a:hover, a:focus {
 }*/
 .navbar-full-bg {
     background: #AA1D1D;
-    background: rgba(170,29,29,0.95)
+    background: rgba(170,29,29,0.95);
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 .navbar-inverse {
     background: none;
@@ -241,9 +243,6 @@ a:hover, a:focus {
     margin-top: -2px;
     margin-bottom: -2px;
     margin-left: 46px;
-}
-.navbar-full-bg .navbar-inverse .navbar-nav {
-    margin-right: 0;
 }
 .navbar-inverse .navbar-nav > li > a {
     color: white;

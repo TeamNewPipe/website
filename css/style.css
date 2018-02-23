@@ -211,16 +211,17 @@ img.border-white {
 .navbar {
     margin-bottom: 0;
 }
-.navbar-wrapper {
+#navbar-wrapper {
+    margin: 7px 0;
     position: relative;
 }
-.navbar-wrapper.navbar-static-top {
+#navbar-wrapper.navbar-static-top {
     top: 0;
     right: 0;
     left: 0;
     z-index: 20;
 }
-.navbar-wrapper.navbar-fixed-top {
+#navbar-wrapper.navbar-fixed-top {
     position: fixed;
 }
 .modal-open /*.navbar-fixed-top*/ .navbar-toggle {
@@ -276,7 +277,7 @@ img.border-white {
     margin-left: 46px;
 }
 .navbar-full-bg .navbar-inverse .navbar-nav {
-    margin-right: 0;
+    margin-right: 20px;
 }
 .navbar-inverse .navbar-nav > li > a {
     color: white;
