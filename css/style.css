@@ -309,6 +309,12 @@ img.border-white {
         margin-left: 15px;
         padding-left: 0;
     }
+    #main-page .navbar-brand {
+        padding-top: 0;
+        line-height: 38px;
+        margin-top: 10px;
+        padding-bottom: 0;
+    }
     .nav > li > a {
         padding-top: 20px;
         padding-bottom: 20px;

@@ -159,7 +159,7 @@ a:hover, a:focus {
     left: 7.3px;
     width: calc(328 / 553 * 350px);
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .header-box-wrapper .pull-left {
         float: none !important;
     }
@@ -264,7 +264,10 @@ a:hover, a:focus {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
+    #header.navbar-full-bg {
+        padding: 0;
+    }
     #navbar {
         width: 100%;
     }
