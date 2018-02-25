@@ -411,16 +411,8 @@ img.border-white {
 
 /* Features */
 
-.fa-money {
-    vertical-align: 2px;
-}
-
 #features2 {
-    background: #d0cdcd;
-    background: linear-gradient(to right, #d0cdcd 0px, #d0cdcd calc(100% - 25% - 25px),#E2DEE0 calc(100% - 25% - 24px));
     background: #f3eff2;
-    /*padding-top: 30px;
-    padding-bottom: 30px;*/
 }
 #features2 #features2-title {
     font-size: 28px;
@@ -570,23 +562,6 @@ img.border-white {
     line-height: 2em !important;
     vertical-align: middle;
 }
-#features2 .progress {
-    width: calc(100% - 84px);
-    float: left;
-    margin-top: auto;
-    margin-bottom: auto;
-    display: inline;
-}
-#features2 .progress-bar {
-    transition: width 1s;
-    width: 0%;
-}
-#features2 .progress-bar.active {
-    width: 100%;
-}
-.progress-bar-newpipe {
-    background: #cd201f;
-}
 #features2 #lightweight .feature2-description {
     width: 100% !important;
 }
@@ -594,11 +569,6 @@ img.border-white {
     display: block;
     margin-bottom: 15px;
 }
-/*#features2 .row.is-flex > * {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-}*/
 #features2 .description {
     color: #cd201f;
     font-weight: 600;
@@ -630,6 +600,100 @@ img.border-white {
 }
 #features2 .feature2-description ul > li.heart:before {
     content: "\f004";
+}
+#features2 .c100 {
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+}
+#features2 .c100 ~ p {
+    text-align: center;
+    font-size: 18px;
+}
+#features2 #lightweight .feature2-description {
+    margin-top: 45px;
+}
+#features2 #lightweight .feature2-description [class^="col"] {
+    margin-bottom: 45px;
+}
+
+/* Progress circles */
+
+.single-chart {
+    max-width: 100px;
+    justify-content: space-around ;
+    position: relative;
+    transform: rotate(0deg);
+    animation-play-state: running;
+    margin: 15px auto;
+}
+
+.circular-chart {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.circle-bg {
+    fill: #E2DEE0;
+    stroke: #c5c5c5 ;
+    stroke-width: 2.5;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 0;
+
+}
+.single-chart.in .circle {
+    stroke-width: 2.5;
+    animation: progress 1.5s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+@keyframes circle-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes circle-rotate-text {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.circular-chart.red .circle {
+    stroke: #cd201f;
+}
+
+.circle-text {
+    color: #cd201f;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 1em;
+    font-size: 30px;
+    margin-top: calc(-50% - 0.5em);
+    /*transition: all 0.2s ease;*/
+}
+.single-chart.animated .circle-text {
+    animation: circle-rotate-text 1.5s ease;
+}
+.single-chart.animated {
+    animation: circle-rotate 1.5s ease;
+}
+.single-chart .fa-mobile-wrapper {
+    font-size: 40px;
 }
 
 
@@ -834,3 +898,4 @@ body.modal-open {
 .site-content {
     flex: 1 0 auto;
 }
+

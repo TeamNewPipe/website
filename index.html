@@ -6,20 +6,20 @@
 <head>
     <title>NewPipe - a free YouTube client</title>
 
-    <meta name="author" content="Christian Schabesberger, NewPipe">
-    <meta name="description" content="Welcome to the Website of NewPipe the lightweight YouTube experience for Android.">
-    <meta name="keywords" content="NewPipe, YouTube, Android">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
+    <meta name="author" content="Christian Schabesberger, NewPipe" />
+    <meta name="description" content="Welcome to the Website of NewPipe the lightweight YouTube experience for Android." />
+    <meta name="keywords" content="NewPipe, YouTube, Android" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
 
-    <link rel="icon" href="{{ site.baseurl }}/img/favicon.gif" type="image/gif" sizes="64x64">
+    <link rel="icon" href="{{ site.baseurl }}/img/favicon.ico" type="image/gif" sizes="64x64" />
 
 
     <!-- JQuery -->
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,10 +29,13 @@
     <![endif]-->
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css" />
+
+    <!-- Circle CSS for progress circles -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/circle.css" />
 
     <!-- Custom stylesheets -->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
 
 </head>
 <body id="main-page">
@@ -125,56 +128,93 @@
         <div class="container container-double">
             <div class="row is-flex">
                 <div class="col-md-9 feature2-detail" id="lightweight">
-                    <h3 style="font-weight: bold">NewPipe - the smart and lightweight streaming solution</h3>
+                    <h3 style="font-weight: bold">NewPipe - the smart streaming solution</h3>
                     <div class="feature2-media"></div>
                     <div class="feature2-description">
-                            <div class="row is-flex">
-                                <div class="col-md-6">
-                                    <div class="description">
-                                        <!--<h3>Fast, mobile / battery friendly, little mobile data usage,
-                                        privacy friendly, designed for offline usage</h3>-->
-                                    </div>
-                                    <div class="icon">
-                                        <i class="fa fa-3x fa-bolt red"></i>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="single-chart">
+                                    <svg viewbox="0 0 36 36" class="circular-chart red">
+                                        <path class="circle-bg"
+                                              d="M18 2.0845
+                                              a 15.9155 15.9155 0 0 1 0 31.831
+                                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                        <path class="circle in"
+                                              stroke-dasharray="80, 100"
+                                              d="M18 2.0845
+                                              a 15.9155 15.9155 0 0 1 0 31.831
+                                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                    </svg>
+                                    <span class="circle-text"><i class="fa fa-bolt"></i></span>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="icon">
-                                        <i class="fa fa-3x fa-dashboard red"></i>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                <p class="text-center">Fast</p>
+                            </div> <!-- fast -->
+
+                            <div class="col-md-6">
+                                <div class="single-chart">
+                                    <svg viewbox="0 0 36 36" class="circular-chart red">
+                                        <path class="circle-bg"
+                                              d="M18 2.0845
+                                              a 15.9155 15.9155 0 0 1 0 31.831
+                                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                        <path class="circle"
+                                              stroke-dasharray="87, 100"
+                                              d="M18 2.0845
+                                              a 15.9155 15.9155 0 0 1 0 31.831
+                                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                    </svg>
+                                    <span class="circle-text fa-mobile-wrapper"><i class="fa fa-mobile"></i></span>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="icon">
-                                        <i class="fa fa-3x fa-user-secret red"></i>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                <p class="text-center">Small</p>
+                            </div> <!-- size -->
+
+                            <div class="col-md-6">
+                                <div class="single-chart">
+                                    <svg viewbox="0 0 36 36" class="circular-chart red">
+                                        <path class="circle-bg"
+                                              d="M18 2.0845
+                                              a 15.9155 15.9155 0 0 1 0 31.831
+                                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                        <path class="circle"
+                                              stroke-dasharray="97, 100"
+                                              d="M18 2.0845
+                                              a 15.9155 15.9155 0 0 1 0 31.831
+                                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                    </svg>
+                                    <span class="circle-text"><i class="fa fa-battery"></i></span>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="icon">
-                                        <i class="fa fa-3x fa-battery-three-quarters red"></i>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                <p class="text-center">Battery Saving</p>
+                            </div> <!-- battery -->
+
+                            <div class="col-md-6">
+                                <div class="single-chart">
+                                    <svg viewbox="0 0 36 36" class="circular-chart red">
+                                        <path class="circle-bg"
+                                              d="M18 2.0845
+                                              a 15.9155 15.9155 0 0 1 0 31.831
+                                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                        <path class="circle in"
+                                              stroke-dasharray="90, 100"
+                                              d="M18 2.0845
+                                              a 15.9155 15.9155 0 0 1 0 31.831
+                                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                                        />
+                                    </svg>
+                                    <span class="circle-text"><i class="fa fa-signal"></i></span>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="icon">
-                                        <i class="fa fa-3x fa-wifi red"></i>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
+                                <p class="text-center">Less Data Consumption</p>
+                            </div> <!-- data -->
+
                         </div>
+                    </div>
                     <div class="feature2-close-detail">
                         <i class="fa fa-arrow-left"></i>
                     </div>
@@ -225,7 +265,7 @@
                         <p><strong>Listen to your favourite music while using other apps:</strong></p>
                         <ul>
                             <li>Play in background</li>
-                            <li class="text-success">Pro tip: close NewPipe and save RAM and battery</li>
+                            <li class="text-success">Pro tip: close NewPipe to save RAM and battery</li>
                             <li>Save mobile data volume (we only download the audio)</li>
                         </ul>
                     </div>
@@ -338,7 +378,7 @@
                             <li>NewPipe is powered by a growing community</li>
                             <li>Our goal is to make the internet a more free (libre) place and open it for everyone</li>
                             <li>Your donation cover a majority our costs</li>
-                            <li class="text-success">WebLate, Sentry and other companies offer their services to Open Source projects for free</li>
+                            <li class="text-success">F-Droid, WebLate, Sentry and other companies offer their services to Open Source projects for free</li>
                         </ul>
                     </div>
                     <div class="feature2-close-detail">
