@@ -21,6 +21,7 @@ $(window).on("orientationchange load resize", function () {
         if (!isActive) {
             if (currentFeature == -1) currentFeature = 0;
             $('#' + features[currentFeature]).addClass('active');
+            $("#features-sidebar .list-group a").eq(currentFeature).addClass('active');
             isActive = true;
         }
         if (isFullscreen) {
@@ -83,6 +84,7 @@ $(window).on('hashchange load', function(){
         $('.feature2-detail.active').removeClass('active');
         $(hash).addClass('active');
         currentFeature = features.indexOf(hash.substr(1));
+        $("#features-sidebar .list-group a").eq(currentFeature).addClass('active');
         if (currentFeature == 0) animateCircleProgress(true);
     } else if(hash == "" && $(window).width() < 767) { // enables hardware back button or back key on keyboard to close the detail view
         $("#features-sidebar .list-group .active").removeClass('active');

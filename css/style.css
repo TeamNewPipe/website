@@ -447,11 +447,12 @@ img.border-white {
     display: flex;
 }
 #features2 #features-sidebar .list-group > .active > .list-group-item {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
     border-radius: 0;
     padding-top: 16px;
     padding-bottom: 16px;
+    background: #d0cdcd;
 }
 #features2 #features-sidebar .list-group .list-group-item span.icon {
     width: 25px;
@@ -617,7 +618,9 @@ img.border-white {
     margin-bottom: 45px;
 }
 
-/* Progress circles */
+/** Progress circles
+    Idea Sergio Pedercini https://medium.com/@pppped/how-to-code-a-responsive-circular-percentage-chart-with-svg-and-css-3632f8cd7705
+ */
 
 .single-chart {
     max-width: 100px;
