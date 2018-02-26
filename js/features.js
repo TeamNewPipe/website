@@ -4,6 +4,14 @@
  * @licence MIT
  */
 
+$(function() {
+
+//////////////////////////
+//                      //
+//   Slides Lifecycle   //
+//                      //
+//////////////////////////
+
 /**
  * IDs of all feature slides
  * @type {Array}
@@ -11,38 +19,44 @@
 var features = [
     "lightweight", "downloads", "privacy", "background", "popup",
     "subscriptions", "bookmarks", "history", "code", "price"];
-var currentFeature = -1;
-var isFullscreen = false;
-var isActive = false;
+var currentFeature = -1,
+    isFullscreen = false,
+    isActive = false;
+var $f = $("#features2"),
+    $s = $("#features-sidebar"),
+    $b = $("body");
 
 
-$(window).on("orientationchange load resize", function () {
+function resizeHandler() {
     if ($(window).width() > 767) {
         if (!isActive) {
-            if (currentFeature == -1) currentFeature = 0;
+            if (currentFeature === -1) currentFeature = 0;
             $('#' + features[currentFeature]).addClass('active');
-            $("#features-sidebar .list-group a").eq(currentFeature).addClass('active');
+            $s.find(".list-group a").eq(currentFeature).addClass('active');
             isActive = true;
-        }
-        if (isFullscreen) {
-
         }
     } else {
         if (isActive) {
-            if (currentFeature == -1) currentFeature = 0;
+            if (currentFeature === -1) currentFeature = 0;
             $('#' + features[currentFeature]).removeClass('active');
-            $('body').removeClass('feature-fullscreen');
+            $b.removeClass('feature-fullscreen');
             isActive = false;
         }
     }
-});
+}
+
+resizeHandler();
+
+$(window).on("orientationchange resize", resizeHandler);
 
 
-$('.feature2-close-detail').click(function () {
-    $("#features-sidebar .list-group .active").removeClass('active');
+/**
+ * Close fullscreen feature
+ */
+$f.find('.feature2-close-detail').click(function () {
+    $s.find(".list-group .active").removeClass('active');
     $(this).parent().removeClass('active');
-    $('body').removeClass('feature-fullscreen');
-    $(document).trigger('bodyClassChanged');
+    $b.removeClass('feature-fullscreen');
     history.pushState(null, null, "#"); // make sure to work with currentFeature
 });
 
@@ -50,22 +64,17 @@ $('.feature2-close-detail').click(function () {
  * Onclick-listener for the features
  * Changes the slides
  */
-$('#features-sidebar .list-group a').click(function (event) {
+$s.find('.list-group a').click(function (event) {
     event.preventDefault();
     var hash = $(this).attr('href');
-    $('.list-group > .active').removeClass('active');
+    $f.find('.list-group > .active').removeClass('active');
     $(this).addClass('active');
-    $('.feature2-detail.active').removeClass('active');
+    $f.find('.feature2-detail.active').removeClass('active');
     $(hash).addClass('active');
     currentFeature = features.indexOf(hash.substr(1));
-    if (currentFeature == 0) {
-        animateCircleProgress(true);
-    }
-    if ($("body").outerWidth() > 767) {
-
-
-    } else {
-        $("body").addClass("feature-fullscreen");
+    if (currentFeature === 0) animateCircleProgress(true);
+    if ($b.outerWidth() <= 767) {
+        $b.addClass("feature-fullscreen");
         isFullscreen = true;
     }
     history.pushState(null, null, hash);
@@ -73,28 +82,33 @@ $('#features-sidebar .list-group a').click(function (event) {
 
 /**
  * Check if the hash changed and update the features if necessary
+ * When the document is ready check if the screen is small,
+ * a slide is called via the URL and open it if necessary.
  */
-$(window).on('hashchange load', function(){
+function a() {
     var hash = window.location.hash;
-    if (hash != "" && hash != null && hash != "undefined"
+    if (hash !== "" && hash != null && hash != "undefined"
         && features.includes(hash.substr(1))
         && !$(hash).hasClass('active')) {
-        if ($(window).width() <= 767) $('body').addClass('feature-fullscreen');
+        if ($(window).width() <= 767) $b.addClass('feature-fullscreen');
         $('.feature2-detail.active').removeClass('active');
         $(hash).addClass('active');
         currentFeature = features.indexOf(hash.substr(1));
-        $("#features-sidebar .list-group a").removeClass('active');
-        $("#features-sidebar .list-group a").eq(currentFeature).addClass('active');
-        if (currentFeature == 0) animateCircleProgress(true);
-    } else if(hash == "" && $(window).width() < 767) { // enables hardware back button or back key on keyboard to close the detail view
-        $("#features-sidebar .list-group .active").removeClass('active');
-        $('.feature2-detail.active').removeClass('active');
-        $('body').removeClass('feature-fullscreen');
-        $(document).trigger('bodyClassChanged');
+        var $l = $s.find(".list-group a");
+        $l.removeClass('active');
+        $l.eq(currentFeature).addClass('active');
+        if (currentFeature === 0) animateCircleProgress(true);
+    } else if (hash === "" && $(window).width() <= 767) { // enables hardware back button or back key on keyboard to close the detail view
+        $s.find(".list-group .active").removeClass('active');
+        $f.find('.feature2-detail.active').removeClass('active');
+        $b.removeClass('feature-fullscreen');
         currentFeature = -1;
     }
-});
+}
 
+a();
+
+$(window).on('hashchange', a);
 
 //////////////////////////
 //                      //
@@ -113,23 +127,23 @@ $(window).on('hashchange load', function(){
  * @param y how much of the element must be on screen; value from 0 to 1
  * @returns {boolean}
  */
-$.fn.isOnScreen = function(x, y){
+$.fn.isOnScreen = function (x, y) {
 
-    if(x == null || typeof x == 'undefined') x = 1;
-    if(y == null || typeof y == 'undefined') y = 1;
+    if (x == null || typeof x == 'undefined') x = 1;
+    if (y == null || typeof y == 'undefined') y = 1;
 
     var win = $(window);
 
     var viewport = {
-        top : win.scrollTop(),
-        left : win.scrollLeft()
+        top: win.scrollTop(),
+        left: win.scrollLeft()
     };
     viewport.right = viewport.left + win.width();
     viewport.bottom = viewport.top + win.height();
 
     var height = this.outerHeight();
     var width = this.outerWidth();
-    if(!width || !height){
+    if (!width || !height) {
         return false;
     }
 
@@ -141,15 +155,15 @@ $.fn.isOnScreen = function(x, y){
 
     if (viewport.bottom > bounds.bottom) return true;
 
-    if(!visible){
+    if (!visible) {
         return false;
     }
 
     var deltas = {
-        top : Math.min( 1, ( bounds.bottom - viewport.top ) / height),
-        bottom : Math.min(1, ( viewport.bottom - bounds.top ) / height),
-        left : Math.min(1, ( bounds.right - viewport.left ) / width),
-        right : Math.min(1, ( viewport.right - bounds.left ) / width)
+        top: Math.min(1, (bounds.bottom - viewport.top) / height),
+        bottom: Math.min(1, (viewport.bottom - bounds.top) / height),
+        left: Math.min(1, (bounds.right - viewport.left) / width),
+        right: Math.min(1, (viewport.right - bounds.left) / width)
     };
 
     return (deltas.left * deltas.right) >= x && (deltas.top * deltas.bottom) >= y;
@@ -160,25 +174,25 @@ $.fn.isOnScreen = function(x, y){
  * Shows and Animates the progress circle when it is completely visible to the viewer
  * @param force - boolean forces the progress circles to show
  */
-function animateCircleProgress (force) {
+function animateCircleProgress(force) {
     if (force == null || typeof force == 'undefined' || force == "") force = false;
-    $('#lightweight .feature2-description .single-chart').each(function () {
-        if(force || !$(this).hasClass('in') && $(this).isOnScreen()) {
+    $('#lightweight .single-chart').each(function () {
+        if (force || !$(this).hasClass('in') && $(this).isOnScreen()) {
             $(this).addClass('in');
         }
     });
 }
 
-$(window).on("load, scroll", function () {
-    animateCircleProgress()
-});
+animateCircleProgress();
+
+$(window).scroll(animateCircleProgress);
 
 //////////////////
 // Hover Animation
 //////////////////
 
-(function( $ ){
-    $.fn.animateCircle = function() {
+(function ($) {
+    $.fn.animateCircle = function () {
         if (!$(this).hasClass('animated')) {
             $(this).addClass('animated');
             var circle = $(this);
@@ -187,10 +201,8 @@ $(window).on("load, scroll", function () {
             }, 1750);
         }
     };
-})( jQuery );
+})(jQuery);
 
-$('.single-chart').mouseenter(function () {
-    $(this).animateCircle();
+$('#lightweight .single-chart').mouseenter($(this).animateCircle);
+
 });
-
-/* TODO Write methods for toggling .active class, feature-fullscreen detection at resize, back-button behavior */

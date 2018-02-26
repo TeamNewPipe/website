@@ -417,12 +417,7 @@ img.border-white {
     font-size: 28px;
     color: #cd201f;
     text-align: center;
-    margin-bottom: 15px;
-}
-@media (min-width: 767px) {
-    #features2 #features2-title {
-        margin-bottom: 30px;
-    }
+    margin-bottom: 30px;
 }
 #features2 .row.is-flex > [class*='col-'] {
     flex: 1 auto;
@@ -479,11 +474,7 @@ img.border-white {
     flex-direction: column;
     justify-content: center;
 }
-#features2 #features-sidebar .list-group .list-group-item span.icon .fa.fa-4k {
-    font-size: 21px;
-    line-height: 21px;
-    font-weight: bold;
-}
+
 #features2 .feature2-detail {
     background: #d0cdcd;
     display: none;
@@ -518,10 +509,11 @@ img.border-white {
     padding-left: 20px;
     padding-right: 20px;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
     #features2 .feature2-detail h3 {
         padding-left: 0;
         padding-right: 0;
+        text-indent: 0;
     }
 }
 #features2 .feature2-detail .feature2-media {
@@ -533,7 +525,7 @@ img.border-white {
 #features2 .feature2-detail .feature2-media > img {
     display: inline;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
     #features2 .feature2-detail .feature2-media {
         width: calc(50% - 15px);
         margin-right: 15px;
@@ -546,7 +538,7 @@ img.border-white {
     margin-left: 15px;
     margin-bottom: 30px;
 }
-@media only screen and (min-width: 767px) and (max-height: 725px) {
+@media only screen and (min-width: 768px) and (max-height: 725px) {
     #features2 .feature2-detail .feature2-media {
         width: calc(33% - 15px);
     }
@@ -636,9 +628,8 @@ img.border-white {
     margin-bottom: 45px;
 }
 
-/** Progress circles
-    Idea Sergio Pedercini https://medium.com/@pppped/how-to-code-a-responsive-circular-percentage-chart-with-svg-and-css-3632f8cd7705
- */
+/* Progress circles
+   Idea Sergio Pedercini https://medium.com/@pppped/how-to-code-a-responsive-circular-percentage-chart-with-svg-and-css-3632f8cd7705 */
 
 .single-chart {
     max-width: 100px;
@@ -705,7 +696,6 @@ img.border-white {
     line-height: 1em;
     font-size: 30px;
     margin-top: calc(-50% - 0.5em);
-    /*transition: all 0.2s ease;*/
 }
 .single-chart.animated .circle-text {
     animation: circle-rotate-text 1.5s ease;
@@ -872,7 +862,7 @@ body.modal-open {
     margin: 0;
     padding: 0;
 }
-@media (min-width: 767px){
+@media (min-width: 768px){
     .footer .copyright a {
         font-weight: normal;
     }
