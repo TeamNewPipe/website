@@ -96,7 +96,6 @@ body.modal-open {
     flex-direction: column;
     align-items: stretch;
     align-content: stretch;
-    flex: 1 auto;
 }
 .red, .red:hover {
     color: #cd201f;
@@ -425,12 +424,20 @@ img.border-white {
         margin-bottom: 30px;
     }
 }
+#features2 .row.is-flex > [class*='col-'] {
+    flex: 1 auto;
+}
 #features2 #features-sidebar {
     background: #E2DEE0;
     display: block;
     /* padding 0 to draw the separators, that is why .list-group-item has a double padding of 30px on each side */
     padding-left: 0;
     padding-right: 0;
+}
+@media (min-width: 992px) {
+    #features2 #features-sidebar {
+        border-left: 1px solid #BBB;
+    }
 }
 #features2 #features-sidebar .list-group {
     width: 100%;
@@ -447,12 +454,20 @@ img.border-white {
     display: flex;
 }
 #features2 #features-sidebar .list-group > .active > .list-group-item {
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    border: 1px solid #BBB;
+    border-left-color: #d0cdcd;
+    border-right-width: 0;
     border-radius: 0;
     padding-top: 16px;
     padding-bottom: 16px;
+    padding-left: 29px;
     background: #d0cdcd;
+}
+@media (min-width: 992px) {
+    #features2 #features-sidebar .list-group > .active > .list-group-item {
+        margin-left: -1px;
+        padding-left: 30px;
+    }
 }
 #features2 #features-sidebar .list-group .list-group-item span.icon {
     width: 25px;
@@ -513,13 +528,16 @@ img.border-white {
     position: relative;
     width: 100%;
     margin-bottom: 30px;
+    text-align: center;
+}
+#features2 .feature2-detail .feature2-media > img {
+    display: inline;
 }
 @media (min-width: 767px) {
     #features2 .feature2-detail .feature2-media {
         width: calc(50% - 15px);
         margin-right: 15px;
         float: left;
-        margin-bottom: 0;
     }
 }
 #features2 .feature2-detail .feature2-description {

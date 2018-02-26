@@ -76,7 +76,6 @@ $('#features-sidebar .list-group a').click(function (event) {
  */
 $(window).on('hashchange load', function(){
     var hash = window.location.hash;
-    console.log(">"+hash);
     if (hash != "" && hash != null && hash != "undefined"
         && features.includes(hash.substr(1))
         && !$(hash).hasClass('active')) {
@@ -84,6 +83,7 @@ $(window).on('hashchange load', function(){
         $('.feature2-detail.active').removeClass('active');
         $(hash).addClass('active');
         currentFeature = features.indexOf(hash.substr(1));
+        $("#features-sidebar .list-group a").removeClass('active');
         $("#features-sidebar .list-group a").eq(currentFeature).addClass('active');
         if (currentFeature == 0) animateCircleProgress(true);
     } else if(hash == "" && $(window).width() < 767) { // enables hardware back button or back key on keyboard to close the detail view
@@ -139,7 +139,6 @@ $.fn.isOnScreen = function(x, y){
 
     var visible = (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 
-    console.log(viewport.bottom + "   " + bounds.bottom);
     if (viewport.bottom > bounds.bottom) return true;
 
     if(!visible){
@@ -190,7 +189,7 @@ $(window).on("load, scroll", function () {
     };
 })( jQuery );
 
-$('.single-chart').hover(function () {
+$('.single-chart').mouseenter(function () {
     $(this).animateCircle();
 });
 
