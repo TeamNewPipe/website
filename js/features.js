@@ -22,7 +22,7 @@ var features = [
 var currentFeature = -1,
     isFullscreen = false,
     isActive = false;
-var $f = $("#features2"),
+var $f = $("#features"),
     $s = $("#features-sidebar"),
     $b = $("body");
 
@@ -32,7 +32,7 @@ function resizeHandler() {
         if (!isActive) {
             if (currentFeature === -1) currentFeature = 0;
             $('#' + features[currentFeature]).addClass('active');
-            $s.find(".list-group a").eq(currentFeature).addClass('active');
+            $s.find(".list-group > a").eq(currentFeature).addClass('active');
             isActive = true;
         }
     } else {
@@ -53,8 +53,8 @@ $(window).on("orientationchange resize", resizeHandler);
 /**
  * Close fullscreen feature
  */
-$f.find('.feature2-close-detail').click(function () {
-    $s.find(".list-group .active").removeClass('active');
+$f.find('.feature-close-detail').click(function () {
+    $s.find(".list-group > .active").removeClass('active');
     $(this).parent().removeClass('active');
     $b.removeClass('feature-fullscreen');
     history.pushState(null, null, "#"); // make sure to work with currentFeature
@@ -64,12 +64,12 @@ $f.find('.feature2-close-detail').click(function () {
  * Onclick-listener for the features
  * Changes the slides
  */
-$s.find('.list-group a').click(function (event) {
+$s.find('.list-group > a').click(function (event) {
     event.preventDefault();
     var hash = $(this).attr('href');
     $f.find('.list-group > .active').removeClass('active');
     $(this).addClass('active');
-    $f.find('.feature2-detail.active').removeClass('active');
+    $f.find('.feature-detail.active').removeClass('active');
     $(hash).addClass('active');
     currentFeature = features.indexOf(hash.substr(1));
     if (currentFeature === 0) animateCircleProgress(true);
@@ -91,16 +91,16 @@ function a() {
         && features.includes(hash.substr(1))
         && !$(hash).hasClass('active')) {
         if ($(window).width() <= 767) $b.addClass('feature-fullscreen');
-        $('.feature2-detail.active').removeClass('active');
+        $('.feature-detail.active').removeClass('active');
         $(hash).addClass('active');
         currentFeature = features.indexOf(hash.substr(1));
-        var $l = $s.find(".list-group a");
+        var $l = $s.find(".list-group > a");
         $l.removeClass('active');
         $l.eq(currentFeature).addClass('active');
         if (currentFeature === 0) animateCircleProgress(true);
     } else if (hash === "" && $(window).width() <= 767) { // enables hardware back button or back key on keyboard to close the detail view
-        $s.find(".list-group .active").removeClass('active');
-        $f.find('.feature2-detail.active').removeClass('active');
+        $s.find(".list-group > .active").removeClass('active');
+        $f.find('.feature-detail.active').removeClass('active');
         $b.removeClass('feature-fullscreen');
         currentFeature = -1;
     }
