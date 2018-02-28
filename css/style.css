@@ -6,6 +6,13 @@ body.modal-open {
     padding: 0!important;
     overflow-y: scroll;
 }
+@media (max-width: 767px) {
+    body.feature-fullscreen {
+        margin-left: -100%;
+        margin-right: 100%;
+        overflow: hidden;
+    }
+}
 .container .container {
     width: auto;
 }
@@ -74,6 +81,8 @@ body.modal-open {
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    align-items: stretch;
+    align-content: stretch;
 }
 .row.is-flex > [class*='col-'] {
     display: -webkit-box;
@@ -85,6 +94,8 @@ body.modal-open {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
 }
 .red, .red:hover {
     color: #cd201f;
@@ -92,7 +103,7 @@ body.modal-open {
 .f-droid {
     width: 160px;
 }
-a:hover {
+a:hover, a:focus, a:active {
     text-decoration: none;
 }
 img.border-white {
@@ -107,7 +118,6 @@ img.border-white {
 }
 .header-background {
     background: url('../img/background_header.png') center center;
-    background-size: cover;
     position: fixed;
     width: 100%;
     top: 0;
@@ -172,7 +182,7 @@ img.border-white {
     width: calc(328 / 553 * 350px);
     background: transparent;
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .header-box-wrapper .pull-left {
         float: none !important;
     }
@@ -191,7 +201,10 @@ img.border-white {
         right: 0;
     }
 }
-@media (min-width: 768px){
+@media (min-width: 768px) {
+    .header-background {
+        background-size: cover;
+    }
     .header-text {
         margin-bottom: 100px;
         width: auto;
@@ -369,13 +382,16 @@ img.border-white {
 .text-1 {
     background: #f3eff2;
     padding-top: 70px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .text-1 p {
     margin-bottom: 15px;
 }
 .text-1 a {
     color: #cd201f;
+}
+.text-1 .separator {
+    margin-top: 30px;
 }
 .text-1-wrapper {
     padding-left: 15px;
@@ -394,152 +410,301 @@ img.border-white {
 
 /* Features */
 
-.features-background {
-    background: url('../img/bg_tiles.jpg') center center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: -2;
-}
-.features-wrapper .heading-wrapper {
+#features {
     background: #f3eff2;
-    text-align: center;
 }
-.features-wrapper .heading-wrapper h3 {
-    margin-top: 30px;
-    margin-bottom: 15px;
+#features #features-title {
+    font-size: 28px;
     color: #cd201f;
-}
-.features-wrapper .features {
-    background: rgba(115, 115, 115, 0.88);
-    color: white;
-}
-.features-wrapper .features .description {
-    margin: 10px 0 20px 0;
     text-align: center;
+    margin-bottom: 30px;
 }
-.features-wrapper .features .icon {
+#features .row.is-flex > [class*='col-'] {
+    flex: 1 auto;
+}
+#features #features-sidebar {
+    background: #E2DEE0;
+    display: block;
+    /* padding 0 to draw the separators, that is why .list-group-item has a double padding of 30px on each side */
+    padding-left: 0;
+    padding-right: 0;
+}
+@media (min-width: 992px) {
+    #features #features-sidebar {
+        border-left: 1px solid #BBB;
+    }
+}
+#features #features-sidebar .list-group {
+    width: 100%;
+    padding-top: 23px;
+    background: #E2DEE0;
+    font-size: 18px;
+    font-weight: bold;
+}
+#features #features-sidebar .list-group .list-group-item {
+    background: none;
+    border: none;
+    color: #cd201f;
+    padding: 17px 30px;
+    display: flex;
+}
+#features #features-sidebar .list-group > .active > .list-group-item {
+    border: 1px solid #BBB;
+    border-left-color: #d0cdcd;
+    border-right-width: 0;
+    border-radius: 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 29px;
+    background: #d0cdcd;
+}
+@media (min-width: 992px) {
+    #features #features-sidebar .list-group > .active > .list-group-item {
+        margin-left: -1px;
+        padding-left: 30px;
+    }
+}
+#features #features-sidebar .list-group .list-group-item span.icon {
+    width: 25px;
+    margin-right: 10px;
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#features .feature-detail {
+    background: #d0cdcd;
+    display: none;
     float: left;
-    position: relative;
-    top: 0;
-    left:0;
-    margin-right: 20px;
-    padding: 0;
-    height: 64px;
-    width: 64px;
-    line-height: 64px;
-    text-align: center;
-    background: white;
-    border-radius: 8px;
-    -webkit-box-shadow: 2px 2px 6px 4px rgba(0,0,0,0.6);
-    -moz-box-shadow: 2px 2px 6px 4px rgba(0,0,0,0.6);
-    box-shadow: 2px 2px 6px 4px rgba(0,0,0,0.6);
-    overflow: hidden;
+    padding-top: 20px;
+    padding-left: 30px;
+    font-size: 16px;
 }
-.features-wrapper .features .icon .fa-2x, .features-wrapper .features .icon .glyphicon {
-    font-size: 31px;
+#features .feature-detail.active {
+    display: block;
 }
-.features-wrapper .features .icon .text-center {
-    font-family: Arial;
-    vertical-align: -5px;
+@media (max-width: 767px) {
+    #features .feature-detail.active {
+        position: fixed;
+        top: 0;
+        right: 0;
+        max-height: 100%;
+        overflow-y: scroll;
+        max-width: 100%;
+        min-height: 100%;
+        padding-right: 30px;
+    }
+    #features .feature-detail.active .back {
+        display: block;
+    }
 }
-.features-wrapper .features .icon p, .features-wrapper .features .icon span {
-    padding: 0;
-    margin: 0;
-}
-.features-wrapper .features .icon .cross-out:nth-child(odd) {
-    width: calc(91px); /* sqrt of (64px pow 4), Pythagoras' theorem */
-    transform: rotate(315deg);
-    transform-origin: 0% 0%;
-    height: 4px;
-    background: #cd201f;
-    position: absolute;
-    bottom: -2px;
-}
-.features-wrapper .features .icon i, .features-wrapper .features .icon img, .features-wrapper .features .icon .glyphicon {
+#features .feature-detail h3 {
     color: #cd201f;
-    vertical-align: middle;
     text-align: center;
+    text-indent: 20px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media (min-width: 768px) {
+    #features .feature-detail h3 {
+        padding-left: 0;
+        padding-right: 0;
+        text-indent: 0;
+    }
+}
+#features .feature-detail .feature-media {
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#features .feature-detail .feature-media > img {
     display: inline;
 }
-.features-wrapper .features .icon img.fa {
-    height: 1.75em;
-}
-.features-wrapper .features .icon .fa-icon-light {
-    -webkit-text-stroke: 2px white;
-    -webkit-font-smoothing: antialiased;
-}
-.features-wrapper .features .icon .fa-lock {
-    -webkit-text-stroke: 1.5px white;
-    -webkit-font-smoothing: antialiased;
-}
-.fa-money {
-    vertical-align: 2px;
-}
-/* .fa-eye icon has more padding on the  top as on the bottom of it and is smaller than the other icons */
-.features-wrapper .features .icon .fa-eye-wrapper {
-    margin-top: -2px;
-}
-.features-wrapper .features .icon .fa-eye {
-    font-size: 2.5em;
-}
-.features-wrapper .features .text {
-    float: left;
-    width: calc(100% - 64px - 20px);
-}
-.features-wrapper .features .text p {
-    /* pull text to top of the parent div: 1.5 as factor needed because font-size: 150% (see .features-wrapper .features .text strong) */
-    margin-top: calc(-4px * 1.5);
-}
-.features-wrapper .features .text strong {
-    font-size: 150%;
-}
-.features-wrapper .features .list-box {
-    max-width: 750px;
-}
-.features-wrapper .features [class^="col"] {
-    margin-bottom: 25px;
-}
-.features-wrapper .row > div  > * {
-    height: auto;
-}
-@media (max-width: 767px){
-    .features-background {
-        height: 100vh;
-        background: none;
-    }
-    .features-wrapper {
-        background: url("../img/bg_tiles.jpg");
-        background-attachment: fixed;
-    }
-    .features-wrapper .features .description {
-        margin-bottom: 10px;
-    }
-    .features-wrapper .features .description {
-        margin: 20px 0 30px 0;
-    }
-}
-/* Extra small size since Bootstrap 4 
-   We use Bootstrap 3 but this size was added to Bootstrap 4 for a good reason. It adresses phones with portait mode. */
-@media (max-width: 543px) {
-    .features-wrapper .features .icon {
+@media (min-width: 768px) {
+    #features .feature-detail .feature-media {
+        width: calc(50% - 15px);
         margin-right: 15px;
-    }
-    .features-wrapper .features .text {
         float: left;
-        width: calc(100% - 64px - 15px);
     }
-    .features-wrapper .features .text > p {
-        line-height: 64px;
-        margin: 0;
+}
+#features .feature-detail .feature-description {
+    position: relative;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+@media only screen and (min-width: 768px) and (max-height: 725px) {
+    #features .feature-detail .feature-media {
+        width: calc(33% - 15px);
     }
-    .features-wrapper .features .text > p.description-text {
-        line-height: 1.42857143;
-        padding-top: 25px;
-        display: none;
-        text-align: left;
+    #features .feature-detail .feature-description {
+        width: calc(66% - 15px);
     }
+}
+#features .feature-close-detail {
+    display: none;
+    position: absolute;
+    top: 24px;
+    left: 15px;
+    font-size: 20px;
+    color: #cd201f;
+    padding: 15px;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    #features .feature-detail.active .feature-close-detail {
+        display: block;
+    }
+}
+#features .icon {
+    float: left;
+    margin-right: 30px;
+    width: 54px;
+}
+#features .icon h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    line-height: 2em !important;
+    vertical-align: middle;
+}
+#features #lightweight .feature-description {
+    width: 100% !important;
+}
+#features #lightweight .row.is-flex > [class*="col-"] {
+    display: block;
+    margin-bottom: 15px;
+}
+#features .description {
+    color: #cd201f;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+#features .feature-description a {
+    color: #cd201f;
+}
+#features .feature-description .text-success {
+    color: #29a400;
+}
+#features .feature-description ul {
+    list-style: none;
+    padding-left: 15px;
+}
+#features .feature-description ul > li {
+    padding-left: 15px;
+    line-height: 2;
+    text-indent: -25px;
+}
+#features .feature-description ul > li:before {
+    content: "\f00c"; /* FontAwesome Unicode for check icon */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: 0;
+    padding-left: 25px;
+    height: 100%;
+}
+#features .feature-description ul > li.heart:before {
+    content: "\f004";
+}
+#features .c100 {
+    margin-right: auto;
+    margin-left: auto;
+    float: none;
+}
+#features .c100 ~ p {
+    text-align: center;
+    font-size: 18px;
+}
+#features #lightweight .feature-description {
+    margin-top: 45px;
+}
+#features #lightweight .feature-description [class^="col"] {
+    margin-bottom: 45px;
+}
+
+/* Progress circles
+   Idea Sergio Pedercini https://medium.com/@pppped/how-to-code-a-responsive-circular-percentage-chart-with-svg-and-css-3632f8cd7705 */
+
+.single-chart {
+    max-width: 100px;
+    justify-content: space-around ;
+    position: relative;
+    transform: rotate(0deg);
+    animation-play-state: running;
+    margin: 15px auto;
+}
+
+.circular-chart {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.circle-bg {
+    fill: #E2DEE0;
+    stroke: #c5c5c5 ;
+    stroke-width: 2.5;
+}
+
+.circle {
+    fill: none;
+    stroke-width: 0;
+
+}
+.single-chart.in .circle {
+    stroke-width: 2.5;
+    animation: progress 1.5s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+@keyframes circle-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes circle-rotate-text {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.circular-chart.red .circle {
+    stroke: #cd201f;
+}
+
+.circle-text {
+    color: #cd201f;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 1em;
+    font-size: 30px;
+    margin-top: calc(-50% - 0.5em);
+}
+.single-chart.animated .circle-text {
+    animation: circle-rotate-text 1.5s ease;
+}
+.single-chart.animated {
+    animation: circle-rotate 1.5s ease;
+}
+.single-chart .fa-mobile-wrapper {
+    font-size: 40px;
 }
 
 
@@ -697,7 +862,7 @@ body.modal-open {
     margin: 0;
     padding: 0;
 }
-@media (min-width: 767px){
+@media (min-width: 768px){
     .footer .copyright a {
         font-weight: normal;
     }
@@ -744,3 +909,4 @@ body.modal-open {
 .site-content {
     flex: 1 0 auto;
 }
+

@@ -2,7 +2,7 @@
 
 Repo for the [NewPipe website](https://newpipe.schabi.org/), which includes the blog and the press kit.
 
-All sites are based on [Bootstrap](https://getbootstrap.com) 3.3.7 and [Jekyll](https://jekyllrb.com/) 3.6.2.
+All sites are based on [Bootstrap](https://getbootstrap.com) 3.3.7 and [Jekyll](https://jekyllrb.com/) 3.7.2.
 
 
 ## Development

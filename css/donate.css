@@ -112,12 +112,6 @@ main .row [class^="col"] {
     border-radius: 5px;
     padding: 6px 10px;
 }
-@media (max-width: 992px){
-    .phone-background .row [class^="col"] {
-        padding: 0;
-        margin: 0;
-    }
-}
 @media (max-width: 767px) {
     #donate {
         padding: 30px 0;
@@ -141,18 +135,20 @@ main .row [class^="col"] {
         margin-top: 20px;
     }
 }
-.features-background {
+#parallax-background {
+    background: url('../img/bg_tiles.jpg') center center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: -8;
 }
-.features-background img {
-    width: 300px;
-    display: none;
-    bottom: 0;
-    position: relative;
-}
-.features-wrapper {
+#donate-wrapper {
     z-index: -4;
     position: relative;
+}
+#donate-wrapper .row > div  > * {
+    height: auto;
 }
 .phone-background {
     height: 0;
@@ -172,6 +168,12 @@ main .row [class^="col"] {
     .phone-background img {
         display: block;
         margin-top: 30px;
+    }
+}
+@media (max-width: 992px){
+    .phone-background .row [class^="col"] {
+        padding: 0;
+        margin: 0;
     }
 }
 @media (min-width: 992px) {

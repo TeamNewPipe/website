@@ -59,17 +59,6 @@ inside this repository as well as from the
 homepage](https://opensource.org/licenses/MIT).
 
 
-
-### bxSlider
-
-This project uses resources from the bxSlider project. Copyright 2014
-Steven Wanderski. Licensed under the terms of the MIT license.
-
-You can fetch a copy from the "licenses" directory inside this repository as
-well as from bxSlider's
-[GitHub repository](https://github.com/stevenwanderski/bxslider-4/).
-
-
 ### Background Image
 
 The background image has been published by Ken Lee under the terms of the
