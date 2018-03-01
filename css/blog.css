@@ -572,6 +572,9 @@ strong.extra {
         padding-top: 20px;
     }
 }
+.postImg[src*=".svg"] {
+    width: 100%;
+}
 #mediaFileView .fa-times {
     color: white;
     position: absolute;
