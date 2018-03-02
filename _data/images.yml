@@ -1,27 +1,37 @@
 new:
     url: new.png
+    type: png
+    size: 14693
     author: Schabi
     origin: https://github.com/theScrabi
 
 34c3-logo:
     url: 34c3_logo.png
+    type: png
+    size: 59315
     name: 34C3 logo
     author: Gregor Sedlag
     origin: https://engelsystem.de/img/34c3_logo.png
 
 34c3-press:
     url: 34c3-press.png
+    type: png
+    size: 46253
     author: Schabi
     origin: https://github.com/theScrabi
 
 newpipe-beta:
   url: logo_app_beta.svg
+  type: svg
+  size: 16583
   name: NewPipe Beta logo
   author: Schabi
   origin: https://github.com/theScrabi
 
 speech-bubbles:
   url: speech_bubbles.svg
+  type: svg
+  size: 915
   name: Speech Bubbles
   author: María Florencia
   origin: https://commons.wikimedia.org/wiki/File:Noun_project_2472.svg
