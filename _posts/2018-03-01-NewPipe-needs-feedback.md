@@ -8,6 +8,8 @@ author: TobiGr
 image: speech-bubbles
 ---
 
+Team NewPipe needs your help!
+
 Since we do not collect any data in the app or on the website,
 we depend on your feedback.
 
