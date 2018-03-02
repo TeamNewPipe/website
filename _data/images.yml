@@ -19,3 +19,10 @@ newpipe-beta:
   name: NewPipe Beta logo
   author: Schabi
   origin: https://github.com/theScrabi
+
+speech-bubbles:
+  url: speech_bubbles.svg
+  name: Speech Bubbles
+  author: María Florencia
+  origin: https://commons.wikimedia.org/wiki/File:Noun_project_2472.svg
+  license: CC0 1.0
