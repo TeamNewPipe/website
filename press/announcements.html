@@ -21,7 +21,9 @@ metatitle: "Announcements - NewPipe a free YouTube client"
                 <div class="row">
                     <a href="{{ BASE_PATH }}{{ post.url }}">
                         <div class="col-md-3 col-img">
+                            {% if site.data.images[post.image].download %}<a href="{{ site.data.images[post.image].download }}">{% endif %}
                             <img src="/img/{{ site.data.images[post.image].url }}" class="img-responsive postImg" />
+                            {% if site.data.images[post.image].download %}</a>{% endif %}
                         </div>
                     </a>
                     <div class="col-md-9">
@@ -33,6 +35,11 @@ metatitle: "Announcements - NewPipe a free YouTube client"
                 {% endif %}
             </article>
             {% endfor %}
+
+            <div class="alert alert-warning download-license-warning" role="alert">
+                <span class="glyphicon glyphicon-alert" aria-hidden="true"></span>
+                For announcements which were made <b>before</b> 18th December 2017 please visit our GitHub <a href="https://github.com/TeamNewPipe/NewPipe/issues">issue page</a>.
+            </div>
 
             <p id="last-modified">Last modified: December 2017</p>
 

@@ -17,7 +17,7 @@ function displaySearchResults(results, store) {
                 + '<p><span>' + item.date+ ', by ' + item.author + '</span></p><br>';
             if (item.image != "") {
                 appendString += '<div class="row">\n'
-                    + '        <a href="{{ BASE_PATH }}{{ post.url }}">\n'
+                    + '        <a href="' + item.url + '">\n'
                     + '            <div class="col-md-3 col-img">\n'
                     + '                <img src="' + item.image + '" class="img-responsive postImg" />\n'
                     + '            </div>\n'
