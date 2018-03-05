@@ -5,7 +5,7 @@
  */
 function latestVersion(tag = false) {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "https://api.github.com/repos/TeamNewPipe/NewPipe/releases/latest", false);
+    xhttp.open("GET", "https://newpipe.schabi.org/api/current-version", false);
     xhttp.send();
-    return (tag) ? $.parseJSON(xhttp.responseText)["name"].substr(1) : $.parseJSON(xhttp.responseText)["name"];
+    return (tag) ?xhttp.responseText.substr(1) : xhttp.responseText;
 }
