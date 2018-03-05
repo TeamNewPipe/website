@@ -12,14 +12,14 @@
         linear-gradient(to right, rgba(0,0,0,0.0) calc(100% - ((100% - 1170px) / 2)), rgba(0,0,0,0.1) 100% );
 }
 #header {
-    -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.175);
-    -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.175);
-    box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.175);
+    -webkit-box-shadow: 0 4px 4px 0 rgba(0,0,0,0.175);
+    -moz-box-shadow: 0 4px 4px 0 rgba(0,0,0,0.175);
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.175);
 }
 .footer .shadow-top {
-    -webkit-box-shadow: 0px -4px 4px 0px rgba(0,0,0,0.175);
-    -moz-box-shadow: 0px -4px 4px 0px rgba(0,0,0,0.175);
-    box-shadow: 0px -4px 4px 0px rgba(0,0,0,0.175);
+    -webkit-box-shadow: 0 -4px 4px 0 rgba(0,0,0,0.175);
+    -moz-box-shadow: 0 -4px 4px 0 rgba(0,0,0,0.175);
+    box-shadow: 0 -4px 4px 0 rgba(0,0,0,0.175);
 }
 .navbar-fixed-top ~ .site-content {
     margin-top: 64px;
@@ -256,14 +256,29 @@ p.subtitle {
 }
 #welcome h4 {
     margin-top: 25px;
+    color: #333;
+}
+#welcome strong {
+    color: #333;
 }
 #welcome p {
     text-align: justify;
+    line-height: 1.5;
 }
-@media (min-width: 767px){
+#welcome ul {
+    margin-bottom: 15px;
+    padding-inline-start: 11px;
+}
+@media (min-width: 767px) {
+    #welcome {
+        font-size: 15px;
+    }
     #welcome ul {
         list-style-position: inside;
         padding-left: 0;
+    }
+    #welcome ul li.linebreak {
+        text-indent: -11px; margin-left: 11px;
     }
 }
 #announcements article {
@@ -272,7 +287,7 @@ p.subtitle {
     margin-bottom: 25px;
     position: relative;
 }
-#announcements article .press-date{
+#announcements article .press-date {
     font-size: 80%;
 }
 
