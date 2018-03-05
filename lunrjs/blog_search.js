@@ -25,29 +25,37 @@ function displaySearchResults(results, store) {
                     + '        <div class="col-md-9">'
                     + '            ' + item.excerpt
                     + '<p><a href="' + item.url + '">Read more...</a></p>'
+                    + getCategories(item)
                     + '        </div>'
-                    + '    </div>';
+                    + '    </div>'; // row
             } else {
                 appendString += item.excerpt
-                    + '<p><a href="' + item.url + '">Read more...</a></p>';
+                    + '<p><a href="' + item.url + '">Read more...</a></p>'
+                    + getCategories(item);
             }
-            if(item.category.length != 0){
-                appendString += '<p class="categories">';
-                for(var c = 0; c < item.category.length; c++){
-                    appendString += '<a href="/' + siteBaseUrl + item.category[c].toLowerCase() + '"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;' + item.category[c] + '</a>';
-                    if(item.category.length - c != 1) //not the last item
-                        appendString += " &nbsp;|&nbsp; ";
-                }
-                appendString += "</p>";
-            }
+
             appendString += '<div class="anchor-right-full"></div>'
-                + '</div>';
+                + '</div>'; // border-box
         }
 
         searchResults.innerHTML = appendString;
     } else {
         searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p><br></div>';
     }
+}
+
+function getCategories(item) {
+    var categ = "";
+    if(item.category.length != 0) {
+        categ += '<p class="categories">';
+        for(var c = 0; c < item.category.length; c++) {
+            categ += '<a href="/' + siteBaseUrl + item.category[c].toLowerCase() + '"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;' + item.category[c] + '</a>';
+            if(item.category.length - c != 1) //not the last item
+                categ += " &nbsp;|&nbsp; ";
+        }
+        categ += "</p>";
+    }
+    return categ;
 }
 
 function getQueryVariable(variable) {

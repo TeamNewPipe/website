@@ -26,19 +26,27 @@ layout: blog_with-sidebar-post
             </div>
             <div class="col-md-9">
                 {{ content }}
+                <div class="post-categories">
+                    See also:
+                    {% for category in page.categories %}
+                    <a href="{{ site.baseurl}}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
+                    {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
         {% else %}
         {{ content }}
-        {% endif %}
-    </div>
 
-    <div class="post-categories">
-        See also: 
-        {% for category in page.categories %}
-        <a href="{{ site.baseurl}}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
-        {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
-        {% endfor %}
+        <div class="post-categories">
+            See also:
+            {% for category in page.categories %}
+            <a href="{{ site.baseurl}}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
+            {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
+            {% endfor %}
+        </div>
+
+        {% endif %}
     </div>
 
     <!-- Modal -->

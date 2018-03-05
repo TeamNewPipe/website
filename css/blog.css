@@ -566,6 +566,9 @@ strong.extra {
         padding-right: 5px;
         padding-bottom: 0;
     }
+    .post-categories {
+        margin-top: 15px;
+    }
 }
 @media (max-width: 767px){
     .post-collection {

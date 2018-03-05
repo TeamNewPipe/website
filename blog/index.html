@@ -1,15 +1,11 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 title: a free YouTube client - HOME
 layout: blog_with-sidebar
 description: Welcome to NewPipe!
 short: All posts
-
 ---
 {% for post in paginator.posts %}
-<!--{{ post.author }}-->
+
 <div class="border-box anchor-right-full-parent">
     <h4><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h4>
     <p><span>{{ post.date | date_to_string }}, by {{ post.author }}</span></p><br>
@@ -30,6 +26,12 @@ short: All posts
                 {%- endfor -%}
             {% endif %}
             <p><a href="{{ post.url }}">Read more...</a></p>
+            <p class="categories">
+                {% for category in post.categories %}
+                <a href="{{ site.baseurl }}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
+                {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
+                {% endfor %}
+            </p>
         </div>
     </div>
     {% else %}
@@ -39,14 +41,16 @@ short: All posts
             {{ post.content | truncatewords:100 }}
         {% endif %}
         <p><a href="{{ post.url }}">Read more...</a></p>
+
+        <p class="categories">
+            {% for category in post.categories %}
+            <a href="{{ site.baseurl }}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
+            {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
+            {% endfor %}
+        </p>
+
     {% endif %}
 
-    <p class="categories">
-        {% for category in post.categories %}
-        <a href="{{ site.baseurl }}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
-        {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
-        {% endfor %}
-    </p>
     <div class="anchor-right-full"></div>
 </div>
 {% endfor %}
