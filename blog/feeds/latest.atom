@@ -1,0 +1,29 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>NewPipe Blog</title>
+    <link rel="self" href="{{ page.url | prepend: site.url }}"/>
+    {%- for post in site.posts limit: 1 %}{% unless post.draft %}
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    {%- endunless %}{% endfor %}
+    <author>
+        <name>Team NewPipe</name>
+    </author>
+    <id>{{ site.url }}/</id>
+
+    {%- for post in site.posts limit: 1 %}{% unless post.draft %}
+    <entry>
+        <title>{{ post.title | xml_escape }}</title>
+        <summary type="html">{% if post.excerpt_separator %}{{ post.excerpt | xml_escape }}{% else %}{{ post.content | xml_escape | truncatewords:100 }}{% endif %}</summary>
+        <content type="html">{{ post.content | xml_escape }}</content>
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        <author><name>{{ post.author }}</name></author>
+        <link href="{{ post.url | prepend: site.url }}" />
+        <id>{{ post.url | prepend: site.url }}</id>
+    </entry>
+    {%- endunless %}{% endfor %}
+
+</feed>

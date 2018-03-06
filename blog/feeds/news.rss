@@ -6,15 +6,14 @@ layout: null
 <channel>
 <title>NewPipe Blog</title>
 <description>The latest blog posts</description>
-<link href="{{ site.url }}/" rel="alternate" type="text/html" title="{{ site.title }}" />
+<link>{{ site.url }}/</link>
 {%- for post in site.posts %}{% unless post.draft %} 
 <item>
 <title>{{ post.title | xml_escape }}</title>
 <description>{{ post.content | xml_escape }}</description>
-<pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-<author><name>{{ post.author }}</name></author>
+<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 {% if post.image %}<enclosure url="{{ site.url }}/img/{{ site.data.images[post.image].url }}" type="image/{{ site.data.images[post.image].type }}" length="{{ site.data.images[post.image].size }}" />{% endif %}
-<link href="{{ post.url | prepend: site.url }}" rel="alternate" type="text/html" title="{{ post.title }}" />
+<link>{{ post.url | prepend: site.url }}</link>
 <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
 </item>
 {%- endunless %}{% endfor %} 
