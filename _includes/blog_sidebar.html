@@ -5,24 +5,25 @@
     <div class="list-group">
         <h3 class="list-group-item active">Current</h3>
         <a href="#" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
-            {% if page.short %}
+            {%- if page.short -%}
             {{ page.short }}
-            {% else %}
+            {%- else -%}
             {{ page.title | truncatewords: 3 }}
-            {% endif %}
+            {%- endif -%}
         </a>
         <h3 class="list-group-item active">Also interesting</h3>
-        {% for post in site.categories["pinned"] %}
-        {% if page.url != post.url %}
+        {%- for post in site.categories["pinned"] limit: 5 %}
+        {%- if page.url != post.url %}
         <a href="{{ post.url }}" class="list-group-item"><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span>
-            {% if post.short %}
+            {%- if post.short -%}
             {{ post.short }}
-            {% else %}
+            {%- else -%}
             {{ post.title | truncatewords: 3 }}
-            {% endif %}
+            {%- endif -%}
         </a>
-        {% endif %}
-        {% endfor %}
+        {%- endif %}
+        {%- endfor %}
+        <a href="/blog/feeds/news.atom" class="list-group-item" style="font-weight: bold; margin-top: 15px"><span class=""><i class="fa fa-rss-square" aria-hidden="true"></i></span> Subscribe to feed</a>
     </div>
 
     <div class="clearfix"></div>
