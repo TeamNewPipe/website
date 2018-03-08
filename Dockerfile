@@ -28,6 +28,7 @@ FROM nginx:1.13-alpine
 # and also make sure hidden files are not served by NGINX
 # TODO the latter doesn't work currently
 RUN sed -i 's/access_log.*/access_log off;/' /etc/nginx/nginx.conf && \
-    sed -i 's/^}/    location ~ \^\/(\\\.) { internal; }\n}/' /etc/nginx/conf.d/default.conf
+    sed -i 's/^}/    location ~ \^\/(\\\.) { internal; }\n}/' /etc/nginx/conf.d/default.conf && \
+    sed -i 's/^}/    application\/rss+xml rss;\n    application\/atom+xml;\n}/' /etc/nginx/mime.types
 
 COPY --from=builder /data /usr/share/nginx/html
