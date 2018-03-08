@@ -36,3 +36,10 @@ speech-bubbles:
   author: María Florencia
   origin: https://commons.wikimedia.org/wiki/File:Noun_project_2472.svg
   license: CC0 1.0
+
+feed-icon:
+  url: feed-icon.svg
+  type: jpg
+  author: Clker Free Vector Images
+  license: CC0
+  origin: https://pixabay.com/de/rss-nachrichten-futtermittel-blog-40674/
