@@ -13,13 +13,11 @@ COPY . /srv/jekyll
 
 ARG ISSO_ADDRESS
 
-ENV JEKYLL_ENV=production
-
 RUN bash -xc "chown -R jekyll: /srv/jekyll && \
     bundle update jekyll && \
     cd /srv/jekyll && \
     jekyll clean && \
-    jekyll build && \
+    JEKYLL_ENV=production jekyll build && \
     mv _site/ /data"
 
 FROM nginx:1.13-alpine
