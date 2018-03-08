@@ -242,34 +242,4 @@
     }
 }
 
-/* Custom styles */
-#comments {
-    margin-top: 20px;
-    #background: #f3eff2;
-}
-#comments > h4 {
-    font-weight: bold;
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-#comments-separator {
-    width: calc(100% + 60px);
-    border-top: 2px solid white;
-    margin-top: 10px;
-    margin-left: -30px;
-    margin-bottom: 15px;
-}
 
-#comments h1, #comments h2, #comments h3, #comments h4 {
-    font-size: 18px;
-}
-@media (min-width: 767px) {
-    .comments-separator {
-        width: calc(100% + 15px);
-        margin-left: 0;
-    }
-    #comments > h4 {
-        margin-top: 60px;
-        margin-bottom: 75px;
-    }
-}
