@@ -574,6 +574,9 @@ strong.extra {
     .post-collection {
         padding-top: 20px;
     }
+    .postImg {
+        max-height: 33vh;
+    }
 }
 .postImg[src*=".svg"] {
     width: 100%;
