@@ -70,13 +70,33 @@ category: categoryName
 ---
 ```
 
-##### Post image
 
-Images which are going to be displayed as a "header" of the post, need to be registered in [_data/images.yml](_data/images.yml).
+##### Post thumbnails
+
+Post thumbnails which are going to be displayed at the left side of the post, need to be registered in [_data/images.yml](_data/images.yml) (see [Image metadata](#image-metadata) to learn how to do this correctly). Thumbnails should be squarisch.
 
 `image`          - Displays an image at the left side of the post. Use the key you registered in [_data/images.yml](_data/images.yml).
 
 `imageHidePress` - Hides the image in the announcement page of the pres kit.
+
+
+#### Image metadata
+
+Image metadata can be set in [_data/images.yml](_data/images.yml). Ypu can display an image in a post with following snippet: 
+
+`<img src="/img/{{ site.data.images[IMAGE_NAME].url }}" />`
+
+``` YML
+newpipe-beta:                          # IMAGE_NAME which is used to display it
+  url: logo_app_beta.svg               # path to the file relative to '/img/'
+  type: svg                            # file extension like 'svg', 'png' or 'jpeg'
+  size: 16583                          # file size of the image in bytes
+  name: NewPipe Beta logo              # image description 
+  author: Schabi                       # author
+  origin: https://github.com/theScrabi # optional: link to the origin of this image when it is not created by one of our teeam members
+  download: /press/logo/#logo-beta     # optional: this is a link to the internal download page with an anchor to the download form '/press/logo/#logo-beta'
+```
+
 
 ##### Page metadata
 
@@ -87,6 +107,7 @@ Images which are going to be displayed as a "header" of the post, need to be reg
 `metakey`   - Additional keywords for search engines `<meta name="keywords">`
 
 `modified`  - The date the page was last modified. It will be displayed at the bottom of each page. Format `YYYY-MM-DD HH:MM:SS +/-TTTT`
+
 
 ##### Search
 
