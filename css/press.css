@@ -290,6 +290,9 @@ p.subtitle {
 #announcements article .press-date {
     font-size: 80%;
 }
+#announcements article img.postImg {
+    margin: 0 auto 15px;
+}
 
 /* Search */
 #search-results {
