@@ -823,36 +823,16 @@ body.modal-open {
     width: 100%;
     min-height: 170px;
 }
-.footer-copyright {
-    margin: 0 0 30px 0;
+.footer-links {
+    margin: 0 0 45px 0;
 }
-.footer, .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
+.footer, .footer a, .footer a:hover  .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
     color: white;
     text-decoration: none;
     position: relative;
 }
 .footer .copyright a {
-    padding-bottom: 1px;
     font-weight: bold;
-}
-.footer .copyright a:after {
-    content: '';
-    bottom: 1px;
-    left: 50%;
-    position: absolute;
-    height: 1px;
-    width: 0;
-    background: white;
-    transition: width 0.25s linear, left 0.25s;
-}
-.footer .copyright:hover a:after {
-    content: '';
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    height: 1px;
-    width: 100%;
-
 }
 .footer .image-holder {
     text-align: center;
@@ -867,29 +847,8 @@ body.modal-open {
     margin: 0;
     padding: 0;
 }
-@media (min-width: 768px){
-    .footer .copyright a {
-        font-weight: normal;
-    }
-    .footer .copyright a:after {
-        content: '';
-        bottom: 1px;
-        left: 50%;
-        position: absolute;
-        height: 1px;
-        width: 0;
-        background: white;
-        -webkit-transition: width 0.25s, left 0.25s;
-        -moz-transition: width 0.25s, left 0.25s;
-        -o-transition: width 0.25s, left 0.25s;
-        -ms-transition: width 0.25s, left 0.25s;
-        transition: width 0.25s, left 0.25s;
-    }
-    .footer .copyright:hover a:after {
-        left: 0;
-        height: 1px;
-        width: 100%;
-    }
+#main-page .footer {
+    border-top: 3px solid white;
 }
 
 
