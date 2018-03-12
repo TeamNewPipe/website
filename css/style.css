@@ -109,6 +109,16 @@ a:hover, a:focus, a:active {
 img.border-white {
     border: 3px solid white;
 }
+strong.extra {
+    font-size: 125%;
+}
+.separator {
+    border-top: 4px solid white;
+}
+.row > [class*='col-'] > .separator {
+    margin-left: -15px;
+    margin-right: -15px;
+}
 
 
 /* Header */
@@ -117,7 +127,8 @@ img.border-white {
     color: white;
 }
 .header-background {
-    background: url('../img/background_header.png') center center;
+    background: url('../img/bg_rectangles_full.png') center center;
+    background-size: cover;
     position: fixed;
     width: 100%;
     top: 0;
@@ -521,23 +532,27 @@ img.border-white {
         text-indent: 0;
     }
 }
-#features .feature-detail .feature-media {
+#features .feature-detail .feature-media,
+.tile-media {
     position: relative;
     width: 100%;
     margin-bottom: 30px;
     text-align: center;
 }
-#features .feature-detail .feature-media > img {
+#features .feature-detail .feature-media > img,
+.tile-media > img {
     display: inline;
 }
 @media (min-width: 768px) {
-    #features .feature-detail .feature-media {
+    #features .feature-detail .feature-media,
+    .tile-media {
         width: calc(50% - 15px);
         margin-right: 15px;
         float: left;
     }
 }
-#features .feature-detail .feature-description {
+#features .feature-detail .feature-description,
+.tile-description {
     position: relative;
     float: left;
     margin-left: 15px;
@@ -581,7 +596,7 @@ img.border-white {
 #features #lightweight .feature-description {
     width: 100% !important;
 }
-#features #lightweight .row.is-flex > [class*="col-"] {
+.container.container-double .row.is-flex > [class*="col-"] {
     display: block;
     margin-bottom: 15px;
 }
@@ -594,19 +609,16 @@ img.border-white {
 #features .feature-description a {
     color: #cd201f;
 }
-#features .feature-description .text-success {
+#features .feature-description .text-success, ul.check > li.text-success {
     color: #29a400;
 }
-#features .feature-description ul {
+#features .feature-description ul > li, ul.check  {
     list-style: none;
-    padding-left: 15px;
-}
-#features .feature-description ul > li {
     padding-left: 15px;
     line-height: 2;
     text-indent: -25px;
 }
-#features .feature-description ul > li:before {
+#features .feature-description ul > li:before, ul.check > li:before {
     content: "\f00c"; /* FontAwesome Unicode for check icon */
     font-family: FontAwesome;
     display: inline-block;
@@ -614,7 +626,7 @@ img.border-white {
     padding-left: 25px;
     height: 100%;
 }
-#features .feature-description ul > li.heart:before {
+#features .feature-description ul > li.heart:before, ul.check > li.heart:before {
     content: "\f004";
 }
 #features .c100 {
@@ -713,31 +725,272 @@ img.border-white {
 }
 
 
-/* TEXT-2 */
+/* Tiles */
 
-.text-2 {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 30px;
+#tiles {
     background: #f3eff2;
+    padding-bottom: 30px;
 }
-.text-2 a {
+#tiles a {
+    color: #CD201F;
+}
+#tiles .separator {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+#tiles h3.title {
+    color: #CD201F;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#tiles .tile {
+    background: #E2DEE0;
+    min-height: 200px;
+    padding: 15px 30px;
+    font-size: 16px;
+}
+@media (max-width: 767px) {
+    #tiles > .container-double > .row.is-flex > [class*='col-'] {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    #tiles .tile.tile-left {
+        border-right: 7px solid #f3eff2;
+    }
+    #tiles .tile.tile-right {
+        border-left: 7px solid #f3eff2;
+    }
+}
+
+#tiles .tile h4 {
+    text-align: center;
+    color: #CD201F;
+}
+#tiles .tile .tile-image-wrapper {
+    max-width:33%;
+    float: left;
+    margin-right: 30px;
+}
+#tiles .tile .button-wrapper {
+    margin-top: 15px;
+}
+
+#tiles ul.check {
+    padding-left:28px;
+}
+#tile-opensource.tile {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#tile-opensource .tile-media {
+    display: none;
+}
+#tile-opensource .tile-description {
+    margin-left: 0;
+}
+#tile-opensource .tile-description h4 {
+    margin-bottom: 20px;
+}
+#tile-opensource .button-wrapper {
+    text-align: center;
+    margin-top: 15px;
+}
+#tile-opensource .button-wrapper button {
+    margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+    #tile-opensource .tile-media {
+        max-width: 300px;
+        margin-bottom: 0;
+        display: block;
+    }
+    #tile-opensource .tile-description {
+        max-width: calc(100% - 330px);
+        margin-right: 15px;
+        float: right;
+    }
+    #tile-opensource .tile-description h4 {
+        text-align: left;
+        font-size: 24px;
+    }
+    #tile-opensource .button-wrapper {
+        text-align: left;
+    }
+}
+
+
+
+#tile-opensource button.action {
+    margin-right: 15px;
+}
+#tiles {
+    line-height: 1.5;
+}
+
+
+#user-voices.tile {
+    text-align: center;
+    padding-bottom: 35px;
+}
+#user-voices h3 {
+    font-weight: bold;
+}
+#user-voices-carousel .carousel-inner .user-thumbnail {
+    font-size: 100px;
+    min-height: 100px;
+    line-height: 1;
+    margin-top: 15px;
+}
+#user-voices-carousel .carousel-inner .user-name {
+    margin-top: 10px;
+}
+#user-voices-carousel .carousel-inner .user-name a {
+    color: #333;
+}
+#user-voices-carousel .carousel-inner .user-statement {
+    color: #CD201F;
+    font-size: 22px;
+    margin: 15px 0 15px 0;
+}
+#user-voices-carousel ol.carousel-indicators {
+    position: relative;
+    bottom: 0;
+}
+#user-voices-carousel ol.carousel-indicators > li {
+    border-color: #000;
+    background-color: #000;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+}
+#user-voices-carousel ol.carousel-indicators > li.active {
+    width: 10px;
+    height: 10px;
+}
+#user-voices-carousel .carousel-control {
+    display: none;
+}
+
+/* Info */
+
+#info {
+    padding: 0 !important;
+    background: none !important;
+}
+@media (min-width: 768px) {
+    #info {
+        background: #E2DEE0 !important;
+    }
+}
+#info a {
     color: #cd201f;
 }
-.text-2 a:hover {
-    text-decoration: none;
+.info-table {
+    background: #E2DEE0;
+    padding: 15px;
 }
-.text-2 .f-droid-wrapper {
-    margin-top: 25px;
-    margin-bottom: 10px
+.info-table > .row.is-flex > [class*="col-"] {
+    display: flex !important;
+    justify-content: stretch;
 }
-strong.extra {
-    font-size: 125%;
+.info-table h4 {
+    color: #cd201f;
+    text-align: center;
+    margin-top: 15px;
 }
-.separator {
-    border-top: 2px solid white;
+.info-version {
+    text-align: center;
+    color: #8c8c8c;
+    font-size: 15px;
 }
-.donate {
+.info {
+    flex-grow: 1;
+}
+.info ul {
+
+}
+.info ul > li {
+
+}
+.info-action {
+    text-align: center;
+    font-size: 25px;
+    padding: 5px 15px;
+}
+@media (max-width: 767px) {
+    .info-table {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .info-table > .row.is-flex > [class*="col-"] {
+        width: 100%;
+        border-top: 15px solid #f3eff2;
+        padding: 15px 30px 0 30px;
+    }
+    .info-table > .row.is-flex > [class*="col-"]:first-child {
+        border-top-width: 0;
+    }
+    .info-action {
+        padding: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .info-title {
+        font-size: 24px;
+    }
+    .border-middle {
+        width: 1px;
+        height: calc(100% - 35px);
+        position: absolute;
+        bottom: 0;
+        background: #C0C0C0;
+    }
+    .border-middle.left {
+        left: 0;
+    }
+    .border-middle.right {
+        right: 0;
+    }
+}
+/* Carousel */
+.info .carousel {
+
+}
+.info .carousel ol.carousel-indicators {
+    position: relative;
+    bottom: 0;
+}
+.info .carousel ol.carousel-indicators > li {
+    border-color: #000;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+}
+.info .carousel ol.carousel-indicators > li.active {
+    width: 8px;
+    height: 8px;
+}
+.info .carousel .carousel-control {
+    display: none;
+}
+@media (min-width: 768px) {
+    /* Fixed height to prevent the container
+    from jumping when the paragraphs have different heights
+    each line has a height of 24px plus 10px margin-bottom
+    for the last paragraph. Max number of line: 5 */
+    .info .carousel .carousel-inner {
+        height: 130px;
+    }
+}
+
+
+
+/* Donate */
+
+button.donate, button.action {
     border: none;
     box-shadow: none;
     background: #cd201f;
@@ -748,72 +1001,50 @@ strong.extra {
     font-size: 125%;
     transition: background 0.75s;
 }
-.donate:hover, .donate:focus {
+button.action {
+    padding: 10px 20px;
+    font-size: 100%;
+}
+button.action.black {
+    background: black;
+}
+button.donate:hover, button.donate:focus,
+button.action:hover, button.action:focus {
     background: #AA1D1D;
 }
-#donateBitcoinModal .modal-content {
-    background: #f3eff2;
+button.action.black:hover, button.action.black:focus {
+    background: #cd201f;
 }
-#donateBitcoinModal samp {
-    background: #f3eff2;
-    padding: 3px 5px;
+#main-page #donate {
+    border-top: 3px solid #CD201F;
+    padding: 100px 0 130px;
+    background: url("/img/bg_rectangles.png") center center;
+    background-size: cover;
+    color: white;
 }
-#donateBitcoinModal .modal-footer h4 {
-    margin-top: 6px;
-    margin-bottom: 0;
+#main-page #donate .donate {
+    border: 3px solid white;
 }
-#donateBitcoinModal .small {
-    margin-bottom: -5px;
+#main-page #donate .col-md-4 {
+    text-align: center;
 }
-body.modal-open {
-    overflow-y: scroll;
-    padding-right: 0 !important;
+#main-page #donate .col-md-4:first-child h3 {
+    margin-bottom: 45px;
 }
-@media (max-width: 767px){
-    .text-2 {
-        padding-top: 40px;
-        padding-bottom: 30px;
-    }
-    .text-2 .row {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
-
-/* News */
-
-.news-container {
-    background-color: #d0cdcd;
-    border-top: 2px solid white;
-    color: #333;
-}
-.news-container a {
-    color: #cd201f;
-}
-.news-container h3 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: #cd201f;
-}
-.news-container .slides-download {
-    margin-top: 0;
-    margin-bottom: 20px;
+#main-page #donate .col-md-4:last-child h3 {
+    margin-top: 45px;
 }
 @media (min-width: 768px) {
-    .news-container {
-        border-top: none;
-        padding-top: 0;
+    #main-page #donate .col-md-4:first-child h3 {
+        text-align: right;
+        margin: 20px 0 10px 0;
     }
-    .news-container h3 {
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-    .news-container .slides-download {
-        margin-top: 15px;
-        margin-bottom: 20px;
+    #main-page #donate .col-md-4:last-child h3 {
+        text-align: left;
+        margin: 20px 0 10px 0;
     }
 }
+
 
 
 /* Footer */

@@ -469,47 +469,252 @@
         </div>
     </div>
 
-    <!-- second text box -->
-    <div class="text-2">
-        <div class="container">
+    <!-- tiles -->
+    <div id="tiles">
+        <div class="container container-double">
+            <div class="row is-flex">
 
-            <!-- download -->
-            <div class="row">
-                <div class="col-md-12">
-                    <p><strong class="extra">Like the idea?<br>Download <a class="red">NewPipe</a> from <a href="https://f-droid.org/" target="_blank">F-Droid</a></strong></p>
-                    <br>
-                    <p>F-Droid is a trusted catalogue of Free and Open Source applications for Android.</p>
-                    <p class="f-droid-wrapper"><a href="https://f-droid.org/packages/org.schabi.newpipe/" target="_blank"><img src="{{ site.baseurl }}/img/f-droid.svg" class="f-droid" alt="F-Droid" /></a></p>
-                    <br class="hidden-xs" ><br class="hidden-xs" >
+                <div class="col-lg-12">
+                    <hr class="separator hidden-md" />
                 </div>
+
+                <!-- User Voices -->
+                <div class="col-lg-12 tile" id="user-voices">
+                    <h3>What other people think</h3>
+                    <div id="user-voices-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="user-thumbnail">
+                                    <i class="fa fa-user-circle-o"></i>
+                                </div>
+                                <p class="user-name">
+                                    <a href="https://newpipe.schabi.org/blog/pinned/NewPipe-needs-feedback/#isso-12">
+                                        Neil Simpson
+                                    </a>
+                                </p>
+                                <p class="user-statement">Such a great app - it is probably the app I use most on my phone!</p>
+                            </div>
+                            <div class="item">
+                                <div class="user-thumbnail">
+                                    <i class="fa fa-user-circle-o"></i>
+                                </div>
+                                <p class="user-name">
+                                    <a href="https://newpipe.schabi.org/blog/pinned/NewPipe-needs-feedback/#isso-8">
+                                        Sarah Ann Berger
+                                    </a>
+                                </p>
+                                <p class="user-statement">You really do have a quality app, which is a rarity. </p>
+                            </div>
+                            <div class="item">
+                                <div class="user-thumbnail">
+                                    <i class="fa fa-user-circle-o"></i>
+                                </div>
+                                <p class="user-name">
+                                    <a href="https://newpipe.schabi.org/blog/pinned/NewPipe-needs-feedback/#isso-16">
+                                        Arthur Reeder
+                                    </a>
+                                </p>
+                                <p class="user-statement">NewPipe is one of the best applications on mobile today.</p>
+                            </div>
+                        </div>
+
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#user-voices-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#user-voices-carousel" data-slide-to="1"></li>
+                            <li data-target="#user-voices-carousel" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Controls: not displayed but needed to get preventJumpingPage() working
+                             Pausing the Carousel won't work without controls. Don't ask me why :)
+                         -->
+                        <a class="left carousel-control" href="#user-voices-carousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#user-voices-carousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <!-- Download -->
+                <div class="col-lg-12">
+                    <h3 class="title">Download NewPipe</h3>
+                </div>
+                <div class="col-lg-12 tile" id="info">
+                    <div class="info-table" id="info-download">
+                        <div class="row is-flex">
+                            <div class="col-md-4">
+                                <h4>Stable</h4>
+                                <div class="info">
+                                    <p class="info-version api-stable-version">0.12.0</p>
+                                    <p class="text-center"><strong>New</strong></p>
+                                    <div class="api-stable-new"></div>
+                                </div>
+                                <p class="info-action">
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/">
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="col-md-4 col-md-push-4">
+                                <h4>Beta</h4>
+                                <div class="info">
+                                    <p class="info-version api-beta-version">1.0.0</p>
+                                    <p class="text-center"><strong>New</strong></p>
+                                    <div id="api-beta-new"></div>
+                                </div>
+                                <p class="info-action">
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe.beta/">
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="col-md-4 col-md-pull-4">
+
+                                <!-- borders -->
+                                <div class="border-middle left"></div>
+                                <div class="border-middle right"></div>
+
+                                <!-- color: #1976d2 -->
+                                <h4>F-Droid</h4>
+                                <div class="info">
+                                    <p class="info-version" id="table-version"></p>
+
+                                    <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <p><a href="https://f-droid.org/">F-Droid</a> is a trusted catalogue of Free and Open Source applications for Android.</p>
+                                            </div>
+                                            <div class="item">
+                                                <p>Install the F-Droid app to get notified about updates. It enables you to download and update them too.</p>
+
+                                            </div>
+                                            <div class="item">
+                                                <p>F-Droid also guarantees the best possible privacy and therefore does not track its users. <br />
+                                                    At this point we would like to thank F-Droid for providing the downloads.
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#f-droid-carousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#f-droid-carousel" data-slide-to="1"></li>
+                                            <li data-target="#f-droid-carousel" data-slide-to="2"></li>
+                                        </ol>
+
+                                        <!-- Controls: not displayed but needed to get preventJumpingPage() working
+                                             Pausing the Carousel won't work without controls. Don't ask me why :)
+                                         -->
+                                        <a class="left carousel-control" href="#f-droid-carousel" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#f-droid-carousel" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <p class="info-action">
+                                    <a href="https://f-droid.org/packages/org.fdroid.fdroid/">
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Open Source -->
+                <div class="col-lg-12">
+                    <hr class="separator" />
+                </div>
+
+                <div class="col-lg-12 tile" id="tile-opensource">
+                    <div class="tile-media">
+                        <a href="https://github.com/TeamNewPipe/NewPipe">
+                            <img src="/img/newpipe_on_github.png" class="img-responsive" />
+                        </a>
+                    </div>
+                    <div class="tile-description">
+                        <h4>NewPipe is free and open source</h4>
+
+                        <p><strong>Your advantages</strong></p>
+                        <ul class="check">
+                            <li>Quick help when you have a problem (nobody's ever had one)</li>
+                            <li>Dozens of people bring NewPipe forward and translate it into <a href="https://hosted.weblate.org/engage/NewPipe/"><span class="api-translations">43</span>&nbsp;languages</a>.</li>
+                            <li>You can check the sourcecode on <a href="https://github.com/TeamNewPipe/NewPipe">GitHub</a> and contribute to NewPipe.</li>
+                            <li>NewPipe is covered by the <a href="https://github.com/TeamNewPipe/NewPipe/blob/master/LICENSE">GPL&nbsp;3.0&nbsp;license</a>.</li>
+                            <li>Get NewPipe from <a href="https://f-droid.org/packages/org.schabi.newpipe/">F-Droid</a> and we guarantee that it is generated from the sourcecode.</li>
+                            <li class="text-success">NewPipe is available for free</li>
+                        </ul>
+                        <p class="button-wrapper">
+                            <a href="https://github.com/TeamNewPipe/NewPipe/blob/dev/.github/CONTRIBUTING.md#newpipe-contribution-guidelines"><button class="action">Contribute</button></a>
+                            <a href="https://github.com/TeamNewPipe/NewPipe/"><button class="action"><i class="fa fa-star"></i> <span id="stargazers">3000</span></button></a>
+                            <a href="https://hosted.weblate.org/engage/NewPipe/"><button class="action">Translate</button></a>
+                            <a href="https://github.com/TeamNewPipe/website/"><button class="action black" >Improve this site</button></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- Support -->
+
+                <div class="col-lg-12">
+                    <h3 class="title">Support NewPipe</h3>
+                </div>
+                <div class="col-md-6 tile tile-left" id="tile-free">
+                    <h4>Why NewPipe is free</h4>
+                    <ul class="check">
+                        <li class="heart">We love what we are doing</li>
+                        <li>NewPipe is powered by a growing community</li>
+                        <li>Our goal is to make the internet a more free (libre) place and open it for everyone</li>
+                        <li>Your donation cover a majority our costs</li>
+                        <li class="text-success">F-Droid, WebLate, Sentry and other companies offer their services to Open Source projects for free</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 tile tile-right" id="tile-like-np">
+                    <h4>Like the idea?</h4>
+                    <p>We hope so! But don't forget, a lot of time and energy goes into this, and we share it with you.</p>
+                    <p>We would like to offer you some ways you can support our work by donations. So we can get some <strong class="red">extra snacks during work!</strong></p>
+                </div>
+
             </div>
-
-            <!-- separator -->
-            <div class="row">
-                <div class="col-md-12">
-                    <hr class="visible-xs separator" />
-                </div>
-            </div>
-
-            <!-- donate -->
-            <div class="row">
-                <div class="col-md-12">
-                    <p><strong class="extra">Do we look fancy?</strong></p>
-                    <br>
-                </div>
-                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-justify">
-                    <p>We hope so! But don't forget, a lot of time and energy goes into this, and we share it with you. We would like to offer you some ways you can support our work by donations. So we can get some <strong class="red">extra snacks during work!</strong></p>
-                    <br>
-                </div>
-                <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
-                    <p><a href="{{ site.baseurl }}/donate/"><button class="donate">Donate</button></a></p>
-                    <br>
-                    <p>Thank you in advance!</p>
-                </div>
-            </div> <!-- donate -->
-
         </div>
-    </div> <!-- second text box -->
+    </div> <!-- tiles -->
+
+
+    <!-- donate -->
+    <div id="donate">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>bring NewPipe forward</h3>
+                </div>
+                <div class="col-md-4 text-center">
+                    <p><a href="{{ site.baseurl }}/donate/"><button class="donate">Donate</button></a></p>
+                </div>
+                <div class="col-md-4">
+                    <h3>support our developers</h3>
+                </div>
+            </div>
+        </div>
+    </div> <!-- donate -->
 
     <!-- footer -->
     <footer class="footer">
@@ -534,6 +739,10 @@
 
     <!-- Script for feature animations -->
     <script src="{{ site.baseurl }}/js/features.js"></script>
+
+    <script src="{{ site.baseurl }}/js/tiles.js"></script>
+
+    <script src="{{ site.baseurl }}/js/web-api.js"></script>
 
     <!-- Load and play animation on medium and large screens -->
     <script>
