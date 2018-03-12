@@ -18,7 +18,7 @@ $(function() {
  */
 var features = [
     "lightweight", "downloads", "privacy", "background", "popup",
-    "subscriptions", "bookmarks", "history", "code", "price"];
+    "subscriptions", "bookmarks", "history"];
 var currentFeature = -1,
     isFullscreen = false,
     isActive = false;
