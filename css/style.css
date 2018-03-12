@@ -379,29 +379,29 @@ img.border-white {
 
 /* TEXT-1 */
 
-.text-1 {
+#text-1 {
     background: #f3eff2;
     padding-top: 70px;
-    padding-bottom: 15px;
 }
-.text-1 p {
+#text-1 p {
     margin-bottom: 15px;
 }
-.text-1 a {
+#text-1 a {
     color: #cd201f;
 }
-.text-1 .separator {
+#text-1 .separator {
     margin-top: 30px;
 }
-.text-1-wrapper {
+#text-1-wrapper {
     padding-left: 15px;
     padding-right: 15px;
 }
 @media (min-width: 768px){
-    .text-1 {
+    #text-1 {
         padding-top: 85px;
+        padding-bottom: 30px;
     }
-    .text-1-wrapper {
+    #text-1-wrapper {
         padding-left: 0;
         padding-right: 0;
     }
