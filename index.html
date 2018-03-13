@@ -124,6 +124,9 @@
     <!-- features -->
     <div id="features">
         <div class="container container-double">
+            <h3 id="features-title">Main Features</h3>
+        </div>
+        <div class="container container-double">
             <div class="row is-flex">
                 <div class="col-md-9 feature-detail" id="lightweight">
                     <h3 style="font-weight: bold">NewPipe - the smart streaming solution</h3>
@@ -421,12 +424,12 @@
         <div class="container container-double">
             <div class="row is-flex">
 
-                <div class="col-lg-12">
+                <div class="col-xs-12">
                     <hr class="separator hidden-md" />
                 </div>
 
                 <!-- User Voices -->
-                <div class="col-lg-12 tile" id="user-voices">
+                <div class="col-xs-12 tile" id="user-voices">
                     <h3>What other people think</h3>
                     <div id="user-voices-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
 
@@ -490,41 +493,41 @@
                 </div>
 
                 <!-- Download -->
-                <div class="col-lg-12">
+                <div class="col-xs-12">
                     <h3 class="title">Download NewPipe</h3>
                 </div>
-                <div class="col-lg-12 tile" id="info">
-                    <div class="info-table" id="info-download">
+                <div class="col-xs-12 tile" id="download">
+                    <div class="download-table">
                         <div class="row is-flex">
-                            <div class="col-md-4">
+                            <div class="col-xs-12 col-sm-6 col-lg-4" id="download-stable">
                                 <h4>Stable</h4>
-                                <div class="info">
-                                    <p class="info-version api-stable-version">0.12.0</p>
+                                <div class="download-info">
+                                    <p class="download-version api-stable-version">0.12.0</p>
                                     <p class="text-center"><strong>New</strong></p>
                                     <div class="api-stable-new"></div>
                                 </div>
-                                <p class="info-action">
+                                <p class="download-action">
                                     <a href="https://f-droid.org/packages/org.schabi.newpipe/">
                                         <i class="fa fa-download"></i>
                                     </a>
                                 </p>
                             </div>
 
-                            <div class="col-md-4 col-md-push-4">
+                            <div class="col-xs-12 col-sm-6 col-lg-4 col-lg-push-4" id="download-beta">
                                 <h4>Beta</h4>
-                                <div class="info">
-                                    <p class="info-version api-beta-version">1.0.0</p>
+                                <div class="download-info">
+                                    <p class="download-version api-beta-version">1.0.0</p>
                                     <p class="text-center"><strong>New</strong></p>
                                     <div id="api-beta-new"></div>
                                 </div>
-                                <p class="info-action">
+                                <p class="download-action">
                                     <a href="https://f-droid.org/packages/org.schabi.newpipe.beta/">
                                         <i class="fa fa-download"></i>
                                     </a>
                                 </p>
                             </div>
 
-                            <div class="col-md-4 col-md-pull-4">
+                            <div class="col-xs-12 col-lg-4 col-lg-pull-4" id="download-f-droid">
 
                                 <!-- borders -->
                                 <div class="border-middle left"></div>
@@ -532,9 +535,7 @@
 
                                 <!-- color: #1976d2 -->
                                 <h4>F-Droid</h4>
-                                <div class="info">
-                                    <p class="info-version" id="table-version"></p>
-
+                                <div class="download">
                                     <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
 
                                         <!-- Wrapper for slides -->
@@ -575,7 +576,7 @@
 
                                     </div>
                                 </div>
-                                <p class="info-action">
+                                <p class="download-action">
                                     <a href="https://f-droid.org/packages/org.fdroid.fdroid/">
                                         <i class="fa fa-download"></i>
                                     </a>
@@ -587,11 +588,11 @@
 
 
                 <!-- Open Source -->
-                <div class="col-lg-12">
+                <div class="col-xs-12">
                     <hr class="separator" />
                 </div>
 
-                <div class="col-lg-12 tile" id="tile-opensource">
+                <div class="col-xs-12 tile" id="tile-opensource">
                     <div class="tile-media">
                         <a href="https://github.com/TeamNewPipe/NewPipe">
                             <img src="/img/newpipe_on_github.svg" class="img-responsive" />
@@ -622,7 +623,7 @@
 
                 <!-- Support -->
 
-                <div class="col-lg-12">
+                <div class="col-xs-12">
                     <h3 class="title">Support NewPipe</h3>
                 </div>
                 <div class="col-md-6 tile tile-left" id="tile-free">
