@@ -18,7 +18,7 @@ layout: blog_with-sidebar-post
     <div class="post-content text-justify-sm" itemprop="articleBody">
         {% if page.image %}
         <div class="row">
-            <div class="col-md-3 col-img" onclick="viewMediaFile(this)" data-toggle="modal" data-target="#mediaFileView">
+            <div class="col-md-3 col-img">
                 {% assign image = site.data.images[page.image] %}
                 <img src="/img/{{ image.url }}" class="img-responsive postImg" />
                 By <a href="{{ image.origin }}">{{ image.author }}</a>
@@ -26,19 +26,27 @@ layout: blog_with-sidebar-post
             </div>
             <div class="col-md-9">
                 {{ content }}
+                <div class="post-categories">
+                    See also:
+                    {% for category in page.categories %}
+                    <a href="{{ site.baseurl}}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
+                    {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
         {% else %}
         {{ content }}
-        {% endif %}
-    </div>
 
-    <div class="post-categories">
-        See also: 
-        {% for category in page.categories %}
-        <a href="{{ site.baseurl}}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
-        {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
-        {% endfor %}
+        <div class="post-categories">
+            See also:
+            {% for category in page.categories %}
+            <a href="{{ site.baseurl}}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
+            {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
+            {% endfor %}
+        </div>
+
+        {% endif %}
     </div>
 
     <!-- Modal -->

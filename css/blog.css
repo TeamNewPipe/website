@@ -566,10 +566,16 @@ strong.extra {
         padding-right: 5px;
         padding-bottom: 0;
     }
+    .post-categories {
+        margin-top: 15px;
+    }
 }
 @media (max-width: 767px){
     .post-collection {
         padding-top: 20px;
+    }
+    .postImg {
+        max-height: 33vh;
     }
 }
 .postImg[src*=".svg"] {
@@ -747,6 +753,10 @@ div.search-container button:focus, div.search-container input:focus {
 Allowed HTML Tags
 h5, h6, 
 */
+#isso-thread .textarea:focus,
+#isso-thread input:focus {
+    border-color: #AA1D1D;
+}
 #comments {
     margin-top: 20px;
     #background: #f3eff2;
@@ -763,7 +773,14 @@ h5, h6,
     margin-left: -30px;
     margin-bottom: 15px;
 }
-
+#comments .isso-postbox > .form-wrapper > .auth-section .post-action > input {
+    background: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#comments .isso-postbox > .form-wrapper > .auth-section .post-action:hover > input {
+    border-color: #AA1D1D;
+}
 #comments h1, #comments h2, #comments h3, #comments h4 {
     font-size: 18px;
 }

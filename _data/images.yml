@@ -27,6 +27,7 @@ newpipe-beta:
   name: NewPipe Beta logo
   author: Schabi
   origin: https://github.com/theScrabi
+  download: /press/logo/#logo-beta
 
 speech-bubbles:
   url: speech_bubbles.svg
