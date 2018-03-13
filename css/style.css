@@ -1008,33 +1008,39 @@ strong.extra {
 }
 
 /* Carousel */
-.download-info .carousel {
+.download .carousel {
 
 }
-.download-info .carousel ol.carousel-indicators {
+.download .carousel ol.carousel-indicators {
     position: relative;
     bottom: 0;
 }
-.download-info .carousel ol.carousel-indicators > li {
+.download .carousel ol.carousel-indicators > li {
     border-color: #000;
     background-color: #000;
     width: 5px;
     height: 5px;
     border-radius: 100%;
 }
-.download-info .carousel ol.carousel-indicators > li.active {
+.download .carousel ol.carousel-indicators > li.active {
     width: 8px;
     height: 8px;
 }
-.download-info .carousel .carousel-control {
+.download .carousel .carousel-control {
     display: none;
 }
 @media (min-width: 768px) {
     /* Fixed height to prevent the container
     from jumping when the paragraphs have different heights
     each line has a height of 24px plus 10px margin-bottom
-    for the last paragraph. Max number of line: 5 */
-    .download-info .carousel .carousel-inner {
+    for the last paragraph. Max number of lines: 2 */
+    .download .carousel .carousel-inner {
+        height: 58px;
+    }
+}
+@media (min-width: 992px) {
+    /* max lines: 5 */
+    .download .carousel .carousel-inner {
         height: 130px;
     }
 }
