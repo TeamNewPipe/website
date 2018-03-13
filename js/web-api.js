@@ -40,8 +40,8 @@ function updateAllWithAPIData() {
     for(var i = 0; i < flavours.length; i++) {
         updateWithAPIData("api-" + flavours[i] + "-version",
             api.flavors[flavours[i]].version.replace(new RegExp("((-beta)|[v])","g"),""));
-        updateWithAPIData("api-" + flavours[i] + "-new",
-            /*api.flavors[flavours[i]].changelog.split("</ul>")[0]);
+        /*updateWithAPIData("api-" + flavours[i] + "-new"
+            api.flavors[flavours[i]].changelog.split("</ul>")[0]);
         console.log(api.flavors[flavours[i]].changelog);*/
     }
     updateWithAPIData("api-translations", api.stats.translations);
