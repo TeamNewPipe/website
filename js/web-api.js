@@ -55,14 +55,12 @@ function updateAllWithAPIData() {
  * Get API information and trigger updates
  */
 $(document).ready(function () {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "https://newpipe.schabi.org/api/data.json", false);
-    xhttp.send();
-    var resp = xhttp.responseText;
-    if (resp == null || typeof resp == 'undefined' || resp == "") {
-        console.log("An error occurred while getting Web-API data from https://newpipe.schabi.org/api/data.json");
-        return false;
-    }
-    api = JSON.parse(resp);
-    updateAllWithAPIData();
+    $.get("https://newpipe.schabi.org/api/data.json", "json")
+        .done(function(resp) {
+            api = resp;
+            updateAllWithAPIData();
+        })
+        .fail(function() {
+            console.log("An error occurred while getting Web-API data from https://newpipe.schabi.org/api/data.json");
+        });
 });
