@@ -1093,7 +1093,7 @@ button.action.black:hover, button.action.black:focus {
 #main-page #donate .col-md-4:last-child h3 {
     margin-top: 45px;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     #main-page #donate .col-md-4:first-child h3 {
         text-align: right;
         margin: 20px 0 10px 0;
