@@ -929,8 +929,13 @@ strong.extra {
     color: #8c8c8c;
     font-size: 15px;
 }
+#download-f-droid .download {
+    flex-grow: 1;
+}
 .download-info {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 .download-info ul {
 
@@ -938,10 +943,24 @@ strong.extra {
 .download-info ul > li {
 
 }
+.download-info > .api-stable-new, .download-info > .api-beta-new {
+    flex-grow: 1;
+    display: contents;
+    text-align: center;
+}
+.download-info img {
+    display: inline-block;
+    /* the visible part of the logos has a height of 100px.
+     I needed to add 5px because there is some invisible space
+     between the top of the circle and the top of the image. */
+    max-height: 105px;
+    margin: auto 0;
+}
 .download-action {
     text-align: center;
     font-size: 25px;
     padding: 5px 15px;
+    margin-top: 5px;
 }
 @media (max-width: 1199px) {
     .download-table {
@@ -982,7 +1001,8 @@ strong.extra {
     #download-stable, #download-beta {
         border-left-width: 0;
         border-right-width: 0;
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        padding-bottom: 15px;
     }
 }
 
@@ -1041,7 +1061,7 @@ strong.extra {
 @media (min-width: 992px) {
     /* max lines: 5 */
     .download .carousel .carousel-inner {
-        height: 130px;
+        height: 96px;
     }
 }
 
