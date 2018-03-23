@@ -36,40 +36,6 @@ main .row [class^="col"] {
     text-align: justify;
 }
 
-#quotes {
-    background: #f3eff2;
-    padding: 0 0 30px 0;
-    display: none;
-}
-#quotesCarousel h4 {
-    font-style: italic;
-}
-#quotesCarousel .carousel-control.left, .carousel-control.right {
-    background-image: none;
-    color: #333;
-    line-height: -moz;
-    text-align: initial;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#quotesCarousel .carousel-control.left > div, .carousel-control.right > div {
-    width: auto;
-}
-#quotesCarousel .carousel-inner > .item {
-    margin-bottom: 40px;
-}
-#quotesCarousel .carousel-indicators {
-    bottom: 0;
-    margin-bottom: 10px;
-}
-#quotesCarousel .carousel-indicators .active {
-    background-color: #333;
-}
-#quotesCarousel .carousel-indicators li {
-    border: 1px solid #333;
-}
-
 
 #thanks {
     background: #d0cdcd;
@@ -92,6 +58,23 @@ main .row [class^="col"] {
 #donate .subtitle {
     font-size: 16px;
 }
+#button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.button-wrapper {
+    flex-grow: 1;
+    margin-bottom: 30px;
+}
+#bountysource-donation {
+    text-align: center;
+}
+#liberapay-donation {
+    text-align: right;
+}
 .phone-background .row [class^="col"] {
     padding: 0 0 0 15px;
     margin: 0;
@@ -99,18 +82,20 @@ main .row [class^="col"] {
 #donate-title {
     margin-bottom: 30px;
 }
-#bitcoin-donation-button {
-    margin-bottom: 30px;
-}
 #bitcoin-donation {
+    text-align: center;
     display: none;
-    margin-top: 30px;
     margin-bottom: 15px;
 }
 #bitcoin-donation samp {
     background: #AA1D1D;
     border-radius: 5px;
     padding: 6px 10px;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    #liberapay-donation {
+        text-align: center;
+    }
 }
 @media (max-width: 767px) {
     #donate {
@@ -126,13 +111,25 @@ main .row [class^="col"] {
         display: flex;
         flex-direction: column;
     }
+    #donate-title {
+        order: 1;
+    }
+    #button-container {
+        display: block;
+        order: 3;
+    }
+    #bitcoin-donation-button {
+        margin-bottom: 30px;
+    }
     #bitcoin-donation {
-        margin-top: 15px;
-        margin-bottom: 20px;
+        margin-top: 0;
+        margin-bottom: 45px;
+        order: 2;
     }
     #bountysource-donation {
         order: 2;
         margin-top: 20px;
+        margin-bottom: 30px;
     }
 }
 #parallax-background {

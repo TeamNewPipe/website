@@ -83,31 +83,6 @@
         </div>
     </div> <!-- Keep-running -->
 
-    <!-- Quotes -->
-    <div id="quotes">
-        <div class="container container-double">
-            <div class="row">
-                <div class="col-md-8 col-md-push-2">
-                    <div id="quotesCarousel" class="carousel slide" data-interval="6000" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#quotesCarousel" data-slide-to="0" class="active"></li>
-                        </ol>
-                        <!-- Carousel items -->
-                        <div class="carousel-inner">
-                            <div class="active item text-center">
-                                <h4>Every donation increases our motivation.</h4>
-                                <p>Tobias Groza</p>
-                            </div>
-                        </div>
-                        <!-- Carousel nav -->
-                        <a class="carousel-control left" href="#quotesCarousel" data-slide="prev"><div>&lsaquo;</div></a>
-                        <a class="carousel-control right" href="#quotesCarousel" data-slide="next"><div>&rsaquo;</div></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- Quotes -->
-
     <!-- parallax background for header -->
     <div id="parallax-background"></div>
     <div class="phone-background">
@@ -129,15 +104,26 @@
                                 <h3 class="with-subtitle">What are you waiting for?</h3>
                                 <p class="subtitle">Help us to bring NewPipe forward!</p>
                             </div>
-                            <div class="col-sm-6 col-xs-12" id="bitcoin-donation-button">
+                            <div class="col-xs-12 col-lg-10" id="button-container">
+                                <div class="button-wrapper" id="bitcoin-donation-button">
                                     <button class="donate" onclick="$('#bitcoin-donation').toggle()">Bitcoin</button>
                                     <div class="clearfix"></div>
-                                    <span>One-time donation</span>
-                            </div>
-                            <div class="col-sm-6 col-xs-12" id="bountysource-donation">
-                                <a href="https://www.bountysource.com/teams/newpipe/" target="_blank"><button class="donate">Bountysource</button></a>
-                                <div class="clearfix"></div>
-                                <span>Boost an upcoming feature</span>
+                                    <span>one-time donation</span>
+                                </div>
+                                <div class="button-wrapper" id="bountysource-donation">
+                                    <a href="https://www.bountysource.com/teams/newpipe/" target="_blank">
+                                        <button class="donate">Bountysource</button>
+                                    </a>
+                                    <div class="clearfix"></div>
+                                    <span>boost an upcoming feature</span>
+                                </div>
+                                <div class="button-wrapper" id="liberapay-donation">
+                                    <a href="https://www.bountysource.com/teams/newpipe/" target="_blank">
+                                        <button class="donate">Liberapay</button>
+                                    </a>
+                                    <div class="clearfix"></div>
+                                    <span>recurrent donations&nbsp;&nbsp;</span>
+                                </div>
                             </div>
                             <div class="col-sm-12 col-xs-12" id="bitcoin-donation">
                                 <p>
@@ -189,11 +175,6 @@
 
 <!-- Script for parallax animations -->
 <script src="{{ site.baseurl }}/js/parallax_donate.js"></script>
-
-<script type="text/javascript">
-    /* initialize carousel */
-    //$("#quotesCarousel").carousel();
-</script>
 
 </body>
 </html>
