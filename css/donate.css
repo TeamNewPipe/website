@@ -36,40 +36,6 @@ main .row [class^="col"] {
     text-align: justify;
 }
 
-#quotes {
-    background: #f3eff2;
-    padding: 0 0 30px 0;
-    display: none;
-}
-#quotesCarousel h4 {
-    font-style: italic;
-}
-#quotesCarousel .carousel-control.left, .carousel-control.right {
-    background-image: none;
-    color: #333;
-    line-height: -moz;
-    text-align: initial;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#quotesCarousel .carousel-control.left > div, .carousel-control.right > div {
-    width: auto;
-}
-#quotesCarousel .carousel-inner > .item {
-    margin-bottom: 40px;
-}
-#quotesCarousel .carousel-indicators {
-    bottom: 0;
-    margin-bottom: 10px;
-}
-#quotesCarousel .carousel-indicators .active {
-    background-color: #333;
-}
-#quotesCarousel .carousel-indicators li {
-    border: 1px solid #333;
-}
-
 
 #thanks {
     background: #d0cdcd;
