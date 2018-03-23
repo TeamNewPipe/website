@@ -431,11 +431,24 @@
                 <!-- User Voices -->
                 <div class="col-xs-12 tile" id="user-voices">
                     <h3>What other people think</h3>
-                    <div id="user-voices-carousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                    <div id="user-voices-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
 
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
-                            <div class="item active">
+                            <div class="item active"> <!-- @Bubu -->
+                                <div class="user-thumbnail">
+                                    <a href="https://github.com/TeamNewPipe/NewPipe/issues/1153#issuecomment-375478646">
+                                        <img src="{{ site.baseurl }}/img/bubu_thumbnail.jpg" class="img-responsive img-circle" />
+                                    </a>
+                                </div>
+                                <p class="user-name">
+                                    <a href="https://github.com/TeamNewPipe/NewPipe/issues/1153#issuecomment-375478646">
+                                        Marcus Hoffmann
+                                    </a>
+                                </p>
+                                <p class="user-statement">one of the most used apps on my Phone</p>
+                            </div>
+                            <div class="item">
                                 <div class="user-thumbnail">
                                     <i class="fa fa-user-circle-o"></i>
                                 </div>
@@ -475,6 +488,7 @@
                             <li data-target="#user-voices-carousel" data-slide-to="0" class="active"></li>
                             <li data-target="#user-voices-carousel" data-slide-to="1"></li>
                             <li data-target="#user-voices-carousel" data-slide-to="2"></li>
+                            <li data-target="#user-voices-carousel" data-slide-to="3"></li>
                         </ol>
 
                         <!-- Controls: not displayed but needed to get preventJumpingPage() working

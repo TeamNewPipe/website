@@ -864,8 +864,16 @@ strong.extra {
 #user-voices-carousel .carousel-inner .user-thumbnail {
     font-size: 100px;
     min-height: 100px;
+    max-height: 100px;
     line-height: 1;
     margin-top: 15px;
+}
+#user-voices-carousel .carousel-inner .user-thumbnail a {
+    height: 100px;
+}
+#user-voices-carousel .carousel-inner .user-thumbnail img {
+    display: inline-block;
+    vertical-align: top;
 }
 #user-voices-carousel .carousel-inner .user-name {
     margin-top: 10px;
