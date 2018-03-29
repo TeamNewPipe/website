@@ -11,7 +11,7 @@ services:
       - 127.0.0.1:8080:80
 
   isso:
-    image: quay.io/teamnewpipe/isso-docker:latest
+    image: quay.io/teamnewpipe/isso-docker:master
     ports:
       - 127.0.0.1:8081:80
     environment:
