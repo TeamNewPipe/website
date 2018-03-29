@@ -700,15 +700,8 @@ div.search-container button:focus, div.search-container input:focus {
   flex: 1 0 auto;
 }
 
-/* Isso comments */
-/*
-Allowed HTML Tags
-h5, h6, 
-*/
-#isso-thread .textarea:focus,
-#isso-thread input:focus {
-    border-color: #AA1D1D;
-}
+/** Comments **/
+
 #comments {
     margin-top: 20px;
     #background: #f3eff2;
@@ -725,17 +718,6 @@ h5, h6,
     margin-left: -30px;
     margin-bottom: 15px;
 }
-#comments .isso-postbox > .form-wrapper > .auth-section .post-action > input {
-    background: white;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-#comments .isso-postbox > .form-wrapper > .auth-section .post-action:hover > input {
-    border-color: #AA1D1D;
-}
-#comments h1, #comments h2, #comments h3, #comments h4 {
-    font-size: 18px;
-}
 @media (min-width: 767px) {
     .comments-separator {
         width: calc(100% + 15px);
@@ -745,4 +727,92 @@ h5, h6,
         margin-top: 60px;
         margin-bottom: 75px;
     }
+}
+
+/* Isso */
+
+#comments .text-wrapper > .text {
+    float: left;
+}
+#comments .text-wrapper > .text h1, #comments .text-wrapper > .text h2,
+#comments .text-wrapper > .text h3, #comments .text-wrapper > .text h4 {
+     font-size: 18px;
+ }
+#comments .text-wrapper > .text h5 {
+    font-size: 16px;
+}
+#comments .text-wrapper > .text h6 {
+    font-size: 14px;
+}
+#comments .isso-postbox > .form-wrapper .textarea:focus,
+#comments .isso-postbox > .form-wrapper input:focus {
+    border-color: #AA1D1D;
+}
+#comments .isso-postbox {
+    display: block;
+}
+#comments .isso-postbox > .form-wrapper .text-wrapper {
+    display: inline-block;
+}
+#comments .isso-postbox > .form-wrapper .textarea-wrapper .markdown-info {
+    position: absolute;
+    z-index: 5;
+    font-size: 30px;
+    color: cornflowerblue;
+    bottom: 0;
+    line-height: 0;
+    left: 5px;
+}
+
+#comments .isso-postbox > .form-wrapper .preview .textarea {
+    display: none;
+}
+
+#comments .isso-postbox > .form-wrapper .isso-comment {
+    border: 2px solid white;
+    margin: 0 0 .3em;
+    display: none;
+}
+#comments .isso-postbox > .form-wrapper .preview .isso-comment {
+    display: block;
+}
+#comments .isso-postbox > .form-wrapper > .auth-section .post-action > * {
+    background: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#comments .isso-postbox > .form-wrapper > .auth-section .post-action > *:hover {
+    border-color: #AA1D1D;
+}
+#comments .isso-postbox > .form-wrapper > .auth-section .input-wrapper,
+#comments .isso-postbox > .form-wrapper > .auth-section .post-action {
+    margin-bottom: 0.3em;
+}
+#comments .isso-postbox > .form-wrapper > .auth-section .post-action > span.info-icon {
+    line-height: 28px;
+    font-size: 20px;
+    height: 28px;
+    background: transparent;
+    float: right;
+    cursor: pointer;
+    color: #CD201F;
+    padding: 0 7px;
+}
+
+#comments-info-modal .modal-footer span {
+    line-height: 34px;
+    float: left;
+}
+#comments-info-modal table {
+    border: none;
+}
+#comments-info-modal table tr td {
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+#comments-info-modal table tr td pre {
+    margin-bottom: 0;
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
