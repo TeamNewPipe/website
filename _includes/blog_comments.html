@@ -1,11 +1,83 @@
 <!-- TODO add data-isso -->
-<script data-isso="{{ site.isso_address }}"
+<script defer data-main="/js/embed"
+        data-isso="{{ site.isso_address }}"
         data-isso-reply-to-self="false"
         data-isso-css="false"
         data-isso-require-author="true"
         src="{{ site.isso_address }}/js/embed.min.js"></script>
+
 <div id="comments">
     <div id="comments-separator"></div>
     <h4 class="text-center">Let us know what you think!</h4>
     <section id="isso-thread"></section>
+    <div class="post-action"></div>
+    <div class="modal  fade" tabindex="-1" role="dialog" id="comments-info-modal">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Markdown and HTML support</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p>Line breaks: two get line breaks, you need to make <strong>two</strong> line breaks in Markdown.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>You can use the following options to make your comments stylish:</p>
+                            <table class="table-responsive">
+                                <tbody>
+                                <tr>
+                                    <td><strong>bold</strong></td>
+                                    <td><pre>**bold**</pre></td>
+                                </tr>
+                                <tr>
+                                    <td><em>italic</em></td>
+                                    <td><pre>*italic*</pre></td>
+                                </tr>
+                                <tr>
+                                    <td><del style="">strike</del></td>
+                                    <td><pre>~~del~~</pre></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#">link</a></td>
+                                    <td><pre>[link](https://www.example.com)</pre></td>
+                                </tr>
+                                <tr>
+                                    <td>image</td>
+                                    <td><pre>![alt text](https://www.image.com/img.png)</pre></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Supported headings:</td>
+                                </tr>
+                                <tr>
+                                    <td><h4>h4</h4></td>
+                                    <td><pre>#### h4</pre></td>
+                                </tr>
+                                <tr>
+                                    <td><h5>h5</h5></td>
+                                    <td><pre>##### h5</pre></td>
+                                </tr>
+                                <tr>
+                                    <td><h6>h6</h6></td>
+                                    <td><pre>###### h6</pre></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Lists must have one empty line between every item:</p>
+                            <p>Bullet list:</p><pre>- something interesting<br/><br/>- also interesting</pre>
+                            <p>Ordered list:</p><pre>1. My first fact<br/><br/>2. My second fact</pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="pull-left">Missing something? <a href="https://github.com/TeamNewPipe/website/issues/new">Tell us!</a></span>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 </div>
+
