@@ -8,7 +8,7 @@ image: newpipe
 ---
 
 We're proud to announce that we have found an agreement with the Google Play
-theme, so that we're finally ready to **release NewPipe in Google Play!**
+team, so that we're finally ready to **release NewPipe in Google Play!**
 
 Christian and I have been working with Google in the background for almost two
 years now. It took us a lot of effort to convince Google of the advantages of
