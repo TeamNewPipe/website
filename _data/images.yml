@@ -45,3 +45,10 @@ feed-icon:
   license: CC0
   origin: https://pixabay.com/de/rss-nachrichten-futtermittel-blog-40674/
   size: 7673
+
+newpipe:
+  url: logo_app.svg
+  type: svg
+  size: 14698
+  author: Schabi
+  origin: https://github.com/TeamNewPipe/NewPipe
