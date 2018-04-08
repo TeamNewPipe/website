@@ -36,7 +36,7 @@ function updateWithAPIData(className, apiData) {
  */
 function updateAllWithAPIData() {
     updateWithAPIData("api-translations", api.stats.translations);
-    var flavours = ["stable", "beta"];
+    var flavours = ["stable"];
     for(var i = 0; i < flavours.length; i++) {
         updateWithAPIData("api-" + flavours[i] + "-version",
             api.flavors[flavours[i]].version.replace(new RegExp("((-beta)|[v])","g"),""));
