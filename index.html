@@ -718,19 +718,28 @@
 
     <script src="{{ site.baseurl }}/js/swipe.js"></script>
 
-    <!-- Script to detect whether the browser supports touch -->
+    <!-- Script to handle touch and swipe events on carousels-->
     <script>
         document.documentElement.className += (!("ontouchstart" in document.documentElement) ? "no-" : "") + "touch";
 
-        var swiper = new Swipe('#user-voices');
-        swiper.onLeft(function() {
-            $('#user-voices-carousel').carousel('next');
-        });
-        swiper.onRight(function() {
-            $('#user-voices-carousel').carousel('prev');
-        });
-        swiper.run();
-
+        if ("ontouchstart" in document.documentElement) {
+            var userVoicesSwiper = new Swipe('#user-voices');
+            userVoicesSwiper.onLeft(function () {
+                $('#user-voices-carousel').carousel('next');
+            });
+            userVoicesSwiper.onRight(function () {
+                $('#user-voices-carousel').carousel('prev');
+            });
+            userVoicesSwiper.run();
+            var downloadFdroidSwiper = new Swipe('#download-f-droid');
+            downloadFdroidSwiper.onLeft(function () {
+                $('#f-droid-carousel').carousel('next');
+            });
+            downloadFdroidSwiper.onRight(function () {
+                $('#f-droid-carousel').carousel('prev');
+            });
+            downloadFdroidSwiper.run();
+        }
     </script>
 
     <!-- Load and play animation on medium and large screens -->
