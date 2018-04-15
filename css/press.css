@@ -110,6 +110,7 @@
     display: block;
 }
 .site-content {
+    background: #E2DEE0;
     border-top: 2px solid white;
 }
 .site-content .container .container {
@@ -321,4 +322,9 @@ p.subtitle {
 #search-results > .border-box .search-result-content .media-gallery [data-toggle="modal"],
 #search-results > .border-box .search-result-content .media-gallery .media-file > img[onclick*="viewMediaFile"]{
     cursor: default;
+}
+
+/* Footer */
+.footer .image-puffer {
+    background:#E2DEE0;
 }

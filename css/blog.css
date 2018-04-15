@@ -437,10 +437,8 @@ strong.extra {
     margin-top: 64px;
 }
 .post-collection {
-    background: #d0cdcd;
-    background-image: 
-        linear-gradient(to right, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.0) calc((100% - 1170px) / 2)),
-        linear-gradient(to right, rgba(0,0,0,0.0) calc(100% - ((100% - 1170px) / 2)), rgba(0,0,0,0.15) 100% );
+    background: #E2DEE0;
+    font-size: 15px;
 }
 .post-collection a {
     color: #CD322E;
@@ -465,10 +463,10 @@ strong.extra {
     position: relative;
 }
 .border-box:hover {
-    background: #E2DEE0;
+    background: #d0cdcd;
     border: 3px solid white;
     border-right-width: 2px;
-    padding: 14px;
+    padding: 14px 15px 14px 14px;
 }
 .border-box .categories {
     margin-top: 15px;
@@ -513,6 +511,12 @@ strong.extra {
     }
 }
 @media (min-width: 992px) {
+    .border-box > .row {
+        margin-left: 0;
+    }
+    .border-box .col-img {
+        padding-left: 0;
+    }
     .col-img {
         text-align: left;
         padding-right: 5px;
@@ -522,10 +526,12 @@ strong.extra {
         margin-top: 15px;
     }
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .post-collection {
         padding-top: 20px;
     }
+}
+@media (max-width: 991px) {
     .postImg {
         max-height: 33vh;
     }
