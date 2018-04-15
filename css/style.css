@@ -891,8 +891,8 @@ strong.extra {
     bottom: 0;
 }
 #user-voices-carousel ol.carousel-indicators > li {
-    border-color: #000;
-    background-color: #000;
+    border-color: #333;
+    background-color: #333;
     width: 8px;
     height: 8px;
     border-radius: 100%;
@@ -906,7 +906,7 @@ strong.extra {
     background: none;
     opacity: 0;
     transition: opacity 0.2s ease-in;
-    color: white;
+    color: #333;
 }
 html.touch #user-voices-carousel .carousel-control,
 #user-voices:hover #user-voices-carousel .carousel-control {
