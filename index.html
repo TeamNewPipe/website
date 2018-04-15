@@ -716,6 +716,11 @@
 
     <script src="{{ site.baseurl }}/js/web-api.js"></script>
 
+    <!-- Script to detect whether the browser supports touch -->
+    <script>
+        document.documentElement.className += (!("ontouchstart" in document.documentElement) ? "no-" : "") + "touch";
+    </script>
+
     <!-- Load and play animation on medium and large screens -->
     <script>
         var loaded = false;

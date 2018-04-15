@@ -902,8 +902,17 @@ strong.extra {
     height: 10px;
 }
 #user-voices-carousel .carousel-control {
-    display: none;
+    top: -26px; /* height of h3 heading to center controls */
+    background: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    color: white;
 }
+html.touch #user-voices-carousel .carousel-control,
+#user-voices:hover #user-voices-carousel .carousel-control {
+    opacity: 1;
+}
+
 
 /* Download */
 
