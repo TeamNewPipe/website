@@ -716,9 +716,21 @@
 
     <script src="{{ site.baseurl }}/js/web-api.js"></script>
 
+    <script src="{{ site.baseurl }}/js/swipe.js"></script>
+
     <!-- Script to detect whether the browser supports touch -->
     <script>
         document.documentElement.className += (!("ontouchstart" in document.documentElement) ? "no-" : "") + "touch";
+
+        var swiper = new Swipe('#user-voices');
+        swiper.onLeft(function() {
+            $('#user-voices-carousel').carousel('next');
+        });
+        swiper.onRight(function() {
+            $('#user-voices-carousel').carousel('prev');
+        });
+        swiper.run();
+
     </script>
 
     <!-- Load and play animation on medium and large screens -->
