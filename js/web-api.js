@@ -46,7 +46,7 @@ function updateAllWithAPIData() {
     }
     updateWithAPIData("api-translations", api.stats.translations);
     updateWithAPIData("api-forks", api.stats.forks);
-    updateWithAPIData("api-contributors", api.stats.contributors);
+    updateWithAPIData("api-contributors", "224");
     updateWithAPIData("api-stargazers", api.stats.stargazers);
     updateWithAPIData("api-watchers", api.stats.watchers);
 }
