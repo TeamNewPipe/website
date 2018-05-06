@@ -750,6 +750,9 @@ div.search-container button:focus, div.search-container input:focus {
 #comments .text-wrapper > .text h6 {
     font-size: 14px;
 }
+#comments .text-wrapper > .text blockquote {
+    font-size: 15px;
+}
 #comments .isso-postbox > .form-wrapper .textarea:focus,
 #comments .isso-postbox > .form-wrapper input:focus {
     border-color: #AA1D1D;
