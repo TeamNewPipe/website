@@ -35,4 +35,15 @@ permalink: /blog/:categories/:title/
 paginate: 4
 paginate_path: "/blog/posts:num/"
 
-
+collections:
+  tutorials:
+    output: true
+    permalink: /FAQ/tutorials/:title
+  faq:
+    output: false
+defaults:
+  - scope:
+      path: ""
+      type: tutorials
+    values:
+      layout: tutorial

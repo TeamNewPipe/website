@@ -1,0 +1,87 @@
+{% comment %}DEFAULT VALUES WHEN NO CATEGORY WAS PASSED{% endcomment %}
+{%- if include.categories -%}
+    {%- assign categories = include.categories -%}
+{%- else -%}
+    {%- assign categories = "download, player, bugs" | split: ", " -%}
+{%- endif -%}
+
+{% comment %}DEFAULT VALUES WHEN NO TYPE/COLLECTION WAS PASSED{% endcomment %}
+{%- if include.type -%}
+    {%- assign faqs = [] -%}
+    {%- for collection in site.collections -%}
+        {%- for lab in include.type -%}
+            {%- if lab == collection.label -%}
+                {%- assign faqs = faqs | concat: site[lab] -%}
+            {%- endif -%}
+        {%- endfor -%}
+    {%- endfor -%}
+{%- else -%}
+    {%- assign faqs = site.faq | concat: site.tutorials -%}
+{%- endif -%}
+
+{% comment %}DEFAULT AND CUSTOM VALUES FOR BACKLINK AND BACKTITLE{% endcomment %}
+{% if include.type == "tutorial" %}
+    {% assign backTitle="Tutorials" %}
+    {% assign backLink="/" %}
+{% else %}
+    {% assign backTitle="FAQ" %}
+    {% assign backLink="../" %}
+{% endif %}
+{% if include.backLink %}
+    {% assign backLink = include.backLink %}
+{% endif %}
+{% if include.backTitle %}
+    {% assign backTitle = include.backTitle %}
+{% endif %}
+<div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+
+    <a href="{{ backLink }}" class="faq-back-link" data-toggle="tooltip" data-placement="bottom" title='GO back to FAQ &amp; Tutorials'>
+        <i class="fa fa-chevron-left"></i>
+        {{ backTitle }}
+    </a>
+    <h3>{{ include.name }}</h3>
+    </div>
+</div>
+<div class="tiles-container tiles faq-tiles">
+    <div class="row">
+        {% for item in faqs %}
+            {%- for category in item.categories %}
+                {%- for c in categories %}
+                    {%- if category == c %}
+                        {%- if item.type == "tutorial" %}
+        <a href="{{ item.url }}">
+                        {%- endif %}
+            <article class="col-md-8 col-md-offset-2 tile">
+                <header class="tile-head">
+                    <span class="{{ item.type }}">
+                        <i class="fa fa-
+                        {%- if item.type == "info" -%}info-circle{%- else if item.type == "tutorial" -%}graduation-cap{%- endif -%}"></i>
+                    </span>
+                    {{ item.title }}
+                </header>
+                {%- if item.type != "tutorial" -%}
+                <div class="tile-body">
+                    {{ item.content }}
+                </div>
+                {%- endif %}
+            </article>
+                        {%- if item.type == "tutorial" %}
+        </a>
+                        {%- endif %}
+                    {%- endif %}
+                {%- endfor -%}
+            {%- endfor %}
+        {%- endfor %}
+    </div>
+</div>
+
+<script>
+    $(".faq-tiles .tile > .tile-head").click(function () {
+        $(this).parent().hasClass("active") ? $(this).parent().find(".tile-body").slideUp() : $(this).parent().find(".tile-body").slideDown();
+        $(this).parent().toggleClass("active");
+    });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
