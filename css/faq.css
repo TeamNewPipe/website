@@ -1,3 +1,6 @@
+body {
+    color: black;
+}
 body,
 .footer .image-puffer {
     background: #f3eff2;
@@ -199,6 +202,27 @@ h3 > a > i.fa-chevron-left {
 
 #tutorial {
     font-size: 16px;
+}
+#tutorial section figure {
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+#tutorial section figure img {
+    margin-bottom: 10px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.8);;
+}
+@media (min-width: 768px) {
+    #tutorial section figure {
+        max-width: 200px;
+        float: left;
+        margin-right: 15px;
+    }
+    #tutorial section figure~:not(figure) {
+        clear: left;
+    }
+}
+#tutorial .text-success {
+    color: #29a400;
 }
 .faq-back-link {
     font-size: 16px;
