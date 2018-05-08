@@ -116,3 +116,36 @@ At the moment there is one search engine for the press kit and another one for t
 The variable `search` accepts following values wich modify the position in the search results:
 
 `exclude`   - exclude the whole page from the search
+
+---
+
+#### FAQ & Tutorials
+
+FAQ and tutorials are located at https://newpipe.schabi.org/FAQ/ and https://newpipe.schabi.org/FAQ/tutorials/.
+
+Essentially FAQs and tutorials have the same structure: 
+Both are collections (`faq` and `tutorials`) and can have the same attributes which are defined via the YAML front matter.
+Nevertheless we make a distinction between FAQs and tutorials because there are different behaviours implemented for them.
+While FAQs are displayed in multiple small collapsible boxes, every tutorial has its own page.
+
+##### Writing FAQs & Tutorials
+
+Since FAQs and tutorials are collections, firstly you need to create a new `.HTML` file in either `_faq/` or `_tutorials/`. 
+Please put the category name first and then add the title behind it: `player_enable_autoplay.html`.
+In the file, you need to define several things to get your post recognized and printed out correctly:
+- Each post must have at least one category which assigns it to one of the subpages (`FAQ/player/`, `FAQ/download/`, `FAQ/bugs`).
+```
+categories:
+- bugs
+- player
+- download
+```
+- There are two types a post can have: `type: info` or `type: tutorial`.
+- Every post needs a title: `title: "Enable Autoplay"`
+
+Before you can start writing, there are some more small things to notice to make your post look like the others. 
+Writing short FAQs is quite easy and there are only few things to consider.
+1. To structure the content, use `<section>`s. There should be no content which is not in a `<section>`.
+2. To separate parts of your article with a thin line, use `<hr/>` tags. 
+3. To insert images, use the `<img/>` tag inside of a `<figure>` tag. Additionally, each image needs a caption (`<figcaption>`).
+4. Please keep your sentences as shorts as possible. This makes it easier to follow you and your instructions.

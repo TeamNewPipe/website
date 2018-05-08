@@ -13,6 +13,13 @@ body.modal-open {
         overflow: hidden;
     }
 }
+
+@media (max-width: 767px) {
+    /* .container shrinks when in flex wrapper */
+    .container {
+        width: 100%;
+    }
+}
 .container .container {
     width: auto;
 }
