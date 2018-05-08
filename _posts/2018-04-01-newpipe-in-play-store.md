@@ -2,7 +2,7 @@
 layout: post
 title: NewPipe in Google Play Store
 date: 2018-04-01 12:00:00 +0100
-categories: [pinned]
+categories: []
 author: TheAssassin
 image: newpipe
 ---
