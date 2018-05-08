@@ -70,7 +70,7 @@ function getQueryVariable(variable) {
         }
     }
 }
-function search(type){
+function search(type) {
     if(type == "manual")
         searchTerm = document.getElementById('search-box').value;
     else if(type == "onload")
