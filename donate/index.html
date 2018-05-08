@@ -36,34 +36,7 @@
 </head>
 <body>
 
-<!-- Header -->
-<div class="navbar-wrapper navbar-full-bg navbar-static-top" id="header">
-    <div class="container">
-        <nav class="navbar navbar-inverse">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/img/logo.svg" class="navbar-logo pull-left img-circle border-white" /><span class="pull-left">NewPipe</span></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="{{ site.baseurl }}/">Home</a></li>
-                        <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
-                        <li><a href="{{ site.baseurl }}/press/">Press</a></li>
-                        <li><a href="https://github.com/TeamNewPipe/NewPipe/">GitHub</a></li>
-                        <li><a href="https://github.com/TeamNewPipe/NewPipe/releases/">Releases</a></li>
-                        <li><a href="https://github.com/TeamNewPipe/NewPipe/issues/">Issues</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-</div> <!-- Header -->
+{% include nav.html position="static" %}
 
 <main class="content">
     <!-- Keep-running -->
