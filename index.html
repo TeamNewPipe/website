@@ -514,7 +514,7 @@
                     <div class="download-table">
                         <div class="row is-flex">
                             <div class="col-xs-12 col-sm-6 col-lg-4" id="download-stable">
-                                <h4>Stable</h4>
+                                <h4>NewPipe</h4>
                                 <div class="download-info">
                                     <p class="download-version api-stable-version">0.11.6</p>
                                     <!--<p class="text-center"><strong>New</strong></p>-->
@@ -532,39 +532,46 @@
                                 </p>
                             </div>
 
-                            <div class="col-xs-12 col-sm-6 col-lg-4 col-lg-push-4" id="download-beta">
-                                <h4>Beta</h4>
-                                <div class="download-info">
-                                    <p class="download-version api-beta-version">0.12.0</p>
-                                    <!--<p class="text-center"><strong>New</strong></p>-->
-                                    <div class="api-beta-new">
-                                        <!-- placeholder until the api part is implemented -->
-                                        <a href="https://f-droid.org/packages/org.schabi.newpipe.beta/">
-                                            <img src="{{ site.baseurl }}/img/logo_app_beta.svg" class="img-responsive" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <p class="download-action">
-                                    <a href="https://f-droid.org/packages/org.schabi.newpipe.beta/">
-                                        <i class="fa fa-download"></i>
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div class="col-xs-12 col-lg-4 col-lg-pull-4" id="download-f-droid">
-
+                            <div class="col-xs-12 col-sm-6 col-lg-4" id="download-feedback">
                                 <!-- borders -->
                                 <div class="border-middle left"></div>
                                 <div class="border-middle right"></div>
 
+                                <h4>Like it?</h4>
+                                <div class="back-info">
+                                    <p>We would like to hear what you think of NewPipe.</p>
+                                    <p>Please leave a reply either on GitHub or our blog:</p>
+                                    <p class="button-wrapper text-center">
+                                        <a href="https://github.com/TeamNewPipe/issues/">
+                                            <button class="action">GitHub</button>
+                                        </a>
+                                        <a href="{{ site.baseurl }}/blog/pinned/NewPipe-needs-feedback/">
+                                            <button class="action">Blog</button>
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-lg-4" id="download-f-droid">
+
                                 <!-- color: #1976d2 -->
                                 <h4>F-Droid</h4>
                                 <div class="download">
-                                    <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+                                    <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="60000">
 
                                         <!-- Wrapper for slides -->
                                         <div class="carousel-inner" role="listbox">
                                             <div class="item active">
+                                                <p class="text-center">
+                                                    <figure>
+                                                        <a href="https://f-droid.org/">
+                                                            <img src="img/fdroid-logo.svg" />
+                                                        </a>
+                                                        <figcaption>F-Droid logo by William Theaker, Robert Martinez and Andrew Nayenko (<a href="https://creativecommons.org/licenses/by-sa/3.0">CC-BY-SA-3.0</a>)</figcaption>
+                                                    </figure>
+                                                </p>
+                                            </div>
+                                            <div class="item">
                                                 <p><a href="https://f-droid.org/">F-Droid</a> is a trusted catalogue of Free and Open Source applications for Android.</p>
                                             </div>
                                             <div class="item">
@@ -584,6 +591,7 @@
                                             <li data-target="#f-droid-carousel" data-slide-to="0" class="active"></li>
                                             <li data-target="#f-droid-carousel" data-slide-to="1"></li>
                                             <li data-target="#f-droid-carousel" data-slide-to="2"></li>
+                                            <li data-target="#f-droid-carousel" data-slide-to="3"></li>
                                         </ol>
 
                                         <!-- Controls: not displayed but needed to get preventJumpingPage() working
