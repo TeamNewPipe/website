@@ -1,0 +1,16 @@
+---
+categories:
+- download
+- bugs
+type: info
+title: "Audio missing for certain downloads"
+---
+<section>
+    <p>YouTube delivers the video and audio in different streams.
+        That has no effect on playing the videos because ExoPlayer merges both streams while playing a video.</p>
+    <p>In contrast, our download library does not have the ability to merge both streams.
+        This process would therefore require another extra library.
+        Due to the size of the app, we have refrained from working on a concrete solution.
+        Nevertheless, the entire download process must be refactored.
+        It is therefore possible that a good solution to this problem will emerge.</p>
+</section>

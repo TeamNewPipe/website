@@ -1,0 +1,50 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NewPipe - a free YouTube client</title>
+
+    <meta name="author" content="Christian Schabesberger, NewPipe" />
+    <meta name="description" content="Welcome to the Website of NewPipe the lightweight YouTube experience for Android." />
+    <meta name="keywords" content="NewPipe, YouTube, Android" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico" sizes="64x64" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/news.rss"/>
+    <link rel="alternate" type="application/atom+xml" title="ATOM" href="/blog/feeds/news.atom"/>
+
+
+    <!-- JQuery -->
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="{{ site.baseurl }}/js/html5shiv.min.js"></script>
+    <script src="{{ site.baseurl }}/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css" />
+
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/faq.css" />
+
+</head>
+<body id="faq">
+    {%- assign link=site.baseurl | append: "FAQ/" -%}
+    {% include nav.html brand="FAQ" brandLink=link %}
+
+    <div class="site-content height-full-parent">
+        <div class="container container-double">
+            {{ content }}
+        </div>
+    </div>
+
+    {% include press_footer.html %}
