@@ -70,7 +70,7 @@ function displaySearchResults(results) {
                 + '</header>';
             if (item.type != 'tutorial') ret += '<div class="tile-body">' + item.content + '</div>';
             ret += '</article>';
-            if (item.tutorial === 'tutorial') ret += '</a>';
+            if (item.type === 'tutorial') ret += '</a>';
         }
 
         searchResults.innerHTML = ret;

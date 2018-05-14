@@ -207,9 +207,12 @@ h3 > a > i.fa-chevron-left {
     flex-direction: column;
     margin-bottom: 15px;
 }
-#tutorial section figure img {
+#tutorial section figure > img {
     margin-bottom: 10px;
     box-shadow: 0 0 4px 0 rgba(0,0,0,0.8);;
+}
+#tutorial section figure > figcaption img {
+    height: 1.2em;
 }
 @media (min-width: 768px) {
     #tutorial section figure {
@@ -224,7 +227,19 @@ h3 > a > i.fa-chevron-left {
 #tutorial .text-success {
     color: #29a400;
 }
-.faq-back-link {
+.faq-back-link, .faq-back-link:hover {
     font-size: 16px;
     color: #CD201F;
+}
+.row.is-flex.figure-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 0;
+}
+code {
+    background-color: #e2dee0;
+    color: black;
+    padding: 2px 5px;
+    white-space: nowrap;
 }
