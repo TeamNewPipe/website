@@ -850,6 +850,12 @@ strong.extra {
 #tile-opensource button.action {
     margin-right: 15px;
 }
+#tile-like-np > h4 + p {
+    /* #tile-free has UL with a line-height of 32px as first element after the heading.
+       The first element (p) has a line-height of 24px.
+       This fixes the baseline of both tiles. */
+    padding-top: 4px;
+}
 #tiles {
     line-height: 1.5;
 }
