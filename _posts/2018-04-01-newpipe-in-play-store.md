@@ -7,6 +7,11 @@ author: TheAssassin
 image: newpipe
 ---
 
+**Please beware that the following text was part of this year's April's fools
+joke. We decided not to delete this post, but add this message. Please see
+@TheAssassin's reply in the comments for more details on the context of this
+joke.**
+
 We're proud to announce that we have found an agreement with the Google Play
 team, so that we're finally ready to **release NewPipe in Google Play!**
 
