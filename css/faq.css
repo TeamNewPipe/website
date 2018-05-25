@@ -56,13 +56,27 @@ h3 > a > i.fa-chevron-left {
 }
 #faq #faq-menu .tile {
     display: flex;
+    background-color: rgba(226,222,224,0.1);
+    color: white;
 }
-#faq #faq-menu .tile:hover {
-    background: #d0cdcd;
-    color: #CD201F;
+#faq #faq-menu .tile::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* fallback color is combination of #CD201F and #AA1D1D */
+    background: url(/img/bg_rectangles_tile.png) no-repeat #BC1F1E;
+    background-size: cover;
+    transform: scaleY(-1);
+    content: '';
+    z-index: -1;
 }
 #faq #faq-menu .tile > div {
     margin: auto 0;
+}
+#faq #faq-menu .row.is-flex:first-child .tile {
+    border-width: 0;
 }
 @media (max-width: 991px) {
     #faq #faq-menu .tile > span {
