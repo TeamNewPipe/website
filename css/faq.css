@@ -19,6 +19,7 @@ h3 > a > i.fa-chevron-left {
 }
 .tiles-container {
     padding: 30px 0;
+    background: transparent;
 }
 .tiles-container .tile {
     text-align: center;
