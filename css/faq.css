@@ -258,3 +258,14 @@ code {
     padding: 2px 5px;
     white-space: nowrap;
 }
+#faq .improve-faq-hint {
+    border-radius: 0;
+}
+.faq-tiles ~ .row > .col-md-8.col-md-offset-2 > .improve-faq-hint {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.improve-faq-hint > .fa {
+    font-size: 150%;
+    margin-right: 15px;
+}
