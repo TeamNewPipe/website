@@ -1,5 +1,10 @@
 ---
-
+# There are three different pages layouts for press pages implemented;
+# default: the default layout fills the full width of the container
+# small: the small layout is one-twelfth smaller than the default one.
+# media: the media layout adds support for media view pop-ups
+# To set your page type different than "default",
+# set type: small or type: media in the YAML header of the page.
 ---
 
 {% include press_head.html %}
@@ -10,16 +15,28 @@
     <div class="container height-full-parent height-full">
         <div class="row is-flex height-full-child">
 
-            <div class="col-xs-12 col-sm-8 col-sm-push-4 col-md-8 col-md-push-3 border-right" id="content-container">
+            <div class="col-xs-12 col-sm-8 col-sm-push-4
+            {% if page.type == 'small' -%}
+            col-md-8
+            {%- else -%}
+            col-md-9
+            {% endif %}
+            col-md-push-3 border-right" id="content-container">
                 <div class="extra-space"></div>
 
-                    <!-- content -->
-                    {{ content }} <!-- content -->
+                <!-- content -->
+                {{ content }} <!-- content -->
 
             </div>
 
             <!-- sidebar -->
-            <div class="col-xs-12 col-sm-pull-8 col-sm-4 col-md-3 col-md-pull-8 sidebar" id="sidebar" >
+            <div class="col-xs-12 col-sm-pull-8 col-sm-4 col-md-3
+            {% if page.type == 'small' -%}
+            col-md-pull-8
+            {%- else -%}
+            col-md-pull-9
+            {%- endif %}
+            sidebar" id="sidebar" >
                 <div class="extra-space"></div>
                 <div class="list-group">
                     <h3 class="list-group-item active red">Press Kit</h3>
@@ -45,8 +62,6 @@
                 </div>
 
                 <div class="clearfix"></div>
-
-                <div class="image-puffer"></div>
             </div> <!-- sidebar -->
 
 
@@ -54,4 +69,40 @@
     </div>
 </div>
 
-{% include press_footer.html %}
+{% if page.type == 'media' %}
+<!-- Modal -->
+<div id="mediaFileView" class="modal fade" role="dialog" data-dismiss="modal">
+    <img id="mediaFullScreen" src="" class="img-full-width screenshot-image" data-dismiss="modal"/>
+    <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" ></i>
+</div> <!-- Modal -->
+
+<script src="{{ site.baseurl }}/js/mediaview.js"></script>
+{% endif %}
+
+{% include footer.html puffer="True" %}
+
+</div> <!-- page -->
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ site.baseurl }}/bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+    /**
+     * Corrects the window scroll position
+     * because the fixed nav bar needs some space on the top.
+     * This makes navigation via HTML anchors difficult,
+     * because a part of the elemnt is hidden behind the navigation bar.
+     */
+    function correctAnchors() {
+        var hash = window.location.hash.substr(1);
+        if (typeof hash == 'undefined' || hash === "" || hash == null) return;
+        var top = $("#" + hash).offset().top;
+        var nav = $("#header").outerHeight(true);
+        window.scrollTo(0, top - nav);
+    }
+    $(window).on("load", correctAnchors);
+    $(window).on('hashchange', correctAnchors);
+</script>
+
+</body>
+</html>

@@ -1,26 +1,33 @@
-
-
 <!-- footer -->
-<footer id="footer" class="footer navbar-fixed-bottom">
-    <div class="image-puffer background-gray background-fade"></div>
-    <div class=" shadow-top">
+<footer class="navbar-fixed-bottom" id="footer">
+    {%- if include.puffer == "True" -%}
+    <div class="image-puffer"></div>
+    {%- endif -%}
+    <div id="footer-content-container">
+    <div class="container">
+        <div class="image-holder">
+            <img src="{{ site.baseurl }}/img/logo.svg" class="footer-logo img-circle border-white" />
+        </div>
+    </div>
+    <div class="container" id="footer-main-links">
+        <div class="footer-links">
+            <span><a href="{{ site.baseurl }}/">Home</a></span>
+            <span><a href="{{ site.baseurl }}/blog/">Blog</a></span>
+            <span><a href="{{ site.baseurl }}/press/">Press</a></span>
+            <!--<span class="line-break"></span>-->
+            <span id="footer-donate-span-"><a href="{{ site.baseurl }}/donate">Donate</a></span>
+        </div>
+    </div>
+    <div class="container-fluid" id="footer-copyright">
         <div class="container">
-            <div class="image-holder">
-                <img src="{{ site.baseurl }}/img/logo.svg" class="footer-logo img-circle border-white" />
-            </div>
-            <div class="footer-links text-center">
-                <p><a href="{{ site.baseurl }}/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ site.baseurl }}/blog/">Blog</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ site.baseurl }}/press/">Press</a></p>
-                <p><a href="{{ site.baseurl }}/donate">Donate</a></p>
-                <p class="copyright"><a href="{{ site.baseurl }}/LICENSE.html" target="_blank">Copyright &copy; Team NewPipe</a></p>
+            <div class="footer-links">
+                <span id="copyright-span">Copyright &copy; Team NewPipe.</span>
+                <span><a href="{{ site.baseurl }}/press/contact/">Contact</a></span>
+                <!--<span><a href="{{ site.baseurl }}/legal/">Legal</a></span>-->
+                <span><a href="{{ site.baseurl }}/legal/license/">Licensing</a></span>
+                <span><a href="{{ site.baseurl }}/legal/privacy/">Privacy Policy</a></span>
             </div>
         </div>
     </div>
+    </div>
 </footer> <!-- footer -->
-
-</div> <!-- page -->
-
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="{{ site.baseurl }}/bootstrap/js/bootstrap.min.js"></script>
-
-</body>
-</html>
