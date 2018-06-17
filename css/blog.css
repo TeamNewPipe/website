@@ -334,59 +334,102 @@ strong.extra {
 
 /* Footer */
 
-.footer {
-    background: #AA1D1D/*#CD322E*/;
+#footer {
     -webkit-box-shadow: 0px -4px 4px 0px rgba(0,0,0,0.175);
     -moz-box-shadow: 0px -4px 4px 0px rgba(0,0,0,0.175);
     box-shadow: 0px -4px 4px 0px rgba(0,0,0,0.175);
+    background: #b31c1b;
     width: 100%;
     min-height: 170px;
     position: relative;
     bottom: 0;
 }
-.footer-links {
-    margin: 0 0 45px 0;
-}
-.footer, .footer a, .footer a:hover  .footer-links a:hover, .footer .copyright, .footer .copyright a, .footer .copyright a:hover {
+#footer,
+#footer a,
+#footer a:hover {
     color: white;
     text-decoration: none;
-    position: relative;
 }
-.footer .copyright a {
-    font-weight: bold;
-}
-.footer .image-holder {
+#footer .image-holder {
     text-align: center;
     position: relative;
     top: -45px;
 }
+#footer .image-puffer,
 .image-puffer {
-    height: 70px;
+    padding-bottom: 70px;
 }
-.footer-logo {
+#footer .footer-logo {
     height: 90px;
-    margin:0;
+    margin: 0;
     padding: 0;
 }
-@media (max-width: 767px){
-    #navbar {
-        float: left;
-        border: none;
-    }
-    .footer-links {
-        line-height: 200%;
-    }
-    .footer-links a {
-        padding-top: 3px;
-        padding-bottom: 3px;
-    }
+#footer .footer-links {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-
-.image-puffer {
+#footer .footer-links > span {
+    flex-basis: 100%;
+    width: 100%;
+    padding: 7px 0;
+}
+#footer .footer-links > .line-break {
     display: none;
 }
-.sidebar .image-puffer, footer .image-puffer {
-    display: block;
+#footer-main-links {
+    margin-bottom: 30px;
+}
+#footer-main-links .footer-links {
+    justify-content: center;
+}
+#footer-copyright {
+    padding: 30px 15px 15px 15px;
+    background: #9a1817;
+    font-weight: bold;
+}
+#copyright-span {
+    order: 10;
+}
+@media (min-width: 768px) {
+    #footer .footer-links {
+        flex-direction: row;
+    }
+    #footer .footer-links > span {
+        width: auto;
+        flex-basis: auto;
+        padding: 0 12px;
+        color: wheat;
+    }
+    #footer .footer-links > .line-break {
+        display: none;
+        flex-basis: 100%;
+        width: 100%;
+    }
+    #footer-main-links {
+        margin-bottom: 50px;
+    }
+    #footer-copyright {
+        padding: 15px;
+        font-size: 90%;
+    }
+    #footer-copyright .footer-links > span:first-child {
+        padding-left: 0;
+    }
+    #footer-copyright .footer-links > span > a {
+        color: wheat;
+    }
+    #footer-copyright .footer-links > span:hover a {
+        color: white;
+    }
+    #footer-donate-span {
+        margin-top: 10px;
+    }
+    #copyright-span {
+        order: 0;
+        padding-left: 0;
+    }
 }
 @media (min-width: 768px) {
     .extra-space {

@@ -178,3 +178,6 @@ main .row [class^="col"] {
         margin-top: 45px;
     }
 }
+#footer .image-puffer {
+    background-color: #D0CDCD;
+}

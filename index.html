@@ -688,19 +688,7 @@
         </div>
     </div> <!-- donate -->
 
-    <!-- footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="image-holder">
-                <img src="{{ site.baseurl }}/img/logo.svg" class="footer-logo img-circle border-white" />
-            </div>
-            <div class="footer-links text-center">
-                <p><a href="{{ site.baseurl }}/">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ site.baseurl }}/blog/">Blog</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{{ site.baseurl }}/press/">Press</a></p>
-                <p><a href="{{ site.baseurl }}/donate">Donate</a></p>
-                <p class="copyright"><a href="{{ site.baseurl }}/LICENSE.html" target="_blank">Copyright &copy; Team NewPipe</a></p>
-            </div>
-        </div>
-    </footer> <!-- footer -->
+    {% include footer.html puffer=False %}
 
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
