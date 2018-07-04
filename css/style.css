@@ -976,7 +976,7 @@ html.touch #user-voices-carousel .carousel-control,
 .download-info ul > li {
 
 }
-.download-info > .api-stable-new, .download-info > .api-beta-new {
+.download-info > .api-fdroid-new, .download-info > .api-github-new {
     flex-grow: 1;
     display: contents;
     text-align: center;
@@ -986,7 +986,7 @@ html.touch #user-voices-carousel .carousel-control,
     /* the visible part of the logos has a height of 100px.
      I needed to add 5px because there is some invisible space
      between the top of the circle and the top of the image. */
-    max-height: 105px;
+    max-height: 64px;
     margin: auto 0;
 }
 .download-action {
@@ -994,6 +994,9 @@ html.touch #user-voices-carousel .carousel-control,
     font-size: 25px;
     padding: 5px 15px;
     margin-top: 5px;
+}
+#api-github-new {
+    padding: 0 15px;
 }
 @media (max-width: 1199px) {
     .download-table {

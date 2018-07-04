@@ -20,13 +20,18 @@ function getAPIData() {
  * Updates all elements having a specific class with web-api information
  * @param className of the elements which will contain the information
  * @param apiData information to display
+ * @param attribute (optional) attribute to add api data to instead of content
  */
-function updateWithAPIData(className, apiData) {
+function updateWithAPIData(className, apiData, attribute) {
+    attribute = attribute || -1;
     var data = apiData.toString();
     var els = document.getElementsByClassName(className);
     if (els == null) return;
     for (var i = 0; i < els.length; i++) {
-        els.item(i).innerHTML = data;
+        if (attribute != -1)
+            els.item(i).setAttribute(attribute, data);
+        else
+            els.item(i).innerHTML = data;
     }
 }
 
@@ -35,15 +40,11 @@ function updateWithAPIData(className, apiData) {
  * from the web-api
  */
 function updateAllWithAPIData() {
-    updateWithAPIData("api-translations", api.stats.translations);
-    var flavours = ["stable"];
-    for(var i = 0; i < flavours.length; i++) {
-        updateWithAPIData("api-" + flavours[i] + "-version",
-            api.flavors[flavours[i]].version.replace(new RegExp("((-beta)|[v])","g"),""));
-        /*updateWithAPIData("api-" + flavours[i] + "-new"
-            api.flavors[flavours[i]].changelog.split("</ul>")[0]);
-        console.log(api.flavors[flavours[i]].changelog);*/
-    }
+    updateWithAPIData("api-github-stable-version", api.flavors.github.stable.version.replace("v",""));
+    updateWithAPIData("api-github-stable-apk", api.flavors.github.stable.apk, "href");
+    updateWithAPIData("api-f-droid-stable-version", api.flavors.fdroid.stable.version.replace("v",""));
+    updateWithAPIData("api-f-droid-stable-apk", api.flavors.fdroid.stable.apk, "href");
+
     updateWithAPIData("api-translations", api.stats.translations);
     updateWithAPIData("api-forks", api.stats.forks);
     updateWithAPIData("api-contributors", api.stats.contributors);
