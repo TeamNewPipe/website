@@ -37,7 +37,7 @@
 </head>
 <body id="faq">
 {%- assign link=site.baseurl | append: "FAQ/" -%}
-{%- include nav.html brand="FAQ" brandLink=link -%}
+{%- include nav.html brand="FAQ" brandLink=link active="FAQ"  -%}
 {% if page.type == "tutorial" %}
     {% assign backTitle="Tutorials" %}
     {% assign backLink="/" %}
@@ -60,10 +60,27 @@
                      {{ page.title }}
                 </h3>
                 {{ content }}
+
+                {% include faq_improve_hint.html %}
             </div>
         </div>
 
+        <!-- Modal -->
+        <div id="mediaFileView" class="modal fade" role="dialog" data-dismiss="modal">
+            <img id="mediaFullScreen" src="" class="img-full-width screenshot-image" data-dismiss="modal"/>
+            <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" ></i>
+        </div> <!-- Modal -->
+        <script src="{{ site.baseurl }}/js/mediaview.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                console.log(document.querySelectorAll('.figure-wrapper figure > img'));
+                var images = document.querySelectorAll('.figure-wrapper > figure > img');
+                for(var image in images) {
+                    images[image].onclick = function(){viewMediaFile(this, true)};
+                }
+            });
+        </script>
     </div>
 </div>
 
-{% include press_footer.html %}
+{% include footer.html puffer="True" %}

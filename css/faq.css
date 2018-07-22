@@ -1,3 +1,6 @@
+body {
+    color: black;
+}
 body,
 .footer .image-puffer {
     background: #f3eff2;
@@ -16,6 +19,7 @@ h3 > a > i.fa-chevron-left {
 }
 .tiles-container {
     padding: 30px 0;
+    background: transparent;
 }
 .tiles-container .tile {
     text-align: center;
@@ -53,13 +57,27 @@ h3 > a > i.fa-chevron-left {
 }
 #faq #faq-menu .tile {
     display: flex;
+    background-color: rgba(226,222,224,0.1);
+    color: white;
 }
-#faq #faq-menu .tile:hover {
-    background: #d0cdcd;
-    color: #CD201F;
+#faq #faq-menu .tile::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    /* fallback color is combination of #CD201F and #AA1D1D */
+    background: url(/img/bg_rectangles_tile.png) no-repeat #BC1F1E;
+    background-size: cover;
+    transform: scaleY(-1);
+    content: '';
+    z-index: -1;
 }
 #faq #faq-menu .tile > div {
     margin: auto 0;
+}
+#faq #faq-menu .row.is-flex:first-child .tile {
+    border-width: 0;
 }
 @media (max-width: 991px) {
     #faq #faq-menu .tile > span {
@@ -168,7 +186,8 @@ h3 > a > i.fa-chevron-left {
     display: flex;
     flex-direction: column;
 }
-.tiles-container.faq-tiles .tile > .tile-body figure img {
+.tiles-container.faq-tiles .tile > .tile-body figure img,
+.tiles-container.faq-tiles .tile > .tile-body figure video {
     float: left;
     margin: 0 auto 15px;
 }
@@ -176,7 +195,8 @@ h3 > a > i.fa-chevron-left {
     .tiles-container.faq-tiles .tile > .tile-body figure {
         flex-direction: row;
     }
-    .tiles-container.faq-tiles .tile > .tile-body figure img {
+    .tiles-container.faq-tiles .tile > .tile-body figure img,
+    .tiles-container.faq-tiles .tile > .tile-body figure video {
         margin: 0 15px 0 0;
     }
 }
@@ -200,7 +220,69 @@ h3 > a > i.fa-chevron-left {
 #tutorial {
     font-size: 16px;
 }
-.faq-back-link {
+#tutorial a {
+    color: #CD201F;
+}
+#tutorial section {
+    margin-bottom: 15px;
+}
+#tutorial section > header {
+    font-size: 22px;
+}
+#tutorial section figure {
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+#tutorial section figure > img,
+#tutorial section figure > video {
+    margin-bottom: 10px;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+#tutorial section figure > figcaption img {
+    height: 1.2em;
+}
+@media (min-width: 768px) {
+    #tutorial section figure {
+        max-width: 200px;
+        float: left;
+        margin-right: 15px;
+    }
+    #tutorial section figure~:not(figure) {
+        clear: left;
+    }
+}
+#tutorial .text-success {
+    color: #29a400;
+}
+.faq-back-link, .faq-back-link:hover {
     font-size: 16px;
     color: #CD201F;
+}
+.row.is-flex.figure-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px 0;
+}
+code {
+    background-color: #e2dee0;
+    color: black;
+    padding: 2px 5px;
+    white-space: nowrap;
+}
+#faq .improve-faq-hint {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.faq-tiles ~ .row > .col-md-8.col-md-offset-2 > .improve-faq-hint {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.improve-faq-hint > .fa {
+    font-size: 150%;
+    margin-right: 15px;
+}
+.image-puffer {
+    background: #f3eff2;
 }

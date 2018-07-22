@@ -39,7 +39,7 @@
 </head>
 <body id="faq">
 {%- assign link=site.baseurl | append: "FAQ/" -%}
-{% include nav.html brand="FAQ" brandLink=link %}
+{% include nav.html brand="FAQ <span class=\"badge\">BETA</span>" brandLink=link active="FAQ" %}
 
     <div class="site-content height-full-parent">
         <div class="container container-double">
@@ -74,7 +74,7 @@
             </div>
             <div id="faq-menu-tutorials" class="tiles-container faq-tiles">
                 <div class="row">
-                    <a href="tutorials/">
+                    <!--<a href="tutorials/">
                         <article class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 tile">
                             <header class="tile-head">
                                 <span class="tutorial">
@@ -83,7 +83,15 @@
                                 All tutorials
                             </header>
                         </article>
-                    </a>
+                    </a>-->
+                    <article class="col-xs-12 col-sm-6 col-md-4 tile" id="tile-show-all">
+                        <header class="tile-head">
+                                <span class="tutorial">
+                                    <i class="fa fa-info-circle"></i>
+                                </span>
+                            Show all
+                        </header>
+                    </article>
 
                 </div>
             </div>
@@ -113,4 +121,4 @@
     </div>
 
 
-{% include press_footer.html %}
+{% include footer.html puffer="True" %}

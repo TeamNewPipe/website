@@ -1,7 +1,7 @@
 ---
 ---
 window.store = {
-{% assign faqs = site.faq | concat: site.tutorials %}
+{%- assign faqs = site.faq | concat: site.tutorials %}
 {% for item in faqs %}
 "{{ item.title | slugify }}": {
     "title": "{{ item.title | xml_escape }}",
@@ -48,40 +48,18 @@ function displaySearchResults(results) {
 
     if (results.length) { // Are there any results?
         var ret = '';
-
-        for (var i = 0; i < results.length; i++) {  // Iterate over the results
-            var item = window.store[results[i].ref];
-            if (item.type === 'tutorial')
-                ret += '<a href="' + item.url + '">';
-            ret += '<article class="col-md-8 col-md-offset-2 tile">\n'
-                + '<header class="tile-head">\n'
-                + '<span class="' + item.type + '">'
-                + '<i class="fa fa-';
-            switch (item.type) {
-                case 'info':
-                    ret += "info-circle";
-                    break;
-                case 'tutorial':
-                    ret += "graduation-cap";
-                    break;
-            }
-            ret += '"></i></span>'
-                + item.title
-                + '</header>';
-            if (item.type != 'tutorial') ret += '<div class="tile-body">' + item.content + '</div>';
-            ret += '</article>';
-            if (item.tutorial === 'tutorial') ret += '</a>';
+        for (var result in results) {
+            var item = window.store[results[result].ref];
+            ret += renderItem(item);
         }
-
         searchResults.innerHTML = ret;
+        // uncollapse content when there is only one result
+        if (results.length === 1) {
+            $('.faq-tiles .tile').addClass("active");
+            $('.faq-tiles .tile').find(".tile-body").show();
+        }
     } else {
         searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p></div>';
-    }
-
-    // uncollapse content when there is only one result
-    if (results.length === 1) {
-        $('.faq-tiles .tile').addClass("active");
-        $('.faq-tiles .tile').find(".tile-body").show();
     }
 
     searchResults.classList.add("active");
@@ -95,8 +73,49 @@ function clickListener() {
     });
 }
 
+function renderItem(item) {
+    var ret = "";
+    if (item.type === 'tutorial')
+        ret += '<a href="' + item.url + '">';
+    ret += '<article class="col-md-8 col-md-offset-2 tile">\n'
+        + '<header class="tile-head">\n'
+        + '<span class="' + item.type + '">'
+        + '<i class="fa fa-';
+    switch (item.type) {
+        case 'info':
+            ret += "info-circle";
+            break;
+        case 'tutorial':
+            ret += "graduation-cap";
+            break;
+    }
+    ret += '"></i></span>'
+        + item.title
+        + '</header>';
+    if (item.type != 'tutorial') ret += '<div class="tile-body">' + item.content + '</div>';
+    ret += '</article>';
+    if (item.type === 'tutorial') ret += '</a>';
+
+    return ret;
+}
+
+function showAll() {
+    var ret = "";
+    for(var key in window.store) {
+        ret += renderItem(window.store[key]);
+    }
+    var searchResults = document.getElementById('search-results');
+    searchResults.innerHTML = ret;
+    searchResults.classList.add("active");
+    clickListener();
+}
+
 $("#search-box").keydown(function (e) {
     if (e.keyCode == 13) { // Enter
         search();
     }
+});
+
+$("#tile-show-all").click(function () {
+    showAll();
 });
