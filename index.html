@@ -21,7 +21,7 @@
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ site.baseurl }}/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -62,6 +62,7 @@
                         <div id="navbar" class="navbar-collapse collapse navbar-right">
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="{{ site.baseurl }}/">Home</a></li>
+                                <li><a href="{{ site.baseurl }}/FAQ/">FAQ <span class="badge">BETA</span></a></li>
                                 <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
                                 <li><a href="{{ site.baseurl }}/press/">Press</a></li>
                                 <li><a href="https://github.com/TeamNewPipe/NewPipe/">GitHub</a></li>
@@ -420,7 +421,7 @@
     </div> <!-- features -->
 
     <!-- tiles -->
-    <div id="tiles">
+    <div class="tiles-container">
         <div class="container container-double">
             <div class="row is-flex">
 

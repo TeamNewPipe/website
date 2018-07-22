@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NewPipe - a free YouTube client</title>
+
+    <meta name="author" content="Christian Schabesberger, NewPipe" />
+    <meta name="description" content="Welcome to the Website of NewPipe the lightweight YouTube experience for Android." />
+    <meta name="keywords" content="NewPipe, YouTube, Android" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico" sizes="64x64" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/news.rss"/>
+    <link rel="alternate" type="application/atom+xml" title="ATOM" href="/blog/feeds/news.atom"/>
+
+
+    <!-- JQuery -->
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="{{ site.baseurl }}/js/html5shiv.min.js"></script>
+    <script src="{{ site.baseurl }}/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css" />
+
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/faq.css" />
+
+</head>
+<body id="faq">
+{%- assign link=site.baseurl | append: "FAQ/" -%}
+{%- include nav.html brand="FAQ <span class=\"badge\">BETA</span>" brandLink=link active="FAQ"  -%}
+{% if page.type == "tutorial" %}
+    {% assign backTitle="Tutorials" %}
+    {% assign backLink="/" %}
+{% else %}
+    {% assign backTitle="FAQ" %}
+    {% assign backLink="../" %}
+{% endif %}
+{% if page.backLink %}
+    {% assign backLink = page.backLink %}
+    {{page.backLink}}
+{% endif %}
+<div id="tutorial" class="site-content height-full-parent">
+    <div class="container container-double">
+        <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+                <a href="../tutorials/" class="faq-back-link" data-toggle="tooltip" data-placement="bottom">
+                    <i class="fa fa-chevron-left"></i> Tutorials
+                </a>
+                <h3 style="margin-bottom: 30px;">
+                     {{ page.title }}
+                </h3>
+                {{ content }}
+
+                {% include faq_improve_hint.html %}
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="mediaFileView" class="modal fade" role="dialog" data-dismiss="modal">
+            <img id="mediaFullScreen" src="" class="img-full-width screenshot-image" data-dismiss="modal"/>
+            <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" ></i>
+        </div> <!-- Modal -->
+        <script src="{{ site.baseurl }}/js/mediaview.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                console.log(document.querySelectorAll('.figure-wrapper figure > img'));
+                var images = document.querySelectorAll('.figure-wrapper > figure > img');
+                for(var image in images) {
+                    images[image].onclick = function(){viewMediaFile(this, true)};
+                }
+            });
+        </script>
+    </div>
+</div>
+
+{% include footer.html puffer="True" %}
+
+<script src="{{ site.baseurl }}/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

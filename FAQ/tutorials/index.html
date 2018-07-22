@@ -1,0 +1,11 @@
+---
+layout: faq_list
+backLink: /FAQ/
+---
+{% assign link = site.baseurl | append: "/FAQ/" %}
+{% include faq_list.html type="tutorials" name="Available Tutorials" backLink=link backTitle="FAQ" %}
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        {% include faq_improve_hint.html %}
+    </div>
+</div>

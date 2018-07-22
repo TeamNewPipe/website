@@ -1,0 +1,62 @@
+{{
+# Authors:  Tobias Groza and Team NewPipe 2018
+#
+# Include for top navigation bar
+# Following parameters are allowed:
+# brand     The title will be showed next to the NewPipe logo and the word "NewPipe" on the left side of the nav bar.
+#           Should be one or two words long.
+# brandLink URL to use as link for the brand. Default: #
+# active    Indicates which item will be bold.
+# position  It is possible to have a navigation which is fixed to the top of the window or
+#           to have a static navigation bar. Allowed values: "fixed", "static". Default: "fixed"
+# search    A search can be integrated next to the first menu entry. Default: false
+}}
+
+<!-- header -->
+<div class="navbar-wrapper navbar-full-bg navbar-{% if include.position == "static" %}static{% else %}fixed{% endif %}-top" id="header">
+    <div class="container">
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" >
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{% if include.brandLink %}{{ site.baseurl }}/{{ include.brandLink }}{% else %}#{% endif%}">
+                        <img src="{{ site.baseurl }}/img/logo.svg" class="img-circle border-white navbar-logo pull-left" />
+                        <span class="pull-left">NewPipe{% if include.brand %} {{ include.brand }}{% endif %}</span>
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        {%- if include.search %}
+                        <li class="search-container">
+                            <a>
+                                <form action="{{ site.baseurl }}/blog/search/" method="get" class="search-form">
+                                    <div class="input-group has-error">
+                                        <input type="text" id="navigation-search-input" class="form-control search-input" name="s" placeholder="Search">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default no-empty-submit" type="submit">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </button>
+                                        </span>
+                                    </div><!-- /input-group -->
+                                </form>
+                            </a>
+                        </li>
+                        {%- endif %}
+                        <li{% if include.active == "home" %} class="active"{% endif %}><a href="{{ site.baseurl }}/">Home</a></li>
+                        <li{% if include.active == "FAQ" %} class="active"{% endif %}><a href="{{ site.baseurl }}/FAQ/">FAQ <span class="badge">BETA</span></a></li>
+                        <li{% if include.active == "blog" %} class="active"{% endif %}><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+                        <li{% if include.active == "press" %} class="active"{% endif %}><a href="{{ site.baseurl }}/press/">Press</a></li>
+                        <li><a href="https://github.com/TeamNewPipe/NewPipe/">GitHub</a></li>
+                        <li><a href="https://github.com/TeamNewPipe/NewPipe/releases/">Releases</a></li>
+                        <li><a href="https://github.com/TeamNewPipe/NewPipe/issues/">Issues</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div> <!-- header -->

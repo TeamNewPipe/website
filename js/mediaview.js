@@ -3,9 +3,12 @@
  **/
 
 // set the media to display in #mediaFileView
-function viewMediaFile(m) {
+function viewMediaFile(media, openModal = false) {
+    console.log(media);
     var img = document.getElementById("mediaFullScreen");
-    img.src = (m.getAttribute("src") != null && m.getAttribute("src") != 'undefined') ? m.getAttribute("src") : m.getElementsByTagName("img")[0].getAttribute("src");
+    var attr = media.getAttribute("src");
+    img.src = (attr != null && attr != 'undefined') ? attr : media.getElementsByTagName("img")[0].getAttribute("src");
+    if(openModal) $('#mediaFileView').modal('show');
 }
 
 // prevent opening #mediaFileView (modal) when a download link is clicked
