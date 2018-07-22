@@ -37,7 +37,7 @@
 </head>
 <body id="faq">
 {%- assign link=site.baseurl | append: "FAQ/" -%}
-{%- include nav.html brand="FAQ" brandLink=link active="FAQ"  -%}
+{%- include nav.html brand="FAQ <span class=\"badge\">BETA</span>" brandLink=link active="FAQ"  -%}
 {% if page.type == "tutorial" %}
     {% assign backTitle="Tutorials" %}
     {% assign backLink="/" %}

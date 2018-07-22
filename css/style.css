@@ -325,6 +325,10 @@ strong.extra {
 .navbar-full-bg .navbar-inverse .navbar-nav {
     margin-right: 20px;
 }
+.navbar-inverse .badge {
+    display: inline;
+    background-color: #a7a7a7;
+}
 .navbar-inverse .navbar-nav > li > a {
     color: white;
     line-height: 14px;
