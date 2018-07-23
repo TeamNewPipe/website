@@ -481,7 +481,7 @@ strong.extra {
     display: inline-block;
 }
 .navbar-fixed-top ~ .post-collection {
-    margin-top: 64px;
+    margin-top: 80px;
 }
 .post-collection {
     background: #E2DEE0;
