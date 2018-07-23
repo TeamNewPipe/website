@@ -4,7 +4,7 @@ title: FAQ now available
 date: 2018-07-22 20:00:00 +0100
 categories: [pinned]
 author: TheAssassin
-image: newpipe
+image: faq
 ---
 
 If you read the title, you probably guessed it: NewPipe's website now provides an FAQ section!

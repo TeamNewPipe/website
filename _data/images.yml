@@ -52,3 +52,10 @@ newpipe:
   size: 14698
   author: Schabi
   origin: https://github.com/TeamNewPipe/NewPipe
+
+faq:
+  url: faq.jpg
+  type: jpg
+  size: 37972
+  author: Alexas_Fotos
+  origin: https://pixabay.com/de/faq-antworten-hilfe-fragen-3408300/
