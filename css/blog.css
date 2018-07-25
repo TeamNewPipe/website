@@ -737,7 +737,7 @@ div.search-container button:focus, div.search-container input:focus {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #d0cdcd;
+  background: #E2DEE0;
 }
 #header, #footer {
   flex: none;
