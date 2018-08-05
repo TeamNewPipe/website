@@ -9,7 +9,8 @@
 
 {% include press_head.html %}
 
-{% include nav.html brand="Press" active="press" %}
+{%- assign blink=site.baseurl | append: "press/" -%}
+{% include nav.html brand="Press" brandLink=blink active="press" %}
 
 <div class="site-content height-full-parent">
     <div class="container height-full-parent height-full">

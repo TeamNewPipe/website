@@ -1,6 +1,7 @@
 {% include blog_head.html %}
 
-{% include nav.html brand="Blog" search=true active="blog" %}
+{%- assign blink=site.baseurl | append: "blog/" -%}
+{% include nav.html brand="Blog" brandLink=blink search=true active="blog" %}
 
 <div class="post-collection height-full-parent">
     <div class="container height-full-parent height-full">
