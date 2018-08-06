@@ -2,16 +2,36 @@ body {
     color: black;
 }
 body,
-.footer .image-puffer {
+footer .image-puffer {
     background: #f3eff2;
+}
+@media (min-width: 768px) {
+    body,
+    footer .image-puffer {
+        background: #E2DEE0;
+    }
 }
 .site-content {
     margin-top: 78px;
-    padding: 30px 0;
+    padding: 0;
+}
+.site-content > .container {
+    background: #f3eff2;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .site-content > .container > h3 {
     margin-top: 32.5px;
     margin-bottom: 35px;
+}
+@media (min-width: 768px) {
+    .site-content {
+        padding: 60px 0 30px 0;
+    }
+    .site-content > .container {
+        padding-top: 45px;
+        padding-bottom: 60px;
+    }
 }
 h3 > a > i.fa-chevron-left {
     color: black;
@@ -37,7 +57,7 @@ h3 > a > i.fa-chevron-left {
 .tiles-container .tile.tile-right {
     border-left: 1px solid #BBB;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
     .tiles-container .is-flex {
         flex-wrap: nowrap;
     }
@@ -59,6 +79,13 @@ h3 > a > i.fa-chevron-left {
     display: flex;
     background-color: rgba(226,222,224,0.1);
     color: white;
+    padding: 45px 0;
+    transition: transform 0.25s ease-in-out, filter 0.25s ease-in-out;
+}
+#faq #faq-menu .tile:hover {
+    transform: scale(1.1);
+    z-index: 3;
+    filter: brightness(1.3);
 }
 #faq #faq-menu .tile::before {
     position: absolute;
@@ -67,49 +94,38 @@ h3 > a > i.fa-chevron-left {
     right: 0;
     left: 0;
     /* fallback color is combination of #CD201F and #AA1D1D */
-    background: url(/img/bg_rectangles_tile.png) no-repeat #BC1F1E;
-    background-size: cover;
-    transform: scaleY(-1);
     content: '';
-    z-index: -1;
+    background: #BC1F1E url(/img/tiles.svg) no-repeat center;
+    background-size: cover;
 }
 #faq #faq-menu .tile > div {
     margin: auto 0;
+    z-index: 2;
 }
 #faq #faq-menu .row.is-flex:first-child .tile {
     border-width: 0;
 }
-@media (max-width: 991px) {
-    #faq #faq-menu .tile > span {
-        margin-top: 15px;
-    }
-    #faq #faq-menu .tile > div > h2 {
-        font-size: 24px;
-    }
+#faq #faq-menu .tile > span {
+    margin-top: 0;
+    z-index: 2;
 }
-@media (min-width: 992px) {
-    #faq #faq-menu .tile > span {
-        width: 50px;
-        position: absolute;
-        top: calc(50% - 1.5em);
-        left: calc(50% - 25px);
-    }
-    #faq #faq-menu .tile > :not(span),
-    #faq #faq-menu .tile:hover > span {
-        opacity: 0;
-        transition: opacity 0.25s ease-in-out 0s;
-    }
+#faq #faq-menu .tile > div > h2 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
 
-    #faq #faq-menu .tile > span,
-    #faq #faq-menu .tile:hover > :not(span) {
-        visibility: visible;
-        opacity: 1;
-        transition: opacity 0.25s ease-in-out 0.3s;
-    }
-}
 #faq #faq-menu-tutorials {
-    margin: 0 15px;
+    margin: 15px 15px 0;
     padding: 0;
+}
+/* Use fixed width and left margin to center this tile.
+ * This is necessary since the big tiles have an extra margin between each other.
+ */
+@media (min-width: 768px) {
+    #faq #faq-menu-tutorials article.tile {
+        margin-left: calc((660px - 328px) / 2)
+    }
 }
 @media (min-width: 992px) {
     #faq #faq-menu-tutorials article.tile {
@@ -282,7 +298,4 @@ code {
 .improve-faq-hint > .fa {
     font-size: 150%;
     margin-right: 15px;
-}
-.image-puffer {
-    background: #f3eff2;
 }
