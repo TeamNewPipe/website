@@ -2,21 +2,36 @@ body {
     color: black;
 }
 body,
-.footer .image-puffer {
-    background: #E2DEE0;
+footer .image-puffer {
+    background: #f3eff2;
+}
+@media (min-width: 768px) {
+    body,
+    footer .image-puffer {
+        background: #E2DEE0;
+    }
 }
 .site-content {
     margin-top: 78px;
-    padding: 60px 0 30px 0;
+    padding: 0;
 }
 .site-content > .container {
     background: #f3eff2;
-    padding-top: 45px;
-    padding-bottom: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .site-content > .container > h3 {
     margin-top: 32.5px;
     margin-bottom: 35px;
+}
+@media (min-width: 768px) {
+    .site-content {
+        padding: 60px 0 30px 0;
+    }
+    .site-content > .container {
+        padding-top: 45px;
+        padding-bottom: 60px;
+    }
 }
 h3 > a > i.fa-chevron-left {
     color: black;
@@ -42,7 +57,7 @@ h3 > a > i.fa-chevron-left {
 .tiles-container .tile.tile-right {
     border-left: 1px solid #BBB;
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
     .tiles-container .is-flex {
         flex-wrap: nowrap;
     }
@@ -103,6 +118,14 @@ h3 > a > i.fa-chevron-left {
 #faq #faq-menu-tutorials {
     margin: 15px 15px 0;
     padding: 0;
+}
+/* Use fixed width and left margin to center this tile.
+ * This is necessary since the big tiles have an extra margin between each other.
+ */
+@media (min-width: 768px) {
+    #faq #faq-menu-tutorials article.tile {
+        margin-left: calc((660px - 328px) / 2)
+    }
 }
 @media (min-width: 992px) {
     #faq #faq-menu-tutorials article.tile {
@@ -275,7 +298,4 @@ code {
 .improve-faq-hint > .fa {
     font-size: 150%;
     margin-right: 15px;
-}
-.image-puffer {
-    background: #E2DEE0;
 }
