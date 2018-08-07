@@ -95,7 +95,7 @@ h3 > a > i.fa-chevron-left {
     left: 0;
     /* fallback color is combination of #CD201F and #AA1D1D */
     content: '';
-    background: #BC1F1E url(/img/tiles.svg) no-repeat center;
+    background: #BC1F1E url(/img/bg_rectangle_tile.svg) no-repeat center;
     background-size: cover;
 }
 #faq #faq-menu .tile > div {
