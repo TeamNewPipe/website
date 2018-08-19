@@ -6,25 +6,34 @@ body {
 main {
     pointer-events: none;
 }
+
 main * {
     pointer-events: auto;
 }
+
 main h3 {
     margin-top: 32.5px;
     margin-bottom: 35px;
 }
+
 main h3.with-subtitle {
     margin-bottom: 10px;
 }
+
 main .row [class^="col"] {
     margin-bottom: 25px;
 }
-@media (min-width: 768px){
+
+@media (min-width: 768px) {
     main h3.with-subtitle {
         margin-bottom: 0;
     }
     main .row [class^="col"] {
         padding: 0 30px;
+    }
+    .phone-background img {
+        display: block;
+        margin-top: 30px;
     }
 }
 
@@ -32,32 +41,38 @@ main .row [class^="col"] {
     background: #f3eff2;
     padding: 30px 0;
 }
+
 #keep-running .row [class^="col"] {
     text-align: justify;
 }
-
 
 #thanks {
     background: #d0cdcd;
     padding-top: 30px;
 }
+
 #thanks h3 {
     font-weight: bold;
 }
+
 #donate {
     padding: 90px 0;
     color: white;
     background: rgba(115, 115, 115, 0.88);
 }
+
 #donate h3 {
     font-size: 26px;
 }
+
 #donate .with-subtitle {
     margin-bottom: 5px;
 }
+
 #donate .subtitle {
     font-size: 16px;
 }
+
 #button-container {
     display: flex;
     flex-direction: row;
@@ -65,38 +80,47 @@ main .row [class^="col"] {
     justify-content: space-between;
     margin-bottom: 30px;
 }
+
 .button-wrapper {
     flex-grow: 1;
     margin-bottom: 30px;
 }
+
 #bountysource-donation {
     text-align: center;
 }
+
 #liberapay-donation {
     text-align: right;
 }
+
 .phone-background .row [class^="col"] {
     padding: 0 0 0 15px;
     margin: 0;
 }
+
 #donate-title {
     margin-bottom: 30px;
 }
+
 #bitcoin-donation {
     text-align: center;
     display: none;
     margin-bottom: 15px;
 }
+
 #bitcoin-donation samp {
     background: #AA1D1D;
     border-radius: 5px;
     padding: 6px 10px;
 }
+
 @media (min-width: 768px) and (max-width: 1199px) {
     #liberapay-donation {
         text-align: center;
     }
 }
+
 @media (max-width: 767px) {
     #donate {
         padding: 30px 0;
@@ -132,6 +156,7 @@ main .row [class^="col"] {
         margin-bottom: 30px;
     }
 }
+
 #parallax-background {
     background: url('../img/bg_tiles.jpg') center center;
     position: fixed;
@@ -140,44 +165,47 @@ main .row [class^="col"] {
     left: 0;
     z-index: -8;
 }
+
 #donate-wrapper {
     z-index: -4;
     position: relative;
 }
-#donate-wrapper .row > div  > * {
+
+#donate-wrapper .row>div>* {
     height: auto;
 }
+
 .phone-background {
     height: 0;
     position: absolute;
     width: 100%;
     z-index: -2;
 }
-.phone-background, .phone-background * {
+
+.phone-background,
+.phone-background * {
     pointer-events: none;
 }
+
 .phone-background img {
     max-width: 230px;
     display: none;
     position: relative;
 }
-@media (min-width: 768px) {
-    .phone-background img {
-        display: block;
-        margin-top: 30px;
-    }
-}
-@media (max-width: 992px){
+
+@media (max-width: 992px) {
     .phone-background .row [class^="col"] {
         padding: 0;
         margin: 0;
     }
 }
+
 @media (min-width: 992px) {
     .phone-background img {
         margin-top: 45px;
     }
 }
+
 #footer .image-puffer {
     background-color: #D0CDCD;
 }
