@@ -215,17 +215,8 @@ h3 > a > i.fa-chevron-left {
 
 .tiles-container.faq-tiles .tile > .tile-body {
     display: none;
-    height: 0;
-    overflow: hidden;
     padding: 15px;
-    transition: height 0.5s ease-in-out;
     border-top: 1px solid #BBB;
-}
-
-.tiles-container.faq-tiles .tile.active > .tile-body {
-    height: auto;
-    display: block;
-    transition: display 0s 0.5s;
 }
 
 .tiles-container.faq-tiles .tile > .tile-body img {

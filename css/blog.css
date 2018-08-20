@@ -610,7 +610,6 @@ strong.extra {
         top: -3px;
         right: -18px;
         width: 18px;
-        background: linear-gradient(to right, #f3eff2 0%, white 100%);
         border-top: 3px solid #AA1D1D;
         border-bottom: 3px solid #AA1D1D;
         display: block;
@@ -852,7 +851,6 @@ div.search-container input:focus {
 
 #comments {
     margin-top: 20px;
-    background: #f3eff2;
 }
 
 #comments > h4 {
