@@ -171,7 +171,7 @@ main .row [class^="col"] {
     position: relative;
 }
 
-#donate-wrapper .row>div>* {
+#donate-wrapper .row > div > * {
     height: auto;
 }
 

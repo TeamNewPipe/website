@@ -55,22 +55,22 @@ body.modal-open {
         margin-top: 10px;
         padding-bottom: 0;
     }
-    .nav>li>a {
+    .nav > li > a {
         padding-top: 20px;
         padding-bottom: 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
         padding-left: 0;
         margin-left: 15px;
     }
-    .navbar-header>.navbar-toggle,
-    .navbar-header>.navbar-toggle:hover,
-    .navbar-header>.navbar-toggle:focus {
+    .navbar-header > .navbar-toggle,
+    .navbar-header > .navbar-toggle:hover,
+    .navbar-header > .navbar-toggle:focus {
         border: none;
         background: none;
     }
-    .navbar-inverse .navbar-nav>.active>a,
-    .navbar-inverse .navbar-nav>.active>a:focus,
-    .navbar-inverse .navbar-nav>.active>a:hover {
+    .navbar-inverse .navbar-nav > .active > a,
+    .navbar-inverse .navbar-nav > .active > a:focus,
+    .navbar-inverse .navbar-nav > .active > a:hover {
         font-weight: normal;
     }
     .navbar-collapse {
@@ -97,10 +97,10 @@ body.modal-open {
     #features .feature-detail.active .feature-close-detail {
         display: block;
     }
-    .tiles-container>.container-double>.row.is-flex>[class*='col-'] {
+    .tiles-container > .container-double > .row.is-flex > [class*='col-'] {
         width: 100%;
     }
-    .download-table>.row.is-flex>[class*="col-"]:first-child {
+    .download-table > .row.is-flex > [class*="col-"]:first-child {
         border-top-width: 0;
     }
     #download-stable,
@@ -189,13 +189,13 @@ body.modal-open {
     #footer .footer-links {
         flex-direction: row;
     }
-    #footer .footer-links>span {
+    #footer .footer-links > span {
         width: auto;
         flex-basis: auto;
         padding: 0 12px;
         color: wheat;
     }
-    #footer .footer-links>.line-break {
+    #footer .footer-links > .line-break {
         display: none;
         flex-basis: 100%;
         width: 100%;
@@ -207,13 +207,13 @@ body.modal-open {
         padding: 15px;
         font-size: 90%;
     }
-    #footer-copyright .footer-links>span:first-child {
+    #footer-copyright .footer-links > span:first-child {
         padding-left: 0;
     }
-    #footer-copyright .footer-links>span>a {
+    #footer-copyright .footer-links > span > a {
         color: wheat;
     }
-    #footer-copyright .footer-links>span:hover a {
+    #footer-copyright .footer-links > span:hover a {
         color: white;
     }
     #footer-donate-span {
@@ -247,7 +247,7 @@ body.modal-open {
         padding: 17px 30px;
         border-top-width: 0;
     }
-    #features #features-sidebar .list-group>.active>.list-group-item {
+    #features #features-sidebar .list-group > .active > .list-group-item {
         border: 1px solid #BBB;
         border-left-color: #d0cdcd;
         border-right-width: 0;
@@ -344,7 +344,7 @@ body.modal-open {
     align-content: stretch;
 }
 
-.row.is-flex>[class*='col-'] {
+.row.is-flex > [class*='col-'] {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -385,7 +385,7 @@ strong.extra {
     border-top: 4px solid white;
 }
 
-.row>[class*='col-']>.separator {
+.row > [class*='col-'] > .separator {
     margin-left: -15px;
     margin-right: -15px;
 }
@@ -404,8 +404,8 @@ strong.extra {
     color: #CD201F;
 }
 
-.alert-warning>.glyphicon,
-.alert-warning>.fa {
+.alert-warning > .glyphicon,
+.alert-warning > .fa {
     margin-right: 15px;
 }
 
@@ -454,7 +454,7 @@ strong.extra {
     box-shadow: 0 -1px 9px black, 0 3px 9px black;
 }
 
-.header-box-wrapper>.container {
+.header-box-wrapper > .container {
     position: relative;
 }
 
@@ -475,16 +475,16 @@ strong.extra {
     margin-bottom: 10px;
 }
 
-.header-box-wrapper .logo>img {
+.header-box-wrapper .logo > img {
     height: 90px;
 }
 
-.header-box-wrapper .phone>img {
+.header-box-wrapper .phone > img {
     height: 100%;
     position: absolute;
 }
 
-.header-box-wrapper .phone>video {
+.header-box-wrapper .phone > video {
     height: 556px;
     transform: scale(1.009);
     position: absolute;
@@ -543,9 +543,9 @@ strong.extra {
     border: 2px solid white;
 }
 
-.navbar-inverse .navbar-nav>.active>a,
-.navbar-inverse .navbar-nav>.active>a:focus,
-.navbar-inverse .navbar-nav>.active>a:hover {
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
     background: none;
     font-weight: bold;
 }
@@ -578,7 +578,7 @@ strong.extra {
     height: auto;
 }
 
-.navbar-full-bg .navbar-inverse .navbar-brand>span {
+.navbar-full-bg .navbar-inverse .navbar-brand > span {
     line-height: 18px;
     font-size: 18px;
     margin-top: -2px;
@@ -595,7 +595,7 @@ strong.extra {
     background-color: #a7a7a7;
 }
 
-.navbar-inverse .navbar-nav>li>a {
+.navbar-inverse .navbar-nav > li > a {
     color: white;
     line-height: 14px;
 }
@@ -686,7 +686,7 @@ strong.extra {
     margin-bottom: 30px;
 }
 
-#features .row.is-flex>[class*='col-'] {
+#features .row.is-flex > [class*='col-'] {
     flex: 1 auto;
 }
 
@@ -718,7 +718,7 @@ strong.extra {
     display: flex;
 }
 
-#features #features-sidebar .list-group>.active>.list-group-item {
+#features #features-sidebar .list-group > .active > .list-group-item {
     background: #d0cdcd;
 }
 
@@ -776,8 +776,8 @@ strong.extra {
     text-align: center;
 }
 
-#features .feature-detail .feature-media>img,
-.tile-media>img {
+#features .feature-detail .feature-media > img,
+.tile-media > img {
     display: inline;
 }
 
@@ -827,7 +827,7 @@ strong.extra {
     width: 100% !important;
 }
 
-.container.container-double .row.is-flex>[class*="col-"] {
+.container.container-double .row.is-flex > [class*="col-"] {
     display: block;
     margin-bottom: 15px;
 }
@@ -844,11 +844,11 @@ strong.extra {
 }
 
 #features .feature-description .text-success,
-ul.check>li.text-success {
+ul.check > li.text-success {
     color: #29a400;
 }
 
-#features .feature-description ul>li,
+#features .feature-description ul > li,
 ul.check {
     list-style: none;
     padding-left: 15px;
@@ -856,8 +856,8 @@ ul.check {
     text-indent: -25px;
 }
 
-#features .feature-description ul>li:before,
-ul.check>li:before {
+#features .feature-description ul > li:before,
+ul.check > li:before {
     content: "\f00c";
     /* FontAwesome Unicode for check icon */
     font-family: FontAwesome;
@@ -867,8 +867,8 @@ ul.check>li:before {
     height: 100%;
 }
 
-#features .feature-description ul>li.heart:before,
-ul.check>li.heart:before {
+#features .feature-description ul > li.heart:before,
+ul.check > li.heart:before {
     content: "\f004";
 }
 
@@ -1053,7 +1053,7 @@ ul.check>li.heart:before {
     margin-right: 15px;
 }
 
-#tile-like-np>h4+p {
+#tile-like-np > h4+p {
     /* #tile-free has UL with a line-height of 32px as first element after the heading.
        The first element (p) has a line-height of 24px.
        This fixes the baseline of both tiles. */
@@ -1109,7 +1109,7 @@ ul.check>li.heart:before {
     bottom: 0;
 }
 
-#user-voices-carousel ol.carousel-indicators>li {
+#user-voices-carousel ol.carousel-indicators > li {
     border-color: #333;
     background-color: #333;
     width: 8px;
@@ -1117,7 +1117,7 @@ ul.check>li.heart:before {
     border-radius: 100%;
 }
 
-#user-voices-carousel ol.carousel-indicators>li.active {
+#user-voices-carousel ol.carousel-indicators > li.active {
     width: 10px;
     height: 10px;
 }
@@ -1152,7 +1152,7 @@ html.touch #user-voices-carousel .carousel-control,
     padding: 15px;
 }
 
-.download-table>.row.is-flex>[class*="col-"] {
+.download-table > .row.is-flex > [class*="col-"] {
     display: flex !important;
     justify-content: stretch;
 }
@@ -1179,8 +1179,8 @@ html.touch #user-voices-carousel .carousel-control,
     flex-direction: column;
 }
 
-.download-info>.api-fdroid-new,
-.download-info>.api-github-new {
+.download-info > .api-fdroid-new,
+.download-info > .api-github-new {
     flex-grow: 1;
     display: contents;
     text-align: center;
@@ -1249,7 +1249,7 @@ html.touch #user-voices-carousel .carousel-control,
     bottom: 0;
 }
 
-.download .carousel ol.carousel-indicators>li {
+.download .carousel ol.carousel-indicators > li {
     border-color: #000;
     background-color: #000;
     width: 5px;
@@ -1257,7 +1257,7 @@ html.touch #user-voices-carousel .carousel-control,
     border-radius: 100%;
 }
 
-.download .carousel ol.carousel-indicators>li.active {
+.download .carousel ol.carousel-indicators > li.active {
     width: 8px;
     height: 8px;
 }
@@ -1369,13 +1369,13 @@ button.action.black:focus {
     flex-wrap: wrap;
 }
 
-#footer .footer-links>span {
+#footer .footer-links > span {
     flex-basis: 100%;
     width: 100%;
     padding: 7px 0;
 }
 
-#footer .footer-links>.line-break {
+#footer .footer-links > .line-break {
     display: none;
 }
 

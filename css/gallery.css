@@ -49,7 +49,7 @@
     vertical-align: middle;
 }
 
-.feature-details>.container {
+.feature-details > .container {
     display: unset;
 }
 
@@ -117,7 +117,7 @@
         width: 100%;
         text-align: center;
     }
-    .feature-details .details-image figure>figcaption {
+    .feature-details .details-image figure > figcaption {
         position: static;
         background: none;
         font-size: 10px;
@@ -153,7 +153,7 @@
         padding-right: 30px;
     }
     .list-box,
-    .list-box>.container-fluid {
+    .list-box > .container-fluid {
         padding-left: 0;
         padding-right: 0;
     }
