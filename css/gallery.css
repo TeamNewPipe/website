@@ -126,8 +126,8 @@
     .feature-details .details-text {
         float: unset;
         width: 100%;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0;
+        padding-right: 0;
     }
     .bx-wrapper a.bx-prev,
     .bx-wrapper a.bx-prev:hover,
@@ -165,14 +165,14 @@
     .bx-wrapper a.bx-prev,
     .bx-wrapper a.bx-prev:hover,
     .bx-wrapper a.bx-prev:focus {
-        padding-left: 0px;
-        background: url(../img/control-prev.png) 0px 15px no-repeat;
+        padding-left: 0;
+        background: url(../img/control-prev.png) 0 15px no-repeat;
     }
     .bx-wrapper a.bx-next,
     .bx-wrapper a.bx-next:hover,
     .bx-wrapper a.bx-next:focus {
-        padding-right: 0px;
-        background: url(../img/control-next.png) 0px 15px no-repeat;
+        padding-right: 0;
+        background: url(../img/control-next.png) 0 15px no-repeat;
         padding-left: 15px;
     }
 }
@@ -191,7 +191,7 @@
     .bx-wrapper a.bx-next:hover,
     .bx-wrapper a.bx-next:focus {
         padding-right: 7.5px;
-        background: url(../img/control-next.png) 0px 15px no-repeat;
+        background: url(../img/control-next.png) 0 15px no-repeat;
         padding-left: 15px;
     }
 }

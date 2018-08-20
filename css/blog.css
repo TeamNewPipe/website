@@ -85,22 +85,22 @@ body.modal-open {
     .col-md-9.border-left {
         margin-left: 15px;
         width: calc(75% - 15px);
-        -webkit-box-shadow: -4px 0px 4px 0px rgba(0, 0, 0, 0.175);
-        -moz-box-shadow: -4px 0px 4px 0px rgba(0, 0, 0, 0.175);
-        box-shadow: -4px 0px 4px 0px rgba(0, 0, 0, 0.175);
+        -webkit-box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.175);
+        -moz-box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.175);
+        box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.175);
     }
     .border-right {
         border-right: 2px solid white;
     }
     .col-md-9.border-right {
-        -webkit-box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.175);
-        -moz-box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.175);
-        box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.175);
+        -webkit-box-shadow: 4px 0 4px 0 rgba(0, 0, 0, 0.175);
+        -moz-box-shadow: 4px 0 4px 0 rgba(0, 0, 0, 0.175);
+        box-shadow: 4px 0 4px 0 rgba(0, 0, 0, 0.175);
     }
     .col-md-9.border-left.border-right {
-        -webkit-box-shadow: -4px 0px 4px 0px rgba(0, 0, 0, 0.175), 4px 0px 4px 0px rgba(0, 0, 0, 0.175);
-        -moz-box-shadow: -4px 0px 4px 0px rgba(0, 0, 0, 0.175), 4px 0px 4px 0px rgba(0, 0, 0, 0.175);
-        box-shadow: -4px 0px 4px 0px rgba(0, 0, 0, 0.175), 4px 0px 4px 0px rgba(0, 0, 0, 0.175);
+        -webkit-box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.175), 4px 0 4px 0 rgba(0, 0, 0, 0.175);
+        -moz-box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.175), 4px 0 4px 0 rgba(0, 0, 0, 0.175);
+        box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.175), 4px 0 4px 0 rgba(0, 0, 0, 0.175);
     }
     .image-puffer {
         display: block;
@@ -188,9 +188,9 @@ a:focus {
 /* Header */
 
 #header {
-    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.175);
-    -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.175);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.175);
+    -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.175);
+    -moz-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.175);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.175);
 }
 
 .header-wrapper {
@@ -222,18 +222,18 @@ a:focus {
 }
 
 .header-wrapper .f-droid-wrapper {
-    -webkit-box-shadow: 0px -1px 8px black, 0px 3px 8px black;
-    -moz-box-shadow: 0px -1px 8px black, 0px 3px 8px black;
-    box-shadow: 0px -1px 8px black, 0px 3px 8px black;
+    -webkit-box-shadow: 0 -1px 8px black, 0 3px 8px black;
+    -moz-box-shadow: 0 -1px 8px black, 0 3px 8px black;
+    box-shadow: 0 -1px 8px black, 0 3px 8px black;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5;
     border-radius: 5px;
 }
 
 .header-wrapper .f-droid-wrapper:hover {
-    -webkit-box-shadow: 0px -1px 9px black, 0px 3px 9px black;
-    -moz-box-shadow: 0px -1px 9px black, 0px 3px 9px black;
-    box-shadow: 0px -1px 9px black, 0px 3px 9px black;
+    -webkit-box-shadow: 0 -1px 9px black, 0 3px 9px black;
+    -moz-box-shadow: 0 -1px 9px black, 0 3px 9px black;
+    box-shadow: 0 -1px 9px black, 0 3px 9px black;
 }
 
 .header-box-wrapper>.container {
@@ -468,9 +468,9 @@ strong.extra {
 /* Footer */
 
 #footer {
-    -webkit-box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.175);
-    -moz-box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.175);
-    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.175);
+    -webkit-box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.175);
+    -moz-box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.175);
+    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.175);
     background: #b31c1b;
     width: 100%;
     min-height: 170px;
@@ -667,14 +667,14 @@ strong.extra {
     li.search-container button:focus {
         background: none;
         color: white;
-        border-width: 0px;
+        border-width: 0;
     }
     .input-group .form-control.search-input {
         float: right;
         width: 0;
         transition: width 0.65s ease-out 0.75s, padding 0.0s ease-out 1.4s, border 0s linear 1.45s;
         padding: 0;
-        border: 0px solid rgb(204, 204, 204);
+        border: 0 solid rgb(204, 204, 204);
     }
     .input-group .form-control.search-input:hover,
     .input-group .form-control.search-input:focus,
@@ -726,10 +726,10 @@ strong.extra {
 
 /*
 #sidebar {
-    -webkit-box-shadow: inset 4px 0px 4px 0px rgba(0,0,0,0.175);
-    -moz-box-shadow: inset 4px 0px 4px 0px rgba(0,0,0,0.175);
-    box-shadow: inset 4px 0px 4px 0px rgba(0,0,0,0.75);
-    box-shadow: inset 6px 0px 4px -4px rgba(0,0,0,0.175);
+    -webkit-box-shadow: inset 4px 0 4px 0 rgba(0,0,0,0.175);
+    -moz-box-shadow: inset 4px 0 4px 0 rgba(0,0,0,0.175);
+    box-shadow: inset 4px 0 4px 0 rgba(0,0,0,0.75);
+    box-shadow: inset 6px 0 4px -4px rgba(0,0,0,0.175);
 }*/
 
 .sidebar .list-group h3 {
