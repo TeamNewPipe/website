@@ -1003,8 +1003,8 @@ div.search-container input:focus {
 
 #comments-info-modal table tr td pre {
     margin-bottom: 0;
-    white-space: -o-pre-wrap;
     /* Opera 7 */
+    white-space: -o-pre-wrap;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
