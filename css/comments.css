@@ -5,6 +5,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 #isso-thread a {
     text-decoration: none;
 }
@@ -13,14 +14,17 @@
     padding: 0;
     margin: 0;
 }
+
 #isso-thread > h4 {
     color: #555;
     font-weight: bold;
 }
+
 #isso-thread .textarea {
     min-height: 58px;
     outline: 0;
 }
+
 #isso-thread .textarea.placeholder {
     color: #AAA;
 }
@@ -32,13 +36,16 @@
     padding: 15px;
     background: #E2DEE0;
 }
+
 #isso-root > .isso-comment {
     border: 2px solid white;
 }
+
 .isso-comment:not(:first-of-type),
 .isso-follow-up .isso-comment {
     border-top: 1px solid rgba(256, 256, 256, 0.6);
 }
+
 .isso-comment > div.avatar,
 .isso-postbox > .avatar {
     display: block;
@@ -46,6 +53,7 @@
     width: 7%;
     margin: 3px 15px 0 0;
 }
+
 .isso-postbox > .avatar {
     float: left;
     margin: 5px 10px 0 5px;
@@ -53,6 +61,7 @@
     height: 48px;
     overflow: hidden;
 }
+
 .isso-comment > div.avatar > svg,
 .isso-postbox > .avatar > svg {
     max-width: 48px;
@@ -61,23 +70,28 @@
     border-radius: 3px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 .isso-comment > div.text-wrapper {
-    display: felx;
     flex-direction: column;
-    
 }
+
 .isso-comment .isso-follow-up {
     padding-left: calc(7% + 20px);
 }
-.isso-comment > div.text-wrapper > .isso-comment-header, .isso-comment > div.text-wrapper > .isso-comment-footer {
+
+.isso-comment > div.text-wrapper > .isso-comment-header,
+.isso-comment > div.text-wrapper > .isso-comment-footer {
     font-size: 0.95em;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-header {
     font-size: 0.85em;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-header .spacer {
     padding: 0 6px;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-header .spacer,
 .isso-comment > div.text-wrapper > .isso-comment-header a.permalink,
 .isso-comment > div.text-wrapper > .isso-comment-header .note,
@@ -86,28 +100,32 @@
     font-weight: normal;
     text-shadow: none !important;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-header .spacer:hover,
 .isso-comment > div.text-wrapper > .isso-comment-header a.permalink:hover,
 .isso-comment > div.text-wrapper > .isso-comment-header .note:hover,
 .isso-comment > div.text-wrapper > .isso-comment-header a.parent:hover {
     color: #606060 !important;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-header .note {
     float: right;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-header .author {
     font-weight: bold;
     color: #555;
 }
-.isso-comment > div.text-wrapper > .textarea-wrapper .textarea {
-    margin-top: 0.2em;
-}
+
+.isso-comment > div.text-wrapper > .textarea-wrapper .textarea,
 .isso-comment > div.text-wrapper > div.text p {
     margin-top: 0.2em;
 }
+
 .isso-comment > div.text-wrapper > div.text p:last-child {
     margin-bottom: 0.2em;
 }
+
 .isso-comment > div.text-wrapper > div.text h1,
 .isso-comment > div.text-wrapper > div.text h2,
 .isso-comment > div.text-wrapper > div.text h3,
@@ -117,46 +135,57 @@
     font-size: 130%;
     font-weight: bold;
 }
+
 .isso-comment > div.text-wrapper > div.textarea-wrapper .textarea {
     width: 100%;
     border: 1px solid white;
     border-radius: 2px;
     box-shadow: 0 0 2px #888;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-footer {
     font-size: 0.80em;
     color: gray !important;
     clear: left;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-footer a {
     font-weight: bold;
     text-decoration: none;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-footer a:hover {
     color: #333 !important;
     /*text-shadow: #aaaaaa 0 0 1px !important;*/
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-footer > a {
     position: relative;
     top: .2em;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-footer > a + a {
     padding-left: 1em;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-footer .votes {
     color: gray;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-footer .upvote svg,
 .isso-comment > div.text-wrapper > .isso-comment-footer .downvote svg {
     position: relative;
     top: .2em;
 }
+
 .isso-comment > div.text-wrapper > .isso-comment-footer .spacer {
     padding: 0 3px;
 }
+
 .isso-comment .isso-postbox {
     margin-top: 0.8em;
 }
+
 .isso-comment.isso-no-votes span.votes {
     display: none;
 }
@@ -165,14 +194,17 @@
     max-width: 68em;
     margin: 0 auto 2em;
 }
+
 .isso-postbox > .form-wrapper {
     display: block;
     padding: 0;
 }
+
 .isso-postbox > .form-wrapper > .auth-section,
 .isso-postbox > .form-wrapper > .auth-section .post-action {
     display: block;
 }
+
 .isso-postbox > .form-wrapper .textarea {
     margin: 0 0 .3em;
     padding: .4em .8em;
@@ -181,19 +213,22 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 #isso-thread .textarea:focus,
 #isso-thread input:focus,
 #isso-thread button:focus {
     border-color: #AA1D1D;
 }
+
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper {
     display: inline-block;
     position: relative;
     max-width: 23%;
     margin: 0;
 }
+
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper input,
-.isso-postbox > .form-wrapper > .auth-section .input-wrapper button{
+.isso-postbox > .form-wrapper > .auth-section .input-wrapper button {
     padding: .3em 10px;
     max-width: 100%;
     border-radius: 3px;
@@ -202,12 +237,14 @@
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 .isso-postbox > .form-wrapper > .auth-section .post-action,
 .isso-postbox > .form-wrapper > .auth-section .input-info {
     display: inline-block;
     float: right;
     margin: 0;
 }
+
 .isso-postbox > .form-wrapper > .auth-section .post-action > input,
 .isso-postbox > .form-wrapper > .auth-section .post-action > button {
     padding: calc(.3em - 1px);
@@ -219,14 +256,17 @@
     line-height: 1.4em;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
+
 .isso-postbox > .form-wrapper > .auth-section .post-action > input:hover,
 .isso-postbox > .form-wrapper > .auth-section .post-action > button:hover {
     background-color: #CCC;
 }
+
 .isso-postbox > .form-wrapper > .auth-section .post-action > input:active,
-.isso-postbox > .form-wrapper > .auth-section .post-action > button:active{
+.isso-postbox > .form-wrapper > .auth-section .post-action > button:active {
     background-color: #BBB;
 }
+
 @media screen and (max-width:600px) {
     .isso-postbox > .form-wrapper > .auth-section .input-wrapper {
         display: block;
@@ -250,5 +290,3 @@
         margin-bottom: 15px;
     }
 }
-
-
