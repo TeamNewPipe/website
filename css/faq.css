@@ -109,8 +109,8 @@ h3 > a > i.fa-chevron-left {
     bottom: 0;
     right: 0;
     left: 0;
-    /* fallback color is combination of #CD201F and #AA1D1D */
     content: '';
+    /* fallback color is combination of #CD201F and #AA1D1D */
     background: #BC1F1E url(/img/bg_rectangle_tile.svg) no-repeat center;
     background-size: cover;
 }
@@ -302,6 +302,30 @@ h3 > a > i.fa-chevron-left {
         max-width: 200px;
         float: left;
         margin-right: 15px;
+    }
+    #tutorial section figure.vertical {
+        display: flex;
+        flex-direction: row;
+        max-width: calc(100% - 30px);
+        margin-right: 0;
+    }
+    #tutorial section figure.vertical > img,
+    #tutorial section figure.vertical > video {
+        margin-bottom: 0;
+        max-width: 200px;
+        max-height: calc(100vh - 78px);
+        flex-grow: 2;
+    }
+    #tutorial section figure.vertical > figcaption {
+        align-items: center;
+        align-content: center;
+        display: flex;
+        flex-shrink: 2;
+        padding: 0 15px;
+    }
+    #tutorial section figure.vertical > figcaption li {
+        line-height: 2;
+        font-size: 110%;
     }
     #tutorial section figure ~ :not(figure) {
         clear: left;
