@@ -46,9 +46,11 @@
 <div class="tiles-container tiles faq-tiles">
     <div class="row">
         {% for item in faqs %}
+        {% assign printed = "false" %}
             {%- for category in item.categories %}
                 {%- for c in categories %}
-                    {%- if category == c %}
+                    {%- if category == c and printed == "false" %}
+                        {% assign printed = "true" %}
                         {%- if item.type == "tutorial" %}
         <a href="{{ item.url }}">
                         {%- endif %}
