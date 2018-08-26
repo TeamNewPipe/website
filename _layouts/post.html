@@ -20,7 +20,7 @@ layout: blog_with-sidebar-post
         <div class="row">
             <div class="col-md-3 col-img">
                 {% assign image = site.data.images[page.image] %}
-                <img src="/img/{{ image.url }}" class="img-responsive postImg" />
+                <img src="/img/{{ image.url }}" class="img-responsive postImg" alt="post image" />
                 By <a href="{{ image.origin }}">{{ image.author }}</a>
                 {% if image.license %} under {{ image.license }}{% endif %}
             </div>
