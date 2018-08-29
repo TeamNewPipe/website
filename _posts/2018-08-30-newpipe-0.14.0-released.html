@@ -1,0 +1,86 @@
+---
+layout: post
+title: NewPipe 0.14.0 brings a more customizable main page
+short: NewPipe 0.14.0 released
+date: 2018-07-30 10:00:00 +0100
+categories: [release, pinned]
+author: TobiGr
+image: newpipe
+excerpt_separator: <!-- more -->
+---
+<p>It has been a while since the last post was published, but here we are, back with great news:</p>
+
+<p>We proudly announce NewPipe version 0.14.0 which comes with a more customizable main page,
+    a better navigation menu and several player improvements.</p>
+
+<!-- more -->
+
+<p><a href="https://github.com/Somethingweirdhere">@Somethingweirdhere</a> invested time to polish NewPipe's UI.
+    We all thank him for his effort. Due to the new look and the even more customizable main page,
+    we think a short summarize of the changes in NewPipe 0.14.0 might be helpful to these
+    who want to try them out immediately.</p>
+
+<h3 id="betternavigationmenu">Better Navigation Menu</h3>
+
+<p>The first improvement brings more material touch to NewPipe.
+    <a href="https://github.com/Somethingweirdhere">@Somethingweirdhere</a> removed the options menu in the action bar
+    and added its content to the navigation menu. From now on it is only possible to access the settings
+    and download page via the navigation menu. You can open it by clicking on the burger menu icon on the top left
+    or swiping from the left side of the screen to the right.</p>
+
+<img src="/img/screenshots/shot_navigation_drawer.png" alt="new navigation look in NewPipe 0.14.0" class="no-flow" />
+
+<p>You will notice a new element structure in the navigation menu.
+    For the reason that NewPipe aims to support multiple services, only the respective sub-pages are visible
+    and all services are hidden. So-called "kiosks" such as "Trending" in the case of YouTube or "Top 50" in SoundCloud
+    change here depending on the active service. To change to another service,
+    tap on the small triangle in the lower right corner of the NewPipe banner. You can now see all available services.
+    By default, YouTube is enabled. To activate SoundCloud instead, tap on it. You will notice a different color scheme and
+    when opening the navigation menu, you will find the "Top 50" and "New and Hot" kiosks.</p>
+
+<img src="/img/screenshots/shot_navigation_drawer_services.png" alt="new navigation look in NewPipe 0.14.0 (services)" class="no-flow" />
+
+<h3 id="moreflexibilityonthemainpage">More flexibility on the main page</h3>
+
+<p>With version 0.14.0 it is now possible to add and remove several tabs from your main page.
+    To do so, open the settings via the navigation drawer. In difference to earlier versions,
+    the content management of the main page is now placed in the category "Appearance".
+    The specific setting is still called "Content of main page". Tap on it to manage the different tabs.</p>
+
+<p>You can reorder the tabs via drag'n drop and remove a tab by swiping it to left or right side of the screen.
+    To add a new tab, use the "+" button at the right bottom. You can now choose between several possibilities.
+    Your changes will be saved automatically and applied instantly.</p>
+<img src="/img/screenshots/shot_settings_main_tabs.png" alt="new navigation look in NewPipe 0.14.0 (services)" class="no-flow" />
+
+
+<h3 id="alsochangedinthisversion">Also changed in this version</h3>
+
+<p>As explained in the <a href="https://newpipe.schabi.org/FAQ/download/">FAQ</a>, NewPipe does not support downloads
+    to external SDCards yet. To increase the user experience and prevent the app from crashing,
+    users are now warned when selecting a directory on an external SDCard.</p>
+
+<p>A better way to close NewPipe's popup window got requested by multiple people.
+    <a href="https://github.com/mauriciocolli">@mauriciocolli</a> implemented a red closing button to help out.
+    When moving the popup window, this button appears at the bottom of the display. To close the popup,
+    just drag it onto the button.</p>
+
+<img src="/img/screenshots/shot_popup_close.png" alt="new button st display bottom to close popup in NewPipe 0.14.0" class="no-flow" />
+
+<p><a href="https://github.com/TheMatten">@TheMatten</a> improved the player's UI when changing volume and brightness.</p>
+
+<p>This new version also provides various fixes. <a href="https://github.com/theScrabi">@theScrabi</a> made the search results work
+    properly again. Before, only the first two pages were loaded and then repeated.</p>
+
+<p>Furthermore YouTube Premium videos are blocked correctly now and some videos which did not load
+    due to invalid DASH parsing, should now load as expected. A bug which prevented video thumbnails to not show up on the
+    notification on Android 8.1 has also been fixed. Additionally more links in the video description work correctly now.</p>
+
+<p>To provide no false information, incorrect explanations of M4A and WebM audio formats have been
+    removed from all translations. At this point we would like to thank the numerous translators which updated and improved
+    translations for this release.</p>
+
+<h3 id="gettheupdate">Get the update</h3>
+
+<p>You can download NewPipe 0.14.0 either from <a href="https://f-droid.org/de/packages/org.schabi.newpipe/">F-Droid</a>
+    or the <a href="https://github.com/TeamNewPipe/NewPipe/releases/tag/v0.14.0">GitHub release page</a>.
+    We recommend you to install the F-Droid app as it notifies you as soon as an update for NewPipe is available.</p>
