@@ -582,6 +582,9 @@ strong.extra {
         margin: 5px auto 15px;
         max-height: 100vh;
     }
+    .post-content img.no-flow.vertical {
+        max-width: 90%;
+    }
 }
 .border-box {
     border: 2px solid white;
