@@ -1,0 +1,36 @@
+---
+categories:
+- player
+- bugs
+type: tutorial
+title: "Enable background player on Huawei devices"
+---
+
+<section>
+    <p>Several media player apps like VLC and NewPipe have problems with background players on devices with
+        Huawei's EMUI 8 interface.
+        These problems are caused by a new battery saving policy which blocks particular background services.
+        To make NewPipe work properly, you need to except it from the battery optimization.
+    </p>
+    <div class="row is-flex figure-wrapper">
+        <figure class="vertical">
+            <video src="/img/newpipe-huawei-background-fix.mp4" class="img-responsive screenshot" autoplay loop></video>
+            <figcaption>
+                <ol>
+                    <li>Open the Phone Settings</li>
+                    <li>Enter the Apps section</li>
+                    <li>Enter Advanced section</li>
+                    <li>Enter Ignore battery optimizations section.
+                        On some devices this is called Except battery optimization</li>
+                    <li>At the top of the list select All apps</li>
+                    <li>Select NewPipe and allow to ignore battery optimizations</li>
+                </ol>
+            </figcaption>
+        </figure>
+    </div>
+</section>
+
+<div class="alert alert-success download-license-warning" role="alert">
+    <span class="fa fa-check" aria-hidden="true"></span> That's it. If there are still problems, please leave a comment
+    <a href="https://github.com/TeamNewPipe/NewPipe/issues/1621">here</a>.
+</div>
