@@ -30,6 +30,7 @@ COPY _config.yml .
 COPY index.html .
 COPY favicon.ico .
 COPY blog blog
+COPY donate donate
 
 # copy files which are changed more regularly (aka content)
 COPY _tutorials _tutorials
