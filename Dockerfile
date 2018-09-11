@@ -23,6 +23,7 @@ COPY font-awesome font-awesome
 COPY legal legal
 COPY lunrjs lunrjs
 COPY press press
+COPY _plugins _plugins
 COPY _layouts _layouts
 COPY _includes _includes
 COPY pdf pdf
