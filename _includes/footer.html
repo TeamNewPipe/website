@@ -21,7 +21,11 @@
     <div class="container-fluid" id="footer-copyright">
         <div class="container">
             <div class="footer-links">
-                <span id="copyright-span">Copyright &copy; Team NewPipe.</span>
+                <span id="copyright-span">Copyright &copy; Team NewPipe. <br class="visible-xxs visible-xs"/>Revision
+                    <a href="https://github.com/TeamNewPipe/website/tree/{% git_hash %}">{% git_hash %}</a></span>
+                <!--<span id="git-version">
+                    <a href="https://github.com/TeamNewPipe/website/tree/{% git_hash %}">{% git_hash %}</a>
+                </span>-->
                 <span><a href="{{ site.baseurl }}/press/contact/">Contact</a></span>
                 <!--<span><a href="{{ site.baseurl }}/legal/">Legal</a></span>-->
                 <span><a href="{{ site.baseurl }}/legal/license/">Licensing</a></span>
