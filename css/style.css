@@ -654,10 +654,12 @@ strong.extra {
         position: fixed;
         top: 0;
         right: 0;
-        max-height: 100%;
-        overflow-y: scroll;
+        width: 100%;
         max-width: 100%;
+        /* Fix overflow caused by to small screens */
+        max-height: 100%;
         min-height: 100%;
+        overflow-y: scroll;
         padding-right: 30px;
     }
     #features .feature-detail.active .back {
