@@ -77,14 +77,14 @@
         <!-- Modal -->
         <div id="mediaFileView" class="modal fade" role="dialog" data-dismiss="modal">
             <img id="mediaFullScreen" src="" class="img-full-width screenshot-image" data-dismiss="modal"/>
+            <video id="videoFullScreen" class="img-full-width screenshot-image"  data-dismiss="modal"></video>
             <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" ></i>
         </div> <!-- Modal -->
         <script src="{{ site.baseurl }}/js/mediaview.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
-                console.log(document.querySelectorAll('.figure-wrapper figure > img'));
-                var images = document.querySelectorAll('.figure-wrapper > figure > img');
-                for(var image in images) {
+                let images = document.querySelectorAll('.figure-wrapper > figure > img, .figure-wrapper > figure > video');
+                for (let image in images) {
                     images[image].onclick = function(){viewMediaFile(this, true)};
                 }
             });
