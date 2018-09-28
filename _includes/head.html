@@ -38,9 +38,13 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css" />
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/press.css" />
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/print.css" />
 
+    <!-- custom stylesheets -->
+    {% for stylesheet in include.extraCSS -%}
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{{ stylesheet }}" />
+    {% endfor -%}
+
 </head>
-<body>
-<div id="page">
+<body{% if include.bodyID %} id="{{ include.bodyID }}"{% endif %}>
+{% if include.page == "False" %}{% else %}<div id="page">{% endif %}

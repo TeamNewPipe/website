@@ -1,7 +1,17 @@
-{% include head.html %}
-{% include nav.html %}
+{% include head.html
+           extraCSS = page.extraCSS
+           bodyID   = page.bodyID
+           page     = page.bodyPage %}
+{% include nav.html
+           brand     = page.navBrand
+           brandLink = page.navBrandLink
+           active    = page.navActive
+           position  = page.navPosition
+           search    = page.navSearch %}
 
 {{ content }}
 
-{% include footer.html %}
-{% include blog_page_end.html %}
+{% include footer.html
+           puffer = page.footerPuffer %}
+{% include blog_page_end.html
+           extraScript = page.extraScript %}

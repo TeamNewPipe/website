@@ -1,135 +1,86 @@
 ---
+layout: default
+extraCSS:
+  - "faq.css"
+  - "faq_home.css"
+bodyID: faq
+navBrandLink: "FAQ/"
+navBrand: "FAQ <span class=\"badge\">BETA</span>"
+footerPuffer: "True"
 ---
-<!DOCTYPE html>
-<html>
-<head>
-    <title>NewPipe - a free YouTube client</title>
-
-    <meta name="author" content="Christian Schabesberger, NewPipe" />
-    <meta name="description" content="Welcome to the website of NewPipe the lightweight YouTube experience for Android." />
-    <meta name="keywords" content="NewPipe, YouTube, Android" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
-
-    <meta property="og:site_name" content="NewPipe">
-    <meta property="og:title" content="NewPipe - a free YouTube client">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ site.url }}">
-    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/logo_400.png">
-    <meta property="og:image:width" content="400">
-    <meta property="og:image:height" content="400">
-    <meta property="og:image:type" content="image/png">
-
-    <link rel="icon" href="{{ site.baseurl }}/favicon.ico" sizes="64x64" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/news.rss"/>
-    <link rel="alternate" type="application/atom+xml" title="ATOM" href="/blog/feeds/news.atom"/>
-
-
-    <!-- JQuery -->
-    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
-
-    <!-- Bootstrap -->
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="{{ site.baseurl }}/js/html5shiv.min.js"></script>
-    <script src="{{ site.baseurl }}/js/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css" />
-
-    <!-- Custom stylesheets -->
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/faq.css" />
-
-</head>
-<body id="faq">
-{%- assign link=site.baseurl | append: "FAQ/" -%}
-{% include nav.html brand="FAQ <span class=\"badge\">BETA</span>" brandLink=link active="FAQ" %}
-
-    <div class="site-content height-full-parent">
-        <div class="container container-double">
-            <h3 class="text-center">FAQ and Tutorials</h3>
-            <div id="faq-menu" class="tiles-container">
-                <div class="row is-flex">
-                    <!--<div class="col-xs-12">
-                        <h3 class="title">FAQ and Tutorials</h3>
-                    </div>-->
-                    <a href="player/" class="col-xs-12 col-sm-6 col-md-4 tile tile-left" id="tile-player">
-                        <span><i class="fa fa-3x fa-play"></i></span>
-                        <div>
-                            <h2>Player</h2>
-                        </div>
-                    </a>
-                    <a href="download/" class="col-xs-12 col-sm-6 col-md-4 tile" id="tile-download">
-                        <span><i class="fa fa-3x fa-download"></i></span>
-                        <div>
-                        <h2>Im- / Export &amp; Download</h2>
-                        </div>
-                    </a>
-                    <a href="bugs/" class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 tile tile-right" id="tile-player">
-                        <span><i class="fa fa-3x fa-bug"></i></span>
-                        <div>
-                        <h2>Bugs &amp; Requests</h2>
-                        </div>
-                    </a>
-                </div>
-                <div class="clearfix"></div>
+<div class="site-content height-full-parent">
+    <div class="container container-double">
+        <h3 class="text-center">FAQ and Tutorials</h3>
+        <div id="faq-menu" class="tiles-container">
+            <div class="row is-flex">
+                <!--<div class="col-xs-12">
+                    <h3 class="title">FAQ and Tutorials</h3>
+                </div>-->
+                <a href="player/" class="col-xs-12 col-sm-6 col-md-4 tile tile-left" id="tile-player">
+                    <span><i class="fa fa-3x fa-play"></i></span>
+                    <div>
+                        <h2>Player</h2>
+                    </div>
+                </a>
+                <a href="download/" class="col-xs-12 col-sm-6 col-md-4 tile" id="tile-download">
+                    <span><i class="fa fa-3x fa-download"></i></span>
+                    <div>
+                    <h2>Im- / Export &amp; Download</h2>
+                    </div>
+                </a>
+                <a href="bugs/" class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 tile tile-right" id="tile-player">
+                    <span><i class="fa fa-3x fa-bug"></i></span>
+                    <div>
+                    <h2>Bugs &amp; Requests</h2>
+                    </div>
+                </a>
             </div>
-            <div id="faq-menu-tutorials" class="tiles-container faq-tiles">
-                <div class="row">
-                    <!--<a href="tutorials/">
-                        <article class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 tile">
-                            <header class="tile-head">
-                                <span class="tutorial">
-                                    <i class="fa fa-graduation-cap"></i>
-                                </span>
-                                All tutorials
-                            </header>
-                        </article>
-                    </a>-->
-                    <article class="col-xs-12 col-sm-6 col-md-4 tile" id="tile-show-all">
+            <div class="clearfix"></div>
+        </div>
+        <div id="faq-menu-tutorials" class="tiles-container faq-tiles">
+            <div class="row">
+                <!--<a href="tutorials/">
+                    <article class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 tile">
                         <header class="tile-head">
-                                <span class="tutorial">
-                                    <i class="fa fa-info-circle"></i>
-                                </span>
-                            Show all
+                            <span class="tutorial">
+                                <i class="fa fa-graduation-cap"></i>
+                            </span>
+                            All tutorials
                         </header>
                     </article>
-
-                </div>
-            </div>
-            <div class="tiles-container faq-tiles">
-                <div class="row">
-                    <div class="col-xs-12 col-md-6 col-md-offset-3">
-                        <div class="search-container">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="search-box" name="s" placeholder="Search for">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" id="search-submit" type="submit" onclick="search()">
-                                        <i class="fa fa-search" aria-hidden="true"></i>
-                                    </button>
-                                </span>
-                            </div><!-- /input-group -->
-                        </div><!-- /.col-lg-6 -->
-                    </div>
-                </div>
-                <div id="search-results"></div>
-
-                <!-- Scripts to perform a search -->
-                <script src="{{ site.baseurl  }}/lunrjs/lunr.min.js"></script>
-                <script src="{{ site.baseurl  }}/lunrjs/faq_search.js"></script>
+                </a>-->
+                <article class="col-xs-12 col-sm-6 col-md-4 tile" id="tile-show-all">
+                    <header class="tile-head">
+                            <span class="tutorial">
+                                <i class="fa fa-info-circle"></i>
+                            </span>
+                        Show all
+                    </header>
+                </article>
 
             </div>
         </div>
+        <div class="tiles-container faq-tiles">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-md-offset-3">
+                    <div class="search-container">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="search-box" name="s" placeholder="Search for">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" id="search-submit" type="submit" onclick="search()">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                </div>
+            </div>
+            <div id="search-results"></div>
+
+            <!-- Scripts to perform a search -->
+            <script src="{{ site.baseurl  }}/lunrjs/lunr.min.js"></script>
+            <script src="{{ site.baseurl  }}/lunrjs/faq_search.js"></script>
+
+        </div>
     </div>
-
-
-{% include footer.html puffer="True" %}
-
-<script src="{{ site.baseurl }}/bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>
+</div>

@@ -2,8 +2,9 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ site.baseurl }}/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Search optimations -->
-    <script>
+    {% if site.url contains "blog/" %}
+    <!-- Search optimizations -->
+    <<script>
         /* Prevent search CSS transition on window resize */
 
         var windowWidth = window.innerWidth;
@@ -27,8 +28,8 @@
             }
         });
 
-        /* Since we have no form as parrent of the input field, the pressing the enter key
-        does not triger a new search. That's why we call the onclick event of the submit button. */
+        /* Since we have no form as parent of the input field, the pressing the enter key
+        does not trigger a new search. That's why we call the onclick event of the submit button. */
 
         document.getElementById("search-box").addEventListener("keyup", function(event) {
             event.preventDefault();
@@ -44,7 +45,7 @@
          * Corrects the window scroll position
          * because the fixed nav bar needs some space on the top.
          * This makes navigation via HTML anchors difficult,
-         * because a part of the elemnt is hidden behind the navigation bar.
+         * because a part of the element is hidden behind the navigation bar.
          */
         function correctAnchors() {
             var hash = window.location.hash.substr(1);
@@ -56,6 +57,10 @@
         $(window).on("load", correctAnchors);
         $(window).on('hashchange', correctAnchors);
     </script>
+    {% endif %}
 
+    {%- for script in include.extraScript %}
+    <script src="{{ site.baseurl }}/js/{{ script }}" ></script>
+    {% endfor -%}
 </body>
 </html>
