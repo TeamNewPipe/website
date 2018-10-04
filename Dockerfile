@@ -34,6 +34,7 @@ COPY blog blog
 COPY donate donate
 
 # copy files which are changed more regularly (aka content)
+COPY .git .git
 COPY _tutorials _tutorials
 COPY _faq _faq
 COPY FAQ FAQ
