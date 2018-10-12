@@ -26,19 +26,10 @@
 {%- assign hNavPosition = page.navPosition | default: layout.navPosition -%}
 {%- assign hNavSearch = page.navSearch | default: layout.navSearch -%}
 
-{% if page.metatitle AND page.metatitle != "" AND page.metatitle != nil %}
-{% assign mt = page.metatitle %}
-{% else if layout.metatitle AND layout.metatitle != "" AND layout.metatitle != nil AND layout.metatitle != null AND layout.metatitle != none %}
-{% assign mt = layout.metatitle | append: "e" %}
-{% else %}
-{% assign mt = "NewPipe. a free YouTube client" %}
-{% endif %}
-
 {%- include head.html
            extraCSS = newCSS
            bodyID   = bID
-           page     = bPage
-           metatitle = mt %}
+           page     = bPage %}
 {% include nav.html
            brand     = hNavBrand
            brandLink = hNavBrandLink

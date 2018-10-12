@@ -1,17 +1,33 @@
-{% assign tit = page.metatitle | default: layout.metatitle %}{{tit | prepend: '.' | append: '.'}}
+{%- assign notPage = 1 -%}
+{%- assign tit = "NewPipe - a free YouTube client" -%}
+{%- if page.metatitle %}{% unless page.metatitle == "" -%}{%- unless page.metatitle == nil -%}
+    {%- assign tit = page.metatitle -%}{%- assign notPage = 2 -%}{%- endunless %}{% endunless -%}
+{%- else if layout.metatitle AND notPage == 1 %}{% unless layout.metatitle == "" %}{% unless page.metatitle == nil -%}
+    {%- assign tit = layout.metatitle | append: "e" %}{% assign notPage = 3 %}{% endunless %}{% endunless -%}
+{%- endif -%}
+
+
+{%- assign des = site.description -%}
+{%- assign notPage = 1 -%}
+{%- if page.metades %}{% unless page.metades == "" -%}{%- unless page.metades == nil -%}
+{%- assign des = page.metades -%}{%- assign notPage = 2 -%}{%- endunless %}{% endunless -%}
+{%- else if layout.metades AND notPage == 1 %}{% unless layout.metades == "" %}{% unless page.metades == nil -%}
+{%- assign des = layout.metades | append: "e" %}{% assign notPage = 3 %}{% endunless %}{% endunless -%}
+{%- endif -%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% if page.metatitle AND page.metatitle != "" AND page.metatitle != nil %}{{ page.metatitle }}{% else if layout.metatitle AND layout.metatitle != "" AND layout.metatitle != nil AND layout.metatitle != null AND layout.metatitle != none %}{{ layout.metatitle | append: "e" }}{% else %}NewPipe. a free YouTube client{% endif %}</title>
+    <title>{{ tit }}</title>
 
     <meta name="author" content="Christian Schabesberger, NewPipe">
-    <meta name="description" content="{% if page.metades %}{{ page.metades | append:"0"}}{% else if layout.metades %}{{ layout.metades |append:"1" }}{% else %}Welcome to the website of NewPipe the lightweight YouTube experience for Android.{% endif %}">
+    <meta name="description" content="{{ des }}">
     <meta name="keywords" content="NewPipe, YouTube, Android, player, background, popup, privacy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
     <meta property="og:site_name" content="NewPipe">
-    <meta property="og:title" content="{% if page.metatitle %}{{ page.metatitle }}{% else if layout.metatitle %}{{ layout.metatitle }}{% else %}NewPipe. a free YouTube client{% endif %}">
+    <meta property="og:title" content="{{ tit }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/logo_400.png">
