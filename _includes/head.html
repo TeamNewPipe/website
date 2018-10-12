@@ -1,11 +1,14 @@
+{%- assign single = "metatitle,metades,bodyPage" -%}
+{%- assign multi = "extraCSS,extraScript" -%}
 {%- assign notPage = 1 -%}
-{%- assign tit = "NewPipe - a free YouTube client" -%}
+{%- assign metatit = "NewPipe - a free YouTube client" -%}
 {%- if page.metatitle %}{% unless page.metatitle == "" -%}{%- unless page.metatitle == nil -%}
-    {%- assign tit = page.metatitle -%}{%- assign notPage = 2 -%}{%- endunless %}{% endunless -%}
+    {%- assign metatit = page.metatitle -%}{%- assign notPage = 2 -%}{%- endunless %}{% endunless -%}
 {%- else if layout.metatitle AND notPage == 1 %}{% unless layout.metatitle == "" %}{% unless page.metatitle == nil -%}
-    {%- assign tit = layout.metatitle | append: "e" %}{% assign notPage = 3 %}{% endunless %}{% endunless -%}
+    {%- assign metatit = layout.metatitle | append: "e" %}{% assign notPage = 3 %}{% endunless %}{% endunless -%}
 {%- endif -%}
 
+{%- assign tit = page.title | default: metatit -%}
 
 {%- assign des = site.description -%}
 {%- assign notPage = 1 -%}
@@ -27,7 +30,7 @@
     <meta charset="UTF-8">
 
     <meta property="og:site_name" content="NewPipe">
-    <meta property="og:title" content="{{ tit }}">
+    <meta property="og:title" content="{{ metatit }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/logo_400.png">
