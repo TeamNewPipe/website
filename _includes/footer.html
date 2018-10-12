@@ -1,34 +1,34 @@
 <!-- footer -->
 <footer class="navbar-fixed-bottom" id="footer">
-    {%- if include.puffer == "True" -%}
+    {%- if include.puffer == "True" %}
     <div class="image-puffer"></div>
-    {%- endif -%}
+    {%- endif %}
     <div id="footer-content-container">
-    <div class="container">
-        <div class="image-holder">
-            <img src="{{ site.baseurl }}/img/logo.svg" class="footer-logo img-circle border-white" alt="NewPipe logo" />
-        </div>
-    </div>
-    <div class="container" id="footer-main-links">
-        <div class="footer-links">
-            <span><a href="{{ site.baseurl }}/">Home</a></span>
-            <span><a href="{{ site.baseurl }}/blog/">Blog</a></span>
-            <span><a href="{{ site.baseurl }}/press/">Press</a></span>
-            <!--<span class="line-break"></span>-->
-            <span id="footer-donate-span-"><a href="{{ site.baseurl }}/donate">Donate</a></span>
-        </div>
-    </div>
-    <div class="container-fluid" id="footer-copyright">
         <div class="container">
-            <div class="footer-links">
-                <span id="copyright-span">Copyright &copy; Team NewPipe. <br class="visible-xxs visible-xs"/>Revision
-                    <a href="https://github.com/TeamNewPipe/website/tree/{%- git_hash -%}">{%- git_hash -%}</a>
-                </span>
-                <span><a href="{{ site.baseurl }}/press/contact/">Contact</a></span>
-                <span><a href="{{ site.baseurl }}/legal/license/">Licensing</a></span>
-                <span><a href="{{ site.baseurl }}/legal/privacy/">Privacy Policy</a></span>
+            <div class="image-holder">
+                <img src="{{ site.baseurl }}/img/logo.svg" class="footer-logo img-circle border-white" alt="NewPipe logo" />
             </div>
         </div>
-    </div>
+        <div class="container" id="footer-main-links">
+            <div class="footer-links">
+                <span><a href="{{ site.baseurl }}/">Home</a></span>
+                <span><a href="{{ site.baseurl }}/blog/">Blog</a></span>
+                <span><a href="{{ site.baseurl }}/press/">Press</a></span>
+                <!--<span class="line-break"></span>-->
+                <span id="footer-donate-span-"><a href="{{ site.baseurl }}/donate">Donate</a></span>
+            </div>
+        </div>
+        <div class="container-fluid" id="footer-copyright">
+            <div class="container">
+                <div class="footer-links">
+                    <span id="copyright-span">Copyright &copy; Team NewPipe. <br class="visible-xxs visible-xs"/>Revision
+                        <a href="https://github.com/TeamNewPipe/website/tree/{%- git_hash -%}">{%- git_hash -%}</a>
+                    </span>
+                    <span><a href="{{ site.baseurl }}/press/contact/">Contact</a></span>
+                    <span><a href="{{ site.baseurl }}/legal/license/">Licensing</a></span>
+                    <span><a href="{{ site.baseurl }}/legal/privacy/">Privacy Policy</a></span>
+                </div>
+            </div>
+        </div>
     </div>
 </footer> <!-- footer -->
