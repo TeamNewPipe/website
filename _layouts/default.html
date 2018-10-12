@@ -1,17 +1,55 @@
-{% include head.html
-           extraCSS = page.extraCSS
-           bodyID   = page.bodyID
-           page     = page.bodyPage %}
+{%- capture CSS -%}
+{%- for layCSS in layout.extraCSS -%}{{ layCSS }}{% if forloop.last == false %}#{% endif %}{%- endfor -%}
+{%- for pageCSS in page.extraCSS -%}{{ pageCSS }}{% if forloop.last == false %}#{% endif %}{%- endfor -%}
+{%- endcapture -%}
+{%- assign newCSS = CSS | split: "#" -%}
+
+{%- if layout.bodyID -%}{%- if layout.bodyID != "" -%}{%- if layout.bodyID != NIL -%}
+{%- assign bID = layout.bodyID -%}{% endif %}{% endif %}
+{%- else -%}
+{%- assign bID = page.bodyID -%}
+{%- endif -%}
+
+{%- if layout.bodyPage -%}{%- if layout.bodyPage != "" -%}{%- if layout.bodyPage != NIL -%}
+{%- assign bPage = layout.bodyPage -%}{% endif %}{% endif %}
+{%- else -%}
+{%- assign bPage = page.bodyPage -%}
+{%- endif -%}
+
+{%- assign bID = page.bodyID | default: layout.bodyID -%}
+{%- assign bPage = page.bodyPage | default: layout.bodyPage -%}
+{%- assign bFooterPuffer = page.footerPuffer | default: layout.footerPuffer -%}
+
+{%- assign hNavBrand = page.navBrand | default: layout.navBrand -%}
+{%- assign hNavBrandLink = page.navBrandLink | default: layout.navBrandLink -%}
+{%- assign hNavActive = page.navActive | default: layout.navActive -%}
+{%- assign hNavPosition = page.navPosition | default: layout.navPosition -%}
+{%- assign hNavSearch = page.navSearch | default: layout.navSearch -%}
+
+{% if page.metatitle AND page.metatitle != "" AND page.metatitle != nil %}
+{% assign mt = page.metatitle %}
+{% else if layout.metatitle AND layout.metatitle != "" AND layout.metatitle != nil AND layout.metatitle != null AND layout.metatitle != none %}
+{% assign mt = layout.metatitle | append: "e" %}
+{% else %}
+{% assign mt = "NewPipe. a free YouTube client" %}
+{% endif %}
+
+{%- include head.html
+           extraCSS = newCSS
+           bodyID   = bID
+           page     = bPage
+           metatitle = mt %}
 {% include nav.html
-           brand     = page.navBrand
-           brandLink = page.navBrandLink
-           active    = page.navActive
-           position  = page.navPosition
-           search    = page.navSearch %}
+           brand     = hNavBrand
+           brandLink = hNavBrandLink
+           active    = hNavActive
+           position  = hNavPosition
+           search    = hNavSearch %}
 
 {{ content }}
 
 {% include footer.html
-           puffer = page.footerPuffer %}
+           puffer = bFooterPuffer %}
 {% include blog_page_end.html
+           page        = bPage
            extraScript = page.extraScript %}

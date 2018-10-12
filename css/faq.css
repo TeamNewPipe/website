@@ -52,15 +52,15 @@ h3 > a > i.fa-chevron-left {
     background: transparent;
 }
 
+.tiles-container .is-flex > a > div {
+    width: 100%;
+}
+
 .tiles-container .tile {
     text-align: center;
     padding: 15px;
     min-height: 0;
     border: 1px solid #BBB;
-}
-
-.tiles-container .is-flex > a > div {
-    width: 100%;
 }
 
 .tiles-container .tile.tile-left {
@@ -245,6 +245,7 @@ h3 > a > i.fa-chevron-left {
         display: flex;
         flex-shrink: 2;
         padding: 0 15px;
+        flex-flow: wrap;
     }
     #tutorial section figure.vertical > figcaption li {
         line-height: 2;
@@ -262,6 +263,9 @@ h3 > a > i.fa-chevron-left {
     }
     #tutorial section figure.vertical > figcaption .inside li {
         padding-left: 1em;
+    }
+    #tutorial section figure.vertical.sm > figcaption {
+        max-width: 60%;
     }
     #tutorial section figure ~ :not(figure) {
         clear: left;

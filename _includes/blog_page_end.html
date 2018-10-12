@@ -1,16 +1,16 @@
-</div> <!-- page -->
+{% if include.page == "False" %}{% else %}</div> <!-- page -->{% endif %}
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ site.baseurl }}/bootstrap/js/bootstrap.min.js"></script>
 
     {% if site.url contains "blog/" %}
     <!-- Search optimizations -->
-    <<script>
+    <script>
         /* Prevent search CSS transition on window resize */
 
-        var windowWidth = window.innerWidth;
+        let windowWidth = window.innerWidth;
         document.getElementsByTagName("BODY")[0].onresize = function(){
             /* Only necessary when the user leaves the mobile size */
-            if(windowWidth < window.innerWidth && windowWidth < 767){
+            if (windowWidth < window.innerWidth && windowWidth < 767) {
                 document.getElementById("navigation-search-input").classList.add("noTransition");
                 setTimeout(function(){ document.getElementById("navigation-search-input").classList.remove("noTransition");}, 900);
             }
@@ -21,7 +21,7 @@
         with medium or large screens because search input textfield is hidden when not focused */
 
         $(".nav .search-form").submit(function(e){
-            if($(".nav .search-input").val().replace(/ /g, '').length === 0){
+            if ($(".nav .search-input").val().replace(/ /g, '').length === 0) {
                 e.preventDefault();
                 $(".nav .search-input").addClass("invalid-input");
                 setTimeout(function(){ $(".nav .search-input").removeClass("inavlid-input");}, 10500);
@@ -48,10 +48,10 @@
          * because a part of the element is hidden behind the navigation bar.
          */
         function correctAnchors() {
-            var hash = window.location.hash.substr(1);
+            let hash = window.location.hash.substr(1);
             if (typeof hash == 'undefined' || hash === "" || hash == null) return;
-            var top = $("#" + hash).offset().top;
-            var nav = $("#header").outerHeight(true);
+            let top = $("#" + hash).offset().top;
+            let nav = $("#header").outerHeight(true);
             window.scrollTo(0, top - nav);
         }
         $(window).on("load", correctAnchors);

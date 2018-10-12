@@ -1,16 +1,17 @@
+{% assign tit = page.metatitle | default: layout.metatitle %}{{tit | prepend: '.' | append: '.'}}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% if page.metatitle %}{{ page.metatitle }}{% else %}Press kit - NewPipe. a free YouTube client{% endif %}</title>
+    <title>{% if page.metatitle AND page.metatitle != "" AND page.metatitle != nil %}{{ page.metatitle }}{% else if layout.metatitle AND layout.metatitle != "" AND layout.metatitle != nil AND layout.metatitle != null AND layout.metatitle != none %}{{ layout.metatitle | append: "e" }}{% else %}NewPipe. a free YouTube client{% endif %}</title>
 
     <meta name="author" content="Christian Schabesberger, NewPipe">
-    <meta name="description" content="{% if page.metades %}{{ page.metades }}{% else %}Welcome to the press kit of NewPipe the lightweight YouTube experience for Android.{% endif %}">
-    <meta name="keywords" content="NewPipe, YouTube, Android, press, media">
+    <meta name="description" content="{% if page.metades %}{{ page.metades | append:"0"}}{% else if layout.metades %}{{ layout.metades |append:"1" }}{% else %}Welcome to the website of NewPipe the lightweight YouTube experience for Android.{% endif %}">
+    <meta name="keywords" content="NewPipe, YouTube, Android, player, background, popup, privacy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
     <meta property="og:site_name" content="NewPipe">
-    <meta property="og:title" content="{% if page.metatitle %}{{ page.metatitle }}{% else %}Press kit - NewPipe. a free YouTube client{% endif %}">
+    <meta property="og:title" content="{% if page.metatitle %}{{ page.metatitle }}{% else if layout.metatitle %}{{ layout.metatitle }}{% else %}NewPipe. a free YouTube client{% endif %}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/logo_400.png">
@@ -18,14 +19,14 @@
     <meta property="og:image:height" content="400">
     <meta property="og:image:type" content="image/png">
 
-    <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="icon" sizes="64x64" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/news.rss"/>
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="icon" sizes="64x64">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/news.rss">
 
     <!-- JQuery -->
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <link href="{{ site.baseurl }}/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ site.baseurl }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,15 +36,15 @@
     <![endif]-->
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/print.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/print.css">
 
     <!-- custom stylesheets -->
     {% for stylesheet in include.extraCSS -%}
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{{ stylesheet }}" />
-    {% endfor -%}
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{{ stylesheet }}">
+    {% endfor %}
 
 </head>
 <body{% if include.bodyID %} id="{{ include.bodyID }}"{% endif %}>
