@@ -325,7 +325,20 @@ h3 > a > i.fa-chevron-left {
     }
     #tutorial section figure.vertical > figcaption li {
         line-height: 2;
+    }
+    #tutorial section figure.vertical > figcaption li,
+    #tutorial section figure.vertical > figcaption ol p,
+    #tutorial section figure.vertical > figcaption ul p {
         font-size: 110%;
+    }
+    #tutorial section figure.vertical > figcaption li + p {
+        margin-top: 10px;
+    }
+    #tutorial section figure.vertical > figcaption .inside {
+        list-style-position: inside;
+    }
+    #tutorial section figure.vertical > figcaption .inside li {
+        padding-left: 1em;
     }
     #tutorial section figure ~ :not(figure) {
         clear: left;
@@ -369,4 +382,11 @@ code {
 .improve-faq-hint > .fa {
     font-size: 150%;
     margin-right: 15px;
+}
+hr.separator {
+    border-top: 15px solid #e2dee0;
+    margin-left: -150px;
+    width: calc(100% + 300px);
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
