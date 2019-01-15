@@ -27,7 +27,6 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - html-proofer
 exclude:
   - Gemfile
   - Gemfile.lock
