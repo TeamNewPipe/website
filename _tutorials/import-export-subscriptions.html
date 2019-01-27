@@ -1,0 +1,112 @@
+---
+categories:
+- download
+type: tutorial
+title: "Import / Export Subscriptions and NewPipe data"
+---
+<section>
+    <p class="text-info">This subscription page and tab show you the list of your subscribed channels. Tap on a channel to view the list of videos on the channel. We need to start here to import your subscriptions.</p>
+
+    <div class="row is-flex figure-wrapper">
+        <figure class="vertical">
+            <img src="/img/screenshots/shot_subscriptions_tab_highlight_import_export_light.png" class="img-responsive screenshot" />
+            <figcaption>
+                <ul class="inside">
+                    <p>We show you how to </p>
+                    <li><a href="#import-youtube">import YouTube subscriptions</a></li>
+                    <li><a href="#import-soundcloud">import SoundCloud subscriptions</a></li>
+                    <li><a href="#import-np-export">import from previous NewPipe export</a></li>
+                    <li><a href="#export-subscriptions">export your subscriptions as a backup</a></li>
+                    <li><a href="#export-database">export all NewPipe data as a backup</a></li>
+                    <p>On the subscriptions page, tap on Import / Export to get started.</p>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+
+    <hr class="separator">
+
+    <h3 id="import-youtube">Import YouTube subscriptions</h3>
+
+    <!--<div class="row is-flex figure-wrapper">
+        <figure>
+            <img src="/img/screenshots/shot_navigation_drawer_light.png" class="img-responsive screenshot" />
+            <figcaption>Go to the <a href="https://www.youtube.com/subscription_manager?action_takeout=1">YouTube subscriptions manager</a>.</figcaption>
+        </figure>
+        <figure>
+            <img src="/img/screenshots/shot_settings_categories_light.png" class="img-responsive" />
+            <figcaption>Log in if asked.</figcaption>
+        </figure>
+        <figure>
+            <img src="/img/screenshots/shot_settings_content_autoplay_light.png" class="img-responsive" />
+            <figcaption>A download will start. It contains your exported YouTube subscriptions.</figcaption>
+        </figure>
+        <figure>
+            <img src="/img/screenshots/shot_settings_content_autoplay_light.png" class="img-responsive" />
+            <figcaption>Go back to NewPipe and tap on the import file at the bottom of the screen. Now, select your downloaded YouTube export file.</figcaption>
+        </figure>
+    </div>-->
+
+    <div class="row is-flex figure-wrapper">
+        <figure class="vertical">
+            <img src="/img/screenshots/shot_subscriptions_export_light.png" class="img-responsive screenshot" />
+            <figcaption>
+                <ul class="inside">
+                    <li>Go to the <a href="https://www.youtube.com/subscription_manager?action_takeout=1">YouTube subscriptions manager</a>.</li>
+                    <li>Log in if asked.</li>
+                    <li>A download will start. It contains your exported YouTube subscriptions.</li>
+                    <li>Go back to NewPipe and tap on the import file at the bottom of the screen. Now, select your downloaded YouTube export file.</li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!--<ol>
+        <li>Go to the <a href="https://www.youtube.com/subscription_manager?action_takeout=1">YouTube subscriptions manager</a>.</li>
+        <li>Log in if asked.</li>
+        <li>A download will start (that’s the export file from your YouTube profile).</li>
+        <li>Go back to NewPipe and tap on the import file at the bottom of the page. Now, select your downloaded YouTube export file.</li>
+    </ol>-->
+
+    <hr class="separator">
+
+    <h3 id="import-soundcloud">Import SoundCloud subscriptions</h3>
+
+    <div class="row is-flex figure-wrapper">
+        <figure class="vertical">
+            <img src="/img/screenshots/shot_subscriptions_import_soundcloud_overview_light.png" class="img-responsive screenshot" />
+            <figcaption>
+                <ul class="inside">
+                    <li>Go to your <a href="https://soundcloud.com/you">SoundCloud profile overview page</a> and make sure to enable desktop mode. Otherwise you might get an error because the page does not exists in the mobile version of the SoundCloud website.</li>
+                    <li>Log in when asked.</li>
+                    <li>Copy the profile URL, you were directed to.</li>
+                    <li>Go back to NewPipe and paste the URL to the input field. Tap import at the bottom of the page.</li>
+                </ul>
+            </figcaption>
+        </figure>
+    </div>
+
+    <!--<ol>
+        <li>Go to your <a href="https://soundcloud.com/you">SoundCloud profile overview page</a> and make sure to enable desktop mode.</li>
+        <li>Log in when asked.</li>
+        <li>Copy the profile URL, you were directed to.</li>
+        <li>Go back to NewPipe and paste the URL to the input field. Tap import at the bottom of the page.</li>
+    </ol>-->
+
+    <hr class="separator">
+
+    <h3 id="import-np-export">Import NewPipe backup</h3>
+    <p>Tap on previous export, to select one of your previous exported files.</p>
+    <p class="text-warning"><b>Warning: This will override your current subscriptions.</b></p>
+
+    <hr class="separator">
+
+    <h3 id="export-subscriptions">Export and backup your subscriptions</h3>
+    <p>This allows you to create a JSON file, of your YouTube/SoundCloud subscriptions. These backups can be imported to restore your subscriptions.</p>
+
+    <hr class="separator">
+
+    <h3 id="export-database">Export and backup all NewPipe data</h3>
+    <p>In case you want to use NewPipe on several devices and keep your subscriptions synchronized, you can import this file on another device, too. It is also possible to export the complete local database which contains not only your subscriptions, but also your search and watch history (only if enabled by you) and local playlists. To do so, go to the settings, open the <code><img src="/img/icons/baseline-language-24px.svg" > Content</code> category and tap on <code>Export database</code>.</p>
+    <p>To import this backup, tap on <code>Import database</code>. <span class="text-warning"><b>Warning: this will override your current app database and cannot be undone.</b></span></p>
+</section>
