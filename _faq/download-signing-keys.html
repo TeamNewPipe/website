@@ -6,6 +6,6 @@ title: "Upgrading NewPipe fails"
 ---
 <section>
     <p>This might happen because you installed the F-Droid version and want to update with an APK from GitHub or vice versa. Android blocks an app upgrade when the signing keys of the installed and the upgrading APK differ. The idea behind this is to protect users from apps which do not come from the original developer and therefore might be malware and a security risk for the user.</p>
-    <p>This means, you need to either get the APK from the correct source or backup your NewPipe database, uninstall and reinstall the app.</p>
+    <p>This means, you need to either get the APK from the correct source or backup your NewPipe database, uninstall and reinstall the app. A <b class="text-danger">backup is necessary</b>, otherwise you will <b>loose your current app data</b> including your subscriptions, history, playlists and settings. If you need help with this, please follow <a href="tutorials/import-export-subscriptions/#">this tutorial</a>.</p>
     <p>The overall solution to this problem is to configure and set up reproducible builds for NewPipe in F-Droid. We are working on this together with F-Droid developers and you can follow its progress <a href="https://github.com/TeamNewPipe/NewPipe/issues/1981">here</a>.</p>
 </section>
