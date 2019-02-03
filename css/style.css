@@ -459,6 +459,14 @@ strong.extra {
     }
 }
 
+/* hide brand text and search bar in nav to free some space */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-brand > span.pull-left,
+    li.search-container {
+        display: none;
+    }
+}
+
 /********************
   CONTENT TEMPLATES
   ******************/
