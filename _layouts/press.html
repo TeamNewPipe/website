@@ -7,8 +7,9 @@
 # set type: small or type: media in the YAML header of the page.
 ---
 
+{%- assign tit = page.title | append: ": Press kit - NewPipe. a free YouTube client" -%}
 {% include head.html
-           title    = "Press kit - NewPipe. a free YouTube client"
+           title    = tit
            extraCSS = "press.css" %}
 
 {%- assign blink=site.baseurl | append: "press/" -%}

@@ -8,7 +8,11 @@
     {%- assign metatit = layout.metatitle | append: "e" %}{% assign notPage = 3 %}{% endunless %}{% endunless -%}
 {%- endif -%}
 
-{%- assign tit = page.title | default: metatit -%}
+{%- if include.title -%}
+    {%- assign tit = include.title -%}
+{%- else -%}
+    {%- assign tit = page.title | default: metatit -%}
+{%- endif -%}
 
 {%- assign des = site.description -%}
 {%- assign notPage = 1 -%}
