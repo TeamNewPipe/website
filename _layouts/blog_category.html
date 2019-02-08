@@ -2,7 +2,7 @@
 title: "Blog - NewPipe. a free YouTube client"
 metades: "Welcome to the blog of NewPipe the lightweight YouTube experience for Android."
 ---
-{% include head.html %}
+{%- include head.html extraCSS = "blog.css" -%}
 
 {%- assign blink=site.baseurl | append: "blog/" -%}
 {% include nav.html brand="Blog" brandLink=blink search=true active="blog" %}
