@@ -1,11 +1,31 @@
-{%- assign single = "metatitle,metades,bodyPage" -%}
-{%- assign multi = "extraCSS,extraScript" -%}
-{%- assign notPage = 1 -%}
+{{
+# This script builds the head of a site, including opening <html> tag, a complete <head> and an open <body> tag.
+# Following parameters are allowed:
+# title    The text to print in between <title></title>.
+# extraCSS Additional CSS files from /css/ can be added to the <head>. style.css and print.css are always included.
+# bodyID   HTML id attribute for the <body> tag.
+# page     Optional <div id="page"> tag to allow easy use of CSS flex boxes or other styles.
+           Must be closed via the footer include. Default: False
+#
+# Unfortunately, there were problems with identifying whether a variable has been set no the page or not.
+# We therefore need these hacks to print the correct values.
+}}
+
+{%- assign notPage = True -%}
 {%- assign metatit = "NewPipe - a free YouTube client" -%}
-{%- if page.metatitle %}{% unless page.metatitle == "" -%}{%- unless page.metatitle == nil -%}
-    {%- assign metatit = page.metatitle -%}{%- assign notPage = 2 -%}{%- endunless %}{% endunless -%}
-{%- else if layout.metatitle AND notPage == 1 %}{% unless layout.metatitle == "" %}{% unless page.metatitle == nil -%}
-    {%- assign metatit = layout.metatitle | append: "e" %}{% assign notPage = 3 %}{% endunless %}{% endunless -%}
+{%- if page.metatitle -%}
+    {%- unless page.metatitle == "" -%}
+        {%- unless page.metatitle == nil -%}
+            {%- assign metatit = page.metatitle -%}
+            {%- assign notPage = False -%}
+        {%- endunless -%}
+    {%- endunless -%}
+{%- else if layout.metatitle AND notPage == True -%}
+    {%- unless layout.metatitle == "" -%}
+        {%- unless page.metatitle == nil -%}
+            {%- assign metatit = layout.metatitle | append: "e" -%}
+        {%- endunless -%}
+    {%- endunless -%}
 {%- endif -%}
 
 {%- if include.title -%}
@@ -15,11 +35,20 @@
 {%- endif -%}
 
 {%- assign des = site.description -%}
-{%- assign notPage = 1 -%}
-{%- if page.metades %}{% unless page.metades == "" -%}{%- unless page.metades == nil -%}
-{%- assign des = page.metades -%}{%- assign notPage = 2 -%}{%- endunless %}{% endunless -%}
-{%- else if layout.metades AND notPage == 1 %}{% unless layout.metades == "" %}{% unless page.metades == nil -%}
-{%- assign des = layout.metades | append: "e" %}{% assign notPage = 3 %}{% endunless %}{% endunless -%}
+{%- assign notPage = True -%}
+    {%- if page.metades -%}
+        {%- unless page.metades == "" -%}
+            {%- unless page.metades == nil -%}
+                {%- assign des = page.metades -%}
+                {%- assign notPage = False -%}
+            {%- endunless -%}
+        {%- endunless -%}
+{%- else if layout.metades AND notPage == True -%}
+    {%- unless layout.metades == "" -%}
+        {%- unless page.metades == nil -%}
+            {%- assign des = layout.metades | append: "e" -%}
+        {%- endunless -%}
+    {%- endunless -%}
 {%- endif -%}
 
 <!DOCTYPE html>

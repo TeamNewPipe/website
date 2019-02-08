@@ -1,3 +1,10 @@
+{{
+# Closes page and handles scripts for several sub pages
+# Following parameters are allowed:
+# page        Closes the optional <div id="page"> tag. Default: False
+# extraScript Additional scripts from the /js/ directory to append to the site
+}}
+
     {% if include.page == "False" %}{% else %}</div> <!-- page -->{% endif %}
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
