@@ -23,15 +23,15 @@
 {%- else if layout.metatitle AND notPage == True -%}
     {%- unless layout.metatitle == "" -%}
         {%- unless page.metatitle == nil -%}
-            {%- assign metatit = layout.metatitle | append: "e" -%}
+            {%- assign metatit = layout.metatitle -%}
         {%- endunless -%}
     {%- endunless -%}
 {%- endif -%}
 
 {%- if include.title -%}
-    {%- assign tit = include.title -%}
+    {%- assign renderedTitle = include.title -%}
 {%- else -%}
-    {%- assign tit = page.title | default: metatit -%}
+    {%- assign renderedTitle = page.title | default: metatit -%}
 {%- endif -%}
 
 {%- assign des = site.description -%}
@@ -46,7 +46,7 @@
 {%- else if layout.metades AND notPage == True -%}
     {%- unless layout.metades == "" -%}
         {%- unless page.metades == nil -%}
-            {%- assign des = layout.metades | append: "e" -%}
+            {%- assign des = layout.metades -%}
         {%- endunless -%}
     {%- endunless -%}
 {%- endif -%}
@@ -54,7 +54,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{{ tit }}</title>
+    <title>{{ renderedTitle }}</title>
 
     <meta name="author" content="Christian Schabesberger, NewPipe">
     <meta name="description" content="{{ des }}">

@@ -18,7 +18,7 @@
 
 {%- assign bID = page.bodyID | default: layout.bodyID -%}
 {%- assign bPage = page.bodyPage | default: layout.bodyPage -%}
-{%- assign bFooterPuffer = page.footerPuffer | default: layout.footerPuffer -%}
+{%- assign bFooterBuffer = page.footerBuffer | default: layout.footerBuffer -%}
 
 {%- assign hNavBrand = page.navBrand | default: layout.navBrand -%}
 {%- assign hNavBrandLink = page.navBrandLink | default: layout.navBrandLink -%}
@@ -40,7 +40,7 @@
 {{ content }}
 
 {% include footer.html
-           puffer = bFooterPuffer %}
+           buffer = bFooterBuffer %}
 {% include page_end.html
            page        = bPage
            extraScript = page.extraScript -%}

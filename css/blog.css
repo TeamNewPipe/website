@@ -413,8 +413,8 @@ strong.extra {
     top: -45px;
 }
 
-#footer .image-puffer,
-.image-puffer {
+#footer .image-buffer,
+.image-buffer {
     padding-bottom: 70px;
 }
 
@@ -526,7 +526,7 @@ strong.extra {
         -moz-box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.175), 4px 0 4px 0 rgba(0, 0, 0, 0.175);
         box-shadow: -4px 0 4px 0 rgba(0, 0, 0, 0.175), 4px 0 4px 0 rgba(0, 0, 0, 0.175);
     }
-    .image-puffer {
+    .image-buffer {
         display: block;
     }
 }

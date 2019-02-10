@@ -3,13 +3,13 @@ body {
 }
 
 body,
-footer .image-puffer {
+footer .image-buffer {
     background: #f3eff2;
 }
 
 @media (min-width: 768px) {
     body,
-    footer .image-puffer {
+    footer .image-buffer {
         background: #E2DEE0;
     }
 }

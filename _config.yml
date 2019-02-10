@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: NewPipe - the lightweight streaming experience for Android.
 email: tnp@schabi.org
-description: Welcome to NewPipe the lightweight YouTube experience for Android.
+description: Welcome to NewPipe, the lightweight YouTube experience for Android.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://newpipe.schabi.org" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  TeamNewPipe
