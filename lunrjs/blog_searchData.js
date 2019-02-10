@@ -1,14 +1,14 @@
 ---
-# Generates the data for the search as JSON
+# Generates the data for the blog search as JSON
 #
 # There were some problems using Jekyll's "excerpt" variable which returns an excerpt of the post.
 # By default that excerpt just captures the first paragraph of the post.
 # There is the possibility to set the number of paragraphs an excerpt contains in EVERY SINGLE post.
 # That is not flexible and good when there is a larger number of posts.
-# Because we want two paragraphs we needed this hack.
+# Because we want two paragraphs, we need the following hack.
 #
-# Basically this takes the whole content of the post, splits it at the end of each paragraph
-# and only prints the first two.
+# Basically take the whole content of the post, split it at the end of each paragraph
+# and only print the first two paragraphs.
 ---
 window.store = {
 {%- for post in site.posts -%}
