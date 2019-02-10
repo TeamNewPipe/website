@@ -1,8 +1,12 @@
-{%- assign css = "blog.css,comments.css" | split: "," -%}
-{%- include head.html extraCSS = css -%}
-
-{%- assign blink=site.baseurl | append: "blog/" -%}
-{% include nav.html brand="Blog" brandLink=blink search=true active="blog" %}
+---
+layout: default
+extraCSS: [blog.css,comments.css]
+bodyID: "blog-post-list"
+navBrand: Blog
+navBrandLink: blog/
+navActive: blog
+footerBuffer: False
+---
 
 <div class="post-collection height-full-parent">
     <div class="container height-full-parent height-full">
@@ -24,6 +28,3 @@
     </div>
 </div>    
 
-{% include footer.html buffer=False %}
-
-{% include page_end.html %}
