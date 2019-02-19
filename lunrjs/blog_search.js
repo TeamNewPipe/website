@@ -3,23 +3,24 @@
 ---
 
 
-var siteBaseUrl = "{{ site.baseurl }}";
-function displaySearchResults(results, store) {
-    var searchResults = document.getElementById('search-results');
+const siteBaseUrl = "{{ site.baseurl }}";
+
+function renderSearchResults(results, store) { // rendering search results could be done with Jade or JSX in the future
+    let searchResults = document.getElementById('search-results');
 
     if (results.length) { // Are there any results?
-        var appendString = '';
+        let appendString = '';
 
-        for (var i = 0; i < results.length; i++) {  // Iterate over the results
-            var item = store[results[i].ref];
+        for (let i = 0; i < results.length; i++) {  // Iterate over the results
+            let item = store[results[i].ref];
             appendString += '<div class="border-box anchor-right-full-parent">'
                 + '<h4><a href="' + item.url + '">' + item.title + '</a></h4>'
                 + '<p><span>' + item.date+ ', by ' + item.author + '</span></p><br>';
-            if (item.image != "") {
+            if (item.image !== "") {
                 appendString += '<div class="row">\n'
                     + '        <a href="' + item.url + '">\n'
                     + '            <div class="col-md-3 col-img">\n'
-                    + '                <img src="' + item.image + '" class="img-responsive postImg" />\n'
+                    + '                <img src="' + item.image + '" alt="post thumbnail" class="img-responsive postImg" />\n'
                     + '            </div>\n'
                     + '        </a>\n'
                     + '        <div class="col-md-9">'
@@ -45,12 +46,14 @@ function displaySearchResults(results, store) {
 }
 
 function getCategories(item) {
-    var categ = "";
-    if(item.category.length != 0) {
+    let categ = "";
+    if (item.category.length !== 0) {
         categ += '<p class="categories">';
-        for(var c = 0; c < item.category.length; c++) {
-            categ += '<a href="/' + siteBaseUrl + item.category[c].toLowerCase() + '"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;' + item.category[c] + '</a>';
-            if(item.category.length - c != 1) //not the last item
+        for (let c = 0; c < item.category.length; c++) {
+            categ += '<a href="/' + siteBaseUrl + "blog/"
+                + item.category[c].toLowerCase() + '"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;'
+                + item.category[c] + '</a>';
+            if (item.category.length - c !== 1) //not the last item
                 categ += " &nbsp;|&nbsp; ";
         }
         categ += "</p>";
@@ -59,11 +62,11 @@ function getCategories(item) {
 }
 
 function getQueryVariable(variable) {
-    var query = window.location.search.substring(1);
-    var vars = query.split('&');
+    let query = window.location.search.substring(1);
+    let vars = query.split('&');
 
-    for (var i = 0; i < vars.length; i++) {
-        var pair = vars[i].split('=');
+    for (let i = 0; i < vars.length; i++) {
+        let pair = vars[i].split('=');
 
         if (pair[0] === variable) {
             return decodeURIComponent(pair[1].replace(/\+/g, '%20'));
@@ -71,19 +74,20 @@ function getQueryVariable(variable) {
     }
 }
 function search(type) {
-    if(type == "manual")
+    let searchTerm = false;
+    if (type === "manual")
         searchTerm = document.getElementById('search-box').value;
-    else if(type == "onload")
-        var searchTerm = getQueryVariable('s');
+    else if (type === "onload")
+        searchTerm = getQueryVariable('s');
     else
-        var searchTerm = getQueryVariable('s');
+        searchTerm = getQueryVariable('s');
 
     if (searchTerm) {
         document.getElementById('search-box').setAttribute("value", searchTerm);
 
-        // Initalize lunr with the fields it will be searching on. I've given title
+        // Initialize lunr with the fields it will be searching on. I've given title
         // a boost of 10 to indicate matches on this field are more important.
-        var idx = lunr(function () {
+        let idx = lunr(function () {
             this.field('id');
             this.field('title', { boost: 10 });
             this.field('author');
@@ -93,7 +97,7 @@ function search(type) {
             this.field('excerpt', { boost: 2 });
         });
 
-        for (var key in window.store) { // Add the data to lunr
+        for (let key in window.store) { // Add the data to lunr
             idx.add({
                 'id': key,
                 'title': window.store[key].title,
@@ -104,8 +108,8 @@ function search(type) {
                 'excerpt': window.store[key].excerpt
             });
 
-            var results = idx.search(searchTerm); // Get lunr to perform a search
-            displaySearchResults(results, window.store); // We'll write this in the next section
+            let results = idx.search(searchTerm); // Get lunr to perform a search
+            renderSearchResults(results, window.store); // We'll write this in the next section
         }
     }
 }

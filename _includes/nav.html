@@ -1,6 +1,4 @@
 {{
-# Authors:  Tobias Groza and Team NewPipe 2018
-#
 # Include for top navigation bar
 # Following parameters are allowed:
 # brand     The title will be showed next to the NewPipe logo and the word "NewPipe" on the left side of the nav bar.
@@ -24,7 +22,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{% if include.brandLink %}{{ site.baseurl }}/{{ include.brandLink }}{% else %}#{% endif%}">
+                    <a class="navbar-brand" href="
+                    {%- if include.brandLink -%}{{ site.baseurl }}/{{ include.brandLink }}
+                    {%- else -%}{{ site.baseurl }}/{%- endif -%}
+                    ">
                         <img src="{{ site.baseurl }}/img/logo.svg" class="img-circle border-white navbar-logo pull-left" alt="NewPipe logo" />
                         <span class="pull-left">NewPipe{% if include.brand %} {{ include.brand }}{% endif %}</span>
                     </a>
@@ -48,7 +49,7 @@
                         </li>
                         {%- endif %}
                         <li{% if include.active == "home" %} class="active"{% endif %}><a href="{{ site.baseurl }}/">Home</a></li>
-                        <li{% if include.active == "FAQ" %} class="active"{% endif %}><a href="{{ site.baseurl }}/FAQ/">FAQ <span class="badge">BETA</span></a></li>
+                        <li{% if include.active == "FAQ" %} class="active"{% endif %}><a href="{{ site.baseurl }}/FAQ/">FAQ</a></li>
                         <li{% if include.active == "blog" %} class="active"{% endif %}><a href="{{ site.baseurl }}/blog/">Blog</a></li>
                         <li{% if include.active == "press" %} class="active"{% endif %}><a href="{{ site.baseurl }}/press/">Press</a></li>
                         <li><a href="https://github.com/TeamNewPipe/NewPipe/">GitHub</a></li>

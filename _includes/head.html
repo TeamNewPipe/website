@@ -1,16 +1,69 @@
+{{
+# This script builds the head of a site, including opening <html> tag, a complete <head> and an open <body> tag.
+# Following parameters are allowed:
+# title    The text to print in between <title></title>.
+# extraCSS Additional CSS files from /css/ can be added to the <head>. style.css and print.css are always included.
+# bodyID   HTML id attribute for the <body> tag.
+# page     Optional <div id="page"> tag to allow easy use of CSS flex boxes or other styles.
+           Must be closed via the footer include. Default: False
+#
+# Unfortunately, there were problems with identifying whether a variable has been set no the page or not.
+# We therefore need these hacks to print the correct values.
+}}
+
+{%- assign notPage = True -%}
+{%- assign metatit = "NewPipe - a free YouTube client" -%}
+{%- if page.metatitle -%}
+    {%- unless page.metatitle == "" -%}
+        {%- unless page.metatitle == nil -%}
+            {%- assign metatit = page.metatitle -%}
+            {%- assign notPage = False -%}
+        {%- endunless -%}
+    {%- endunless -%}
+{%- else if layout.metatitle AND notPage == True -%}
+    {%- unless layout.metatitle == "" -%}
+        {%- unless page.metatitle == nil -%}
+            {%- assign metatit = layout.metatitle -%}
+        {%- endunless -%}
+    {%- endunless -%}
+{%- endif -%}
+
+{%- if include.title -%}
+    {%- assign renderedTitle = include.title -%}
+{%- else -%}
+    {%- assign renderedTitle = page.title | default: metatit -%}
+{%- endif -%}
+
+{%- assign des = site.description -%}
+{%- assign notPage = True -%}
+    {%- if page.metades -%}
+        {%- unless page.metades == "" -%}
+            {%- unless page.metades == nil -%}
+                {%- assign des = page.metades -%}
+                {%- assign notPage = False -%}
+            {%- endunless -%}
+        {%- endunless -%}
+{%- else if layout.metades AND notPage == True -%}
+    {%- unless layout.metades == "" -%}
+        {%- unless page.metades == nil -%}
+            {%- assign des = layout.metades -%}
+        {%- endunless -%}
+    {%- endunless -%}
+{%- endif -%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% if page.metatitle %}{{ page.metatitle }}{% else %}Press kit - NewPipe. a free YouTube client{% endif %}</title>
+    <title>{{ renderedTitle }}</title>
 
     <meta name="author" content="Christian Schabesberger, NewPipe">
-    <meta name="description" content="{% if page.metades %}{{ page.metades }}{% else %}Welcome to the press kit of NewPipe the lightweight YouTube experience for Android.{% endif %}">
-    <meta name="keywords" content="NewPipe, YouTube, Android, press, media">
+    <meta name="description" content="{{ des }}">
+    <meta name="keywords" content="NewPipe, YouTube, Android, player, background, popup, privacy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
     <meta property="og:site_name" content="NewPipe">
-    <meta property="og:title" content="{% if page.metatitle %}{{ page.metatitle }}{% else %}Press kit - NewPipe. a free YouTube client{% endif %}">
+    <meta property="og:title" content="{{ metatit }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/logo_400.png">
@@ -18,29 +71,35 @@
     <meta property="og:image:height" content="400">
     <meta property="og:image:type" content="image/png">
 
-    <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="icon" sizes="64x64" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/news.rss"/>
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico" type="icon" sizes="64x64">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/news.rss">
+    <link rel="alternate" type="application/atom+xml" title="ATOM" href="/blog/feeds/news.atom">
 
     <!-- JQuery -->
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
 
     <!-- Bootstrap -->
-    <link href="{{ site.baseurl }}/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="{{ site.baseurl }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
     <![endif]-->
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/press.css" />
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/print.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/print.css">
+
+    <!-- custom stylesheets -->
+    {% for stylesheet in include.extraCSS -%}
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{{ stylesheet }}">
+    {% endfor %}
 
 </head>
-<body>
-<div id="page">
+<body{% if include.bodyID %} id="{{ include.bodyID }}"{% endif %}>
+{% if include.page == "False" %}{% else %}<div id="page">{% endif %}

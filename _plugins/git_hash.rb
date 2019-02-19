@@ -1,7 +1,7 @@
 module Jekyll
 
     #
-    # Show the hash of HEAD.
+    # Show the hash of current Git HEAD.
     #
     class GitHash < Liquid::Tag
         include Jekyll::LiquidExtensions

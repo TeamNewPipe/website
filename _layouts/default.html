@@ -1,7 +1,46 @@
-{% include head.html %}
-{% include nav.html %}
+{%- capture CSS -%}
+{%- for layCSS in layout.extraCSS -%}{{ layCSS }}{% if forloop.last == false %}#{% endif %}{%- endfor -%}
+{%- for pageCSS in page.extraCSS -%}{{ pageCSS }}{% if forloop.last == false %}#{% endif %}{%- endfor -%}
+{%- endcapture -%}
+{%- assign newCSS = CSS | split: "#" -%}
+
+{%- if layout.bodyID -%}{%- if layout.bodyID != "" -%}{%- if layout.bodyID != NIL -%}
+{%- assign bID = layout.bodyID -%}{% endif %}{% endif %}
+{%- else -%}
+{%- assign bID = page.bodyID -%}
+{%- endif -%}
+
+{%- if layout.bodyPage -%}{%- if layout.bodyPage != "" -%}{%- if layout.bodyPage != NIL -%}
+{%- assign bPage = layout.bodyPage -%}{% endif %}{% endif %}
+{%- else -%}
+{%- assign bPage = page.bodyPage -%}
+{%- endif -%}
+
+{%- assign bID = page.bodyID | default: layout.bodyID -%}
+{%- assign bPage = page.bodyPage | default: layout.bodyPage -%}
+{%- assign bFooterBuffer = page.footerBuffer | default: layout.footerBuffer -%}
+
+{%- assign hNavBrand = page.navBrand | default: layout.navBrand -%}
+{%- assign hNavBrandLink = page.navBrandLink | default: layout.navBrandLink -%}
+{%- assign hNavActive = page.navActive | default: layout.navActive -%}
+{%- assign hNavPosition = page.navPosition | default: layout.navPosition -%}
+{%- assign hNavSearch = page.navSearch | default: layout.navSearch -%}
+
+{%- include head.html
+           extraCSS = newCSS
+           bodyID   = bID
+           page     = bPage %}
+{% include nav.html
+           brand     = hNavBrand
+           brandLink = hNavBrandLink
+           active    = hNavActive
+           position  = hNavPosition
+           search    = hNavSearch %}
 
 {{ content }}
 
-{% include footer.html %}
-{% include blog_page_end.html %}
+{% include footer.html
+           buffer = bFooterBuffer %}
+{% include page_end.html
+           page        = bPage
+           extraScript = page.extraScript -%}

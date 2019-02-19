@@ -1,7 +1,7 @@
 html,
 body {
     min-height: 100%;
-    font-family: Arial;
+    font-family: 'Arial';
 }
 
 body.modal-open {
@@ -911,6 +911,7 @@ ul.check > li.heart:before {
 .tiles-container {
     background: #f3eff2;
     padding-bottom: 30px;
+    line-height: 1.5;
 }
 
 .tiles-container a {
@@ -1027,10 +1028,6 @@ ul.check > li.heart:before {
        The first element (p) has a line-height of 24px.
        This fixes the baseline of both tiles. */
     padding-top: 4px;
-}
-
-.tiles-container {
-    line-height: 1.5;
 }
 
 #user-voices.tile {
@@ -1389,7 +1386,7 @@ button.action.black:focus {
     top: -45px;
 }
 
-.image-puffer {
+.image-buffer {
     padding-bottom: 70px;
     background-color: #E2DEE0;
 }

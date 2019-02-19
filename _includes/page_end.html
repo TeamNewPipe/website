@@ -1,15 +1,24 @@
-</div> <!-- page -->
+{{
+# Closes page and handles scripts for several sub pages
+# Following parameters are allowed:
+# page        Closes the optional <div id="page"> tag. Default: False
+# extraScript Additional scripts from the /js/ directory to append to the site
+}}
+
+    {% if include.page == "False" %}{% else %}</div> <!-- page -->{% endif %}
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="{{ site.baseurl }}/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Search optimations -->
+    {% if site.url contains "blog/" %}
+    <!-- Search optimizations -->
     <script>
         /* Prevent search CSS transition on window resize */
 
-        var windowWidth = window.innerWidth;
+        let windowWidth = window.innerWidth;
         document.getElementsByTagName("BODY")[0].onresize = function(){
             /* Only necessary when the user leaves the mobile size */
-            if(windowWidth < window.innerWidth && windowWidth < 767){
+            if (windowWidth < window.innerWidth && windowWidth < 767) {
                 document.getElementById("navigation-search-input").classList.add("noTransition");
                 setTimeout(function(){ document.getElementById("navigation-search-input").classList.remove("noTransition");}, 900);
             }
@@ -20,15 +29,15 @@
         with medium or large screens because search input textfield is hidden when not focused */
 
         $(".nav .search-form").submit(function(e){
-            if($(".nav .search-input").val().replace(/ /g, '').length === 0){
+            if ($(".nav .search-input").val().replace(/ /g, '').length === 0) {
                 e.preventDefault();
                 $(".nav .search-input").addClass("invalid-input");
                 setTimeout(function(){ $(".nav .search-input").removeClass("inavlid-input");}, 10500);
             }
         });
 
-        /* Since we have no form as parrent of the input field, the pressing the enter key
-        does not triger a new search. That's why we call the onclick event of the submit button. */
+        /* Since we have no form as parent of the input field, the pressing the enter key
+        does not trigger a new search. That's why we call the onclick event of the submit button. */
 
         document.getElementById("search-box").addEventListener("keyup", function(event) {
             event.preventDefault();
@@ -44,18 +53,22 @@
          * Corrects the window scroll position
          * because the fixed nav bar needs some space on the top.
          * This makes navigation via HTML anchors difficult,
-         * because a part of the elemnt is hidden behind the navigation bar.
+         * because a part of the element is hidden behind the navigation bar.
          */
         function correctAnchors() {
-            var hash = window.location.hash.substr(1);
+            let hash = window.location.hash.substr(1);
             if (typeof hash == 'undefined' || hash === "" || hash == null) return;
-            var top = $("#" + hash).offset().top;
-            var nav = $("#header").outerHeight(true);
+            let top = $("#" + hash).offset().top;
+            let nav = $("#header").outerHeight(true);
             window.scrollTo(0, top - nav);
         }
         $(window).on("load", correctAnchors);
         $(window).on('hashchange', correctAnchors);
     </script>
+    {% endif %}
 
+    {%- for script in include.extraScript %}
+    <script src="{{ site.baseurl }}/js/{{ script }}" ></script>
+    {% endfor -%}
 </body>
 </html>

@@ -1,4 +1,8 @@
-{% include blog_head.html %}
+---
+title: "Blog - NewPipe. a free YouTube client"
+metades: "Welcome to the blog of NewPipe the lightweight YouTube experience for Android."
+---
+{%- include head.html extraCSS = "blog.css" -%}
 
 {%- assign blink=site.baseurl | append: "blog/" -%}
 {% include nav.html brand="Blog" brandLink=blink search=true active="blog" %}
@@ -40,7 +44,7 @@
 
                 <div class="clearfix"></div>
 
-                <div class="image-puffer"></div>
+                <div class="image-buffer"></div>
             </div>
 
             {% include blog_sidebar.html %}
@@ -51,5 +55,5 @@
 
 {% include footer.html %}
 
-{% include blog_page_end.html %}
+{% include page_end.html %}
 

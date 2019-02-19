@@ -1,0 +1,31 @@
+---
+layout: default
+extraCSS: [blog.css,comments.css]
+bodyID: "blog-post-list"
+navBrand: Blog
+navBrandLink: blog/
+navActive: blog
+navSearch: True
+footerBuffer: False
+---
+
+<div class="post-collection height-full-parent">
+    <div class="container height-full-parent height-full">
+        <div class="row is-flex height-full-child">
+            <div class="col-xs-12 col-sm-8 col-md-9 {% if layout.post %}single-post {% endif -%} border-right">
+
+                <div class="extra-space"></div>
+
+                {{ content }}
+
+                <div class="clearfix"></div>
+
+                <div class="image-buffer"></div>
+            </div>
+
+            {% include blog_sidebar.html %}
+
+        </div>
+    </div>
+</div>    
+
