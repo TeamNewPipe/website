@@ -27,13 +27,15 @@
                     {%- else -%}{{ site.baseurl }}/{%- endif -%}
                     ">
                         <img src="{{ site.baseurl }}/img/logo.svg" class="img-circle border-white navbar-logo pull-left" alt="NewPipe logo" />
-                        <span class="pull-left">NewPipe{% if include.brand %} {{ include.brand }}{% endif %}</span>
+                        <span class="pull-left">NewPipe
+                            {%- if include.brand -%}<span class="navbar-brand-sub hidden-sm"> {{ include.brand }}</span>{%- endif -%}
+                        </span>
                     </a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse navbar-right">
                     <ul class="nav navbar-nav">
                         {%- if include.search %}
-                        <li class="search-container">
+                        <li class="search-container hidden-sm">
                             <a>
                                 <form action="{{ site.baseurl }}/blog/search/" method="get" class="search-form">
                                     <div class="input-group has-error">
@@ -53,8 +55,8 @@
                         <li{% if include.active == "blog" %} class="active"{% endif %}><a href="{{ site.baseurl }}/blog/">Blog</a></li>
                         <li{% if include.active == "press" %} class="active"{% endif %}><a href="{{ site.baseurl }}/press/">Press</a></li>
                         <li><a href="https://github.com/TeamNewPipe/NewPipe/">GitHub</a></li>
+                        <li><a href="https://teamnewpipe.github.io/documentation/">Docs <span class="badge">BETA</span></a></li>
                         <li><a href="https://github.com/TeamNewPipe/NewPipe/releases/">Releases</a></li>
-                        <li><a href="https://github.com/TeamNewPipe/NewPipe/issues/">Issues</a></li>
                     </ul>
                 </div>
             </div>
