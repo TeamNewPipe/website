@@ -23,6 +23,12 @@
         <a href="/blog/feeds/news.atom" class="list-group-item" id="sidebar-feed-link"><i class="fa fa-rss-square" aria-hidden="true"></i> Subscribe to feed</a>
     </div>
 
+    <div class="sidebar-categories categories">
+    {%- for category in site.data.categories %}
+        <p class="text-center"><a href="{{ site.baseurl }}/blog/{{ category.category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category.category }}</a></p>
+    {% endfor %}
+    </div>
+
     <div class="clearfix"></div>
     <div class="search-container">
         <form action="{{ site.baseurl }}/blog/search/" method="get">

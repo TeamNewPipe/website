@@ -47,3 +47,10 @@ defaults:
       type: tutorials
     values:
       layout: tutorial
+
+# blog category pages
+page_gen:
+    - data: categories
+      template: blog_category
+      name: category
+      dir: blog

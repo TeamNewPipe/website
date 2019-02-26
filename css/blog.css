@@ -527,6 +527,21 @@ strong.extra {
     }
 }
 
+.page-title {
+    color: #CD322E;
+    text-align: center;
+}
+
+#blog-category-post-list .page-title {
+    margin-top: 26px;
+    margin-bottom: 35px;
+}
+
+.post-collection .page-title {
+    margin-top: 5px;
+    margin-bottom: 26px;
+}
+
 @media (max-width: 991px) {
     .postImg {
         max-height: 33vh;
@@ -716,8 +731,8 @@ div.search-container input:focus {
     transition: all 0s !important;
 }
 
-.category.post-preview {
-    margin-bottom: 15px;
+.search-container.border-box .input-group {
+    margin-bottom: 10px;
 }
 
 /* Sticky footer */

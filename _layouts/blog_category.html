@@ -1,31 +1,27 @@
 ---
-title: "Blog - NewPipe. a free YouTube client"
-metades: "Welcome to the blog of NewPipe the lightweight YouTube experience for Android."
+#   using the default or blog layout is difficult here,
+#   because page titles depend on multiple variables.
+metades: "Welcome to the blog of NewPipe, the lightweight YouTube experience for Android."
 ---
-{%- include head.html extraCSS = "blog.css" -%}
+{%- assign Ptitle = page.title | append: ": " | append: site.title -%}
+{%- include head.html extraCSS = "blog.css" title = Ptitle bodyID="blog-category-post-list" -%}
 
 {%- assign blink=site.baseurl | append: "blog/" -%}
 {% include nav.html brand="Blog" brandLink=blink search=true active="blog" %}
 
-<div class="post-collection height-full-parent">
-    <div class="container height-full-parent height-full">
-        <div class="row is-flex height-full-child">
-            <div class="col-xs-12 col-sm-8 col-md-9 single-post border-left border-right">
+<div class="post-collection">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-9">
 
-                <div class="extra-space"></div>
-
-                {% if page.title == "pinned" %}
-                <h3>All pinned posts</h3>
-                {% else %}
-                <h3>All {{ page.title | capitalize }}s</h3>
-                {% endif %}
-
-                {% unless page.content == '' %}
-                <p>{{ page.content }}</p>
-                {% endunless %}
+                {%- if page.heading -%}
+                <h3 class="page-title">{{ page.heading }}</h3>
+                {%- else -%}
+                <h3 class="page-title">{{ page.title }}</h3>
+                {%- endif -%}
 
                 {% for post in site.categories[page.category] %}
-                <div class="category post-preview">
+                <div class="category border-box">
                     <a href="{{ post.url | prepend: site.baseurl }}">
                         <h4 class="post-title">{{ post.title }}</h4>
                         {% if post.subtitle %}
@@ -41,10 +37,6 @@ metades: "Welcome to the blog of NewPipe the lightweight YouTube experience for 
                     </p>
                 </div>
                 {% endfor %}
-
-                <div class="clearfix"></div>
-
-                <div class="image-buffer"></div>
             </div>
 
             {% include blog_sidebar.html %}
@@ -53,7 +45,7 @@ metades: "Welcome to the blog of NewPipe the lightweight YouTube experience for 
     </div>
 </div>
 
-{% include footer.html %}
+{% include footer.html buffer="True" %}
 
 {% include page_end.html %}
 
