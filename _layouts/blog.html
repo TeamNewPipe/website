@@ -6,26 +6,35 @@ navBrand: Blog
 navBrandLink: blog/
 navActive: blog
 navSearch: True
-footerBuffer: False
+footerBuffer: "True"
 ---
 
-<div class="post-collection height-full-parent">
-    <div class="container height-full-parent height-full">
-        <div class="row is-flex height-full-child">
-            <div class="col-xs-12 col-sm-8 col-md-9 {% if layout.post %}single-post {% endif -%} border-right">
-
-                <div class="extra-space"></div>
+<div class="post-collection">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-9 {%- if layout.post %} border-box single-post{% endif -%}">
 
                 {{ content }}
 
-                <div class="clearfix"></div>
-
-                <div class="image-buffer"></div>
             </div>
 
             {% include blog_sidebar.html %}
 
         </div>
     </div>
-</div>    
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.border-box').click(function (event) {
+            if (event.target.nodeName === 'a' || event.target.nodeName === 'A'
+                || event.target.tagName === 'a' || event.target.tagName === 'A') {
+                return;
+            }
+            let url = $(this).attr('data-href');
+            if (url !== "" && url.startsWith("{{ site.url }}"))
+                window.location.href = url;
+        });
+    });
+</script>
 

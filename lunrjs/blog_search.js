@@ -2,8 +2,8 @@
 
 ---
 
-
-const siteBaseUrl = "{{ site.baseurl }}";
+const SITE_URL = "{{ site.url }}";
+const SITE_BASE_URL = "{{ site.baseurl }}";
 
 function renderSearchResults(results, store) { // rendering search results could be done with Jade or JSX in the future
     let searchResults = document.getElementById('search-results');
@@ -13,7 +13,7 @@ function renderSearchResults(results, store) { // rendering search results could
 
         for (let i = 0; i < results.length; i++) {  // Iterate over the results
             let item = store[results[i].ref];
-            appendString += '<div class="border-box anchor-right-full-parent">'
+            appendString += '<div class="border-box" data-href="' + SITE_URL + '">'
                 + '<h4><a href="' + item.url + '">' + item.title + '</a></h4>'
                 + '<p><span>' + item.date+ ', by ' + item.author + '</span></p><br>';
             if (item.image !== "") {
@@ -25,8 +25,8 @@ function renderSearchResults(results, store) { // rendering search results could
                     + '        </a>\n'
                     + '        <div class="col-md-9">'
                     + '            ' + item.excerpt
-                    + '<p><a href="' + item.url + '">Read more...</a></p>'
-                    + getCategories(item)
+                    + '            <p><a href="' + item.url + '">Read more...</a></p>'
+                    + '            ' + getCategories(item)
                     + '        </div>'
                     + '    </div>'; // row
             } else {
@@ -41,7 +41,7 @@ function renderSearchResults(results, store) { // rendering search results could
 
         searchResults.innerHTML = appendString;
     } else {
-        searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p><br></div>';
+        searchResults.innerHTML = '<div id="no-search-results" class="border-box"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No posts found</p><br></div>';
     }
 }
 
@@ -50,11 +50,9 @@ function getCategories(item) {
     if (item.category.length !== 0) {
         categ += '<p class="categories">';
         for (let c = 0; c < item.category.length; c++) {
-            categ += '<a href="/' + siteBaseUrl + "blog/"
+            categ += '<a href="/' + SITE_BASE_URL + "blog/"
                 + item.category[c].toLowerCase() + '"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;'
                 + item.category[c] + '</a>';
-            if (item.category.length - c !== 1) //not the last item
-                categ += " &nbsp;|&nbsp; ";
         }
         categ += "</p>";
     }
