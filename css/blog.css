@@ -435,10 +435,31 @@ strong.extra {
     color: #cd201f;
 }
 
-.single-post {
-    padding-left: 30px;
-    padding-right: 30px;
+/* remove one border and add 1px additional padding */
+.single-post.border-box {
+    padding-right: 30px !important;
 }
+
+@media (min-width: 992px) {
+    .single-post ~ #sidebar {
+        border-left: 0;
+        padding-left: 16px;
+    }
+}
+
+.single-post > .image-buffer {
+    display: none;
+}
+
+.post.single-article > .post-header > .post-title {
+    margin-top: 6px;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+}
+
 .post-content img.no-flow {
     display: block;
     margin: 0 auto;
@@ -543,8 +564,11 @@ strong.extra {
 }
 
 @media (max-width: 991px) {
-    .postImg {
-        max-height: 33vh;
+    .post-content .postImg {
+        /* 344px equals 50% of the post-content container for screen width < 992px and is a good maximum on smartphones */
+        max-width: 344px;
+        margin: 0 auto;
+        display: block;
     }
 }
 
@@ -777,7 +801,7 @@ div.search-container input:focus {
 
 #comments-separator {
     width: calc(100% + 60px);
-    border-top: 2px solid white;
+    border-top: 1px solid #b9b6b6;
     margin-top: 10px;
     margin-left: -30px;
     margin-bottom: 15px;
