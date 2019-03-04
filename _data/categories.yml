@@ -1,0 +1,27 @@
+###############################################################################
+# Register post categories below
+###############################################################################
+# category: Category name used to categorize posts.
+#           Rendered tag name (e.g. in the badges)
+#           Using "name" instead of "category" is not possible due to conflicts
+#           with page.name  caused by data_page_generator plugin.
+# title:    HTML <title>title</title>
+# short:    Sidebar "current" entry
+# heading:  Heading on the page
+###############################################################################
+- category: announcement
+  title: Announcements
+  short: Announcements
+  heading: Announcements
+- category: release
+  title: Release posts
+  short: All releases
+  heading: All release posts
+- category: pinned
+  title: Pinned posts
+  short: Pinned posts
+  heading: Important posts
+- category: talk
+  title: Talks by Team NewPipe
+  short:  All talks
+  heading: Talks held by members of Team NewPipe

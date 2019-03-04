@@ -3,9 +3,27 @@ layout: blog
 title: Search
 ---
 
-<h3>Search</h3>
+<div class="search-container border-box">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <h3 class="page-title">Search</h3>
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" id="search-submit" type="submit" onclick="search('manual')">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </span>
+                <input type="text" class="form-control" id="search-box" name="s" placeholder="Search for">
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div>
+</div>
+<div id="search-results"></div>
 
-{% include blog_search.html %}
+<!-- Scripts to perform a search -->
+<script src="{{ site.baseurl  }}/lunrjs/blog_searchData.js"></script>
+<script src="{{ site.baseurl  }}/lunrjs/lunr.min.js"></script>
+<script src="{{ site.baseurl  }}/lunrjs/blog_search.js"></script>
 
 <script>
 $("#search-box").on('keyup', function (e) {

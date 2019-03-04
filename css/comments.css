@@ -32,13 +32,13 @@
 .isso-comment {
     max-width: 68em;
     padding-top: 0.95em;
-    margin: 0.95em auto;
+    margin: 20px auto;
     padding: 15px;
-    background: #E2DEE0;
+    background: #faf6f8;
 }
 
 #isso-root > .isso-comment {
-    border: 2px solid white;
+    border: 1px solid #b9b6b6;
 }
 
 .isso-comment:not(:first-of-type),
@@ -208,10 +208,9 @@
 .isso-postbox > .form-wrapper .textarea {
     margin: 0 0 .3em;
     padding: .4em .8em;
-    border-radius: 3px;
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
+    background-color: #faf6f8;
+    border: 1px solid #b9b6b6;
 }
 
 #isso-thread .textarea:focus,
@@ -231,11 +230,11 @@
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper button {
     padding: .3em 10px;
     max-width: 100%;
-    border-radius: 3px;
-    background-color: #fff;
+    border-radius: 0;
+    background-color: #faf6f8;
     line-height: 1.4em;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid #b9b6b6;
+    box-shadow: none;
 }
 
 .isso-postbox > .form-wrapper > .auth-section .post-action,
@@ -248,8 +247,8 @@
 .isso-postbox > .form-wrapper > .auth-section .post-action > input,
 .isso-postbox > .form-wrapper > .auth-section .post-action > button {
     padding: calc(.3em - 1px);
-    border-radius: 2px;
-    border: 1px solid #CCC;
+    border-radius: 0;
+    border: 1px solid #b9b6b6;
     background-color: #DDD;
     cursor: pointer;
     outline: 0;

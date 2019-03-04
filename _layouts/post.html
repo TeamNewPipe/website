@@ -1,6 +1,7 @@
 ---
 layout: blog
 post: True
+bodyID: "blog-post"
 ---
 <article class="post single-article" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -16,7 +17,7 @@ post: True
         {% endif %}</p>
     </header>
 
-    <div class="post-content text-justify-sm" itemprop="articleBody">
+    <div class="post-content" itemprop="articleBody">
         {% if page.image %}
         <div class="row">
             <div class="col-md-3 col-img">
@@ -27,11 +28,10 @@ post: True
             </div>
             <div class="col-md-9">
                 {{ content }}
-                <div class="post-categories">
+                <div class="categories">
                     See also:
                     {% for category in page.categories %}
                     <a href="{{ site.baseurl}}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
-                    {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
                     {% endfor %}
                 </div>
             </div>
@@ -39,21 +39,20 @@ post: True
         {% else %}
         {{ content }}
 
-        <div class="post-categories">
+        <div class="categories">
             See also:
             {% for category in page.categories %}
             <a href="{{ site.baseurl}}/blog/{{ category | slugize }}"><i class="fa fa-tag" aria-hidden="true"></i>&nbsp;{{ category }}</a>
-            {% unless forloop.last %}&nbsp;|&nbsp;{% endunless %}
             {% endfor %}
         </div>
 
         {% endif %}
-    </div>
+    </div> <!-- post content -->
 
     <!-- Modal -->
     <div id="mediaFileView" class="modal fade" role="dialog" data-dismiss="modal">
-        <img id="mediaFullScreen" src="" class="img-full-width screenshot-image" data-dismiss="modal"/>
-        <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" ></i>
+        <img id="mediaFullScreen" src="" class="img-full-width screenshot-image" data-dismiss="modal" alt="full-size image" />
+        <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal"></i>
     </div> <!-- Modal -->
 
     <script src="{{ site.baseurl }}/js/mediaview.js"></script>
