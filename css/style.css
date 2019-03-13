@@ -1460,11 +1460,8 @@ button.action.black:focus {
     #footer-copyright .footer-links > span > a {
         color: wheat;
     }
-    #footer-copyright .footer-links > span:hover a {
+    #footer-copyright .footer-links > span:hover > a {
         color: white;
-    }
-    #footer-donate-span {
-        margin-top: 10px;
     }
     #copyright-span {
         order: 0;

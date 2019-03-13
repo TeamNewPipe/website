@@ -5,7 +5,7 @@
 }}
 
 <!-- footer -->
-<footer class="navbar-fixed-bottom" id="footer">
+<footer id="footer">
     {%- if include.buffer == "True" || include.buffer == true %}
     <div class="image-buffer"></div>
     {%- endif %}
@@ -20,8 +20,7 @@
                 <span><a href="{{ site.baseurl }}/">Home</a></span>
                 <span><a href="{{ site.baseurl }}/blog/">Blog</a></span>
                 <span><a href="{{ site.baseurl }}/press/">Press</a></span>
-                <!--<span class="line-break"></span>-->
-                <span id="footer-donate-span-"><a href="{{ site.baseurl }}/donate">Donate</a></span>
+                <span><a href="{{ site.baseurl }}/donate">Donate</a></span>
             </div>
         </div>
         <div class="container-fluid" id="footer-copyright">
