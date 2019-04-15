@@ -61,4 +61,19 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
-...
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  jekyll (= 3.8.5)
+  jekyll-feed (~> 0.9, >= 0.9.3)
+  jekyll-paginate
+  minima (~> 2.3, >= 2.3.0)
+  tzinfo-data
+
+RUBY VERSION
+   ruby 2.5.1p57
+
+BUNDLED WITH
+   1.16.1
