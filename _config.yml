@@ -30,6 +30,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .idea/
+  - vendor/
 
 permalink: /blog/:categories/:title/
 paginate: 4
