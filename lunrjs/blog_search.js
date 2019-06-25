@@ -13,7 +13,7 @@ function renderSearchResults(results, store) { // rendering search results could
 
         for (let i = 0; i < results.length; i++) {  // Iterate over the results
             let item = store[results[i].ref];
-            appendString += '<div class="border-box" data-href="' + SITE_URL + '">'
+            appendString += '<div class="border-box" data-href="' + SITE_URL + item.url+ '">'
                 + '<h4><a href="' + item.url + '">' + item.title + '</a></h4>'
                 + '<p><span>' + item.date+ ', by ' + item.author + '</span></p><br>';
             if (item.image !== "") {
