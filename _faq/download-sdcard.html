@@ -6,10 +6,10 @@ type: info
 title: "Download to SD card fails"
 ---
 <section>
-    <p class="text-info">We are aware of a bug that causes a crash when downloading a stream to an external SD card.
-        We are sorry for this inconvenience and trying our best to fix this issue. </p>
-    <p> Due to an outdated library (Gigaget) we are planing to refactor the whole download handling.
-        This might take a while. We've raised a bounty for implementing certain aspects of the new mechanism.
-        You can take a look at the corresponding ticket on
-        <a href="https://github.com/TeamNewPipe/NewPipe/issues/962">GitHub</a>.</p>
+    <p>NewPipe uses the Android Storage Access Framework (SAF) and a the old but gold Java Input Output (Java IO).<br>
+    SAF requires Android KitKat or later. However it is not supported on all devices.
+    If this applies to your device, please disable SAF. To do this go to the 
+    <code style="background: #f3eff2"><i class="fa fa-download"></i> Download</code> section in the 
+    <code style="background: #f3eff2"><img src="/img/icons/baseline-settings-20px.svg" style="margin-right:0" /> Settings</code> and uncheck
+    <code>Use SAF</code></p>
 </section>
