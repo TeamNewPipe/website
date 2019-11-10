@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     set -xe
     apt-get update
-    apt-get install -y build-essential git ruby ruby-bundler ruby-dev
+    yes | apt-get install -y build-essential git ruby ruby-bundler ruby-dev
     sudo -Hu vagrant bundle install
   SHELL
 end
