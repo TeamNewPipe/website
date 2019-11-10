@@ -2,3 +2,7 @@
 .sass-cache
 _site
 docker-compose.yml
+.bundle/
+.vagrant/
+vendor/
+*.log
