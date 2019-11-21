@@ -43,7 +43,7 @@ For more information, see also the [release page](https://github.com/TeamNewPipe
 
 In this release, again many improvements have been added to NewPipe. Most notably, a new option has been added to clear all positions in playlists. Until then, you had to clear your entire watch history, however in most cases that's undesirable. Another useful addition is that NewPipe can now show hidden files in the file picker.
 
-Most of you probably know [invidio.us](https://invidio.us), a free/open-source alternative web frontend to YouTube. NewPipe can now understand URLs pointing to this service, which means you can open links to Invidious in NewPipe just like you can open links to YouTube. Also, links to `music.youtube.com` can now be opened in NewPipe.
+Most of you probably know [invidio.us](https://invidio.us), a free/open-source alternative web frontend to YouTube. NewPipe has been able to open links to the central instance for a while already. 0.17.3 now also supports opening URLs pointing to all [publicly listed instances](https://github.com/omarroth/invidious/wiki/invidious-instances), which means you can open links to Invidious in NewPipe just like you can open links to YouTube. Also, links to `music.youtube.com` can now be opened in NewPipe.
 
 The most interesting bugs fixed in this release are an annoying exception caused by a small but important typo in the extractor. Furthermore, a bug in the playback of live streams has been resolved. Also, a bug producing performance problems has been fixed in the extractor.
 
@@ -63,7 +63,7 @@ For more information, see also the [release page](https://github.com/TeamNewPipe
 
 ## Upcoming release
 
-Soon Team NewPipe will be able to release version 0.18.0. We will post a release announcement here once ready. A few changes which we can announce already involve using new localization and downloader implementations introduced in the extractor as well as adding support for the Kotlin language, allowing the development of new features in this language.
+Soon Team NewPipe will be able to release version 0.18.0. We will post a release announcement here once ready. A few changes which we can announce already involve using new localization and downloader implementations introduced in the extractor as well as adding support for the Kotlin language, allowing the development of new features in this language. Another noteworthy feature we can announce already is the [overhaul of the "What's new" section](https://github.com/TeamNewPipe/NewPipe/pull/2309), including a properly sorted feed and subscription groups to further improve your user experience.
 
 
 ## Help wanted for website maintenance
