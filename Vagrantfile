@@ -26,6 +26,6 @@ Vagrant.configure("2") do |config|
     set -xe
     apt-get update
     yes | apt-get install -y build-essential git ruby ruby-bundler ruby-dev
-    sudo -Hu vagrant bundle install
+    (cd /vagrant && sudo -Hu vagrant bundle install)
   SHELL
 end
