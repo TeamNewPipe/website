@@ -59,3 +59,10 @@ faq:
   size: 37972
   author: Alexas_Fotos
   origin: https://pixabay.com/de/faq-antworten-hilfe-fragen-3408300/
+
+peertube:
+  url: peertube-brand.png
+  type: png
+  size: 2586
+  author: PeerTube
+  origin: https://joinpeertube.org

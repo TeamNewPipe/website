@@ -476,6 +476,30 @@ strong.extra {
     margin: 0 auto;
 }
 
+.post-content .media-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+.post-content .media-row > * {
+    display:inline;
+}
+
+.post-content .media-row.media-items-2 > * {
+    width: 50%;
+}
+
+.post-content .media-row.media-items-2 > *:first-child {
+    padding-right: 5px;
+}
+
+.post-content .media-row.media-items-2 > *:last-child {
+    padding-left: 5px;
+}
+
+
 @media (min-width: 768px) {
     .navbar-fixed-top ~ .post-collection {
         margin-top: calc(78px + 45px);
