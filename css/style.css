@@ -246,16 +246,17 @@ strong.extra {
 .header-box-wrapper .phone > img {
     height: 100%;
     position: absolute;
+    left: 0;
 }
 
 .header-box-wrapper .phone > video {
-    height: 556px;
-    transform: scale(1.009);
-    position: absolute;
-    top: -53px;
-    left: 7.7px;
-    width: calc(328 / 553 * 350px);
+    position: relative;
+    top: 39px;
+    left: 7px;
+    width: 210px;
+    height: auto;
     background: transparent;
+    display: inline-block;
 }
 
 @media (max-width: 767px) {
