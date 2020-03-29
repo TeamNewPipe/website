@@ -471,7 +471,8 @@ strong.extra {
     height: auto;
 }
 
-.post-content img.no-flow {
+.post-content img.no-flow,
+.post-content video.no-flow {
     display: block;
     margin: 0 auto;
 }
@@ -507,13 +508,15 @@ strong.extra {
 }
 
 @media (min-width: 992px) {
-    .post-content img.no-flow {
+    .post-content img.no-flow,
+    .post-content video.no-flow {
         display: block;
         max-width: 50%;
         margin: 5px auto 15px;
         max-height: 100vh;
     }
-    .post-content img.no-flow.vertical {
+    .post-content img.no-flow.vertical,
+    .post-content video.no-flow.vertical {
         max-width: 90%;
     }
 }
