@@ -15,32 +15,8 @@ WORKDIR /srv/jekyll
 ARG ISSO_ADDRESS
 ENV JEKYLL_ENV=production
 
-# copy static resources
-COPY bootstrap bootstrap
-COPY css css
-COPY js js
-COPY font-awesome font-awesome
-COPY legal legal
-COPY lunrjs lunrjs
-COPY press press
-COPY _plugins _plugins
-COPY _layouts _layouts
-COPY _includes _includes
-COPY pdf pdf
-COPY _config.yml .
-COPY index.html .
-COPY favicon.ico .
-COPY blog blog
-COPY donate donate
-
-# copy files which are changed more regularly (aka content)
-COPY .git .git
-COPY _tutorials _tutorials
-COPY _faq _faq
-COPY FAQ FAQ
-COPY img img
-COPY _data _data
-COPY _posts _posts
+# copy data
+COPY . /srv/jekyll/
 
 RUN bash -xc "chown -R jekyll: /srv/jekyll && \
     bundle update jekyll && \
@@ -48,9 +24,6 @@ RUN bash -xc "chown -R jekyll: /srv/jekyll && \
     jekyll clean && \
     jekyll build && \
     mv _site/ /data"
-
-RUN ls -al /data /data/img
-
 
 FROM nginx:alpine
 
