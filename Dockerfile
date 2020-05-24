@@ -1,4 +1,4 @@
-FROM jekyll/jekyll as builder
+FROM jekyll/jekyll:3 as builder
 
 COPY Gemfile /srv/jekyll
 RUN bundle install
