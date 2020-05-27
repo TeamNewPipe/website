@@ -73,7 +73,7 @@ category: categoryName
 
 ##### Post thumbnails
 
-Post thumbnails which are going to be displayed at the left side of the post, need to be registered in [_data/images.yml](_data/images.yml) (see [Image metadata](#image-metadata) to learn how to do this correctly). Thumbnails should be squarisch.
+Post thumbnails which are going to be displayed at the left side of the post, need to be registered in [_data/images.yml](_data/images.yml) (see [Image metadata](#image-metadata) to learn how to do this correctly). Thumbnails should be squarish.
 
 `image`          - Displays an image at the left side of the post. Use the key you registered in [_data/images.yml](_data/images.yml).
 
@@ -82,7 +82,7 @@ Post thumbnails which are going to be displayed at the left side of the post, ne
 
 #### Image metadata
 
-Image metadata can be set in [_data/images.yml](_data/images.yml). Ypu can display an image in a post with following snippet: 
+Image metadata can be set in [_data/images.yml](_data/images.yml). You can display an image in a post with following snippet: 
 
 `<img src="/img/{{ site.data.images[IMAGE_NAME].url }}" />`
 
@@ -113,7 +113,7 @@ newpipe-beta:                          # IMAGE_NAME which is used to display it
 
 At the moment there is one search engine for the press kit and another one for the blog.
 
-The variable `search` accepts following values wich modify the position in the search results:
+The variable `search` accepts following values which modify the position in the search results:
 
 `exclude`   - exclude the whole page from the search
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NewPip Beta now available
+title: NewPipe Beta now available
 short: NewPipe Beta published
 date: 2018-02-16 16:00:00 +0100
 categories: [announcement, pinned]
