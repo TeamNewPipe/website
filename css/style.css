@@ -1020,7 +1020,7 @@ ul.check > li.heart:before {
     }
 }
 
-#tile-opensource button.action {
+#tile-opensource .button.action {
     margin-right: 15px;
 }
 
@@ -1293,37 +1293,43 @@ html.touch #user-voices-carousel .carousel-control,
 
 /* Donate */
 
-button.donate,
-button.action {
+.button.action {
     border: none;
     box-shadow: none;
     background: #cd201f;
-    padding: 15px 30px;
+    display: inline-block;
+    padding: 10px 20px;
     border-radius: 8px;
     color: white;
     font-weight: bold;
-    font-size: 125%;
+    font-size: 100%;
     transition: background 0.75s;
 }
 
-button.action {
-    padding: 10px 20px;
-    font-size: 100%;
+.button.button-small.action {
+    padding: 5px 15px;
 }
 
-button.action.black {
+.button.button-large.action {
+    padding: 15px 30px;
+    font-size: 125%;
+}
+
+.button.action.black {
     background: black;
 }
 
-button.donate:hover,
-button.donate:focus,
-button.action:hover,
-button.action:focus {
+.button.action.grey {
+    background: #4a4a4a;
+}
+
+.button.action:hover,
+.button.action:focus {
     background: #AA1D1D;
 }
 
-button.action.black:hover,
-button.action.black:focus {
+.button.action.black:hover,
+.button.action.black:focus {
     background: #cd201f;
 }
 
@@ -1335,7 +1341,7 @@ button.action.black:focus {
     color: white;
 }
 
-#main-page #donate .donate {
+#main-page #donate .button.action {
     border: 3px solid white;
 }
 
