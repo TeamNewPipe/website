@@ -4,6 +4,12 @@
 {%- endcapture -%}
 {%- assign newCSS = CSS | split: "#" -%}
 
+{%- capture JS -%}
+{%- for layJS in layout.extraJS -%}{{ layJS }}{% if forloop.last == false %}#{% endif %}{%- endfor -%}
+{%- for pageJS in page.extraJS -%}{{ pageJS }}{% if forloop.last == false %}#{% endif %}{%- endfor -%}
+{%- endcapture -%}
+{%- assign newJS = JS | split: "#" -%}
+
 {%- if layout.bodyID -%}{%- if layout.bodyID != "" -%}{%- if layout.bodyID != NIL -%}
 {%- assign bID = layout.bodyID -%}{% endif %}{% endif %}
 {%- else -%}
@@ -27,9 +33,10 @@
 {%- assign hNavSearch = page.navSearch | default: layout.navSearch -%}
 
 {%- include head.html
-           extraCSS = newCSS
-           bodyID   = bID
-           page     = bPage %}
+            extraCSS = newCSS
+            extraJS  = newJS
+            bodyID   = bID
+            page     = bPage %}
 {% include nav.html
            brand     = hNavBrand
            brandLink = hNavBrandLink
