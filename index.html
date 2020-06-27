@@ -700,21 +700,19 @@
 
     <!-- Load and play animation on medium and large screens -->
     <script>
-        var loaded = false;
-        var playing = false;
-        var animation = $('#animation').get(0);
+        let loaded = false;
+        let playing = false;
+        let animation = $('#animation').get(0);
         $(window).on("orientationchange load resize", function () {
-            if($(window).width() > 767 && !loaded){
+            if ($(window).width() > 767 && !loaded) {
                 animation.load();
                 loaded = true;
                 animation.play();
                 playing = true;
-            }
-            else if($(window).width() > 767 && !playing){
+            } else if ($(window).width() > 767 && !playing) {
                 animation.play();
                 playing = true;
-            }
-            else if($(window).width() <= 767 && loaded && playing){
+            } else if ($(window).width() <= 767 && loaded && playing) {
                 animation.pause();
                 playing = false;
             }

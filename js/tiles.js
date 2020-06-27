@@ -1,13 +1,13 @@
 $(document).ready(function() {
-    var $carousel = $(".carousel");
+    let $carousel = $(".carousel");
     $carousel.carousel();
-    var carousels = {0: "user-voices-carousel", 1: "f-droid-carousel"};
-    var paused = new Object();
-    for (var key in carousels) {
+    let carousels = {0: "user-voices-carousel", 1: "f-droid-carousel"};
+    let paused = {};
+    for (let key in carousels) {
         if (!carousels.hasOwnProperty(key)) continue;
         paused[key] = false;
     }
-    var w, wTop, fTop, fHeight;
+    let w, wTop, fTop, fHeight;
 
     /**
      * Prevent jumping page on small screens
@@ -16,8 +16,8 @@ $(document).ready(function() {
     function preventSingleCarouselJumping() {
         w = $(window).width();
         wTop = $(window).scrollTop();
-        for (var c in carousels) {
-            var $ca = $("#" + carousels[c]);
+        for (let c in carousels) {
+            let $ca = $("#" + carousels[c]);
             fTop = $ca.offset().top;
             fHeight = $ca.outerHeight();
             if (w < 768 && !paused[c] && wTop > fTop + fHeight) { // pause cycling when slides are not displayed

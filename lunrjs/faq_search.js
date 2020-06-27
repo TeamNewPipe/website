@@ -28,7 +28,7 @@ function search() {
         this.field('url');
     });
 
-    for (var key in window.store) { // Add the data to lunr
+    for (let key in window.store) { // Add the data to lunr
         idx.add({
             'id': key,
             'title': window.store[key].title,
@@ -39,24 +39,25 @@ function search() {
         });
     }
 
-    var results = idx.search(searchTerm); // Get lunr to perform a search
+    let results = idx.search(searchTerm); // Get lunr to perform a search
     displaySearchResults(results); // We'll write this in the next section
 }
 
 function displaySearchResults(results) {
-    var searchResults = document.getElementById('search-results');
+    let searchResults = document.getElementById('search-results');
 
     if (results.length) { // Are there any results?
-        var ret = '';
-        for (var result in results) {
-            var item = window.store[results[result].ref];
+        let ret = '';
+        for (let result in results) {
+            let item = window.store[results[result].ref];
             ret += renderItem(item);
         }
         searchResults.innerHTML = ret;
-        // uncollapse content when there is only one result
+        // un-collapse content when there is only one result
         if (results.length === 1) {
-            $('.faq-tiles .tile').addClass("active");
-            $('.faq-tiles .tile').find(".tile-body").show();
+            let $tile = $('.faq-tiles .tile');
+            $tile.addClass("active");
+            $tile.find(".tile-body").show();
         }
     } else {
         searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p></div>';
@@ -74,10 +75,10 @@ function clickListener() {
 }
 
 function renderItem(item) {
-    var ret = "";
+    let ret = "";
     if (item.type === 'tutorial')
         ret += '<a href="' + item.url + '">';
-    ret += '<article class="col-md-8 col-md-offset-2 tile">\n'
+    ret += '<article class="col-md-8 col-md-offset-2 tile" id="' + item.id + '">\n'
         + '<header class="tile-head">\n'
         + '<span class="' + item.type + '">'
         + '<i class="fa fa-';
@@ -92,7 +93,7 @@ function renderItem(item) {
     ret += '"></i></span>'
         + item.title
         + '</header>';
-    if (item.type != 'tutorial') ret += '<div class="tile-body">' + item.content + '</div>';
+    if (item.type !== 'tutorial') ret += '<div class="tile-body">' + item.content + '</div>';
     ret += '</article>';
     if (item.type === 'tutorial') ret += '</a>';
 
@@ -100,18 +101,18 @@ function renderItem(item) {
 }
 
 function showAll() {
-    var ret = "";
-    for(var key in window.store) {
+    let ret = "";
+    for (let key in window.store) {
         ret += renderItem(window.store[key]);
     }
-    var searchResults = document.getElementById('search-results');
+    let searchResults = document.getElementById('search-results');
     searchResults.innerHTML = ret;
     searchResults.classList.add("active");
     clickListener();
 }
 
 $("#search-box").keydown(function (e) {
-    if (e.keyCode == 13) { // Enter
+    if (e.which === 13 || e.keyCode === 13) { // Enter
         search();
     }
 });
