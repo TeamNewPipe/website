@@ -4,6 +4,7 @@ window.store = {
 {%- assign faqs = site.faq | concat: site.tutorials %}
 {% for item in faqs %}
 "{{ item.title | slugify }}": {
+    "id": "{{ item.relative_path | split: "/" | last | replace: ".html", "" }}",
     "title": "{{ item.title | xml_escape }}",
     "url": "{{ item.url | xml_escape }}",
     "content": {{ item.content | strip_newlines | jsonify}},
@@ -67,20 +68,13 @@ function displaySearchResults(results) {
     clickListener();
 }
 
-function clickListener() {
-    $(".faq-tiles .tile > .tile-head").click(function () {
-        $(this).parent().hasClass("active") ? $(this).parent().find(".tile-body").slideUp() : $(this).parent().find(".tile-body").slideDown();
-        $(this).parent().toggleClass("active");
-    });
-}
-
 function renderItem(item) {
     let ret = "";
     if (item.type === 'tutorial')
         ret += '<a href="' + item.url + '">';
     ret += '<article class="col-md-8 col-md-offset-2 tile" id="' + item.id + '">\n'
         + '<header class="tile-head">\n'
-        + '<span class="' + item.type + '">'
+        + '<span class="tile-type ' + item.type + '">'
         + '<i class="fa fa-';
     switch (item.type) {
         case 'info':
@@ -91,7 +85,9 @@ function renderItem(item) {
             break;
     }
     ret += '"></i></span>'
-        + item.title
+        + '<div class="tile-title">' + item.title + '</div>'
+        + '<span class="tile-anchor" title="Copy link to this ' + (item.type === 'tutorial' ? 'tutorial' : 'FAQ entry')
+        + '">' + '<i class="fa fa-link fa-flip-horizontal"></i></span>'
         + '</header>';
     if (item.type !== 'tutorial') ret += '<div class="tile-body">' + item.content + '</div>';
     ret += '</article>';
@@ -109,6 +105,15 @@ function showAll() {
     searchResults.innerHTML = ret;
     searchResults.classList.add("active");
     clickListener();
+}
+
+function showOne(itemId) {
+    for (let key in window.store) {
+        if (window.store[key].id === itemId) {
+            displaySearchResults([{ref: key}]);
+            return;
+        }
+    }
 }
 
 $("#search-box").keydown(function (e) {
