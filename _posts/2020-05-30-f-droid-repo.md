@@ -25,7 +25,8 @@ The easiest way to add the repository is to scan the QR code below or [click thi
 
 Alternatively, in F-Droid, open the *Settings*, and choose *Repositories*. Then press the *plus* button, and paste the link if needed.
 
-Once you added the repository, update your package lists. If you had NewPipe installed from the official F-Droid repository before, you will have to uninstall this one before F-Droid will display the packages from our repository.
+Once you added the repository, update your package lists. If you had NewPipe installed from the official F-Droid repository before, you will have to uninstall this one before F-Droid will display the packages from our repository. Please make sure to [backup and restore the app data]({{ site.base_url }}/FAQ/tutorials/import-export-data/#export-subscriptions) to avoid losing your subscriptions, history and settings.
+
 
 The URL you need to copy is below. It includes the key's fingerprint for your convenience.
 
