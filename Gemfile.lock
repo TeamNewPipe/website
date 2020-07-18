@@ -74,7 +74,6 @@ DEPENDENCIES
   jekyll-feed (~> 0.15, >= 0.15.0)
   jekyll-paginate
   minima (~> 2.5, >= 2.5.1)
-  tzinfo-data
 
 RUBY VERSION
    ruby 2.7.0p0
