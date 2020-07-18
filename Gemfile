@@ -24,8 +24,22 @@ group :jekyll_plugins do
    gem "jekyll-paginate"
 end
 
+
 ########################################################################
+############################### WINDOWS ################################
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # Uncomment the line below and run `bundler install` after that
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+
+########################################################################
+################################ TESTING ###############################
+# Check for dead links.
+# 1. uncommenting the lines below
+# 2. $ bundle install
+# 3. $ jekyll build
+# 4. $ htmlproofer ./_site --allow-hash-href true  --empty_alt_ignore --url_ignore "/legal/privacy/,/js/embed.min.js" --http_status_ignore 429
+# For detailed htmlproofer options see https://github.com/gjtorikian/html-proofer#configuration
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# gem "rake"
+# gem "html-proofer"
