@@ -6,3 +6,5 @@ docker-compose.yml
 .vagrant/
 vendor/
 *.log
+
+.jekyll-cache/

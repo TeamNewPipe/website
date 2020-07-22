@@ -9,10 +9,10 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "3.8.6"
+gem "jekyll", "4.1.1"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.3", ">= 2.3.0"
+gem "minima", "~> 2.5", ">= 2.5.1"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -20,10 +20,26 @@ gem "minima", "~> 2.3", ">= 2.3.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.9", ">= 0.9.3"
+   gem "jekyll-feed", "~> 0.15", ">= 0.15.0"
    gem "jekyll-paginate"
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+########################################################################
+############################### WINDOWS ################################
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Uncomment the line below and run `bundler install` after that
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+########################################################################
+################################ TESTING ###############################
+# Check for dead links.
+# 1. uncommenting the lines below
+# 2. $ bundle install
+# 3. $ jekyll build
+# 4. $ htmlproofer ./_site --allow-hash-href true  --empty_alt_ignore --url_ignore "/legal/privacy/,/js/embed.min.js" --http_status_ignore 429
+# For detailed htmlproofer options see https://github.com/gjtorikian/html-proofer#configuration
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# gem "rake"
+# gem "html-proofer"
