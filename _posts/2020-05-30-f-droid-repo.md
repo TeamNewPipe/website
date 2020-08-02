@@ -17,7 +17,7 @@ Team NewPipe proudly announces a self-hosted F-Droid repository, providing the o
 
 Instead of telling you the boring story behind the repository, let's first talk about how you can use it from F-Droid on your device(s).
 
-The easiest way to add the repository is to scan the QR code below or [click this link](fdroidrepo://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501) if you're viewing this on your device already. F-Droid should pop up on both, prompting you to add the repository. For the paranoid (*which is not a bad idea, especially in this context!*), you can verify the fingerprint F-Droid shows you with the one in the "copy-pastable" URL below.
+The easiest way to add the repository is to scan the QR code below or [click this link](fdroidrepos://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501) if you're viewing this on your device already. F-Droid should pop up on both, prompting you to add the repository. For the paranoid (*which is not a bad idea, especially in this context!*), you can verify the fingerprint F-Droid shows you with the one in the "copy-pastable" URL below.
 
 <center>
     <img src="/img/fdroid-repo-qrcode.svg" alt="NewPipe F-Droid repository QR code" style="width: 250px">
