@@ -1,59 +1,79 @@
 /**
- * @author TobiGr and Team NewPipe
- * This document provides everything to get information
- * the NewPipe web-api {@link https://gtihub.com/TeamNewPipe/web-api}.
+ * @author TobiGr for Team NewPipe
+ * This document provides everything to get information from
+ * the NewPipe Website API (Web API) {@link https://github.com/TeamNewPipe/web-api}.
  *
- * Elements which expect to receive information from the web-api
- * automatically, need to have a class of the following scheme:
- *      api-stable-version
- *      api-stars
- * and so on. The "stats" are unambiguous, therefore they got dropped.
+ * Elements which expect to receive information from the Web API
+ * automatically, need to have an attribute of the following scheme:
+ *      data-newpipe-api="JSON_IDENTIFIER_OF_THE_REQUESTED_VALUE"
+ *
+ * By default, the inner HTML of the elements having the above's attribute is replaced.
+ * You can also specify an attribute to store the API data instead:
+ *      data-newpipe-api-attribute="ATTRIBUTE_NAME"
+ *
+ *  Example usage:
+ *  <pre>
+ *  <a href="https://default.locati.on" data-newpipe-api="flavors.fdroid.stable.apk" data-newpipe-api-attribute="href">
+ *      download APK</a>
+ *  </pre>
  */
-
-var api = null;
-
-function getAPIData() {
-    return api;
-}
 
 /**
- * Updates all elements having a specific class with web-api information
- * @param className of the elements which will contain the information
- * @param apiData information to display
- * @param attribute (optional) attribute to add api data to instead of content
+ * Stores the Web API data. Is <code>null</code> when uninitialized.
+ * @type {null | JSON}
  */
-function updateWithAPIData(className, apiData, attribute) {
-    attribute = attribute || -1;
-    var data = apiData.toString();
-    var els = document.getElementsByClassName(className);
-    if (els == null) return;
-    for (var i = 0; i < els.length; i++) {
-        if (attribute != -1)
-            els.item(i).setAttribute(attribute, data);
-        else
-            els.item(i).innerHTML = data;
+let api = null;
+
+/**
+ * Recursive function to update elements with API data
+ * @param {Object | string | number} object - Object or value from the {@link #api} object
+ * @param {string} key - key of the object
+ * @param {null | string} oldIdentifier
+ * @return {void}
+ */
+function updateWithAPIData(object, key, oldIdentifier) {
+    let newIdentifier = (oldIdentifier === null) ? key : oldIdentifier + '.' + key;
+    if (object instanceof Object) {
+        // this is a JSON object containing more objects with API data
+        // iterate through them
+        Object.keys(object).forEach(function (name) {
+            updateWithAPIData(object[name], name, newIdentifier);
+        });
+    } else {
+        // this object is a value
+        if (object === -1) return; // invalid value, something went wrong when building the API data
+
+        // get all elements which registered to be updated with the API data
+        let elementsToUpdate = document.querySelectorAll('[data-newpipe-api="' + newIdentifier + '"]');
+        if (elementsToUpdate == null) return;
+
+        let data = object.toString();
+        for (let i = 0; i < elementsToUpdate.length; i++) {
+            if (elementsToUpdate.item(i).hasAttribute("data-newpipe-api-attribute")) {
+                // the element requests to set an attribute to the API value
+                let attr = elementsToUpdate.item(i).getAttribute("data-newpipe-api-attribute");
+                elementsToUpdate.item(i).setAttribute(attr, data);
+            } else {
+                // default: set the inner HTML of the element to the API value
+                elementsToUpdate.item(i).innerHTML = data;
+            }
+        }
     }
 }
 
 /**
  * Updates every element which expects to receive information
- * from the web-api
+ * from the Web API
+ * @return {void}
  */
 function updateAllWithAPIData() {
-    updateWithAPIData("api-github-stable-version", api.flavors.github.stable.version.replace("v",""));
-    updateWithAPIData("api-github-stable-apk", api.flavors.github.stable.apk, "href");
-    updateWithAPIData("api-f-droid-stable-version", api.flavors.fdroid.stable.version.replace("v",""));
-    updateWithAPIData("api-f-droid-stable-apk", api.flavors.fdroid.stable.apk, "href");
-
-    updateWithAPIData("api-translations", api.stats.translations);
-    updateWithAPIData("api-forks", api.stats.forks);
-    updateWithAPIData("api-contributors", api.stats.contributors);
-    updateWithAPIData("api-stargazers", api.stats.stargazers);
-    updateWithAPIData("api-watchers", api.stats.watchers);
+    Object.keys(api).forEach(function (name) {
+        updateWithAPIData(api[name], name, null);
+    })
 }
 
 /**
- * Get API information and trigger updates
+ * Fetch API information and trigger updates
  */
 $(document).ready(function () {
     $.get("https://newpipe.schabi.org/api/data.json", "json")
@@ -62,6 +82,6 @@ $(document).ready(function () {
             updateAllWithAPIData();
         })
         .fail(function() {
-            console.log("An error occurred while getting Web-API data from https://newpipe.schabi.org/api/data.json");
+            console.log("An error occurred while getting Web API data from https://newpipe.schabi.org/api/data.json");
         });
 });
