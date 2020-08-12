@@ -149,3 +149,25 @@ Writing short FAQs is quite easy and there are only few things to consider.
 2. To separate parts of your article with a thin line, use `<hr/>` tags. 
 3. To insert images, use the `<img/>` tag inside of a `<figure>` tag. Additionally, each image needs a caption (`<figcaption>`).
 4. Please keep your sentences as shorts as possible. This makes it easier to follow you and your instructions.
+
+#### Usage of Website API
+We have an API which provides data for running the website to not require visitors contacting other servers when visiting our website.
+You can find its source code [on GitHub](https://github.com/TeamNewPipe/web-api) and the served data [here](https://newpipe.schabi.org/api/data.json).
+If you want to use the API for other purposes than running or developing our website, please host it yourself.
+
+To use API data, you need to add the `data-newpipe-api` attribute to an HTML tag containing the JSON identifier of the value you want to access:
+
+``` HTML
+<p>NewPipe has <span data-newpipe-api="stats.stargazers>10k</span> stars on GitHub.</p>"
+```
+
+By default, the inner HTML of tags which have the `data-newpipe-api` attribute will be replaced with the requested value. Nevertheless, you should put a value there to provide a fallback for the rare case, that our API failed to generate correct data. 
+It is also possible to not replace the HTML, but store the API data in a referred attribute by adding the `ata-newpipe-api-attribute` attribute:
+
+``` HTML
+<a data-newpipe-api="flavors.fdroid.stable.apk" data-newpipe-api-attribute="href">download NewPipe</a>
+```
+will result in something like
+``` HTML
+<a href="https://f-droid.org/repo/org.schabi.newpipe_953.apk">download NewPipe</a>
+```

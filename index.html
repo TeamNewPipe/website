@@ -1,8 +1,11 @@
 ---
 
 ---
+{%- include release_data.html -%}
+
 {%- include head.html
             bodyID = "main-page"
+            extraCSS = "home.css"
             page = "False" %}
 
     <!-- parallax background for header -->
@@ -314,24 +317,7 @@
                         <i class="fa fa-arrow-left"></i>
                     </div>
                 </div>
-                <!--<div class="col-md-9 feature-detail" id="4k" >
-                    <h3>Live Stream and 4k</h3>
-                    <div class="feature-media">
-                        <img src="/img/screenshots/shot_01.png" class="img-responsive" />
-                    </div>
-                    <div class="feature-description">
-                        <p><strong>Ge</strong></p>
-                        <ul>
-                            <li>Set title</li>
-                            <li>Choose between video or audio download</li>
-                            <li>Select the most suitably file format</li>
-                            <li>Download the resolution you need</li>
-                        </ul>
-                    </div>
-                    <div class="feature-close-detail">
-                        <i class="fa fa-arrow-left"></i>
-                    </div>
-                </div>-->
+
                 <!-- Sidebar -->
                 <div class="col-md-3" id="features-sidebar">
                     <div class="list-group">
@@ -475,109 +461,183 @@
 
                 <!-- Download -->
                 <div class="col-xs-12">
-                    <h3 class="title">Download NewPipe</h3>
+                    <h3 class="title">Get NewPipe</h3>
                 </div>
-                <div class="col-xs-12 tile" id="download">
-                    <div class="download-table">
-                        <div class="row is-flex">
-                            <div class="col-xs-12 col-sm-6 col-lg-4" id="download-stable">
-                                <h4>F-Droid</h4>
-                                <div class="download-info">
-									<!--Release on FDroids website-->
-                                    <p class="download-version api-f-droid-stable-version"><a href="https://f-droid.org/packages/org.schabi.newpipe/#latest">Latest version on F-Droid</a></p>
-                                    <!--<p class="text-center"><strong>New</strong></p>-->
-                                    <div class="api-fdroid-new">
-                                        <!-- placeholder until the api part is implemented -->
-                                        <a href="https://f-droid.org/packages/org.schabi.newpipe/">
-                                            <img src="{{ site.baseurl }}/img/f-droid.svg" class="img-responsive" alt="get it on F-Droid" />
-                                        </a>
-                                    </div>
+
+                <div class="col-xs-12 tile tile-bordered" id="download1">
+                    <div class="row is-flex">
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="download-version-container">
+                                <div class="download-version-icon">
+                                    <img src="img/logo_app.svg" class="img-responsive" alt="NewPipe icon" />
                                 </div>
-                                <p class="download-action">
-                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/">
-                                        <i class="fa fa-download"></i>
-                                    </a>
-                                </p>
-                            </div>
-
-                            <div class="col-xs-12 col-sm-6 col-lg-4 col-lg-push-4" id="download-beta">
-                                <h4>GitHub</h4>
-                                <div class="download-info">
-                                    <p class="download-version api-github-stable-version"><a href="https://github.com/TeamNewPipe/NewPipe/releases">Latest version on Github</a></p>
-                                    <!--<p class="text-center"><strong>New</strong></p>-->
-                                    <div class="api-github-new">
-                                        <!-- placeholder until the api part is implemented -->
-                                        <a href="https://github.com/TeamNewPipe/NewPipe/releases">
-                                            <img src="{{ site.baseurl }}/img/GitHub-Mark-64px.png" class="img-responsive" alt="GitHub logo" />
-                                        </a>
-                                    </div>
+                                <div class="download-version-requirements">
+                                    Android 4.4+
                                 </div>
-                                <p class="download-action">
-                                    <a href="https://github.com/TeamNewPipe/NewPipe/releases">
-                                        <i class="fa fa-download"></i>
+                                <div class="download-version-button">
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/#latest" data-newpipe-api="flavors.fdroid.stable.apk" data-newpipe-api-attribute="href" class="button action">
+                                        <i class="fa fa-download"></i> NewPipe <span data-newpipe-api="flavors.fdroid.stable.version"></span>
                                     </a>
-                                </p>
+                                </div>
                             </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4">
+                            <div class="download-version-container">
+                                <div class="download-version-icon">
+                                    <img src="img/icon_legacy.svg" class="img-responsive" alt="NewPipe legacy icon" />
+                                </div>
+                                <div class="download-version-requirements">
+                                    Android 4.1+
+                                </div>
+                                <div class="download-version-button">
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe.lagacy/#latest" data-newpipe-api="flavors.fdroid_legacy.stable.apk" data-newpipe-api-attribute="href" class="button action">
+                                        <i class="fa fa-download"></i> NewPipe legacy <span data-newpipe-api="flavors.fdroid_legacy.stable.version"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8">
+                            <div id="download-info-carousel-container">
+                                <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
 
-                            <div class="col-xs-12 col-lg-4 col-lg-pull-4" id="download-f-droid">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <p><a href="https://f-droid.org/"><img src="img/fdroid-logo.svg" class="img-responsive" style="display: inline-block" alt="F-Droid logo" /> F-Droid</a> is a trusted catalogue of Free and Open Source applications for Android.</p>
+                                            <p>Install the F-Droid app to get notified about updates. It enables you to download and update them too.</p>
+                                            <br>
+                                            <p><a href=" https://f-droid.org/en/about/#terms-etc">F-Droid respects your privacy. They don’t track you, or your device.</a><br />
+                                                We would like to thank them for providing their services in this way.
+                                            </p>
+                                        </div>
+                                        <div class="item">
+                                            <div class="row is-flex">
+                                                <div class="col-md-5 col-lg-4" id="download-newpipe-qr-code-container-col">
+                                                    <div id="download-newpipe-qr-code-container">
+                                                        <a href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">
+                                                            <img src="/img/fdroid-repo-qrcode.svg" class="img-responsive" alt="Link to our F-Droid repo" style="background-color: #fff;" />
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-lg-8">
+                                                    <div style="margin: auto;">
+                                                        <p>You can also add our F-Droid repository to your client to receive updates even faster.</p>
+                                                        <p><a style="word-wrap: break-word; word-wrap: anywhere;" href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501</a></p>
+                                                        <div class="hidden-md hidden-lg">
+                                                            <p id="f-droid-qr-code-toggle" class="text-center"><i class="fa fa-chevron-right"></i> <span class="f-droid-qr-code-toggled shown">Show</span><span class="f-droid-qr-code-toggled hidden">Hide</span> QR-code</p>
+                                                            <p class="text-center">
+                                                                <a id="f-droid-repo-qr-code" href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501" class="hidden f-droid-qr-code-toggled" style="display: inline-block">
+                                                                    <img src="https://f-droid.org/assets/download-fdroid-qr.png" class="img-responsive" alt="URL to our F-Droid repo"/>
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                        <p class="text-center text-left-md"><a class="button button-small action grey" href="{{ site.baseurl }}/FAQ/tutorials/install-add-fdroid-repo/">Learn more</a></p>
 
-                                <!-- borders -->
-                                <div class="border-middle left"></div>
-                                <div class="border-middle right"></div>
-
-                                <!-- color: #1976d2 -->
-                                <h4>F-Droid</h4>
-                                <div class="download">
-                                    <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-
-                                        <!-- Wrapper for slides -->
-                                        <div class="carousel-inner" role="listbox">
-                                            <div class="item active">
-                                                <p><a href="https://f-droid.org/">F-Droid</a> is a trusted catalogue of Free and Open Source applications for Android.</p>
-                                            </div>
-                                            <div class="item">
-                                                <p>Install the F-Droid app to get notified about updates. It enables you to download and update them too.</p>
-
-                                            </div>
-                                            <div class="item">
-                                                <p><a href=" https://f-droid.org/en/about/#terms-etc">F-Droid respects your privacy. They don’t track you, or your device.</a><br />
-                                                    We would like to thank them for providing their services in this way.
-                                                </p>
-
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+                                    </div>
 
-                                        <!-- Indicators -->
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#f-droid-carousel" data-slide-to="0" class="active"></li>
-                                            <li data-target="#f-droid-carousel" data-slide-to="1"></li>
-                                            <li data-target="#f-droid-carousel" data-slide-to="2"></li>
-                                        </ol>
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#f-droid-carousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#f-droid-carousel" data-slide-to="1"></li>
+                                    </ol>
 
-                                        <!-- Controls: not displayed but needed to get preventJumpingPage() working
-                                             Pausing the Carousel won't work without controls. Don't ask me why :)
-                                         -->
-                                        <a class="left carousel-control" href="#f-droid-carousel" role="button" data-slide="prev">
-                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="right carousel-control" href="#f-droid-carousel" role="button" data-slide="next">
-                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
+                                    <!-- Controls: not displayed but needed to get preventJumpingPage() working
+                                         Pausing the Carousel won't work without controls. Don't ask me why :)
+                                     -->
+                                    <a class="left carousel-control" href="#f-droid-carousel" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#f-droid-carousel" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4">
+                            <div class="download-info-container">
+                                <div class="download-info-heading">
+                                    <h4>Release Highlights</h4>
+                                </div>
+                                <div class="download-info-content">
+                                    <div id="download-info-changelog">
+                                        {{ releaseChangelog }}
+                                        {%- if releasePostUrl and releasePostUrl != empty %}
+                                        <p class="text-center"><a href="{{ releasePostUrl }}" class="button button-small action grey">Blog post</a></p>
+                                        {%- endif %}
                                     </div>
                                 </div>
-                                <p class="download-action">
-                                    <a href="https://f-droid.org/packages/org.fdroid.fdroid/">
-                                        <i class="fa fa-download"></i>
-                                    </a>
-                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-4">
+                            <div class="download-info-container">
+                                <div class="download-info-heading">
+                                    <h4>Need help?</h4>
+                                </div>
+                                <div class="download-info-content">
+                                    <div id="download-info-help">
+                                        <ul>
+                                            <li>Did you enable unknown sources?</li>
+                                            <li>Do you have problems updating?</li>
+                                        </ul>
+                                        <p class="text-center">
+                                            <!--<a href="#" class="button button-small action grey">Read more</a>-->
+                                            <a href="{{ site.baseurl }}/FAQ/install/" class="button button-small action grey">First steps</a>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- disabled until we have enough tutorials and FAQs
+                <div class="col-xs-12">
+                    <h3 class="title">Get Started</h3>
+                </div>
+
+                <div class="col-xs-12 tile tile-bordered" id="get-started">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h4>Try our tutorials and read the FAQ</h4>
+                        </div>
+                    </div>
+                    <div class="row is-flex">
+                        <div class="col-xs-12 col-md-4">
+                            <div class="content">
+                                Set up NewPipe to work best with your conditions.
+                            </div>
+                        </div>
+                        <a class="col-xs-12 col-md-4" href="#"><i class="fa fa-caret-right"></i> First steps</a>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="content">
+                                Are you low on mobile data and have no WiFi?<br>We show you how to save data with NewPipe
+                            </div>
+                        </div>
+                        <a class="col-xs-12 col-md-4" href="#"><i class="fa fa-caret-right"></i> Save Data</a>
+                        <div class="col-xs-12 col-md-4">
+                            <div class="content">
+                                NewPipe has a bunch of hidden features.<br>Don't believe us?<br>Check it out!
+                            </div>
+                        </div>
+                        <a class="col-xs-12 col-md-4" href="#"><i class="fa fa-caret-right"></i> Learn more</a>
+                    </div>
+                    <div class="row text-center border-none">
+                        <a class="col-xs-6" href="#">
+                            <i class="fa fa-chevron-right"></i> Tutorials
+                        </a>
+                        <a class="col-xs-6" href="#">
+                            <i class="fa fa-chevron-right"></i> FAQ
+                        </a>
+                    </div>
+                </div>
+                -->
 
                 <!-- Open Source -->
                 <div class="col-xs-12">
@@ -596,17 +656,17 @@
                         <p><strong>Your advantages</strong></p>
                         <ul class="check">
                             <li>Quick help when you have a problem (nobody's ever had one)</li>
-                            <li>Dozens of people bring NewPipe forward and translate it into <a href="https://hosted.weblate.org/engage/NewPipe/"><span class="api-translations">60+</span>&nbsp;languages</a>.</li>
+                            <li>Dozens of people bring NewPipe forward and translate it into <a href="https://hosted.weblate.org/engage/NewPipe/"><span data-newpipe-api="stats.translations">60+</span>&nbsp;languages</a>.</li>
                             <li>You can check the source code on <a href="https://github.com/TeamNewPipe/NewPipe">GitHub</a> and contribute to NewPipe.</li>
                             <li>NewPipe is covered by the <a href="https://github.com/TeamNewPipe/NewPipe/blob/master/LICENSE">GPL&nbsp;3.0&nbsp;license</a>.</li>
-                            <li>Get NewPipe from <a href="https://f-droid.org/packages/org.schabi.newpipe/">F-Droid</a> and we guarantee that it is generated from the source code.</li>
+                            <li>Get NewPipe from <a href="https://f-droid.org/packages/org.schabi.newpipe/">F-Droid</a> and discover more FOSS apps.</li>
                             <li class="text-success">NewPipe is available for free</li>
                         </ul>
                         <p class="button-wrapper">
-                            <a href="https://github.com/TeamNewPipe/NewPipe/blob/dev/.github/CONTRIBUTING.md#newpipe-contribution-guidelines"><button class="action">Contribute</button></a>
-                            <a href="https://github.com/TeamNewPipe/NewPipe/"><button class="action"><i class="fa fa-star"></i> <span class="api-stargazers">8000+</span></button></a>
-                            <a href="https://hosted.weblate.org/engage/NewPipe/"><button class="action">Translate</button></a>
-                            <a href="https://github.com/TeamNewPipe/website/"><button class="action black" >Improve this site</button></a>
+                            <a href="https://github.com/TeamNewPipe/NewPipe/blob/dev/.github/CONTRIBUTING.md#newpipe-contribution-guidelines" class="button action">Contribute</a>
+                            <a href="https://github.com/TeamNewPipe/NewPipe/" class="button action"><i class="fa fa-star"></i> <span data-newpipe-api="stats.stargazers">10k</span></a>
+                            <a href="https://hosted.weblate.org/engage/NewPipe/" class="button action">Translate</a>
+                            <a href="https://github.com/TeamNewPipe/website/" class="button action grey" >Improve this site</a>
                         </p>
                     </div>
                 </div>
@@ -647,7 +707,7 @@
                     <h3>Bring NewPipe forward</h3>
                 </div>
                 <div class="col-md-4 text-center">
-                    <p><a href="{{ site.baseurl }}/donate/"><button class="donate">Donate</button></a></p>
+                    <p><a href="{{ site.baseurl }}/donate/" class="button button-large action">Donate</a></p>
                 </div>
                 <div class="col-md-4">
                     <h3>Support our developers</h3>
@@ -679,7 +739,7 @@
         document.documentElement.className += (!("ontouchstart" in document.documentElement) ? "no-" : "") + "touch";
 
         if ("ontouchstart" in document.documentElement) {
-            var userVoicesSwiper = new Swipe('#user-voices');
+            let userVoicesSwiper = new Swipe('#user-voices');
             userVoicesSwiper.onLeft(function () {
                 $('#user-voices-carousel').carousel('next');
             });
@@ -687,7 +747,7 @@
                 $('#user-voices-carousel').carousel('prev');
             });
             userVoicesSwiper.run();
-            var downloadFdroidSwiper = new Swipe('#download-f-droid');
+            let downloadFdroidSwiper = new Swipe('#download-info-carousel-container');
             downloadFdroidSwiper.onLeft(function () {
                 $('#f-droid-carousel').carousel('next');
             });
@@ -696,25 +756,32 @@
             });
             downloadFdroidSwiper.run();
         }
+
+        // collapse qr-code
+        $(document).ready(function () {
+            let $qrCodeToggled = $('.f-droid-qr-code-toggled');
+            $('#f-droid-qr-code-toggle').click(function () {
+                $qrCodeToggled.toggleClass('shown');
+                $qrCodeToggled.toggleClass('hidden');
+            });
+        });
     </script>
 
     <!-- Load and play animation on medium and large screens -->
     <script>
-        var loaded = false;
-        var playing = false;
-        var animation = $('#animation').get(0);
+        let loaded = false;
+        let playing = false;
+        let animation = $('#animation').get(0);
         $(window).on("orientationchange load resize", function () {
-            if($(window).width() > 767 && !loaded){
+            if ($(window).width() > 767 && !loaded) {
                 animation.load();
                 loaded = true;
                 animation.play();
                 playing = true;
-            }
-            else if($(window).width() > 767 && !playing){
+            } else if ($(window).width() > 767 && !playing) {
                 animation.play();
                 playing = true;
-            }
-            else if($(window).width() <= 767 && loaded && playing){
+            } else if ($(window).width() <= 767 && loaded && playing) {
                 animation.pause();
                 playing = false;
             }

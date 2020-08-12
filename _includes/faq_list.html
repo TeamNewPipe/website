@@ -2,7 +2,7 @@
 {%- if include.categories -%}
     {%- assign categories = include.categories -%}
 {%- else -%}
-    {%- assign categories = "download, player, bugs" | split: ", " -%}
+    {%- assign categories = "download, player, bugs, install" | split: ", " -%}
 {%- endif -%}
 
 {% comment %}DEFAULT VALUES WHEN NO TYPE/COLLECTION WAS PASSED{% endcomment %}
@@ -54,13 +54,14 @@
                         {%- if item.type == "tutorial" %}
         <a href="{{ item.url }}">
                         {%- endif %}
-            <article class="col-md-8 col-md-offset-2 tile">
+            <article class="col-md-8 col-md-offset-2 tile" id="{{ item.relative_path | split: "/" | last | replace: ".html", "" }}">
                 <header class="tile-head">
-                    <span class="{{ item.type }}">
+                    <span class="tile-type {{ item.type }}">
                         <i class="fa fa-
                         {%- if item.type == "info" -%}info-circle{%- else if item.type == "tutorial" -%}graduation-cap{%- endif -%}"></i>
                     </span>
-                    {{ item.title }}
+                    <div class="tile-title">{{ item.title }}</div>
+                    <span class="tile-anchor" title="Copy link to this {% if item.type == "info" %}FAQ entry{% else %}tutorial{% endif %}"><i class="fa fa-link fa-flip-horizontal"></i></span>
                 </header>
                 {%- if item.type != "tutorial" -%}
                 <div class="tile-body">
@@ -79,11 +80,5 @@
 </div>
 
 <script>
-    $(".faq-tiles .tile > .tile-head").click(function () {
-        $(this).parent().hasClass("active") ? $(this).parent().find(".tile-body").slideUp() : $(this).parent().find(".tile-body").slideDown();
-        $(this).parent().toggleClass("active");
-    });
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
+    clickListener();
 </script>

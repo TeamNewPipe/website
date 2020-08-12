@@ -3,6 +3,7 @@
 # Following parameters are allowed:
 # title    The text to print in between <title></title>.
 # extraCSS Additional CSS files from /css/ can be added to the <head>. style.css and print.css are always included.
+# extraJS  Additional JS files from /js/ can be added to <head>.
 # bodyID   HTML id attribute for the <body> tag.
 # page     Optional <div id="page"> tag to allow easy use of CSS flex boxes or other styles.
            Must be closed via the footer include. Default: False
@@ -88,6 +89,11 @@
     <script src="/js/html5shiv.min.js"></script>
     <script src="/js/respond.min.js"></script>
     <![endif]-->
+
+    <!-- custom scripts -->
+    {% for script in include.extraJS -%}
+    <script src="{{ site.baseurl }}/js/{{ script }}"></script>
+    {% endfor %}
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css">
