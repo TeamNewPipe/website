@@ -234,6 +234,13 @@ h3 > a > i.fa-chevron-left {
     height: 1.2em;
 }
 
+#tutorial section figure.vertical > img,
+#tutorial section figure.vertical > video {
+    margin-right: auto;
+    margin-left: auto;
+    max-height: calc(100vh - 64px);
+}
+
 @media (min-width: 768px) {
     #tutorial section figure {
         max-width: 200px;
@@ -283,6 +290,16 @@ h3 > a > i.fa-chevron-left {
     }
     #tutorial section figure ~ :not(figure) {
         clear: left;
+    }
+}
+
+@media (min-width: 992px) {
+    #tutorial section figure.vertical.figure-right > img,
+    #tutorial section figure.vertical.figure-right > video {
+        order: 2;
+    }
+    #tutorial section figure.vertical.figure-right > figcaption {
+        order: 1;
     }
 }
 
