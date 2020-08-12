@@ -73,6 +73,9 @@ body.modal-open {
     .text-justify-md {
         text-align: justify;
     }
+    .text-left-md {
+        text-align: left;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */

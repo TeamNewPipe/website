@@ -1,0 +1,212 @@
+.tile.tile-bordered {
+    padding: 0 15px;
+    background: none;
+}
+
+.tile.tile-bordered > .row > [class^="col-"],
+.tile.tile-bordered > .row.is-flex > [class^="col-"] {
+    margin-bottom: 0;
+    background: #E2DEE0;
+    padding: 10px;
+    border-top: 1px solid #BBB;
+    border-left: 1px solid #BBB;
+}
+
+.tile.tile-bordered > .row > [class^="col-"] {
+    border-right: 1px solid #BBB;
+}
+.tile.tile-bordered > .row > .col-sm-6:nth-child(2n+1) {
+    border-right: 0;
+}
+
+.tile.tile-bordered > .row:last-child > [class^="col-"] {
+    border-bottom: 1px solid #BBB;
+}
+
+.tile.tile-bordered > .row > .col-md-8 {
+    padding: 30px 30px 15px 30px;
+}
+
+.download-version-container {
+    text-align: center;
+    padding: 15px;
+}
+
+.download-version-container .download-version-icon {
+    margin-bottom: 15px;
+}
+
+.download-version-container .download-version-icon img {
+    width: 100%;
+    max-height: 10em;
+    max-width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download-version-container .download-version-requirements {
+    font-size: small;
+}
+
+#download-info-carousel-container {
+    height: 100%;
+}
+
+#download1 .carousel {
+    height: calc(100% - 24px); /* height of indicators */
+}
+
+#download1 .carousel .carousel-inner {
+    height: 100%;
+}
+
+#download1 .carousel .carousel-inner .item {
+    padding: 10px 10px 0 10px;
+}
+
+#download1 .carousel .carousel-inner .item .col-lg-6 {
+    margin-bottom: 0;
+}
+
+#download1 .carousel .carousel-control.left,
+#download1 .carousel .carousel-control.right {
+    display: none;
+    color: black;
+    opacity: 1;
+}
+
+#download1 .carousel .carousel-control.left,
+#download1 .carousel:hover .carousel-control.left,
+#download1 .carousel .carousel-control.left:hover,
+#download1 .carousel .carousel-control.right,
+#download1 .carousel:hover .carousel-control.right,
+#download1 .carousel .carousel-control.right:hover {
+    background: none;
+    display: block;
+    font-size: 25px;
+    bottom: 0;
+    top: unset;
+}
+
+#download1 .carousel .carousel-indicators {
+    position: relative;
+    bottom: 6px;
+    margin-bottom: 0;
+}
+
+#download1 .carousel .carousel-indicators > li {
+    border-color: #333;
+    background-color: #333;
+    width: 8px;
+    height: 8px;
+}
+#download1 .carousel .carousel-indicators > li.active {
+    width: 10px;
+    height: 10px;
+}
+#download-newpipe-qr-code-container-col {
+    display: none;
+}
+#download-newpipe-qr-code-container {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    #download1 .row.is-flex > [class^="col-"]:nth-child(n+3) {
+        border-top-width: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    /* align "read more" button with "download NewPipe Legacy" button */
+    /* <bad code> */
+    #download1 .download-info-container {
+        /* 100% - height of heading - padding bottom of .download-version-container */
+        height: calc(100% - 29.8px - 15px);
+    }
+    #download1 .download-info-content {
+        height: 100%;
+    }
+    #download1 .download-info-content .button-small {
+        margin-bottom: 5px;
+    }
+    #download-info-changelog,
+    #download-info-help {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    /* </bad code> */
+}
+
+@media (min-width: 992px) {
+    #download-newpipe-qr-code-container-col {
+        display: block;
+    }
+    #download-newpipe-qr-code-container img {
+        width: 100%;
+        max-width: 12.5em;
+    }
+
+    /* Re-order grid on medium and larger devices */
+    /* Just as a British Speaker used to call in a very honourable house:Oooooorder! */
+    #download1 .row.is-flex > [class^="col-"]:nth-child(1) {
+        order: 1;
+        border-bottom: none;
+    }
+    #download1 .row.is-flex > [class^="col-"]:nth-child(2) {
+        order: 3;
+        border-right: none;
+    }
+    #download1 .row.is-flex > [class^="col-"]:nth-child(3) {
+        order: 2;
+        border-right: 1px solid #BBB;
+        border-bottom: 0;
+    }
+    #download1 .row.is-flex > [class^="col-"]:nth-child(4) {
+        order: 4;
+        border-right: none;
+    }
+    #download1 .row.is-flex > [class^="col-"]:nth-child(5) {
+        order: 5;
+    }
+}
+
+#get-started .row > [class^="col-"] {
+    padding: 10px 30px;
+}
+#get-started .row.is-flex > [class^="col-"] {
+    padding: 30px;
+}
+#get-started .row.is-flex > a[class^="col-"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+    #get-started .row.is-flex > div.col-md-4:not(:last-of-type),
+    #get-started .row.is-flex > a.col-md-4:not(:last-of-type),
+    #get-started .row.text-center > [class^="col-"]:not(:last-of-type) {
+        border-right-width: 0;
+    }
+    /* Re-order grid on medium and larger devices */
+    #get-started .row.is-flex > [class^="col-"]:nth-child(1) {
+        order: 1;
+    }
+    #get-started .row.is-flex > [class^="col-"]:nth-child(2) {
+        order: 4;
+    }
+    #get-started .row.is-flex > [class^="col-"]:nth-child(3) {
+        order: 2;
+    }
+    #get-started .row.is-flex > [class^="col-"]:nth-child(4) {
+        order: 5;
+    }
+    #get-started .row.is-flex > [class^="col-"]:nth-child(5) {
+        order: 3;
+    }
+    #get-started .row.is-flex > [class^="col-"]:nth-child(6) {
+        order: 6;
+    }
+}
