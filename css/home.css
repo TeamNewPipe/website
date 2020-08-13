@@ -15,9 +15,6 @@
 .tile.tile-bordered > .row > [class^="col-"] {
     border-right: 1px solid #BBB;
 }
-.tile.tile-bordered > .row > .col-sm-6:nth-child(2n+1) {
-    border-right: 0;
-}
 
 .tile.tile-bordered > .row:last-child > [class^="col-"] {
     border-bottom: 1px solid #BBB;
@@ -25,6 +22,18 @@
 
 .tile.tile-bordered > .row > .col-md-8 {
     padding: 30px 30px 15px 30px;
+}
+
+@media (max-width: 767px) {
+    .tile.tile-bordered > .row > .col-sm-6:nth-child(2n+2) {
+        border-top-width: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .tile.tile-bordered > .row > .col-sm-6:nth-child(2n+1) {
+        border-right-width: 0;
+    }
 }
 
 .download-version-container {
@@ -153,20 +162,20 @@
     /* Just as a British Speaker used to call in a very honourable house:Oooooorder! */
     #download1 .row.is-flex > [class^="col-"]:nth-child(1) {
         order: 1;
-        border-bottom: none;
+        border-bottom-width: 0;
     }
     #download1 .row.is-flex > [class^="col-"]:nth-child(2) {
         order: 3;
-        border-right: none;
+        border-right-width: 0;
     }
     #download1 .row.is-flex > [class^="col-"]:nth-child(3) {
         order: 2;
-        border-right: 1px solid #BBB;
+        border-right-width: 1px;
         border-bottom: 0;
     }
     #download1 .row.is-flex > [class^="col-"]:nth-child(4) {
         order: 4;
-        border-right: none;
+        border-right-width: 0;
     }
     #download1 .row.is-flex > [class^="col-"]:nth-child(5) {
         order: 5;
