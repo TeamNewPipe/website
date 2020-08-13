@@ -1,3 +1,7 @@
+#main-page {
+    background: #AA1D1D; /* fallback when the header background image is loaded slowly */
+}
+
 /***************************************
  ************ custom header *************
  ***************************************/
