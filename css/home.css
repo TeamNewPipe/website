@@ -716,9 +716,10 @@ ul.check > li.heart:before {
 #tile-opensource .button-wrapper {
     text-align: center;
     margin-top: 15px;
+    margin-bottom: 0;
 }
 
-#tile-opensource .button-wrapper button {
+#tile-opensource .button-wrapper .button:not(:last-child) {
     margin-bottom: 15px;
 }
 
