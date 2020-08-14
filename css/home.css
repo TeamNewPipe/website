@@ -514,34 +514,26 @@ ul.check > li.heart:before {
 
 .tile.tile-bordered > .row > [class^="col-"],
 .tile.tile-bordered > .row.is-flex > [class^="col-"] {
-    margin-bottom: 0;
-    background: #E2DEE0;
+    margin-bottom: 7px;
+    margin-left: 0;
+    margin-right: 0;
     padding: 10px;
-    border-top: 1px solid #BBB;
-    border-left: 1px solid #BBB;
-}
-
-.tile.tile-bordered > .row > [class^="col-"] {
-    border-right: 1px solid #BBB;
-}
-
-.tile.tile-bordered > .row:last-child > [class^="col-"] {
-    border-bottom: 1px solid #BBB;
+    background: #E2DEE0;
 }
 
 .tile.tile-bordered > .row > .col-md-8 {
     padding: 30px 30px 15px 30px;
 }
 
-@media (max-width: 767px) {
-    .tile.tile-bordered > .row > .col-sm-6:nth-child(2n+2) {
-        border-top-width: 0;
+@media (min-width: 768px) and (max-width: 991px) {
+    .tile.tile-bordered > .row > .col-sm-6:nth-child(1) {
+        margin-right: 4px;
+        width: calc(50% - 4px);
     }
-}
-
-@media (min-width: 768px) {
-    .tile.tile-bordered > .row > .col-sm-6:nth-child(2n+1) {
-        border-right-width: 0;
+    .tile.tile-bordered > .row > .col-sm-6:nth-child(2) {
+        margin-left: 3px;
+        margin-right: 0;
+        width: calc(50% - 3px);
     }
 }
 
@@ -618,21 +610,18 @@ ul.check > li.heart:before {
     width: 8px;
     height: 8px;
 }
+
 #download1 .carousel .carousel-indicators > li.active {
     width: 10px;
     height: 10px;
 }
+
 #download-newpipe-qr-code-container-col {
     display: none;
 }
+
 #download-newpipe-qr-code-container {
     width: 100%;
-}
-
-@media (max-width: 991px) {
-    #download1 .row.is-flex > [class^="col-"]:nth-child(n+3) {
-        border-top-width: 0;
-    }
 }
 
 @media (min-width: 768px) {
@@ -669,25 +658,28 @@ ul.check > li.heart:before {
 
     /* Re-order grid on medium and larger devices */
     /* Just as a British Speaker used to call in a very honourable house:Oooooorder! */
-    #download1 .row.is-flex > [class^="col-"]:nth-child(1) {
+    #download1 > .row.is-flex > [class^="col-"]:nth-child(1) {
         order: 1;
-        border-bottom-width: 0;
+        width: calc(100% / 3 - 4px);
+        margin-right: 7px;
     }
-    #download1 .row.is-flex > [class^="col-"]:nth-child(2) {
+    #download1 > .row.is-flex > [class^="col-"]:nth-child(2) {
         order: 3;
-        border-right-width: 0;
+        margin-right: 7px;
+        width: calc(100% / 3 - 4px);
     }
-    #download1 .row.is-flex > [class^="col-"]:nth-child(3) {
+    #download1 > .row.is-flex > [class^="col-"]:nth-child(3) {
         order: 2;
-        border-right-width: 1px;
-        border-bottom: 0;
+        width: calc(100% / 3 * 2 - 3px);
     }
-    #download1 .row.is-flex > [class^="col-"]:nth-child(4) {
+    #download1 > .row.is-flex > [class^="col-"]:nth-child(4) {
         order: 4;
-        border-right-width: 0;
+        margin-right: 7px;
+        width: calc(100% / 3 - 5px);
     }
-    #download1 .row.is-flex > [class^="col-"]:nth-child(5) {
+    #download1 > .row.is-flex > [class^="col-"]:nth-child(5) {
         order: 5;
+        width: calc(100% / 3 - 5px);
     }
 }
 
