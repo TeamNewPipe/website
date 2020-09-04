@@ -66,3 +66,11 @@ peertube:
   size: 2586
   author: PeerTube
   origin: https://joinpeertube.org
+
+birthday-cake:
+  url: birthday-cake.svg
+  type: svg
+  size: 500
+  author: webalys
+  origin: https://twitter.com/webalys
+  license: CC BY 4.0
