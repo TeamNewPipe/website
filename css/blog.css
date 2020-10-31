@@ -971,3 +971,7 @@ div.search-container input:focus {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
+
+#comments .isso-comment .text-wrapper .text a {
+    word-break: break-word;
+}
