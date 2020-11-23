@@ -32,7 +32,7 @@ Android version of Apple TV+ based on our core project: **NewPipe!**
 <p style="text-align: center; padding: 20px 0;">
 <img
     alt="ApplePipe Logo Proposal"
-    src="/img/applepipe-logo-proposal.png"
+    src="{{ site.baseurl }}/img/applepipe-logo-proposal.png"
     style="max-width: 480px;"
 />
 <span style="color: #999; display: block;">
@@ -57,7 +57,7 @@ we can surely tell we can't generate any revenue by the tool, hence it doesn't m
 <p style="text-align: center; padding: 20px 0;">
 <img
     alt="Axel Voss is very enthusiastic about a positive vote for his copyright directive in 2018."
-    src="/img/happy-voss.jpg"
+    src="{{ site.baseurl }}/img/happy-voss.jpg"
     style="max-width: 480px;"
 />
 <span style="color: #999; display: block;">
