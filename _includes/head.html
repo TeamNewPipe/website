@@ -37,13 +37,15 @@
 
 {%- assign des = site.description -%}
 {%- assign notPage = True -%}
-    {%- if page.metades -%}
-        {%- unless page.metades == "" -%}
-            {%- unless page.metades == nil -%}
-                {%- assign des = page.metades -%}
-                {%- assign notPage = False -%}
-            {%- endunless -%}
+{%- if page.metades -%}
+    {%- unless page.metades == "" -%}
+        {%- unless page.metades == nil -%}
+            {%- assign des = page.metades | normalize_whitespace -%}
+            {%- assign notPage = False -%}
         {%- endunless -%}
+    {%- endunless -%}
+{%- else if page.post AND page.excerpt %}
+    {%- assign des = page.excerpt | strip_html | normalize_whitespace -%}
 {%- else if layout.metades AND notPage == True -%}
     {%- unless layout.metades == "" -%}
         {%- unless page.metades == nil -%}
