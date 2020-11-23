@@ -992,3 +992,7 @@ figure figcaption {
 .post-content p {
     text-align: justify;
 }
+
+.post-collection .border-box p {
+    text-align: justify;
+}
