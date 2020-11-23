@@ -985,3 +985,7 @@ figure figcaption {
     font-size: 90%;
     text-align: center;
 }
+
+.post-content p {
+    text-align: justify;
+}
