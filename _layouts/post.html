@@ -23,8 +23,10 @@ bodyID: "blog-post"
             <div class="col-md-3 col-img">
                 {% assign image = site.data.images[page.image] %}
                 <img src="/img/{{ image.url }}" class="img-responsive postImg" alt="{% if image.name %}{{ image.name }}{% else %}post image{% endif %}" />
-                By <a href="{{ image.origin }}">{{ image.author }}</a>
+                {% if image.attributeAuthor %}
+                Thumbnail by <a href="{{ image.origin }}">{{ image.author }}</a>
                 {% if image.license %} under {{ image.license }}{% endif %}
+                {% endif %}
             </div>
             <div class="col-md-9">
                 {{ content }}

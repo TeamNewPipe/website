@@ -4,6 +4,7 @@ new:
     size: 14693
     author: Schabi
     origin: https://github.com/theScrabi
+    attributeAuthor: true
 
 34c3-logo:
     url: 34c3_logo.png
@@ -12,6 +13,7 @@ new:
     name: 34C3 logo
     author: Gregor Sedlag
     origin: https://engelsystem.de/img/34c3_logo.png
+    attributeAuthor: true
 
 34c3-press:
     url: 34c3-press.png
@@ -19,6 +21,7 @@ new:
     size: 46253
     author: Schabi
     origin: https://github.com/theScrabi
+    attributeAuthor: true
 
 newpipe-beta:
   url: logo_app_beta.svg
@@ -28,6 +31,7 @@ newpipe-beta:
   author: Schabi
   origin: https://github.com/theScrabi
   download: /press/logo/#logo-beta
+  attributeAuthor: false
 
 speech-bubbles:
   url: speech_bubbles.svg
@@ -37,6 +41,7 @@ speech-bubbles:
   author: María Florencia
   origin: https://commons.wikimedia.org/wiki/File:Noun_project_2472.svg
   license: CC0 1.0
+  attributeAuthor: true
 
 feed-icon:
   url: feed-icon.svg
@@ -45,6 +50,7 @@ feed-icon:
   license: CC0
   origin: https://pixabay.com/de/rss-nachrichten-futtermittel-blog-40674/
   size: 7673
+  attributeAuthor: true
 
 newpipe:
   url: logo_app.svg
@@ -52,6 +58,7 @@ newpipe:
   size: 14698
   author: Schabi
   origin: https://github.com/TeamNewPipe/NewPipe
+  attributeAuthor: false
 
 faq:
   url: faq.jpg
@@ -59,6 +66,7 @@ faq:
   size: 37972
   author: Alexas_Fotos
   origin: https://pixabay.com/de/faq-antworten-hilfe-fragen-3408300/
+  attributeAuthor: true
 
 peertube:
   url: peertube-brand.png
@@ -66,6 +74,7 @@ peertube:
   size: 2586
   author: PeerTube
   origin: https://joinpeertube.org
+  attributeAuthor: true
 
 birthday-cake:
   url: birthday-cake.svg
@@ -74,3 +83,4 @@ birthday-cake:
   author: webalys
   origin: https://twitter.com/webalys
   license: CC BY 4.0
+  attributeAuthor: true
