@@ -3,7 +3,7 @@ layout: post
 title: "NewPipe's position on advertising"
 short: "NewPipe's position on advertising"
 date: 2020-11-23 19:30:00 +0100
-categories: [pinned, release]
+categories: [pinned]
 author: TheAssassin
 image: newpipe
 excerpt_separator: <!-- more -->
