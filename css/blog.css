@@ -716,15 +716,18 @@ strong.extra {
     color: #CD322E;
 }
 
+.pagination > li > a.disabled:not(.active),
+.pagination > li > a.disabled:not(.active):hover {
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
 .pagination > li > a:hover,
 .pagination > li > a.active {
     color: #AA1D1D;
     background-color: #f3eff2;
     border-color: #d0cdcd;
-}
-
-.pagination > li > a.disabled {
-    cursor: default;
 }
 
 /* Search */

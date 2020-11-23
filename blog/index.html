@@ -68,7 +68,7 @@ short: All posts
         {% if page == paginator.page %}
         <li><a class="active disabled">{{ page }}</a></li>
         {% elsif page == 1 %}
-        <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">{{ page }}</a></li>
         {% else %}
         <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
         {% endif %}
