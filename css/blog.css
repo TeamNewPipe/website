@@ -975,3 +975,13 @@ div.search-container input:focus {
 #comments .isso-comment .text-wrapper .text a {
     word-break: break-word;
 }
+
+figure {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+figure figcaption {
+    font-size: 90%;
+    text-align: center;
+}
