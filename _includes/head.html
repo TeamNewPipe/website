@@ -54,12 +54,18 @@
     {%- endunless -%}
 {%- endif -%}
 
+{%- if page.author -%}
+    {%- assign metaAuthor = page.author -%}
+{%- else -%}
+    {%- assign metaAuthor = "Team NewPipe" -%}
+{%- endif -%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>{{ renderedTitle }}</title>
 
-    <meta name="author" content="Christian Schabesberger, NewPipe">
+    <meta name="author" content="{{ metaAuthor }}">
     <meta name="description" content="{{ des }}">
     <meta name="keywords" content="NewPipe, YouTube, Android, player, background, popup, privacy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
