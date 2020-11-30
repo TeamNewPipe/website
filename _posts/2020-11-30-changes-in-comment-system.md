@@ -11,7 +11,7 @@ excerpt_separator: <!-- more -->
 
 Starting today, we have changed our blog's comment system. In this post, we explain what we changed, why we did so, and how this affects you as a loyal reader.
 
-**TL;DR:** We also introduce a simple set of rules, as well as moderation.
+**TL;DR:** We introduce a simple set of rules, as well as moderation.
 
 <!-- more -->
 
