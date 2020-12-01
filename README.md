@@ -162,7 +162,7 @@ To use API data, you need to add the `data-newpipe-api` attribute to an HTML tag
 ```
 
 By default, the inner HTML of tags which have the `data-newpipe-api` attribute will be replaced with the requested value. Nevertheless, you should put a value there to provide a fallback for the rare case, that our API failed to generate correct data. 
-It is also possible to not replace the HTML, but store the API data in a referred attribute by adding the `ata-newpipe-api-attribute` attribute:
+It is also possible to not replace the HTML, but store the API data in a referred attribute by adding the `data-newpipe-api-attribute` attribute:
 
 ``` HTML
 <a data-newpipe-api="flavors.fdroid.stable.apk" data-newpipe-api-attribute="href">download NewPipe</a>
