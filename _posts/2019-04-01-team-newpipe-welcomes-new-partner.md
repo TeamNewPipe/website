@@ -5,7 +5,7 @@ date: 2019-04-01 12:00:00 +0200
 categories: [pinned]
 author: TheAssassin
 image: newpipe
-excerpt_separator: <!--more-->
+excerpt_separator: <!-- more -->
 ---
 
 Team NewPipe has found a new partner. We're very enthusiastic about the awesome deal we negotiated with them. Read on for more information!
@@ -13,7 +13,7 @@ Team NewPipe has found a new partner. We're very enthusiastic about the awesome 
 **Please beware that the following text was part of this year's April's fools joke. Please see @TheAssassin's reply in the comments for more details on the context of this joke.**
 
 
-<!--more-->
+<!-- more -->
 
 Team NewPipe is proud to announce our new partnership with a well-known tech
 brand we admire a lot: Apple Inc., the authors of **revolutionary devices** like

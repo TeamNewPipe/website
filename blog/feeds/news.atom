@@ -18,9 +18,9 @@ layout: null
     <entry>
         <title>{{ post.title | xml_escape }}</title>
         <summary type="html">{% if post.excerpt_separator %}{{ post.excerpt | xml_escape }}{% else %}{{ post.content | xml_escape | truncatewords:100 }}{% endif %}</summary>
-        <content type="html">{{ post.content | xml_escape }}</content>
+        <content type="html">{{ post.content | replace: "<!-- more -->", "" | xml_escape }}</content>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
-        <author><name>{{ post.author }}</name></author>
+        <author><name>{{ post.author | replace: "&", "and" }}</name></author>
         <link href="{{ post.url | prepend: site.url }}" />
         <id>{{ post.url | prepend: site.url }}</id>
     </entry>
