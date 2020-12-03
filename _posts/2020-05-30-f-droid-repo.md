@@ -34,7 +34,7 @@ The URL you need to copy is below. It includes the key's fingerprint for your co
 https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501
 ```
 
-*Note: we also provide an archive containing older builds of NewPipe; to use this, just substitute `fdroid` with `archive` in the URL, the key's fingerprint is the same.)*
+*Note: we also provide an archive containing older builds of NewPipe; to use this, just substitute `repo` with `archive` in the URL, the key's fingerprint is the same.)*
 
 We will soon provide a detailed guide including screenshots for our less tech-savvy users.
 
