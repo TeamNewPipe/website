@@ -14,6 +14,7 @@ bodyID: "blog-post"
             </time>
             {% if page.author %}
             by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+            &ndash; {% include reading-time.html %}
         {% endif %}</p>
     </header>
 

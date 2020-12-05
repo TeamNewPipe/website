@@ -1,0 +1,11 @@
+{% comment %}
+inspired by https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/reading-time.html -- thanks!
+{% endcomment %}
+
+<i class="fa fa-clock-o"></i>
+{% capture words %}
+{{ content | number_of_words | minus: 180 }}
+{% endcapture %}
+{% unless words contains '-' %}
+{{ words | plus: 150 | divided_by: 150 | append: ' minute(s)' }}
+{% endunless %}
