@@ -15,10 +15,10 @@ be able to use either feed type with any feed reader application.
 
 Please use the following URLs:
 
-  - Atom: [https://newpipe.schabi.org/blog/feeds/news.atom](https://newpipe.schabi.org/blog/feeds/news.atom)
-  - RSS: [https://newpipe.schabi.org/blog/feeds/news.rss](https://newpipe.schabi.org/blog/feeds/news.rss)
+  - Atom: [{{ site.url }}/blog/feeds/news.atom]({{ site.url }}/blog/feeds/news.atom)
+  - RSS: [{{ site.url }}/blog/feeds/news.rss]({{ site.url }}/blog/feeds/news.rss)
 
-You can also use [https://newpipe.org/blog/](https://newpipe.schabi.org/blog/)
+You can also use [{{ site.url}}/blog/]({{ site.url }}/blog/)
 directly to have your reader choose the right URL for you.
 
 Let us know about issues in the comments!

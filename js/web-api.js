@@ -76,12 +76,12 @@ function updateAllWithAPIData() {
  * Fetch API information and trigger updates
  */
 $(document).ready(function () {
-    $.get("https://newpipe.schabi.org/api/data.json", "json")
+    $.get("https://newpipe.net/api/data.json", "json")
         .done(function(resp) {
             api = resp;
             updateAllWithAPIData();
         })
         .fail(function() {
-            console.log("An error occurred while getting Web API data from https://newpipe.schabi.org/api/data.json");
+            console.log("An error occurred while getting Web API data from https://newpipe.net/api/data.json");
         });
 });
