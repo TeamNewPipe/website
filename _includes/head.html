@@ -21,6 +21,13 @@
             {%- assign notPage = False -%}
         {%- endunless -%}
     {%- endunless -%}
+{%- else if page.title -%}
+    {%- unless page.title == "" -%}
+        {%- unless page.title == nil -%}
+            {%- assign metatit = page.title -%}
+            {%- assign notPage = False -%}
+        {%- endunless -%}
+    {%- endunless -%}
 {%- else if layout.metatitle AND notPage == True -%}
     {%- unless layout.metatitle == "" -%}
         {%- unless page.metatitle == nil -%}
