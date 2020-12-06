@@ -11,6 +11,6 @@ If you read the title, you probably guessed it: NewPipe's website now provides a
 
 We've been planning this for many months now, and finally Tobias Groza, long time community member and our chief web developer has found some time to implement this in our website. Big thanks, Tobias, you've done a great job!
 
-Please visit [https://newpipe.schabi.org/FAQ/](https://newpipe.schabi.org/FAQ/) to find answers for the most common questions. You're encouraged to share that link with your friends, too.
+Please visit [{{ site.url }}/FAQ/]({{ site.url }}/FAQ/) to find answers for the most common questions. You're encouraged to share that link with your friends, too.
 
 The FAQ has been released in "beta mode", i.e., it isn't complete yet. If you find bugs or want to suggest new topics that should be added, please reach out to us on [GitHub](https://github.com/TeamNewPipe/website). Of course, you're welcome to send us pull requests to add new entries or fix existing ones.

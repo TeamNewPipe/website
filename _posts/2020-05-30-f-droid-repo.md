@@ -52,4 +52,4 @@ The F-Droid repository has been in a semi-public beta for a significant amount o
 
 ## Disclaimer
 
-Please note that there are no guarantees made from us with regards to the repository and the contained `.apk` files. We work on keeping everything working safely, though. If you spot any issues, please don't hesitate to [contact us](https://newpipe.schabi.org/press/contact/).
+Please note that there are no guarantees made from us with regards to the repository and the contained `.apk` files. We work on keeping everything working safely, though. If you spot any issues, please don't hesitate to [contact us]({{ site.url }}/press/contact/).

@@ -1,6 +1,6 @@
 # NewPipe Website Generator
 
-Repo for the [NewPipe website](https://newpipe.schabi.org/), which includes the blog and the press kit.
+Repo for the [NewPipe website](https://newpipe.net/), which includes the blog and the press kit.
 
 All sites are based on [Bootstrap](https://getbootstrap.com) 3.3.7 and [Jekyll](https://jekyllrb.com/).
 
@@ -121,7 +121,7 @@ The variable `search` accepts following values which modify the position in the 
 
 #### FAQ & Tutorials
 
-FAQ and tutorials are located at https://newpipe.schabi.org/FAQ/ and https://newpipe.schabi.org/FAQ/tutorials/.
+FAQ and tutorials are located at https://newpipe.net/FAQ/ and https://newpipe.net/FAQ/tutorials/.
 
 Essentially FAQs and tutorials have the same structure: 
 Both are collections (`faq` and `tutorials`) and can have the same attributes which are defined via the YAML front matter.
@@ -152,7 +152,7 @@ Writing short FAQs is quite easy and there are only few things to consider.
 
 #### Usage of Website API
 We have an API which provides data for running the website to not require visitors contacting other servers when visiting our website.
-You can find its source code [on GitHub](https://github.com/TeamNewPipe/web-api) and the served data [here](https://newpipe.schabi.org/api/data.json).
+You can find its source code [on GitHub](https://github.com/TeamNewPipe/web-api) and the served data [here](https://newpipe.net/api/data.json).
 If you want to use the API for other purposes than running or developing our website, please host it yourself.
 
 To use API data, you need to add the `data-newpipe-api` attribute to an HTML tag containing the JSON identifier of the value you want to access:
