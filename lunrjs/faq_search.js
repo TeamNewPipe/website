@@ -116,12 +116,6 @@ function showOne(itemId) {
     }
 }
 
-$("#search-box").keydown(function (e) {
-    if (e.which === 13 || e.keyCode === 13) { // Enter
-        search();
-    }
-});
+$("#search-box").keydown(search);
 
-$("#tile-show-all").click(function () {
-    showAll();
-});
+$("#tile-show-all").click(showAll);
