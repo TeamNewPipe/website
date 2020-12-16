@@ -1,29 +1,29 @@
 # NewPipe Website Generator
 
-Repo for the [NewPipe website](https://newpipe.net/), which includes the blog and the press kit.
+Repo for the static [NewPipe website](https://newpipe.net). The code for the blog commenting system [isso](https://posativ.org/isso) is located in [this repository](https://github.com/TeamNewPipe/isso).
 
-All sites are based on [Bootstrap](https://getbootstrap.com) 3.3.7 and [Jekyll](https://jekyllrb.com/).
+All sites are based on [Bootstrap](https://getbootstrap.com) 3.4.1 and [Jekyll](https://jekyllrb.com/).
 
 
 ## Development
 
 #### Installation
 Install Jekyll and Bundler gems through RubyGems:
-```
+``` sh
 ~ $ gem install jekyll bundler
 ```
 
 Navigate to the root directory of this project, dev environment:
-```
-bundle install
+``` sh
+$ bundle install
 ```
 
 Navigate to this directory and build the site on the preview server:
-```
-~ $ jekyll serve
+``` sh
+$ bundle exec jekyll serve
 ```
 
-Run http://localhost:4000/blog or http://localhost:4000/press.
+Open http://localhost:4000 in your browser.
 
 #### General
 
@@ -62,7 +62,7 @@ Posts with the `pinned` category appear on the right sidebar as _Also interestin
 New categories can be implemented via an extra HTML page named `categoryName.html` and placed in `blog/`.
 The new page should look like this:
  
-```
+``` yml
 ---
 layout: blog_category
 title: categoryName
@@ -149,6 +149,8 @@ Writing short FAQs is quite easy and there are only few things to consider.
 2. To separate parts of your article with a thin line, use `<hr/>` tags. 
 3. To insert images, use the `<img/>` tag inside of a `<figure>` tag. Additionally, each image needs a caption (`<figcaption>`).
 4. Please keep your sentences as shorts as possible. This makes it easier to follow you and your instructions.
+
+---
 
 #### Usage of Website API
 We have an API which provides data for running the website to not require visitors contacting other servers when visiting our website.
