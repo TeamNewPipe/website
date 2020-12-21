@@ -130,8 +130,14 @@ body.modal-open {
     color: #cd201f;
 }
 
+.newpipe {
+    width: 160px;
+}
+
 .f-droid {
     width: 160px;
+	float: right;
+	margin-left: 10px;
 }
 
 a:hover,

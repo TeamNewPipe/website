@@ -29,25 +29,27 @@
     width: 100%;
 }
 
-.header-wrapper .f-droid-wrapper {
+.header-wrapper .get-newpipe-wrapper {
     position: relative;
     bottom: -25px;
 }
 
-.header-wrapper .f-droid-wrapper {
-    -webkit-box-shadow: 0 -1px 8px black, 0 3px 8px black;
-    -moz-box-shadow: 0 -1px 8px black, 0 3px 8px black;
-    box-shadow: 0 -1px 8px black, 0 3px 8px black;
+
+.header-wrapper .get-newpipe-wrapper {
+    -webkit-box-shadow: 0px -1px 10px -4px black, 0 2px 10px -4px black;
+    -moz-box-shadow: 0px -1px 10px -4px black, 0 2px 10px -4px black;
+    box-shadow: 0px -1px 10px -4px black, 0 2px 10px -4px black;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
 
-.header-wrapper .f-droid-wrapper:hover {
-    -webkit-box-shadow: 0 -1px 9px black, 0 3px 9px black;
-    -moz-box-shadow: 0 -1px 9px black, 0 3px 9px black;
-    box-shadow: 0 -1px 9px black, 0 3px 9px black;
+.header-wrapper .get-newpipe-wrapper:hover {
+    -webkit-box-shadow: 0px -1px 10px -3px black, 0 2px 10px -3px black;
+    -moz-box-shadow: 0px -1px 10px -3px black, 0 2px 10px -3px black;
+    box-shadow: 0px -1px 10px -3px black, 0 2px 10px -3px black;
 }
+
 
 .header-box-wrapper > .container {
     position: relative;
@@ -99,10 +101,10 @@
         position: relative;
         left: 0;
     }
-    .header-wrapper .f-droid-wrapper {
+    .header-wrapper .get-newpipe-wrapper {
         text-align: center;
     }
-    .header-wrapper .f-droid-wrapper {
+    .header-wrapper .get-newpipe-wrapper {
         width: 160px;
         margin: auto;
         left: 0;
@@ -118,7 +120,7 @@
         margin-bottom: 100px;
         width: auto;
     }
-    .header-wrapper .f-droid-wrapper {
+    .header-wrapper .get-newpipe-wrapper {
         position: absolute;
         bottom: -25px;
     }
