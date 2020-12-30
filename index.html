@@ -447,11 +447,11 @@
                         <!-- Controls: not displayed but needed to get preventJumpingPage() working
                              Pausing the Carousel won't work without controls. Don't ask me why :)
                          -->
-                        <a class="left carousel-control" href="#user-voices-carousel" role="button" data-slide="prev">
+                        <a class="left user-voices carousel-control" href="#user-voices-carousel" role="button" data-slide="prev">
                             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="right carousel-control" href="#user-voices-carousel" role="button" data-slide="next">
+                        <a class="right user-voices carousel-control" href="#user-voices-carousel" role="button" data-slide="next">
                             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
@@ -498,7 +498,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-8">
                             <div id="download-info-carousel-container">
-                                <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+                                <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
 
                                     <!-- Wrapper for slides -->
                                     <div class="carousel-inner" role="listbox">
@@ -552,11 +552,11 @@
                                     <!-- Controls: not displayed but needed to get preventJumpingPage() working
                                          Pausing the Carousel won't work without controls. Don't ask me why :)
                                      -->
-                                    <a class="left carousel-control" href="#f-droid-carousel" role="button" data-slide="prev">
+                                    <a class="left f-droid carousel-control" href="#f-droid-carousel" role="button" data-slide="prev">
                                         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
                                         <span class="sr-only">Previous</span>
                                     </a>
-                                    <a class="right carousel-control" href="#f-droid-carousel" role="button" data-slide="next">
+                                    <a class="right f-droid carousel-control" href="#f-droid-carousel" role="button" data-slide="next">
                                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                                         <span class="sr-only">Next</span>
                                     </a>
@@ -746,17 +746,21 @@
             let userVoicesSwiper = new Swipe('#user-voices');
             userVoicesSwiper.onLeft(function () {
                 $('#user-voices-carousel').carousel('next');
+				$('#user-voices-carousel').carousel('pause');
             });
             userVoicesSwiper.onRight(function () {
                 $('#user-voices-carousel').carousel('prev');
+				$('#user-voices-carousel').carousel('pause');
             });
             userVoicesSwiper.run();
             let downloadFdroidSwiper = new Swipe('#download-info-carousel-container');
             downloadFdroidSwiper.onLeft(function () {
                 $('#f-droid-carousel').carousel('next');
+				$('#f-droid-carousel').carousel('pause');
             });
             downloadFdroidSwiper.onRight(function () {
                 $('#f-droid-carousel').carousel('prev');
+				$('#f-droid-carousel').carousel('pause');
             });
             downloadFdroidSwiper.run();
         }
@@ -770,7 +774,28 @@
             });
         });
     </script>
-
+	
+	<!-- Script to pause slides when buttons are pressed -->
+	<script>
+	$(document).ready(function(){
+	  $(".left.f-droid").click(function(){
+		$("#f-droid-carousel").carousel("prev");
+		$("#f-droid-carousel").carousel("pause");
+	  });
+	  $(".right.f-droid").click(function(){
+		$("#f-droid-carousel").carousel("next");
+		$("#f-droid-carousel").carousel("pause");
+	  });
+	  $(".left.user-voices").click(function(){
+		$("#user-voices-carousel").carousel("prev");
+		$("#user-voices-carousel").carousel("pause");
+	  });
+	  $(".right.user-voices").click(function(){
+		$("#user-voices-carousel").carousel("next");
+		$("#user-voices-carousel").carousel("pause");
+	  });
+	});
+	</script>
     <!-- Load and play animation on medium and large screens -->
     <script>
         let loaded = false;
