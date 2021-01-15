@@ -998,3 +998,43 @@ figure figcaption {
     hyphenate-limit-last: always;
     hyphenate-limit-zone: 8%;
 }
+
+img.peertube-title {
+    height: 30px;
+    margin-top:-5px;
+}
+
+p.applepipe-logo {
+    text-align: center !important;
+    padding: 20px 0 !important;
+}
+img.applepipe-logo {
+    max-width: 480px;
+}
+span.applepipe-logo {
+    color: #999;
+    display: block;
+}
+p.applepipe-voss {
+    text-align: center;
+    padding: 20px 0;
+}
+img.applepipe-voss {
+    max-width: 480px;
+}
+span.applepipe-voss {
+    color: #999;
+    display: block;
+}
+
+.notification-align-center {
+    align-self: center;
+}
+
+.media-ccc-de-screenshot {
+    max-width: 330px;
+}
+
+.fdroid-repo-qr-code {
+    width: 250px;
+}

@@ -29,13 +29,13 @@ service needs nice apps for mobile platforms. The Apple TV+ management is a big
 fan of NewPipe and sent us an offer we couldn't deny in order to develop the
 Android version of Apple TV+ based on our core project: **NewPipe!**
 
-<p style="text-align: center; padding: 20px 0;">
+<p class="applepipe-logo">
 <img
     alt="ApplePipe Logo Proposal"
     src="{{ site.baseurl }}/img/applepipe-logo-proposal.png"
-    style="max-width: 480px;"
+    class="applepipe-logo"
 />
-<span style="color: #999; display: block;">
+<span class="applepipe-logo">
 ApplePipe Logo Proposal
 </span>
 </p>
@@ -54,13 +54,13 @@ will soon be **released as free software**, of course, as other companies probab
 have similar issues. Also, we want to give something back, and after evaluation by our management,
 we can surely tell we can't generate any revenue by the tool, hence it doesn't make sense to keep it proprietary for economic reasons either.
 
-<p style="text-align: center; padding: 20px 0;">
+<p class="applepipe-voss">
 <img
     alt="Axel Voss is very enthusiastic about a positive vote for his copyright directive in 2018."
     src="{{ site.baseurl }}/img/happy-voss.jpg"
-    style="max-width: 480px;"
+    class="applepipe-voss"
 />
-<span style="color: #999; display: block;">
+<span class="applepipe-voss">
 Axel Voss is very happy about a positive vote for his copyright directive in 2018.
 </span>
 </p>
