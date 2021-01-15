@@ -704,3 +704,27 @@ strong.extra {
 .img-full-width.icon-image {
     width: 85%;
 }
+
+.newpipe-title {
+    font-weight: bold;
+}
+
+img.fdroid-logo {
+    display: inline-block;
+}
+
+img.fdroid-repo-qrcode {
+    background-color: #fff;
+}
+
+div.fdroid-col-right {
+    margin: auto;
+}
+
+div.fdroid-col-right .break-line {
+    word-wrap: break-word; word-wrap: anywhere;
+}
+
+#f-droid-repo-qr-code {
+    display: inline-block;
+}
