@@ -348,3 +348,7 @@ hr.separator {
     margin-bottom: 30px;
     margin-top: 30px;
 }
+
+.code-bg-light {
+    background: #f3eff2;
+}
