@@ -10,7 +10,7 @@ title: "Add the NewPipe repository to F-Droid"
 
     You will need to add our repository to your F-Droid client. We will only show steps for adding to the official F-Droid app. There are two ways to add an F-Droid repository.
     </p>
-    <div class="alert alert-danger download-license-warning" style="font-size: 110%" role="alert">
+    <div class="alert alert-danger download-license-warning" class="fdroid-repo-alert" role="alert">
         <span class="fa fa-2x fa-exclamation" aria-hidden="true"></span>
         <span>
             In case NewPipe is <b>already installed</b> on your device, make sure to <a href="/FAQ/tutorials/import-export-data/#export-database"><b>backup your application data</b></a>.<br>
@@ -36,7 +36,7 @@ title: "Add the NewPipe repository to F-Droid"
                     <li>After scanning, this menu will appear:</li>
                     <li>Click <code>OK</code>. The NewPipe upstream repository will be added.</li>
                     <li>Go to F-Droid's search and search for <code>NewPipe</code>. Click the listing for NewPipe.</li>
-                    <li>Scroll down to the versions tab. Expand both of the tabs for the highest numbers at the top. Press <code>INSTALL</code> on the one that says <code style="white-space: normal">Repository: NewPipe upstream repository</code>.</li>
+                    <li>Scroll down to the versions tab. Expand both of the tabs for the highest numbers at the top. Press <code>INSTALL</code> on the one that says <code class=".fdroid-repo-code-1">Repository: NewPipe upstream repository</code>.</li>
                 </ol>
                 <p>
                     Note: If you have the official F-Droid version installed, you won't be able to see (or install) the Newpipe version because it has a different signature. To see it, enable "Include incompatible versions" from F-Droid settings. To install it, first make a database backup of your existing version, uninstall it, then install the new one and restore your backup (<a href="/FAQ/tutorials/import-export-data/#export-database">tutorial</a>).
@@ -62,9 +62,9 @@ title: "Add the NewPipe repository to F-Droid"
         <li>Click the <i class="fa fa-plus"></i> to add NewPipe's repository.</li>
         <li>In the pop-up, after <code>https://</code> paste the following link: <a href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">copy me!</a> You don't need to add to the fingerprint field as the link provided will automatically fill it.</li>
         <li>Click <code>OK</code>. The repository will save and show it as unsigned until all repositories are refreshed. This is because the F-Droid app didn't compared the fingerprints yet. It will tell you if they do not match. If you want, you can also check it by hand:
-            <pre style="white-space: pre-line">E240 2C78 F9B9 7C6C 89E9 7DB9 14A2 751F DA1D 02FE 2039 CC08 97A4 62BD B57E 7501</pre></li>
+            <pre class="fdroid-repo-code-2">E240 2C78 F9B9 7C6C 89E9 7DB9 14A2 751F DA1D 02FE 2039 CC08 97A4 62BD B57E 7501</pre></li>
         <li>Go to F-Droid's search and search for <code>NewPipe</code> and click the listing for NewPipe.</li>
-        <li>Scroll down to the versions tab. Expand both of the tabs for the highest numbers at the top. Press <code>INSTALL</code> on the one that says <code style="white-space: normal">Repository: NewPipe upstream repository</code>.</li>
+        <li>Scroll down to the versions tab. Expand both of the tabs for the highest numbers at the top. Press <code>INSTALL</code> on the one that says <code class="fdroid-repo-code-1">Repository: NewPipe upstream repository</code>.</li>
     </ol>
     <p>
         Note: If you have the official F-Droid version installed, you won't be able to see (or install) the Newpipe version because it has a different signature. To see it, enable "Include incompatible versions" from F-Droid settings. To install it, first make a database backup of your existing version, uninstall it, then install the new one and restore your backup (<a href="/FAQ/tutorials/import-export-data/#export-database">tutorial</a>).
