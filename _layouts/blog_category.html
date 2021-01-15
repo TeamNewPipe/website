@@ -45,22 +45,7 @@ metades: "Welcome to the blog of NewPipe, the lightweight YouTube experience for
     </div>
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        /*
-        Make single post tiles clickable
-         */
-        $('.border-box').click(function (event) {
-            if (event.target.nodeName === 'a' || event.target.nodeName === 'A'
-                || event.target.tagName === 'a' || event.target.tagName === 'A') {
-                return;
-            }
-            let url = $(this).attr('data-href');
-            if (url !== "" && url.startsWith("{{ site.url }}"))
-                window.location.href = url;
-        });
-    });
-</script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/blog_category.js"></script>
 
 {% include footer.html buffer="True" %}
 
