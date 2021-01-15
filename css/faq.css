@@ -352,3 +352,7 @@ hr.separator {
 .code-bg-light {
     background: #f3eff2;
 }
+
+img.baseline-settings {
+    margin-right: 0;
+}

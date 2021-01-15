@@ -212,3 +212,12 @@ main .row [class^="col"] {
 #footer .image-buffer {
     background-color: #D0CDCD;
 }
+
+img.cup-hot {
+    width: 1em;
+    vertical-align: 0;
+}
+
+.wrench-large {
+    font-size: 18px;
+}
