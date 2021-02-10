@@ -1,3 +1,8 @@
+---
+# yaml header to enable parsing
+# without this header, the {{ site.url }} is not parsed
+#// noinspection JSAnnotator
+---
 $(document).ready(function() {
     /*
     Make single post tiles clickable
