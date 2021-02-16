@@ -8,6 +8,7 @@ navBrand: "FAQ"
 navActive: "FAQ"
 footerBuffer: "True"
 extraCSS: [tutorials.css]
+extraJS: tutorial.js
 ---
 
 {% if page.type == "tutorial" %}
@@ -44,13 +45,5 @@ extraCSS: [tutorials.css]
             <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" ></i>
         </div> <!-- Modal -->
         <script src="{{ site.baseurl }}/js/mediaview.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                let images = document.querySelectorAll('.figure-wrapper > figure > img, .figure-wrapper > figure > video');
-                for (let image in images) {
-                    images[image].onclick = function(){viewMediaFile(this, true)};
-                }
-            });
-        </script>
     </div>
 </div>
