@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: NewPipe - the lightweight streaming experience for Android
-email: tnp@schabi.org
+email: tnp@newpipe.schabi.org
 description: Welcome to NewPipe, the lightweight YouTube experience for Android
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://newpipe.net" # the base hostname & protocol for your site, e.g. http://example.com
