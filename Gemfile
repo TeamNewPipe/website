@@ -9,7 +9,7 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "4.1.1"
+gem "jekyll", "4.2.0"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5", ">= 2.5.1"
@@ -20,7 +20,7 @@ gem "minima", "~> 2.5", ">= 2.5.1"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.15", ">= 0.15.0"
+   gem "jekyll-feed", "~> 0.15", ">= 0.15.1"
    gem "jekyll-paginate"
 end
 
