@@ -15,6 +15,11 @@ WORKDIR /srv/jekyll
 ARG ISSO_ADDRESS
 ENV JEKYLL_ENV=production
 
+# fix timezone so that our CE(S)T timestamps work
+# we specify the times relative to the UTC, however, jekyll does not render them with this image's default timezone
+# changing the timezone to a CE(S)T one appears to fix the issue
+ENV TZ=Europe/Berlin
+
 # copy data
 COPY . /srv/jekyll/
 
