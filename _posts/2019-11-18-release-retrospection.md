@@ -75,5 +75,5 @@ We hope you can understand the reasons for the missing release announcements. We
 
 We recommend you to install the [F-Droid app](https://f-droid.org/) as it notifies you as soon as an update for [NewPipe](https://f-droid.org/packages/org.schabi.newpipe/) is available.
 
-Please let us know what your experience of the latest release is, especially bugs in need of fixing. As usual, you can reach out to us via IRC ([#newpipe on Libera.Chat](ircs://irc.libera.chat:6697/newpipe)), [open issues on GitHub](https://github.com/TeamNewPipe/NewPipe/issues/new) or ideally use our built-in crash reporter to send us machine-readable issue reports, or [send in fixes](https://github.com/TeamNewPipe/NewPipe/blob/dev/.github/CONTRIBUTING.md#bug-fixing) yourself.
+Please let us know what your experience of the latest release is, especially bugs in need of fixing. As usual, you can reach out to us via IRC ([#newpipe on Libera.Chat](https://web.libera.chat/#newpipe)), [open issues on GitHub](https://github.com/TeamNewPipe/NewPipe/issues/new) or ideally use our built-in crash reporter to send us machine-readable issue reports, or [send in fixes](https://github.com/TeamNewPipe/NewPipe/blob/dev/.github/CONTRIBUTING.md#bug-fixing) yourself.
 
