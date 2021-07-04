@@ -1,6 +1,6 @@
 html,
 body {
-    min-height: 100%;
+    min-height: 100vh;
     font-family: 'Arial';
 }
 
@@ -647,7 +647,7 @@ strong.extra {
 #page {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 100vh;
     background: #d0cdcd;
 }
 

@@ -182,6 +182,15 @@ h3 > a > i.fa-chevron-left {
     }
 }
 
+#faq {
+    display: flex;
+    flex-direction: column;
+}
+
+#faq .site-content {
+    align-items: center;
+}
+
 #faq .search-container #search-submit,
 #faq .search-container #search-box {
     background: #E2DEE0;
