@@ -13,7 +13,7 @@ $(document).ready(function() {
             return;
         }
         let url = $(this).attr('data-href');
-        if (url !== "" && url.startsWith("{{ site.url }}"))
+        if (url !== undefined && url != null && url !== "" && url.startsWith("{{ site.url }}"))
             window.location.href = url;
     });
 });
