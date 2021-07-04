@@ -728,3 +728,8 @@ div.fdroid-col-right .break-line {
 #f-droid-repo-qr-code {
     display: inline-block;
 }
+
+#no-search-results,
+#no-search-results p {
+    text-align: center;
+}

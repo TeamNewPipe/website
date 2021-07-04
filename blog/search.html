@@ -24,11 +24,3 @@ title: Search
 <script src="{{ site.baseurl }}/lunrjs/blog_searchData.js"></script>
 <script src="{{ site.baseurl }}/lunrjs/lunr.min.js"></script>
 <script src="{{ site.baseurl }}/lunrjs/blog_search.js"></script>
-
-<script>
-$("#search-box").on('keyup', function (e) {
-    if (e.keyCode == 13) { // Enter key
-        search('manual');
-    }
-});
-</script>

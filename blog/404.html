@@ -30,10 +30,3 @@ title: 404 Error
 <script src="{{ site.baseurl }}/js/blog_searchData.js"></script>
 <script src="{{ site.baseurl }}/js/lunr.min.js"></script>
 <script src="{{ site.baseurl }}/js/blog_search.js"></script>
-<!-- search for words in false url -->
-<script>
-var searchTerm = document.location.pathname;
-searchTerm = searchTerm.replace(/\//g, " ");
-document.getElementById('search-box').setAttribute("value", searchTerm);
-search("manual");
-</script>

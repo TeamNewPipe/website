@@ -61,7 +61,7 @@ function displaySearchResults(results) {
             $tile.find(".tile-body").show();
         }
     } else {
-        searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p></div>';
+        searchResults.innerHTML = '<div id="no-search-results"><br><p><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p></div>';
     }
 
     searchResults.classList.add("active");
