@@ -986,6 +986,11 @@ figure {
     margin-bottom: 2em;
 }
 
+figure.center img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 figure figcaption {
     font-size: 90%;
     text-align: center;
@@ -993,8 +998,7 @@ figure figcaption {
 
 .post-content p, .post-collection .border-box p {
     text-align: justify;
-
-    hyphenate: auto
+    hyphenate: auto;
     hyphenate-limit-chars: 6 3 3;
     hyphenate-limit-lines: 2;
     hyphenate-limit-last: always;
