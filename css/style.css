@@ -454,6 +454,12 @@ strong.extra {
     font-size: 16px;
 }
 
+.tiles-container .tile.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 @media (max-width: 767px) {
     .tiles-container > .container-double > .row.is-flex > [class*='col-'] {
         width: 100%;
