@@ -72,14 +72,14 @@
 <head>
     <title>{{ renderedTitle }}</title>
 
-    <meta name="author" content="{{ metaAuthor }}">
-    <meta name="description" content="{{ des }}">
+    <meta name="author" content="{{ metaAuthor | strip_html }}">
+    <meta name="description" content="{{ des | strip_html }}">
     <meta name="keywords" content="NewPipe, YouTube, Android, player, background, popup, privacy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
     <meta property="og:site_name" content="NewPipe">
-    <meta property="og:title" content="{{ metatit }}">
+    <meta property="og:title" content="{{ metatit | strip_html }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/logo_400.png">
