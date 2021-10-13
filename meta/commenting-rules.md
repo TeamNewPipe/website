@@ -24,7 +24,7 @@ To make our moderation work as transparent as possible, we publish our rules for
 
 We see a lot of comments of people looking for help, trying to suggest features, report bugs, complain about the app in general, etc. Those, however, are not related to the content in any way.
 
-We welcome discussions on new features or other changes below release posts, for instance. However, what regularly happens is that critical, constructive posts are lost between tens or hundreds of others, which discuss anything but the content.
+We welcome discussions on new features or other changes below release posts, for instance. However, what regularly happens is that critical, constructive posts are lost between tens or hundreds of others, which discuss anything but the content. This includes feature requests or bug reports, which need to be reported [on GitHub](https://github.com/TeamNewPipe/NewPipe/issues).
 
 Therefore, we are no longer going to publish comments unrelated to the sites in order to provide more space for feedback on the actual content.
 
