@@ -22,6 +22,7 @@ gem "minima", "~> 2.5", ">= 2.5.1"
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.15", ">= 0.15.1"
    gem "jekyll-paginate"
+   gem 'jekyll-redirect-from'
 end
 
 
