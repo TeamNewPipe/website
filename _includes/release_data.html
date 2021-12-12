@@ -9,10 +9,15 @@
 #                   releasePostUrl is empty: releasePostUrl != empty
 }}
 {%- capture releaseChangelog -%}
-Fixed resuming streams.
-Fixed crash on app start.
+<ul>
+    <li>Fixed YouTube dislike removal</li>
+    <li>Support for PeerTube short URL</li>
+    <li>Adding more options to UI menus</li>
+    <li>Better feed experience</li>
+    <li>Switch to ExoPlayer's default buffer values</li>
+</ul>
 {%- endcapture -%}
 
 {%- capture releasePostUrl -%}
-{% post_url 2021-10-12-newpipe-0.21.12+13-released %}
+{% post_url 2021-12-12-newpipe-0.21.14-released %}
 {%- endcapture -%}
