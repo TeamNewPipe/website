@@ -9,15 +9,11 @@
 #                   releasePostUrl is empty: releasePostUrl != empty
 }}
 {%- capture releaseChangelog -%}
-<ul>
-    <li>Fixed YouTube dislike removal</li>
-    <li>Support for PeerTube short URL</li>
-    <li>Adding more options to UI menus</li>
-    <li>Better feed experience</li>
-    <li>Switch to ExoPlayer's default buffer values</li>
-</ul>
+<div>
+    <p>Removed MediaParser support to fix failing playback resume after buffering on Android 11+.</p>
+    <p>Disabled media tunneling on Philips QM16XE to fix playback problems.</p>
+</div>
 {%- endcapture -%}
 
 {%- capture releasePostUrl -%}
-{% post_url 2021-12-12-newpipe-0.21.14-released %}
 {%- endcapture -%}
