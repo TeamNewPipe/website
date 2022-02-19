@@ -9,11 +9,14 @@
 #                   releasePostUrl is empty: releasePostUrl != empty
 }}
 {%- capture releaseChangelog -%}
-<div>
-    <p>Fixed YouTube not playing any stream.</p>
-</div>
+<ul>
+    <li>YouTube-like rewind/fast-forward</li>
+    <li>Pinned comments</li>
+    <li>Searchable preferences</li>
+    <li>Fixed player playback reset, order of search history, opening video links with 4+ digits timestamps, and more</li>
+</ul>
 {%- endcapture -%}
 
 {%- capture releasePostUrl -%}
-{% post_url 2022-02-01-newpipe-0.21.16-hotfix %}
+{% post_url 2022-02-19-newpipe-0.22.0 %}
 {%- endcapture -%}
