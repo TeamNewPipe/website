@@ -10,13 +10,12 @@
 }}
 {%- capture releaseChangelog -%}
 <ul>
-    <li>YouTube-like rewind/fast-forward</li>
-    <li>Pinned comments</li>
-    <li>Searchable preferences</li>
-    <li>Fixed player playback reset, order of search history, opening video links with 4+ digits timestamps, and more</li>
+    <li>Fixed the fast-forward/rewind arc not underlaying the system UI</li>
+    <li>Fixed loading problems and random crashes in lists</li>
+    <li>Reverted changes to the handling of phone notches</li>
 </ul>
 {%- endcapture -%}
 
 {%- capture releasePostUrl -%}
-{% post_url 2022-02-19-newpipe-0.22.0 %}
+{% post_url 2022-02-25-newpipe-0.22.1 %}
 {%- endcapture -%}
