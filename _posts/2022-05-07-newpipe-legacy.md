@@ -2,7 +2,7 @@
 layout: post
 title: "An overdue announcement about NewPipe-Legacy being archived"
 short: "NewPipe-Legacy archived, lack of maintainer"
-date: 2022-04-30 01:00:00 + 2:00
+date: 2022-05-07 01:00:00 + 2:00
 categories: [pinned]
 author: Team NewPipe
 image: newpipe
