@@ -350,12 +350,25 @@ code {
     font-size: 150%;
     margin-right: 15px;
 }
+
 hr.separator {
     border-top: 15px solid #e2dee0;
-    margin-left: -150px;
-    width: calc(100% + 300px);
     margin-bottom: 30px;
     margin-top: 30px;
+    margin-left: -30px;
+    width: 100vw;
+}
+@media (min-width: 768px) {
+    hr.separator {
+        margin-left: -55px;
+        width: calc(100% + 300px);
+    }
+}
+@media (min-width: 1024px) {
+    hr.separator {
+        margin-left: -150px;
+        width: calc(100% + 300px);
+    }
 }
 
 .code-bg-light {
