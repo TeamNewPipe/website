@@ -249,6 +249,21 @@ h3 > a > i.fa-chevron-left {
     margin-left: auto;
     max-height: calc(100vh - 64px);
 }
+#tutorial section figure.vertical.figure-below {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#tutorial section figure.vertical.figure-below > img,
+#tutorial section figure.vertical.figure-below > video {
+    max-width: 100%;
+    max-height: calc(100vh - 64px);
+}
 
 @media (min-width: 768px) {
     #tutorial section figure {
