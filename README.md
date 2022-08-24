@@ -10,17 +10,17 @@ All sites are based on [Bootstrap](https://getbootstrap.com) 3.4.1 and [Jekyll](
 #### Installation
 Install Jekyll and Bundler gems through RubyGems:
 ``` sh
-~ $ gem install jekyll bundler
+gem install jekyll bundler
 ```
 
 Navigate to the root directory of this project, dev environment:
 ``` sh
-$ bundle install
+bundle install
 ```
 
 Navigate to this directory and build the site on the preview server:
 ``` sh
-$ bundle exec jekyll serve
+bundle exec jekyll serve
 ```
 
 Open http://localhost:4000 in your browser.
