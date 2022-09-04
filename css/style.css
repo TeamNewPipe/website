@@ -727,6 +727,12 @@ div.fdroid-col-right {
     margin: auto;
 }
 
+div.fdroid-col-right .break-line {
+    word-wrap: break-word;
+    word-wrap: anywhere;
+    line-break: anywhere;
+}
+
 #f-droid-repo-qr-code {
     display: inline-block;
 }
