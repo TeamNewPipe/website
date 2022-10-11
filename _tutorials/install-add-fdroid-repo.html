@@ -6,65 +6,82 @@ title: "Add the NewPipe repository to F-Droid"
 ---
 <section>
 
-    <p><span class="text-info">Team NewPipe's F-Droid repository allows for updates to NewPipe to be available faster than on the default F-Droid repository.</span>
+    <p><span class="text-info">Team NewPipe's F-Droid repository allows updates for NewPipe to be available faster than on the default F-Droid repository. This is the recommended way of installing NewPipe.</span>
 
-    You will need to add our repository to your F-Droid client. We will only show steps for adding to the official F-Droid app. There are two ways to add an F-Droid repository.
+    You will need to add our repository to your F-Droid client. We will only show the steps to add the repo to the official F-Droid app. Please note that it is possible for other clients (such as Neo Store) to have this repository pre-added upon install.
     </p>
     <div class="alert alert-danger download-license-warning" class="fdroid-repo-alert" role="alert">
         <span class="fa fa-2x fa-exclamation" aria-hidden="true"></span>
         <span>
-            In case NewPipe is <b>already installed</b> on your device, make sure to <a href="/FAQ/tutorials/import-export-data/#export-database"><b>backup your application data</b></a>.<br>
-            <b>Uninstall</b> NewPipe before proceeding and reinstall it once your are done following the instructions below. After that <a href="/FAQ/tutorials/import-export-data/#import-database"><b>import your backup</b></a>.
+            In case NewPipe is <b>already installed</b> on your device, make sure to <a href="/FAQ/tutorials/import-export-data/#export-database"><b>backup your application data</b></a> and <b>uninstall</b> NewPipe before proceeding.<br>
+            After you have followed the instructions below and reinstalled NewPipe from our repository, <a href="/FAQ/tutorials/import-export-data/#import-database"><b>import your backup</b></a>.
         </span>
     </div>
     <hr class="separator">
 
-    <h3 id="qr-code">The first of these is by scanning QR code or clicking link.</h3>
+    <h3 id="qr-code">Method 1 - Scan a QR code or click a link:</h3>
     <div class="row figure-wrapper">
         <figure class="vertical">
             <img src="/img/fdroid-repo-qrcode.svg" alt="NewPipe repository QR code" class="img-responsive" />
             <figcaption>
                 <ol>
-                    <li>Scan the QR code or click <a href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501"> this link</a>.</li>
+                    <li>Scan the QR code or click <a href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501"> this link</a> and process it with your F-Droid client. Here's the full link text for easy viewing:
+                        <br>
+                        <span class="break-line">
+                            https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501
+                        </span>
+                    </li>
                 </ol>
-            </figcaption>
-        </figure>
-        <figure class="vertical figure-right">
-            <img src="/img/screenshots/shot_add_fdroid_repo.png" class="img-responsive screenshot" alt="F-Droid 'Add new repository' pop-up"/>
-            <figcaption>
-                <ol start="2">
-                    <li>After scanning, this menu will appear:</li>
-                    <li>Click <code>OK</code>. The NewPipe upstream repository will be added.</li>
-                    <li>Go to F-Droid's search and search for <code>NewPipe</code>. Click the listing for NewPipe.</li>
-                    <li>Scroll down to the versions tab. Expand both of the tabs for the highest numbers at the top. Press <code>INSTALL</code> on the one that says <code class=".fdroid-repo-code-1">Repository: NewPipe upstream repository</code>.</li>
-                </ol>
-                <p>
-                    Note: If you have the official F-Droid version installed, you won't be able to see (or install) the Newpipe version because it has a different signature. To see it, enable "Include incompatible versions" from F-Droid settings. To install it, first make a database backup of your existing version, uninstall it, then install the new one and restore your backup (<a href="/FAQ/tutorials/import-export-data/#export-database">tutorial</a>).
-                </p>
             </figcaption>
         </figure>
     </div>
-    <!--<p class="text-center"><img src="/img/fdroid-repo-qrcode.svg" alt="NewPipe repository QR code"/></p>
-    <ol>
-        <li>Scan the QR code above or click <a href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">this link</a>.</li>
-        <li>After scanning, this menu will appear: ![F-Droid "Add new repository" pop-up](ADD IMAGE)</li>
-        <li>Click <code>ADD</code>. The NewPipe upstream repository will be added.</li>
-        <li>Go to F-Droid's search and search for <code>newpipe</code>. Click the listing for NewPipe.</li>
-        <li>Scroll down to the versions tab. Expand both of the tabs for the highest numbers at the top. Press <code>INSTALL</code> on the one that says <code>Repository: NewPipe upstream repository</code>.</li>
-    </ol>-->
+    <div class="row figure-wrapper">
+        <figure class="vertical figure-below">
+            <figcaption>
+                <ol start="2">
+                    <li>After step 1, the menu shown below will appear:</li>
+                </ol>
+            </figcaption>
+            <img src="/img/screenshots/shot_add_fdroid_repo.png" class="img-responsive screenshot" alt="F-Droid 'Add new repository' pop-up"/>
+        </figure>
+        <ol start="3">
+            <li><b>If, after step 1, you don't get <i>exactly</i> what's shown in this screenshot, then abort this method and use the other one.</b></li>
+            <li>Click "OK". The NewPipe upstream repository will be added.</li>
+            <li>Even after doing all the previous steps correctly, you'll notice a grey "Unverified" below the repo title. Don't worry. Move to the next step.</li>
+            <li>F-Droid will now automatically refresh all repo indices, including the new one. Let the process finish.</li>
+            <li>Once that is done, go to your home screen, and then open the app again. You should now see the proper repo title, "NewPipe upstream repository".</li>
+            <li>Go to "Latest" tab and search for "NewPipe". Click the listing for NewPipe.</li>
+            <li>Scroll down to the "Versions" section and tap on it to expand. There could be either one or two entries with the latest version number. One of them is built by F-Droid, and the other one by us. You're looking for the second one.</li>
+            <li>Expand both entries. Tap "INSTALL" on the one that says <code class=".fdroid-repo-code-1">Repository: NewPipe upstream repository</code>.</li>
+        </ol>
+        <p>
+            Note: If you have the official F-Droid version installed, you won't be able to see (or install) the Newpipe version because it has a different signature. To see it, enable "Include incompatible versions" from F-Droid settings. To install it, first make a database backup of your existing version, uninstall it, then install the new one and restore your backup (<a href="/FAQ/tutorials/import-export-data/#export-database">tutorial</a>).
+        </p>
+    </div>
 
     <hr class="separator">
 
-    <h3 id="manually">Or you can add NewPipe manually.</h3>
+    <h3 id="manually">Method 2 - Add NewPipe manually:</h3>
     <ol>
-        <li>Open your F-Droid client.</li>
-        <li>Go to settings and click <code>Repositories</code>.</li>
-        <li>Click the <i class="fa fa-plus"></i> to add NewPipe's repository.</li>
-        <li>In the pop-up, after <code>https://</code> paste the following link: <a href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">copy me!</a> You don't need to add to the fingerprint field as the link provided will automatically fill it.</li>
-        <li>Click <code>OK</code>. The repository will save and show it as unsigned until all repositories are refreshed. This is because the F-Droid app didn't compared the fingerprints yet. It will tell you if they do not match. If you want, you can also check it by hand:
-            <pre class="fdroid-repo-code-2">E240 2C78 F9B9 7C6C 89E9 7DB9 14A2 751F DA1D 02FE 2039 CC08 97A4 62BD B57E 7501</pre></li>
-        <li>Go to F-Droid's search and search for <code>NewPipe</code> and click the listing for NewPipe.</li>
-        <li>Scroll down to the versions tab. Expand both of the tabs for the highest numbers at the top. Press <code>INSTALL</code> on the one that says <code class="fdroid-repo-code-1">Repository: NewPipe upstream repository</code>.</li>
+        <li>Copy the following link to your clipboard:
+            <a href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">copy me!</a>
+            Here's the full link text for easy viewing:
+            <br>
+            <span class="break-line">
+                https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501
+            </span>
+        </li>
+        <li>Open the F-Droid app.</li>
+        <li>Go to the Settings tab and tap "Repositories".</li>
+        <li>Tap the <i class="fa fa-plus"></i> at the top-right corner to add a new repository.</li>
+        <li>At this point, the two fields of the menu should be filled automatically, so it should look exactly like what's shown in the screenshot above.</li>
+        <li>Click "OK". The NewPipe upstream repository will be added.</li>
+        <li>Even after doing all the previous steps correctly, you'll notice a grey "Unverified" below the repo title. Don't worry. Move to the next step.</li>
+        <li>F-Droid will now automatically refresh all repo indices, including the new one. Let the process finish.</li>
+        <li>Once that is done, go to your home screen, and then open the app again. You should now see the proper repo title, "NewPipe upstream repository".</li>                    
+        <li>Go to "Latest" tab and search for "NewPipe". Click the listing for NewPipe.</li>
+        <li>Scroll down to the "Versions" section and tap on it to expand. There could be either one or two entries with the latest version number. One of them is built by F-Droid, and the other one by us. You're looking for the second one.</li>
+        <li>Expand both entries. Tap "INSTALL" on the one that says <code class=".fdroid-repo-code-1">Repository: NewPipe upstream repository</code>.</li>
     </ol>
     <p>
         Note: If you have the official F-Droid version installed, you won't be able to see (or install) the Newpipe version because it has a different signature. To see it, enable "Include incompatible versions" from F-Droid settings. To install it, first make a database backup of your existing version, uninstall it, then install the new one and restore your backup (<a href="/FAQ/tutorials/import-export-data/#export-database">tutorial</a>).
