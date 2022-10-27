@@ -1,0 +1,26 @@
+---
+categories:
+- download
+- bugs
+type: info
+title: "SAF FAQ"
+---
+<section>
+	<p class="text-info">The Storage Access Framework Google introduced with Android KitKat has been enforced since Android 11.</p>
+	<p>This means that Android highly restricts the access of apps on user folders (for very good privacy and security reasons).</p>
+	<p>But it means that users need to relearn their habits when choosing folders for apps.</p>
+	<p>In Newpipes case, this means that you need to ensure the folders Newpipe saves files to, or reads from, are accessible to the app.</p>
+	<p>The main thing to note is that on Android 11 and higher, you cannot use the <i>Download</i> folder for your files, nor the top level of your internal storage or external SD Card (the one that contains your usual folders: <i>Android</i>, <i>Download</i>, <i>Movies</i>, <i>Music</i>, etc.). You must choose a separate folder, ideally a newly created one that will only be used for NewPipe, to keep your NewPipe downloads, as well as your files intended for export from/import into NewPipe.</p>
+	<p>If you're using a custom ROM, it could be lacking a critical system app that handles all SAF operations: <i>DocumentsUI</i> (<code>com.android.documentsui</code>). You might even have disabled this yourself, knowingly or unknowingly. NewPipe does not support use cases where this app is unavailable. Please figure out on your own how to enable/obtain this system app. [Insert search engine here] is your friend.</p>
+	<p>If your default/chosen file manager app cannot handle the file types used by NewPipe, then please try Material Files from F-Droid.</p>
+	<hr>
+	<p>Here are some generic steps you can try, though we make no guarantees of them working:</p>
+	<ul>
+		<li>Try another folder.</li>
+		<li>If your SD Card is giving you prbblems, try internal storage, and vice-versa.</li>
+		<li>Check if SAF is enabled in Download settings. Toggle on/off if it isn't greyed out.</li>
+		<li>Ensure that the SAF provider mentioned above is not disabled.</li>
+		<li>Check the download folders you have set for videos and audios in the Download settings. Check if NewPipe has access to these folders. (This refers to the File Picker UI which has a button "Use this folder" at the bottom.)</li>
+		<li>Check if NewPipe has the Storage/Media permission in App Info.</li>
+	</ul>
+</section>
