@@ -1,29 +1,33 @@
-version: '2'
+version: '3'
 
 services:
   web:
     build:
       context: .
       args:
-        # ISSO_ADDRESS is the address of the isso installation
-        ISSO_ADDRESS: http://127.0.0.1:8081
+        ISSO_ADDRESS: http://isso:8080
     ports:
-      - 127.0.0.1:8080:80
+      - "80:80"
+    depends_on:
+      - isso
 
   isso:
-    image: quay.io/teamnewpipe/isso-docker:master
+    image: quay.io/teamnewpipe/isso-docker:latest
     ports:
-      - 127.0.0.1:8081:80
+      - "8080:8080"
     environment:
-      # ISSO_HOST is the address of the blog
-      ISSO_HOST: "http://127.0.0.1:8080"
-      #ISSO_NAME: "comments.example.net"
-      #ISSO_MAX_AGE: "30m"
-      #ISSO_REPLY_TO_SELF: "false"
-      #ISSO_REQUIRE_EMAIL: "false"
-      ISSO_REQUIRE_AUTHOR: "true"
+      ISSO_HOST: "http://web"
+      ISSO_DB_NAME: "sqlite:////data/comments.db"
+      ISSO_SMTP_HOST: "smtp.gmail.com"
+      ISSO_SMTP_PORT: "465"
+      ISSO_SMTP_USER: "your_email@gmail.com"
+      ISSO_SMTP_PASS: "your_password"
+      ISSO_NOTIFICATION_FROM: "your_email@gmail.com"
+      ISSO_ADMIN_USER: "admin"
+      ISSO_ADMIN_PASS: "admin_password"
     volumes:
       - isso-data:/data
 
 volumes:
   isso-data:
+
