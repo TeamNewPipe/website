@@ -250,6 +250,22 @@ h3 > a > i.fa-chevron-left {
     max-height: calc(100vh - 64px);
 }
 
+#tutorial section figure.vertical.figure-below {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#tutorial section figure.vertical.figure-below > img,
+#tutorial section figure.vertical.figure-below > video {
+    max-width: 100%;
+    max-height: calc(100vh - 64px);
+}
+
 @media (min-width: 768px) {
     #tutorial section figure {
         max-width: 200px;
@@ -350,12 +366,25 @@ code {
     font-size: 150%;
     margin-right: 15px;
 }
+
 hr.separator {
     border-top: 15px solid #e2dee0;
-    margin-left: -150px;
-    width: calc(100% + 300px);
     margin-bottom: 30px;
     margin-top: 30px;
+    margin-left: -30px;
+    width: 100vw;
+}
+@media (min-width: 768px) {
+    hr.separator {
+        margin-left: -55px;
+        width: calc(100% + 300px);
+    }
+}
+@media (min-width: 1024px) {
+    hr.separator {
+        margin-left: -150px;
+        width: calc(100% + 300px);
+    }
 }
 
 .code-bg-light {
