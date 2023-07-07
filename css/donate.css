@@ -3,6 +3,10 @@ body {
     z-index: -10;
 }
 
+.d-none {
+    display: none;
+}
+
 main {
     pointer-events: none;
 }
@@ -77,17 +81,29 @@ main .row [class^="col"] {
     margin-bottom: 30px;
 }
 
+#button-container > * {
+    flex-grow: 0;
+}
+
 .button-wrapper {
     flex-grow: 1;
     margin-bottom: 30px;
 }
 
-#bountysource-donation {
-    text-align: center;
-}
-
 #liberapay-donation {
     text-align: right;
+}
+
+/* hidden until we have the full info */
+#liberapay-donation span,
+#bank-transfer-donation {
+    display: none;
+}
+
+#bank-transfer-donation pre {
+    background-color: rgba(256,256,256, 0.85);
+    width: fit-content;
+    padding: 1em 1.25em;
 }
 
 .phone-background .row [class^="col"] {
@@ -97,18 +113,6 @@ main .row [class^="col"] {
 
 #donate-title {
     margin-bottom: 30px;
-}
-
-#bitcoin-donation {
-    text-align: center;
-    display: none;
-    margin-bottom: 15px;
-}
-
-#bitcoin-donation samp {
-    background: #AA1D1D;
-    border-radius: 5px;
-    padding: 6px 10px;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
@@ -137,19 +141,6 @@ main .row [class^="col"] {
     #button-container {
         display: block;
         order: 3;
-    }
-    #bitcoin-donation-button {
-        margin-bottom: 30px;
-    }
-    #bitcoin-donation {
-        margin-top: 0;
-        margin-bottom: 45px;
-        order: 2;
-    }
-    #bountysource-donation {
-        order: 2;
-        margin-top: 20px;
-        margin-bottom: 30px;
     }
 }
 
