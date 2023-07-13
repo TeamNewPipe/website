@@ -19,3 +19,5 @@ The team is currently discussing what to do about the situation. We are consider
 
 Regards,
 Schabi
+
+**Update 13th July:** The DMCA notice has been rescinded and our landing page is back on Google search.
