@@ -467,6 +467,11 @@ strong.extra {
     margin-top: 6px;
 }
 
+.post-content blockquote.highlight {
+    font-size: 100%;
+    border-left: 5px solid #cd201f;
+}
+
 .post-content img {
     max-width: 100%;
     height: auto;

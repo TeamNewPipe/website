@@ -9,7 +9,7 @@ image: newpipe
 excerpt_separator: <!-- more -->
 ---
 
-**Update 13th July:** The DMCA notice was rescinded with no further comment. Our landing page appears to be listed in Google's search results again.
+<blockquote class="highlight"><strong>Update 13th July:</strong> The DMCA notice was rescinded with no further comment. Our landing page appears to be listed in Google's search results again.</blockquote>
 
 Dear NewPipe community and other beloved creatures,
 
