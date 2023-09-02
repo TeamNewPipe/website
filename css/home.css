@@ -770,6 +770,9 @@ ul.check > li.heart:before {
 #download1-fdroid-newpipe-repo {
     padding: 30px;
 }
+#download1-fdroid-newpipe-repo > .row.is-flex > [class*="col-"] {
+    margin-bottom: 0;
+}
 .download-info-content code {
     display: block;
     width: 100%;
