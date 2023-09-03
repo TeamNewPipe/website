@@ -60,8 +60,8 @@
     position: absolute;
     right: 60px;
     top: 20px;
-    height: 450px;
-    width: calc(350 / 713 * 450px);
+    height: 500px;
+    width: calc(2158 / 4291 * 500px);
 }
 
 .header-box-wrapper .logo {
@@ -84,12 +84,26 @@
 
 .header-box-wrapper .phone > video {
     position: relative;
-    top: 39px;
-    left: 7px;
-    width: 210px;
-    height: 370px;
+    top: 48px;
+    left: 15px;
+    width: 223px;
+    height: 397px;
     background: black;
     display: inline-block;
+}
+
+@media (max-width: 991px) {
+    .header-box-wrapper .phone {
+        height: 450px;
+        width: calc(2158 / 4291 * 450px);
+    }
+
+    .header-box-wrapper .phone > video {
+        top: 43px;
+        left: 13px;
+        width: 201px;
+        height: 358px;
+    }
 }
 
 @media (max-width: 767px) {
