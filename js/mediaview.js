@@ -10,15 +10,18 @@ function viewMediaFile(media, openModal = false) {
         video = document.getElementById("videoFullScreen");
     }
 
+    let tagName = media.tagName.toUpperCase();
+    if (tagName !== "IMG" && tagName !== "VIDEO") {
+        media = media.querySelector("img, video")
+    }
+
     let attr = media.getAttribute("src");
 
-    switch (media.tagName) {
-        case "img":
+    switch (media.tagName.toUpperCase()) {
         case "IMG":
             img.src = (attr != null && attr !== 'undefined') ? attr : media.getElementsByTagName("img")[0].getAttribute("src");
             break;
 
-        case "video":
         case "VIDEO":
             video.src = (attr != null && attr !== 'undefined') ? attr : media.getElementsByTagName("video")[0].getAttribute("src");
             video.play();
@@ -42,4 +45,10 @@ $(document).keyup(function(e) {
      if (e.keyCode === 27) { // escape key := keycode `27`
         $('#mediaFileView').modal('hide');
     }
+});
+
+$(document).ready(function () {
+   $('[data-action="view-media-file"]').click(function () {
+       viewMediaFile(this)
+   });
 });
