@@ -116,6 +116,11 @@ function showOne(itemId) {
     }
 }
 
-$("#search-box").keydown(search);
+document.addEventListener('DOMContentLoaded', function() {
+    $("#search-box").on("keypress", search);
+    $('[data-action="search"]').on('click', function () {
+        search($(this).data.search)
+    })
+    $("#tile-show-all").on('click', showAll);
+});
 
-$("#tile-show-all").click(showAll);

@@ -90,4 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
             search('manual');
         }
     });
+    $('[data-action="search"]').on('click', function () {
+        search($(this).data.search)
+    })
 });
