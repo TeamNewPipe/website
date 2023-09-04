@@ -13,7 +13,7 @@
  *
  *  Example usage:
  *  <pre>
- *  <a href="https://default.locati.on" data-newpipe-api="flavors.fdroid.stable.apk" data-newpipe-api-attribute="href">
+ *  <a href="https://default.locati.on" data-newpipe-api="flavors.newpipe.apk" data-newpipe-api-attribute="href">
  *      download APK</a>
  *  </pre>
  */
@@ -45,7 +45,7 @@ function updateWithAPIData(object, key, oldIdentifier) {
 
         // get all elements which registered to be updated with the API data
         let elementsToUpdate = document.querySelectorAll('[data-newpipe-api="' + newIdentifier + '"]');
-        if (elementsToUpdate == null) return;
+        if (elementsToUpdate == null || elementsToUpdate.length === 0) return;
 
         let data = object.toString();
         for (let i = 0; i < elementsToUpdate.length; i++) {
