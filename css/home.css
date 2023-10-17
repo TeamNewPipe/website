@@ -748,6 +748,16 @@ ul.check > li.heart:before {
     height: 10px;
 }
 
+#download1-fdroid-newpipe-repo {
+    background: #ff9e1f;
+    color: white;
+}
+
+#download1-fdroid-newpipe-repo h4 {
+    color: white;
+    font-size: 25px;
+}
+
 #download-newpipe-qr-code-container-col {
     display: none;
 }
@@ -756,6 +766,25 @@ ul.check > li.heart:before {
     width: 100%;
 }
 
+#download1-fdroid,
+#download1-fdroid-newpipe-repo {
+    padding: 30px;
+}
+#download1-fdroid-newpipe-repo > .row.is-flex > [class*="col-"] {
+    margin-bottom: 0;
+}
+.download-info-content code {
+    display: block;
+    width: 100%;
+    line-break: anywhere;
+    margin-top: 5px;
+}
+#download1-apk-info {
+    padding: 10px 30px;
+}
+.download-info-content ul {
+    padding-right: 15px;
+}
 @media (min-width: 768px) {
     /* align "read more" button with "download NewPipe Legacy" button */
     /* <bad code> */
@@ -787,31 +816,70 @@ ul.check > li.heart:before {
         width: 100%;
         max-width: 12.5em;
     }
+    #download1-direct-download {
+        order: 1;
+    }
+    #download1-apk-info {
+        order: 2;
+    }
+    #download1-release-highlights {
+        order: 3;
+    }
+    #download1-installation-help {
+        order: 4;
+    }
+    #download1-fdroid-newpipe-repo {
+        order: 5;
+    }
+    #download1-fdroid {
+        order: 6;
+    }
+    .tri-col {
+        width: calc(50% - 7px / 2);
+    }
+    .tri-col:nth-child(2n - 1) {
+        margin-right: 7px !important;
+    }
+}
 
+@media (min-width: 1200px) {
+    #download1 > .row.is-flex > .tri-col {
+        width: calc((100% - (2 * 7px)) / 3);
+    }
+    /*#download1 > .row.is-flex > .tri-col:nth-child(3n - 2),*/
+    /*#download1 > .row.is-flex > .tri-col:nth-child(3n - 1) {*/
+    /*    margin-right: 7px;*/
+    /*}*/
     /* Re-order grid on medium and larger devices */
     /* Just as a British Speaker used to call in a very honourable house:Oooooorder! */
-    #download1 > .row.is-flex > [class^="col-"]:nth-child(1) {
-        order: 1;
-        width: calc(100% / 3 - 4px);
+    #download1 > .row.is-flex > #download1-direct-download {
+        order: 2;
         margin-right: 7px;
     }
-    #download1 > .row.is-flex > [class^="col-"]:nth-child(2) {
+    #download1 > .row.is-flex > #download1-release-highlights {
+        order: 1;
+        margin-right: 7px;
+    }
+    #download1 > .row.is-flex > #download1-apk-info {
+        order: 3;
+    }
+    #download1 > .row.is-flex > #download1-direct-download-legacy {
         order: 3;
         margin-right: 7px;
-        width: calc(100% / 3 - 4px);
+        width: calc(100% / 3 - 7px);
+        display: none;
     }
-    #download1 > .row.is-flex > [class^="col-"]:nth-child(3) {
-        order: 2;
-        width: calc(100% / 3 * 2 - 3px);
+    #download1 > .row.is-flex > #download1-installation-help {
+        order: 6;
     }
-    #download1 > .row.is-flex > [class^="col-"]:nth-child(4) {
-        order: 4;
-        margin-right: 7px;
-        width: calc(100% / 3 - 5px);
-    }
-    #download1 > .row.is-flex > [class^="col-"]:nth-child(5) {
+    #download1 > .row.is-flex > #download1-fdroid {
         order: 5;
-        width: calc(100% / 3 - 5px);
+        width: calc((100% - 2 * 7px) * 2 / 3 + 7px);
+        margin-right: 7px;
+    }
+    #download1 > .row.is-flex > #download1-fdroid-newpipe-repo {
+        order: 4;
+        width: calc(100%);
     }
 }
 
