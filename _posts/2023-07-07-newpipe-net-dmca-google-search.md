@@ -10,7 +10,7 @@ excerpt_separator: <!-- more -->
 ---
 
 <blockquote class="highlight"><strong>Update 13th July:</strong> The DMCA notice was rescinded with no further comment. Our landing page appears to be listed in Google's search results again.</blockquote>
-
+<!-- more -->
 Dear NewPipe community and other beloved creatures,
 
 You might have already noticed this: Searching "NewPipe" via Google will yield plenty information about the project, but a link to the official website is missing. This is because Google submitted to a DMCA takedown notice from a French record label, "Because Music". The notice demands removing our homepage [newpipe.net](https://newpipe.net) from their search listings along with a set of other domains completely unrelated to our project. The DMCA takedown notice was published [in the Lumen database](https://lumendatabase.org/notices/34149383) by Google themselves.
