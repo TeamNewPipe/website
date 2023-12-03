@@ -10,8 +10,8 @@ excerpt_separator: <!-- more -->
 ---
 Dear fellow NewPipers,
 
-As you read in the headline: I (Schabi) have lost access to about €6,400 worth of bounties on https://bountysource.com/.
-
+The money that had been accumulating on NewPipe's [Bountysource](https://bountysource.com/) account is no longer accessible to me (Schabi). As a result, the project has lost about €6,400 worth of awarded bounties.
+<!-- more -->
 ### Background
 
 Bountysource is a website which acts as a platform for the placement of bounties for open source development. People can use it to post bounties to fix certain issues or develop certain features.
