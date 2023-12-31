@@ -58,7 +58,7 @@ Unfortunately, my studies are progressing and my free time is becoming increasin
 
 NewPipe is neither developed by one person, nor does one person alone make substantial decisions. I have been trying to step back from the project for some time, as I am currently not able to contribute to larger and more complex projects, both mentally and in terms of time available. I think that with aiming to start rewriting larger parts of the app in the coming year, it is reasonable to make space for new, enthusiastic, motivated people with the required free time.
 
-[@Stypox](https://github.com/Stypox) and [@AudricV](https://github.com/AudricV) have taken the project lead for some time already and are happy to move forward with NewPipe. I wish you all the best - personally and in terms of NewPipe' future. It was a pleasure and an unforgettable experience to be part of the community around NewPipe. Thank you all for this amazing time!
+[@Stypox](https://github.com/Stypox) and [@AudricV](https://github.com/AudricV) have taken the project lead for some time already and are happy to move forward with NewPipe. Of course, they cannot do the job alone and are happy about every kind of support they can get from the community. If you want to step in and help them with maintaining the app, e.g. reviewing PRs, developing code or doing community management, please get in touch! I wish you all the best - personally and in terms of NewPipe' future. It was a pleasure and an unforgettable experience to be part of the community around NewPipe. Thank you all for this amazing time!
 
 I wish all of you a good start into 2024. May the new year bring the best to you!
 
