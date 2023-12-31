@@ -4,7 +4,7 @@ title: State of the Pipe 2023
 short: State of the Pipe 2023
 date: 2023-12-31 10:00:00 +0200
 categories: [pinned, announcement]
-author: TobiGr
+author: <a href="https://github.com/TobiGr">@TobiGr</a>
 image: newpipe
 excerpt_separator: <!-- more -->
 ---
