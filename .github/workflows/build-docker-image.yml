@@ -40,3 +40,5 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           platforms: |
             linux/amd64
+          build-args: |
+            ISSO_ADDRESS=https://comments.newpipe.net
