@@ -44,6 +44,7 @@ jobs:
             ISSO_ADDRESS=https://comments.newpipe.net
 
       - name: Trigger redeployment
+        if: github.ref == 'refs/heads/master'
         env:
           UPDATE_URL: ${{ secrets.UPDATE_URL }}
           UPDATE_TOKEN: ${{ secrets.UPDATE_TOKEN }}
