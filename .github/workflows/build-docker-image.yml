@@ -42,3 +42,10 @@ jobs:
             linux/amd64
           build-args: |
             ISSO_ADDRESS=https://comments.newpipe.net
+
+      - name: Trigger redeployment
+        env:
+          UPDATE_URL: ${{ secrets.UPDATE_URL }}
+          UPDATE_TOKEN: ${{ secrets.UPDATE_TOKEN }}
+        run: |
+          curl "$UPDATE_URL" -H "Authorization: Bearer ${UPDATE_TOKEN}"
