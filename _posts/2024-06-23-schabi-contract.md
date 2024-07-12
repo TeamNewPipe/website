@@ -13,7 +13,7 @@ TLDR: the NewPipe e.V. will pay Schabi to work on NewPipe during the summer of 2
 
 <!-- more -->
 
-For those of you who do not know, Schabi ([@theScrabi](https://github.com/theScrabi) on GitHub) is the creator and first maintainer of NewPipe. After laying the project's foundations and reviewing contributions for a few years, he found himself out of time due to his studies, and decided to hand over the maintainership to [@TobiGr](https://github.com/TobiGr) [in 2019](/blog/pinned/state-of-the-pipe-2019/). He remained in contact with the NewPipe team, though, and was happy to contribute to the founding of the NewPipe e.V. in November 2022, and even became a member of the association board.
+For those of you who do not know, Schabi ([@theScrabi](https://github.com/theScrabi) on GitHub) is the creator and first maintainer of NewPipe. After laying the project's foundations and reviewing contributions for a few years, he found himself out of time due to his studies, and decided to hand over the maintainership to [@TobiGr](https://github.com/TobiGr) [in 2019](/blog/pinned/state-of-the-pipe-2019/). He remained in contact with the NewPipe team, though, and was happy to contribute to the founding of the NewPipe e.V. in November 2022, even becoming a member of the association board.
 
 As you might know, we founded the e.V. primarily to be able to transparently handle the stream of donations coming from NewPipe (thanks a lot!). Moreover, the association also has the legal means to pay someone to work on the NewPipe project. Well, actually, the association's purpose is more general, and includes promoting and helping out any project related to free and open media streaming clients and platforms, not just NewPipe, but this is a story for another time.
 
