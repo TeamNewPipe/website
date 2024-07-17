@@ -8,7 +8,7 @@ ruby RUBY_VERSION
 #     bundle exec jekyll serve
 #
 
-gem "jekyll", "4.2.2"
+gem "jekyll", "4.3.0"
 
 # Fix development command "jekyll serve"
 # Can be removed when upgrading to Jekyll 4.3
