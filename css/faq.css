@@ -392,5 +392,5 @@ hr.separator {
 }
 
 img.baseline-settings {
-    margin-right: 0;
+    margin-right: 0 !important;
 }
