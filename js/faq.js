@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
             $('html, body').animate({scrollTop: scrollPos}, 1);
         }
     }
+
+    clickListener();
 });
 
 function clickListener() {

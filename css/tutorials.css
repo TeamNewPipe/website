@@ -1,0 +1,19 @@
+.autoplay-img {
+    vertical-align: sub;
+}
+
+.import-export-code, .fdroid-repo-code-1 {
+    white-space: normal;
+}
+
+.fdroid-repo-alert {
+    font-size: 110%;
+}
+
+.fdroid-repo-code-2 {
+    white-space: pre-line;
+}
+
+.tutorial-title {
+    margin-bottom: 30px;
+}

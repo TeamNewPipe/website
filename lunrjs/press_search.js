@@ -29,7 +29,7 @@ function displaySearchResults(results, store) {
 
         searchResults.innerHTML = appendString;
     } else {
-        searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p><br></div>';
+        searchResults.innerHTML = '<div id="no-search-results"><br><p><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p><br></div>';
     }
 }
 
@@ -46,6 +46,7 @@ function getQueryVariable(variable) {
     }
 }
 
+var idx;
 function search(type) {
     let searchTerm;
     if (type === "manual")
@@ -60,7 +61,7 @@ function search(type) {
 
         // Initialize lunr with the fields it will be searching on. I've given title
         // a boost of 10 to indicate matches on this field are more important.
-        var idx = lunr(function () {
+        idx = lunr(function () {
             this.field('id');
             this.field('title', {boost: 10});
             this.field('date');
@@ -82,3 +83,14 @@ function search(type) {
 }
 
 search("onload");
+
+document.addEventListener('DOMContentLoaded', function() {
+    $("#search-box").on('keyup', function (e) {
+        if (e.keyCode === 13) { // Enter key
+            search('manual');
+        }
+    });
+    $('[data-action="search"]').on('click', function () {
+        search($(this).data.search)
+    })
+});

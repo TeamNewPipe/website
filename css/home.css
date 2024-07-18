@@ -29,25 +29,27 @@
     width: 100%;
 }
 
-.header-wrapper .f-droid-wrapper {
+.header-wrapper .get-newpipe-wrapper {
     position: relative;
     bottom: -25px;
 }
 
-.header-wrapper .f-droid-wrapper {
-    -webkit-box-shadow: 0 -1px 8px black, 0 3px 8px black;
-    -moz-box-shadow: 0 -1px 8px black, 0 3px 8px black;
-    box-shadow: 0 -1px 8px black, 0 3px 8px black;
+
+.header-wrapper .get-newpipe-wrapper {
+    -webkit-box-shadow: 0px -1px 10px -4px black, 0 2px 10px -4px black;
+    -moz-box-shadow: 0px -1px 10px -4px black, 0 2px 10px -4px black;
+    box-shadow: 0px -1px 10px -4px black, 0 2px 10px -4px black;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
 }
 
-.header-wrapper .f-droid-wrapper:hover {
-    -webkit-box-shadow: 0 -1px 9px black, 0 3px 9px black;
-    -moz-box-shadow: 0 -1px 9px black, 0 3px 9px black;
-    box-shadow: 0 -1px 9px black, 0 3px 9px black;
+.header-wrapper .get-newpipe-wrapper:hover {
+    -webkit-box-shadow: 0px -1px 10px -3px black, 0 2px 10px -3px black;
+    -moz-box-shadow: 0px -1px 10px -3px black, 0 2px 10px -3px black;
+    box-shadow: 0px -1px 10px -3px black, 0 2px 10px -3px black;
 }
+
 
 .header-box-wrapper > .container {
     position: relative;
@@ -58,8 +60,8 @@
     position: absolute;
     right: 60px;
     top: 20px;
-    height: 450px;
-    width: calc(350 / 713 * 450px);
+    height: 500px;
+    width: calc(2158 / 4291 * 500px);
 }
 
 .header-box-wrapper .logo {
@@ -82,12 +84,26 @@
 
 .header-box-wrapper .phone > video {
     position: relative;
-    top: 39px;
-    left: 7px;
-    width: 210px;
-    height: auto;
-    background: transparent;
+    top: 48px;
+    left: 15px;
+    width: 223px;
+    height: 397px;
+    background: black;
     display: inline-block;
+}
+
+@media (max-width: 991px) {
+    .header-box-wrapper .phone {
+        height: 450px;
+        width: calc(2158 / 4291 * 450px);
+    }
+
+    .header-box-wrapper .phone > video {
+        top: 43px;
+        left: 13px;
+        width: 201px;
+        height: 358px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -99,10 +115,10 @@
         position: relative;
         left: 0;
     }
-    .header-wrapper .f-droid-wrapper {
+    .header-wrapper .get-newpipe-wrapper {
         text-align: center;
     }
-    .header-wrapper .f-droid-wrapper {
+    .header-wrapper .get-newpipe-wrapper {
         width: 160px;
         margin: auto;
         left: 0;
@@ -118,7 +134,7 @@
         margin-bottom: 100px;
         width: auto;
     }
-    .header-wrapper .f-droid-wrapper {
+    .header-wrapper .get-newpipe-wrapper {
         position: absolute;
         bottom: -25px;
     }
@@ -504,6 +520,122 @@ ul.check > li.heart:before {
 }
 
 /***************************************
+ *********** services tiles ************
+ ***************************************/
+
+#services .service-tile {
+    width: 100%;
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+    color: #fff;
+}
+
+#services .service-tile:hover {
+    filter: brightness(115%);
+}
+
+@media (min-width: 768px) {
+    /* 2 tiles per row */
+    #services .service-tile {
+        margin-left: 7px;
+        width: calc((100% - 7px) / 2);
+    }
+    #services .service-tile:nth-child(2n - 1) {
+        margin-left: 0;
+    }
+    #services .service-tile:nth-child(5) {
+        margin-left: calc((100% - 7px) / 4);
+    }
+}
+
+@media (min-width: 992px) {
+    /* 3 tiles per row */
+    #services .service-tile {
+        width: calc((100% - 2 * 7px) / 3);
+    }
+    #services .service-tile:nth-child(2n - 1) {
+        margin-left: 7px;
+    }
+    #services .service-tile:nth-child(3n - 2) {
+        margin-left: 0;
+    }
+    /* center last row with only 2 items */
+    #services .service-tile:nth-child(4){
+        margin-left: calc((100% - 2 * 7px) / 6);
+    }
+}
+
+#services .service-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+    line-height: 2;
+}
+
+#services .service-logo {
+    text-align: center;
+}
+
+#services .service-logo + .service-title {
+    display: none;
+}
+
+#services .service-description {
+    flex-grow: 1;
+    margin-bottom: 5px;
+}
+
+#services .service-description a {
+    color: white;
+    font-style: italic;
+}
+
+#services .service-link {
+    color: #fff;
+}
+
+#services .service-link:hover {
+    font-weight: bold;
+}
+
+#services .service-link::before {
+    content: '\f0aa';
+    font-family: FontAwesome;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    margin-right: 7px;
+    margin-left: 0;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#services .service-link:hover::before {
+    font-weight: normal;
+}
+
+#service-youtube {
+    background-color: #CD322E;
+}
+
+#service-soundcloud {
+    background-color: #ff9100;
+}
+
+#service-peertube {
+    background-color: #ff6f00;
+}
+
+#service-bandcamp {
+    background-color: #17a0c4;
+}
+
+#service-mediacccde {
+    background-color: #9e9e9e;
+}
+
+/***************************************
  ************ download tile ************
  ***************************************/
 
@@ -514,34 +646,26 @@ ul.check > li.heart:before {
 
 .tile.tile-bordered > .row > [class^="col-"],
 .tile.tile-bordered > .row.is-flex > [class^="col-"] {
-    margin-bottom: 0;
-    background: #E2DEE0;
+    margin-bottom: 7px;
+    margin-left: 0;
+    margin-right: 0;
     padding: 10px;
-    border-top: 1px solid #BBB;
-    border-left: 1px solid #BBB;
-}
-
-.tile.tile-bordered > .row > [class^="col-"] {
-    border-right: 1px solid #BBB;
-}
-
-.tile.tile-bordered > .row:last-child > [class^="col-"] {
-    border-bottom: 1px solid #BBB;
+    background: #E2DEE0;
 }
 
 .tile.tile-bordered > .row > .col-md-8 {
     padding: 30px 30px 15px 30px;
 }
 
-@media (max-width: 767px) {
-    .tile.tile-bordered > .row > .col-sm-6:nth-child(2n+2) {
-        border-top-width: 0;
+@media (min-width: 768px) and (max-width: 991px) {
+    .tile.tile-bordered > .row > .col-sm-6:nth-child(1) {
+        margin-right: 4px;
+        width: calc(50% - 4px);
     }
-}
-
-@media (min-width: 768px) {
-    .tile.tile-bordered > .row > .col-sm-6:nth-child(2n+1) {
-        border-right-width: 0;
+    .tile.tile-bordered > .row > .col-sm-6:nth-child(2) {
+        margin-left: 3px;
+        margin-right: 0;
+        width: calc(50% - 3px);
     }
 }
 
@@ -618,23 +742,49 @@ ul.check > li.heart:before {
     width: 8px;
     height: 8px;
 }
+
 #download1 .carousel .carousel-indicators > li.active {
     width: 10px;
     height: 10px;
 }
+
+#download1-fdroid-newpipe-repo {
+    background: #ff9e1f;
+    color: white;
+}
+
+#download1-fdroid-newpipe-repo h4 {
+    color: white;
+    font-size: 25px;
+}
+
 #download-newpipe-qr-code-container-col {
     display: none;
 }
+
 #download-newpipe-qr-code-container {
     width: 100%;
 }
 
-@media (max-width: 991px) {
-    #download1 .row.is-flex > [class^="col-"]:nth-child(n+3) {
-        border-top-width: 0;
-    }
+#download1-fdroid,
+#download1-fdroid-newpipe-repo {
+    padding: 30px;
 }
-
+#download1-fdroid-newpipe-repo > .row.is-flex > [class*="col-"] {
+    margin-bottom: 0;
+}
+.download-info-content code {
+    display: block;
+    width: 100%;
+    line-break: anywhere;
+    margin-top: 5px;
+}
+#download1-apk-info {
+    padding: 10px 30px;
+}
+.download-info-content ul {
+    padding-right: 15px;
+}
 @media (min-width: 768px) {
     /* align "read more" button with "download NewPipe Legacy" button */
     /* <bad code> */
@@ -666,28 +816,70 @@ ul.check > li.heart:before {
         width: 100%;
         max-width: 12.5em;
     }
+    #download1-direct-download {
+        order: 1;
+    }
+    #download1-apk-info {
+        order: 2;
+    }
+    #download1-release-highlights {
+        order: 3;
+    }
+    #download1-installation-help {
+        order: 4;
+    }
+    #download1-fdroid-newpipe-repo {
+        order: 5;
+    }
+    #download1-fdroid {
+        order: 6;
+    }
+    .tri-col {
+        width: calc(50% - 7px / 2);
+    }
+    .tri-col:nth-child(2n - 1) {
+        margin-right: 7px !important;
+    }
+}
 
+@media (min-width: 1200px) {
+    #download1 > .row.is-flex > .tri-col {
+        width: calc((100% - (2 * 7px)) / 3);
+    }
+    /*#download1 > .row.is-flex > .tri-col:nth-child(3n - 2),*/
+    /*#download1 > .row.is-flex > .tri-col:nth-child(3n - 1) {*/
+    /*    margin-right: 7px;*/
+    /*}*/
     /* Re-order grid on medium and larger devices */
     /* Just as a British Speaker used to call in a very honourable house:Oooooorder! */
-    #download1 .row.is-flex > [class^="col-"]:nth-child(1) {
-        order: 1;
-        border-bottom-width: 0;
-    }
-    #download1 .row.is-flex > [class^="col-"]:nth-child(2) {
-        order: 3;
-        border-right-width: 0;
-    }
-    #download1 .row.is-flex > [class^="col-"]:nth-child(3) {
+    #download1 > .row.is-flex > #download1-direct-download {
         order: 2;
-        border-right-width: 1px;
-        border-bottom: 0;
+        margin-right: 7px;
     }
-    #download1 .row.is-flex > [class^="col-"]:nth-child(4) {
-        order: 4;
-        border-right-width: 0;
+    #download1 > .row.is-flex > #download1-release-highlights {
+        order: 1;
+        margin-right: 7px;
     }
-    #download1 .row.is-flex > [class^="col-"]:nth-child(5) {
+    #download1 > .row.is-flex > #download1-apk-info {
+        order: 3;
+    }
+    #download1 > .row.is-flex > #download1-direct-download-legacy {
+        order: 3;
+        margin-right: 7px;
+        width: calc(100% / 3 - 7px);
+        display: none;
+    }
+    #download1 > .row.is-flex > #download1-installation-help {
+        order: 6;
+    }
+    #download1 > .row.is-flex > #download1-fdroid {
         order: 5;
+        width: calc((100% - 2 * 7px) * 2 / 3 + 7px);
+        margin-right: 7px;
+    }
+    #download1 > .row.is-flex > #download1-fdroid-newpipe-repo {
+        order: 4;
+        width: calc(100%);
     }
 }
 

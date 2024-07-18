@@ -5,12 +5,12 @@ date: 2019-05-18 12:00:00 +0200
 categories: [pinned]
 author: TheAssassin
 image: newpipe
-excerpt_separator: <!--more-->
+excerpt_separator: <!-- more -->
 ---
 
 [Christian "theScrabi" Schabesberger](https://schabi.org), primary maintainer of NewPipe and the related projects, didn't get to giving a talk during a conference this year, so he asked [Team NewPipe](https://newpipe.net) for help.
 
-<!--more-->
+<!-- more -->
 
 In the video, Christian covers the latest developments of the project, talks about plans for the future and makes a personal statement.
 

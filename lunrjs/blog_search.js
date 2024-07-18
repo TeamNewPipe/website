@@ -41,7 +41,7 @@ function renderSearchResults(results, store) { // rendering search results could
 
         searchResults.innerHTML = appendString;
     } else {
-        searchResults.innerHTML = '<div id="no-search-results" class="border-box"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No posts found</p><br></div>';
+        searchResults.innerHTML = '<div id="no-search-results" class="border-box"><br><p><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No posts found</p><br></div>';
     }
 }
 
@@ -112,3 +112,11 @@ function search(type) {
     }
 }
 search("onload");
+
+document.addEventListener('DOMContentLoaded', function() {
+    $("#search-box").on('keyup', function (e) {
+        if (e.keyCode === 13) { // Enter key
+            search('manual');
+        }
+    });
+});

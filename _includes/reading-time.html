@@ -1,0 +1,22 @@
+{%- comment -%}
+inspired by https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/reading-time.html -- thanks!
+{%- endcomment -%}
+
+<i class="fa fa-clock-o"></i>
+{% capture words -%}
+    {{ content | number_of_words | minus: 180 }}
+{%- endcapture -%}
+
+{%- if words contains '-' -%}
+    {%- assign reading_time = '1' -%}
+{%- else -%}
+    {%- capture reading_time -%}
+        {{ words | plus: 150 | divided_by: 150 }}
+    {%- endcapture -%}
+{%- endif -%}
+
+{%- if reading_time == '1' -%}
+    {{ reading_time | append: ' minute' }}
+{%- else -%}
+    {{ reading_time | append: ' minutes' }}
+{%- endif -%}

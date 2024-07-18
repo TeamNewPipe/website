@@ -8,3 +8,4 @@ vendor/
 *.log
 
 .jekyll-cache/
+*.swp

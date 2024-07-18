@@ -21,9 +21,16 @@
             {%- assign notPage = False -%}
         {%- endunless -%}
     {%- endunless -%}
+{%- else if page.title -%}
+    {%- unless page.title == "" -%}
+        {%- unless page.title == nil -%}
+            {%- assign metatit = page.title -%}
+            {%- assign notPage = False -%}
+        {%- endunless -%}
+    {%- endunless -%}
 {%- else if layout.metatitle AND notPage == True -%}
     {%- unless layout.metatitle == "" -%}
-        {%- unless page.metatitle == nil -%}
+        {%- unless layout.metatitle == nil -%}
             {%- assign metatit = layout.metatitle -%}
         {%- endunless -%}
     {%- endunless -%}
@@ -37,13 +44,15 @@
 
 {%- assign des = site.description -%}
 {%- assign notPage = True -%}
-    {%- if page.metades -%}
-        {%- unless page.metades == "" -%}
-            {%- unless page.metades == nil -%}
-                {%- assign des = page.metades -%}
-                {%- assign notPage = False -%}
-            {%- endunless -%}
+{%- if page.metades -%}
+    {%- unless page.metades == "" -%}
+        {%- unless page.metades == nil -%}
+            {%- assign des = page.metades | normalize_whitespace -%}
+            {%- assign notPage = False -%}
         {%- endunless -%}
+    {%- endunless -%}
+{%- else if page.post AND page.excerpt %}
+    {%- assign des = page.excerpt | strip_html | normalize_whitespace -%}
 {%- else if layout.metades AND notPage == True -%}
     {%- unless layout.metades == "" -%}
         {%- unless page.metades == nil -%}
@@ -52,19 +61,25 @@
     {%- endunless -%}
 {%- endif -%}
 
+{%- if page.author -%}
+    {%- assign metaAuthor = page.author -%}
+{%- else -%}
+    {%- assign metaAuthor = "Team NewPipe" -%}
+{%- endif -%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>{{ renderedTitle }}</title>
 
-    <meta name="author" content="Christian Schabesberger, NewPipe">
-    <meta name="description" content="{{ des }}">
-    <meta name="keywords" content="NewPipe, YouTube, Android, player, background, popup, privacy">
+    <meta name="author" content="{{ metaAuthor | strip_html }}">
+    <meta name="description" content="{{ des | strip_html }}">
+    <meta name="keywords" content="NewPipe, YouTube, Android, player, background, privacy, PeerTube, Bandcamp, Soundcloud">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
 
     <meta property="og:site_name" content="NewPipe">
-    <meta property="og:title" content="{{ metatit }}">
+    <meta property="og:title" content="{{ metatit | strip_html }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url }}">
     <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/img/logo_400.png">

@@ -9,7 +9,7 @@ title: Search
             <h3 class="page-title">Search</h3>
             <div class="input-group">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" id="search-submit" type="submit" onclick="search('manual')">
+                    <button class="btn btn-default" id="search-submit" type="submit" data-action="search" data-search="manual">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
                 </span>
@@ -21,14 +21,6 @@ title: Search
 <div id="search-results"></div>
 
 <!-- Scripts to perform a search -->
-<script src="{{ site.baseurl  }}/lunrjs/blog_searchData.js"></script>
-<script src="{{ site.baseurl  }}/lunrjs/lunr.min.js"></script>
-<script src="{{ site.baseurl  }}/lunrjs/blog_search.js"></script>
-
-<script>
-$("#search-box").on('keyup', function (e) {
-    if (e.keyCode == 13) { // Enter key
-        search('manual');
-    }
-});
-</script>
+<script src="{{ site.baseurl }}/lunrjs/blog_searchData.js"></script>
+<script src="{{ site.baseurl }}/lunrjs/lunr.min.js"></script>
+<script src="{{ site.baseurl }}/lunrjs/blog_search.js"></script>

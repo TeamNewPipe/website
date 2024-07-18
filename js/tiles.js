@@ -1,7 +1,7 @@
 $(document).ready(function() {
     let $carousel = $(".carousel");
     $carousel.carousel();
-    let carousels = {0: "user-voices-carousel", 1: "f-droid-carousel"};
+    let carousels = {0: "user-voices-carousel"};
     let paused = {};
     for (let key in carousels) {
         if (!carousels.hasOwnProperty(key)) continue;

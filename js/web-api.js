@@ -13,7 +13,7 @@
  *
  *  Example usage:
  *  <pre>
- *  <a href="https://default.locati.on" data-newpipe-api="flavors.fdroid.stable.apk" data-newpipe-api-attribute="href">
+ *  <a href="https://default.locati.on" data-newpipe-api="flavors.newpipe.apk" data-newpipe-api-attribute="href">
  *      download APK</a>
  *  </pre>
  */
@@ -45,7 +45,7 @@ function updateWithAPIData(object, key, oldIdentifier) {
 
         // get all elements which registered to be updated with the API data
         let elementsToUpdate = document.querySelectorAll('[data-newpipe-api="' + newIdentifier + '"]');
-        if (elementsToUpdate == null) return;
+        if (elementsToUpdate == null || elementsToUpdate.length === 0) return;
 
         let data = object.toString();
         for (let i = 0; i < elementsToUpdate.length; i++) {
@@ -76,12 +76,12 @@ function updateAllWithAPIData() {
  * Fetch API information and trigger updates
  */
 $(document).ready(function () {
-    $.get("https://newpipe.schabi.org/api/data.json", "json")
+    $.get("https://newpipe.net/api/data.json", "json")
         .done(function(resp) {
             api = resp;
             updateAllWithAPIData();
         })
         .fail(function() {
-            console.log("An error occurred while getting Web API data from https://newpipe.schabi.org/api/data.json");
+            console.log("An error occurred while getting Web API data from https://newpipe.net/api/data.json");
         });
 });

@@ -1,3 +1,23 @@
+/* everything but isso */
+
+.comments-heading, .comments-rules-hint, .comments-rules-hint-alt {
+    text-align: center !important;
+}
+
+.comments-heading {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.comments-rules-hint a, .comments-rules-hint-alt a {
+    font-weight: bold;
+}
+
+.comments-rules-hint-alt {
+    font-size: 95%;
+    font-style: italic;
+}
+
 /* ISSO */
 
 #isso-thread * {

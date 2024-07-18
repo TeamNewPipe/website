@@ -5,9 +5,15 @@ module Jekyll
     #
     class GitHash < Liquid::Tag
         include Jekyll::LiquidExtensions
+        def getRawHash()
+            hash = %x( git rev-parse --short HEAD )
+            # remove newlines and other whitespaces at the beginning and end of the hash
+            # for some reason one strip is not enough
+            return hash.strip
+        end
 		def render(context)
-            %x( git rev-parse --short HEAD )
-		end
+		    getRawHash()
+        end
     end
 end
 

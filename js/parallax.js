@@ -36,3 +36,9 @@ if ($(window).width() > 767) parallax();
 $(document).on('bodyClassChanged', function() {
     parallax_reset();
 })
+
+$(document).ready(function () {
+    $('#navbar-wrapper button[data-toggle="collapse"][data-target="#navbar"]').on('click', function () {
+        parallax_reset()
+    });
+})

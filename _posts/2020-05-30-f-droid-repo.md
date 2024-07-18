@@ -20,7 +20,7 @@ Instead of telling you the boring story behind the repository, let's first talk 
 The easiest way to add the repository is to scan the QR code below or [click this link](fdroidrepos://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501) if you're viewing this on your device already. F-Droid should pop up on both, prompting you to add the repository. For the paranoid (*which is not a bad idea, especially in this context!*), you can verify the fingerprint F-Droid shows you with the one in the "copy-pastable" URL below.
 
 <center>
-    <img src="/img/fdroid-repo-qrcode.svg" alt="NewPipe F-Droid repository QR code" style="width: 250px">
+    <img src="{{ site.baseurl }}/img/fdroid-repo-qrcode.svg" alt="NewPipe F-Droid repository QR code" class="fdroid-repo-qr-code">
 </center>
 
 Alternatively, in F-Droid, open the *Settings*, and choose *Repositories*. Then press the *plus* button, and paste the link if needed.
@@ -34,7 +34,7 @@ The URL you need to copy is below. It includes the key's fingerprint for your co
 https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501
 ```
 
-*Note: we also provide an archive containing older builds of NewPipe; to use this, just substitute `fdroid` with `archive` in the URL, the key's fingerprint is the same.)*
+*Note: we also provide an archive containing older builds of NewPipe; to use this, just substitute `repo` with `archive` in the URL, the key's fingerprint is the same.)*
 
 We will soon provide a detailed guide including screenshots for our less tech-savvy users.
 
@@ -52,4 +52,4 @@ The F-Droid repository has been in a semi-public beta for a significant amount o
 
 ## Disclaimer
 
-Please note that there are no guarantees made from us with regards to the repository and the contained `.apk` files. We work on keeping everything working safely, though. If you spot any issues, please don't hesitate to [contact us](https://newpipe.schabi.org/press/contact/).
+Please note that there are no guarantees made from us with regards to the repository and the contained `.apk` files. We work on keeping everything working safely, though. If you spot any issues, please don't hesitate to [contact us]({{ site.url }}/press/contact/).

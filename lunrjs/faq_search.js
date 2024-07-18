@@ -13,14 +13,14 @@ window.store = {
 }{%- unless forloop.last -%},{%- endunless -%}
 {% endfor %}
 };
-
+var idx;
 function search() {
     searchTerm = document.getElementById('search-box').value;
     if (searchTerm.replace(/\s/g, '').length === 0) return;
 
-    // Initalize lunr with the fields it will be searching on. I've given title
+    // Initialize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.
-    var idx = lunr(function () {
+    idx = lunr(function () {
         this.field('id');
         this.field('title', { boost: 10 });
         this.field('categories', { boost: 5 });
@@ -61,7 +61,7 @@ function displaySearchResults(results) {
             $tile.find(".tile-body").show();
         }
     } else {
-        searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p></div>';
+        searchResults.innerHTML = '<div id="no-search-results"><br><p><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p></div>';
     }
 
     searchResults.classList.add("active");
@@ -116,12 +116,11 @@ function showOne(itemId) {
     }
 }
 
-$("#search-box").keydown(function (e) {
-    if (e.which === 13 || e.keyCode === 13) { // Enter
-        search();
-    }
+document.addEventListener('DOMContentLoaded', function() {
+    $("#search-box").on("keypress", search);
+    $('[data-action="search"]').on('click', function () {
+        search($(this).data.search)
+    })
+    $("#tile-show-all").on('click', showAll);
 });
 
-$("#tile-show-all").click(function () {
-    showAll();
-});

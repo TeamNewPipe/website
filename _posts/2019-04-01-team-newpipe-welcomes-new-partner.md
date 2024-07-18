@@ -5,7 +5,7 @@ date: 2019-04-01 12:00:00 +0200
 categories: [pinned]
 author: TheAssassin
 image: newpipe
-excerpt_separator: <!--more-->
+excerpt_separator: <!-- more -->
 ---
 
 Team NewPipe has found a new partner. We're very enthusiastic about the awesome deal we negotiated with them. Read on for more information!
@@ -13,7 +13,7 @@ Team NewPipe has found a new partner. We're very enthusiastic about the awesome 
 **Please beware that the following text was part of this year's April's fools joke. Please see @TheAssassin's reply in the comments for more details on the context of this joke.**
 
 
-<!--more-->
+<!-- more -->
 
 Team NewPipe is proud to announce our new partnership with a well-known tech
 brand we admire a lot: Apple Inc., the authors of **revolutionary devices** like
@@ -29,13 +29,13 @@ service needs nice apps for mobile platforms. The Apple TV+ management is a big
 fan of NewPipe and sent us an offer we couldn't deny in order to develop the
 Android version of Apple TV+ based on our core project: **NewPipe!**
 
-<p style="text-align: center; padding: 20px 0;">
+<p class="applepipe-logo">
 <img
     alt="ApplePipe Logo Proposal"
-    src="/img/applepipe-logo-proposal.png"
-    style="max-width: 480px;"
+    src="{{ site.baseurl }}/img/applepipe-logo-proposal.png"
+    class="applepipe-logo"
 />
-<span style="color: #999; display: block;">
+<span class="applepipe-logo">
 ApplePipe Logo Proposal
 </span>
 </p>
@@ -54,13 +54,13 @@ will soon be **released as free software**, of course, as other companies probab
 have similar issues. Also, we want to give something back, and after evaluation by our management,
 we can surely tell we can't generate any revenue by the tool, hence it doesn't make sense to keep it proprietary for economic reasons either.
 
-<p style="text-align: center; padding: 20px 0;">
+<p class="applepipe-voss">
 <img
     alt="Axel Voss is very enthusiastic about a positive vote for his copyright directive in 2018."
-    src="/img/happy-voss.jpg"
-    style="max-width: 480px;"
+    src="{{ site.baseurl }}/img/happy-voss.jpg"
+    class="applepipe-voss"
 />
-<span style="color: #999; display: block;">
+<span class="applepipe-voss">
 Axel Voss is very happy about a positive vote for his copyright directive in 2018.
 </span>
 </p>

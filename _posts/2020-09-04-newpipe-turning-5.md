@@ -17,7 +17,7 @@ On September 4th, 2015 I uploaded v0.3 as a tag on GitHub. By this date NewPipe 
 I thought for this reason I am telling you how all of this started.
 
 <figure>
-<img src="/img/all_logos.svg" class="img-responsive">
+<img src="{{ site.baseurl }}/img/all_logos.svg" class="img-responsive">
 <figcaption class="text-center">NewPipe's logo over the time</figcaption>
 </figure>
 <br>

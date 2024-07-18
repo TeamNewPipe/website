@@ -20,7 +20,7 @@
                 <nav class="navbar navbar-inverse navbar-static-top">
                     <div class="container">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" onclick="parallax_reset();" >
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -55,14 +55,14 @@
                 <div class="logo">
                     <img src="{{ site.baseurl }}/img/logo.svg" class="img-circle border-white" alt="NewPipe logo" />
                 </div>
-                <div class="f-droid-wrapper">
-                    <a href="https://f-droid.org/packages/org.schabi.newpipe/" target="_blank">
-                        <img src="{{ site.baseurl }}/img/f-droid.svg" class="f-droid" alt="get it on F-Droid" />
+                <div class="get-newpipe-wrapper">
+                    <a href="#download">
+                        <img src="{{ site.baseurl }}/img/Get_NewPipe_logo_large.svg" class="newpipe" alt="get NewPipe" />
                     </a>
                 </div>
                 <div class="phone hidden-xs">
-                    <video id="animation" src="{{ site.baseurl }}/img/newpipe_promotion_video.mp4" preload='none' loop muted playsinline></video>
-                    <img src="{{ site.baseurl }}/img/nexus6.png" alt="NewPipe running on nexus6" />
+                    <video id="animation" src="{{ site.baseurl }}/img/newpipe_promotion_video.webm" preload='none' loop muted playsinline></video>
+                    <img src="{{ site.baseurl }}/img/fairphone_device_frame.png" alt="NewPipe running on a Fairphone" />
                 </div>
             </div>
         </div> <!-- header-box -->
@@ -99,7 +99,7 @@
         <div class="container container-double">
             <div class="row is-flex">
                 <div class="col-md-9 feature-detail" id="lightweight">
-                    <h3 style="font-weight: bold">NewPipe—against the stream of the current</h3>
+                    <h3 class="newpipe-title">NewPipe — against the stream of the current</h3>
                     <div class="feature-description">
                         <div class="row">
 
@@ -189,17 +189,17 @@
                         <i class="fa fa-arrow-left"></i>
                     </div>
                 </div>
-                <div class="col-md-9 feature-detail" id="downloads" >
-                    <h3>Downloads</h3>
+                <div class="col-md-9 feature-detail" id="offline-usage">
+                    <h3>Offline usage</h3>
                     <div class="feature-media">
-                        <img src="/img/screenshots/shot_02.png" class="img-responsive active" alt="download functionality" />
+                        <img src="/img/screenshots/shot_02.png" class="img-responsive active" alt="offline functionality" loading="lazy" />
                         <!--<img src="/img/screenshots/shot_03.png" class="img-responsive" />-->
                     </div>
                     <div class="feature-description">
-                        <p><strong>Customize your download:</strong></p>
+                        <p><strong>Customize your offline experience:</strong></p>
                         <ul>
-                            <li>Set title</li>
-                            <li>Video or audio only, with or without captions</li>
+                            <li>Set the title</li>
+                            <li>Video, or audio only — with or without captions</li>
                             <li>Many file formats</li>
                             <li>In any resolution</li>
                         </ul>
@@ -211,7 +211,7 @@
                 <div class="col-md-9 feature-detail" id="privacy" >
                     <h3>Extended Privacy</h3>
                     <div class="feature-media">
-                        <img src="/img/privacy_written_in_tiles.jpg" class="img-responsive" alt="privacy spelled" />
+                        <img src="/img/privacy_written_in_tiles.jpg" class="img-responsive" alt="privacy spelled" loading="lazy" />
                     </div>
                     <div class="feature-description">
                         <p><strong>Friends of your privacy</strong></p>
@@ -226,10 +226,10 @@
                         <i class="fa fa-arrow-left"></i>
                     </div>
                 </div>
-                <div class="col-md-9 feature-detail" id="background" >
+                <div class="col-md-9 feature-detail" id="background">
                     <h3>Background Player</h3>
                     <div class="feature-media">
-                        <img src="/img/screenshots/shot_06.png" class="img-responsive" alt="background playlist" />
+                        <img src="/img/screenshots/shot_06.png" class="img-responsive" alt="background playlist" loading="lazy" />
                     </div>
                     <div class="feature-description">
                         <p><strong>Listen to your favourite music while using other apps:</strong></p>
@@ -244,10 +244,10 @@
                         <i class="fa fa-arrow-left"></i>
                     </div>
                 </div>
-                <div class="col-md-9 feature-detail" id="popup" >
+                <div class="col-md-9 feature-detail" id="popup">
                     <h3>Popup Player</h3>
                     <div class="feature-media">
-                        <img src="/img/screenshots/shot_05.png" class="img-responsive" alt="popup player in any web-browser app" />
+                        <img src="/img/screenshots/shot_05.png" class="img-responsive" alt="popup player in web-browser app" loading="lazy" />
                     </div>
                     <div class="feature-description">
                         <p><strong>Never stop playing!</strong></p>
@@ -263,10 +263,10 @@
                         <i class="fa fa-arrow-left"></i>
                     </div>
                 </div>
-                <div class="col-md-9 feature-detail" id="subscriptions" >
+                <div class="col-md-9 feature-detail" id="subscriptions">
                     <h3>Subscriptions</h3>
                     <div class="feature-media">
-                        <img src="/img/screenshots/shot_09.png" class="img-responsive" alt="subscriptions list" />
+                        <img src="/img/screenshots/shot_09.png" class="img-responsive" alt="subscriptions list" loading="lazy" />
                     </div>
                     <div class="feature-description">
                         <p><strong>Never miss new content again:</strong></p>
@@ -284,7 +284,7 @@
                 <div class="col-md-9 feature-detail" id="bookmarks">
                     <h3>Bookmarks and Local Playlists</h3>
                     <div class="feature-media">
-                        <img src="/img/screenshots/shot_14.png" class="img-responsive" alt="bookmark view" />
+                        <img src="/img/screenshots/shot_14.png" class="img-responsive" alt="bookmark view" loading="lazy" />
                     </div>
                     <div class="feature-description">
                         <p><strong>Endless music</strong></p>
@@ -299,10 +299,10 @@
                         <i class="fa fa-arrow-left"></i>
                     </div>
                 </div>
-                <div class="col-md-9 feature-detail" id="history" >
+                <div class="col-md-9 feature-detail" id="history">
                     <h3>History</h3>
                     <div class="feature-media">
-                        <img src="/img/screenshots/shot_history_last_played_dark.png" class="img-responsive" alt="watched history" />
+                        <img src="/img/screenshots/shot_history_last_played_dark.png" class="img-responsive" alt="watched history" loading="lazy" />
                     </div>
                     <div class="feature-description">
                         <p><strong>Go back in time</strong></p>
@@ -326,9 +326,9 @@
                                 <span class="icon"><i class="fa fa-bolt"></i></span> Lightweight
                             </div>
                         </a>
-                        <a href="#downloads">
+                        <a href="#offline-usage">
                             <div class="list-group-item">
-                                <span class="icon"><i class="fa fa-download"></i></span> Downloads
+                                <span class="icon"><i class="fa fa-download"></i></span> Offline usage
                             </div>
                         </a>
                         <a href="#privacy">
@@ -376,6 +376,65 @@
     <div class="tiles-container">
         <div class="container container-double">
             <div class="row is-flex">
+                
+                <div class="col-xs-12">
+                    <hr class="separator hidden visible-xs" />
+                </div>
+                
+                <div class="col-xs-12" id="services">
+                    <h3 class="title">Supported Services</h3>
+                    <div class="row is-flex">
+                        <div class="tile service-tile" id="service-youtube">
+                            <div class="service-title">YouTube</div>
+                            <div class="service-description">
+                                YouTube is one of the most popular video and live streaming platforms, including music, news, gaming and much more.
+                            </div>
+                            <a class="service-link" href="https://youtube.com">visit service website</a>
+                        </div>
+
+                        <div class="tile service-tile" id="service-peertube">
+                            <!--<div class="service-logo"><img src="/img/peertube-brand.png" alt="PeerTube" class="img-responsive"/></div>-->
+                            <div class="service-title">PeerTube</div>
+                            <div class="service-description">
+                                PeerTube is a decentralized video platform.<br>
+                                Any PeerTube instance can be added to NewPipe.
+                            </div>
+                            <a class="service-link" href="https://joinpeertube.org">visit service website</a>
+                        </div>
+
+                        <div class="tile service-tile" id="service-soundcloud">
+                            <div class="service-title">SoundCloud</div>
+                            <div class="service-description">
+                                SoundCloud is a streaming platform for music.
+                            </div>
+                            <a class="service-link" href="https://soundcloud.com">visit service website</a>
+                        </div>
+
+                        <div class="tile service-tile" id="service-bandcamp">
+                            <!--<div class="service-logo"></div>-->
+                            <div class="service-title">Bandcamp</div>
+                            <div class="service-description">
+                                Bandcamp is an artist-friendly platform for sharing music.<br>
+                                It offers user-friendly DRM-free downloads.
+                            </div>
+                            <a class="service-link" href="https://bandcamp.com">visit service website</a>
+                        </div>
+
+                        <div class="tile service-tile" id="service-mediacccde">
+                            <div class="service-title">media.ccc.de</div>
+                            <div class="service-description">
+                                media.ccc.de is the video archive and live streaming platform of the German hacker and information security activist group <a href="https://ccc.de">Chaos Computer Club</a>.
+                            </div>
+                            <a class="service-link" href="https://media.ccc.de/">visit service website</a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-xs-12 text-center" style="margin-top: 15px">
+                            <div class="button action" style="background-color: green">And more to come!</div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col-xs-12">
                     <hr class="separator hidden-md" />
@@ -391,7 +450,7 @@
                             <div class="item active"> <!-- @Bubu -->
                                 <div class="user-thumbnail">
                                     <a href="https://github.com/TeamNewPipe/NewPipe/issues/1153#issuecomment-375478646">
-                                        <img src="{{ site.baseurl }}/img/bubu_thumbnail.jpg" class="img-responsive img-circle" alt="Marcus Hoffman thumbnail" />
+                                        <img src="{{ site.baseurl }}/img/bubu_thumbnail.jpg" class="img-responsive img-circle" alt="Marcus Hoffman thumbnail" loading="lazy" />
                                     </a>
                                 </div>
                                 <p class="user-name">
@@ -406,7 +465,7 @@
                                     <i class="fa fa-user-circle-o"></i>
                                 </div>
                                 <p class="user-name">
-                                    <a href="https://newpipe.schabi.org/blog/pinned/NewPipe-needs-feedback/#isso-12">
+                                    <a href="{{ site.url }}/blog/pinned/NewPipe-needs-feedback/#isso-12">
                                         Neil Simpson
                                     </a>
                                 </p>
@@ -417,7 +476,7 @@
                                     <i class="fa fa-user-circle-o"></i>
                                 </div>
                                 <p class="user-name">
-                                    <a href="https://newpipe.schabi.org/blog/pinned/NewPipe-needs-feedback/#isso-8">
+                                    <a href="{{ site.url }}/blog/pinned/NewPipe-needs-feedback/#isso-8">
                                         Sarah Ann Berger
                                     </a>
                                 </p>
@@ -428,7 +487,7 @@
                                     <i class="fa fa-user-circle-o"></i>
                                 </div>
                                 <p class="user-name">
-                                    <a href="https://newpipe.schabi.org/blog/pinned/NewPipe-needs-feedback/#isso-16">
+                                    <a href="{{ site.url }}/blog/pinned/NewPipe-needs-feedback/#isso-16">
                                         Arthur Reeder
                                     </a>
                                 </p>
@@ -460,106 +519,44 @@
                 </div>
 
                 <!-- Download -->
-                <div class="col-xs-12">
+                <div class="col-xs-12" id="download">
                     <h3 class="title">Get NewPipe</h3>
                 </div>
 
                 <div class="col-xs-12 tile tile-bordered" id="download1">
                     <div class="row is-flex">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 tri-col" id="download1-direct-download">
                             <div class="download-version-container">
                                 <div class="download-version-icon">
-                                    <img src="img/logo_app.svg" class="img-responsive" alt="NewPipe icon" />
+                                    <img src="img/logo_app.svg" class="img-responsive" alt="NewPipe icon" loading="lazy" />
                                 </div>
                                 <div class="download-version-requirements">
-                                    Android 4.4+
+                                    Android 5+
                                 </div>
                                 <div class="download-version-button">
-                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/#latest" data-newpipe-api="flavors.github.stable.apk" data-newpipe-api-attribute="href" class="button action">
-                                        <i class="fa fa-download"></i> NewPipe <span data-newpipe-api="flavors.github.stable.version"></span>
+                                    <a href="https://github.com/TeamNewPipe/NewPipe/releases" data-newpipe-api="flavors.newpipe.apk" data-newpipe-api-attribute="href" class="button action">
+                                        <i class="fa fa-download"></i> NewPipe <span data-newpipe-api="flavors.newpipe.version"></span>
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
-                            <div class="download-version-container">
-                                <div class="download-version-icon">
-                                    <img src="img/icon_legacy.svg" class="img-responsive" alt="NewPipe legacy icon" />
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 tri-col" id="download1-apk-info">
+                            <div class="download-info-container">
+                                <div class="download-info-heading">
+                                    <h4>APK Info</h4>
                                 </div>
-                                <div class="download-version-requirements">
-                                    Android 4.1+
-                                </div>
-                                <div class="download-version-button">
-                                    <a href="https://f-droid.org/packages/org.schabi.newpipe.lagacy/#latest" data-newpipe-api="flavors.fdroid_legacy.stable.apk" data-newpipe-api-attribute="href" class="button action">
-                                        <i class="fa fa-download"></i> NewPipe legacy <span data-newpipe-api="flavors.fdroid_legacy.stable.version"></span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-8">
-                            <div id="download-info-carousel-container">
-                                <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-
-                                    <!-- Wrapper for slides -->
-                                    <div class="carousel-inner" role="listbox">
-                                        <div class="item active">
-                                            <p><a href="https://f-droid.org/"><img src="img/fdroid-logo.svg" class="img-responsive" style="display: inline-block" alt="F-Droid logo" /> F-Droid</a> is a trusted catalogue of libre software apps for Android.</p>
-                                            <p>Install the F-Droid app to get notified about new libre software and install libre apps.</p>
-                                            <br>
-                                            <p><a href=" https://f-droid.org/en/about/#terms-etc">F-Droid respects your privacy too.</a><br />
-                                            </p>
-                                        </div>
-                                        <div class="item">
-                                            <div class="row is-flex">
-                                                <div class="col-md-5 col-lg-4" id="download-newpipe-qr-code-container-col">
-                                                    <div id="download-newpipe-qr-code-container">
-                                                        <a href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">
-                                                            <img src="/img/fdroid-repo-qrcode.svg" class="img-responsive" alt="Link to our F-Droid repo" style="background-color: #fff;" />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7 col-lg-8">
-                                                    <div style="margin: auto;">
-                                                        <p>Add our F-Droid repository to your client to get new versions of NewPipe earlier.</p>
-                                                        <p><a style="word-wrap: break-word; word-wrap: anywhere;" href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501</a></p>
-                                                        <div class="hidden-md hidden-lg">
-                                                            <p id="f-droid-qr-code-toggle" class="text-center"><i class="fa fa-chevron-right"></i> <span class="f-droid-qr-code-toggled shown">Show</span><span class="f-droid-qr-code-toggled hidden">Hide</span> QR code</p>
-                                                            <p class="text-center">
-                                                                <a id="f-droid-repo-qr-code" href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501" class="hidden f-droid-qr-code-toggled" style="display: inline-block">
-                                                                    <img src="https://f-droid.org/assets/download-fdroid-qr.png" class="img-responsive" alt="URL to our F-Droid repository"/>
-                                                                </a>
-                                                            </p>
-                                                        </div>
-                                                        <p class="text-center text-left-md"><a class="button button-small action grey" href="{{ site.baseurl }}/FAQ/tutorials/install-add-fdroid-repo/">Learn more</a></p>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Indicators -->
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#f-droid-carousel" data-slide-to="0" class="active"></li>
-                                        <li data-target="#f-droid-carousel" data-slide-to="1"></li>
-                                    </ol>
-
-                                    <!-- Controls: not displayed but needed to get preventJumpingPage() working
-                                         Pausing the Carousel won't work without controls. Don't ask me why :)
-                                     -->
-                                    <a class="left carousel-control" href="#f-droid-carousel" role="button" data-slide="prev">
-                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="right carousel-control" href="#f-droid-carousel" role="button" data-slide="next">
-                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-
+                                <div class="download-info-content">
+                                    <p>Hash sum: <span data-newpipe-api="flavors.newpipe.hash_type">hashing algorithm not available</span>
+                                        <code data-newpipe-api="flavors.newpipe.hash">hash sum not available</code>
+                                    </p>
+                                    <p>
+                                    Signing key (SHA-256 fingerprint):
+                                        <code>CB:84:06:9B:D6:81:16:BA:FA:E5:EE:4E:E5:B0:8A:56:7A:A6:D8:98:40:4E:7C:B1:2F:9E:75:6D:F5:CF:5C:AB</code>
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 tri-col" id="download1-release-highlights">
                             <div class="download-info-container">
                                 <div class="download-info-heading">
                                     <h4>Release Highlights</h4>
@@ -574,7 +571,47 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-4">
+                        <div class="col-xs-12 col-sm-12 col-md-12" id="download1-fdroid-newpipe-repo">
+                            <div class="row is-flex">
+                                <div class="col-md-5 col-lg-4" id="download-newpipe-qr-code-container-col">
+                                    <div id="download-newpipe-qr-code-container">
+                                        <a href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">
+                                            <img src="/img/fdroid-repo-qrcode.svg" class="img-responsive fdroid-repo-qrcode" alt="Link to our F-Droid repo" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-lg-8">
+                                    <div class="fdroid-col-right">
+                                        <h4>Faster updates</h4>
+                                        <p>You can also add our own F-Droid repository to your client to receive updates even faster.</p>
+                                        <p><a class="break-line" href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501</a></p>
+                                        <div class="hidden-md hidden-lg">
+                                            <p id="f-droid-qr-code-toggle" class="text-center"><i class="fa fa-chevron-right"></i> <span class="f-droid-qr-code-toggled shown">Show</span><span class="f-droid-qr-code-toggled hidden">Hide</span> QR-code</p>
+                                            <p class="text-center">
+                                                <a id="f-droid-repo-qr-code" href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501" class="hidden f-droid-qr-code-toggled">
+                                                    <img src="https://f-droid.org/assets/download-fdroid-qr.png" class="img-responsive" alt="URL to our F-Droid repo"/>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <p class="text-center text-left-md"><a class="button button-small action grey" href="{{ site.baseurl }}/FAQ/tutorials/install-add-fdroid-repo/">Learn more</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12" id="download1-fdroid">
+                            <p><a href="https://f-droid.org/"><img src="img/fdroid-logo.svg" class="img-responsive fdroid-logo" alt="F-Droid logo" /> F-Droid</a> is a trusted catalogue of Free and Open Source applications for Android.</p>
+                            <p>Install the F-Droid app to get notified about updates. It enables you to download and update them too.</p>
+                            <div>
+                                <p>If you install NewPipe via the default F-Droid repo, updates for NewPipe might take their time to arrive for you. If you want to use our own repository, check out the next item in this slideshow.</p>
+                                <a href="https://f-droid.org/packages/org.schabi.newpipe/" target="_blank">
+                                    <img src="/img/f-droid.svg" class="f-droid" alt="get it on F-Droid">
+                                </a>
+                            </div>
+                            <p><a href=" https://f-droid.org/en/about/#terms-etc">F-Droid respects your privacy. They don’t track you, or your device.</a><br />
+                                We would like to thank them for providing their services in this way.
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 tri-col" id="download1-installation-help">
                             <div class="download-info-container">
                                 <div class="download-info-heading">
                                     <h4>Need help?</h4>
@@ -646,7 +683,7 @@
                 <div class="col-xs-12 tile" id="tile-opensource">
                     <div class="tile-media">
                         <a href="https://github.com/TeamNewPipe/NewPipe">
-                            <img src="/img/newpipe_on_github.svg" class="img-responsive" alt="NewPipe on GitHub" />
+                            <img src="/img/newpipe_on_github.svg" class="img-responsive" alt="NewPipe on GitHub" loading="lazy" />
                         </a>
                     </div>
                     <div class="tile-description">
@@ -663,9 +700,9 @@
                         </ul>
                         <p class="button-wrapper">
                             <a href="https://github.com/TeamNewPipe/NewPipe/blob/dev/.github/CONTRIBUTING.md#newpipe-contribution-guidelines" class="button action">Contribute</a>
-                            <a href="https://github.com/TeamNewPipe/NewPipe/" class="button action"><i class="fa fa-star"></i> <span data-newpipe-api="stats.stargazers">10k</span></a>
+                            <a href="https://github.com/TeamNewPipe/NewPipe/" class="button action"><i class="fa fa-star"></i> <span data-newpipe-api="stats.stargazers">25k</span></a>
                             <a href="https://hosted.weblate.org/engage/NewPipe/" class="button action">Translate NewPipe</a>
-                            <a href="https://github.com/TeamNewPipe/website/" class="button action grey">Improve this site</a>
+                            <a href="https://github.com/TeamNewPipe/website/" class="button action grey" >Improve this site</a>
                         </p>
                     </div>
                 </div>
@@ -680,9 +717,9 @@
                 <div class="col-md-6 tile tile-left" id="tile-free">
                     <h4>Why NewPipe is not only libre, but also gratis</h4>
                     <ul class="check">
-                        <li class="heart">We love what we are doing</li>
+                        <li class="heart">We love what we do</li>
                         <li>Powered by a growing and generous community</li>
-                        <li>To make the Internet for everyone</li>
+                        <li>Internet for everyone :)</li>
                         <li>Your donation helps development directly</li>
                         <li class="text-success">F-Droid, Weblate, Sentry and other companies offer their services to libre software for free</li>
                     </ul>
@@ -734,58 +771,8 @@
     <script src="{{ site.baseurl }}/js/swipe.js"></script>
 
     <!-- Script to handle touch and swipe events on carousels-->
-    <script>
-        document.documentElement.className += (!("ontouchstart" in document.documentElement) ? "no-" : "") + "touch";
-
-        if ("ontouchstart" in document.documentElement) {
-            let userVoicesSwiper = new Swipe('#user-voices');
-            userVoicesSwiper.onLeft(function () {
-                $('#user-voices-carousel').carousel('next');
-            });
-            userVoicesSwiper.onRight(function () {
-                $('#user-voices-carousel').carousel('prev');
-            });
-            userVoicesSwiper.run();
-            let downloadFdroidSwiper = new Swipe('#download-info-carousel-container');
-            downloadFdroidSwiper.onLeft(function () {
-                $('#f-droid-carousel').carousel('next');
-            });
-            downloadFdroidSwiper.onRight(function () {
-                $('#f-droid-carousel').carousel('prev');
-            });
-            downloadFdroidSwiper.run();
-        }
-
-        // collapse qr-code
-        $(document).ready(function () {
-            let $qrCodeToggled = $('.f-droid-qr-code-toggled');
-            $('#f-droid-qr-code-toggle').click(function () {
-                $qrCodeToggled.toggleClass('shown');
-                $qrCodeToggled.toggleClass('hidden');
-            });
-        });
-    </script>
-
     <!-- Load and play animation on medium and large screens -->
-    <script>
-        let loaded = false;
-        let playing = false;
-        let animation = $('#animation').get(0);
-        $(window).on("orientationchange load resize", function () {
-            if ($(window).width() > 767 && !loaded) {
-                animation.load();
-                loaded = true;
-                animation.play();
-                playing = true;
-            } else if ($(window).width() > 767 && !playing) {
-                animation.play();
-                playing = true;
-            } else if ($(window).width() <= 767 && loaded && playing) {
-                animation.pause();
-                playing = false;
-            }
-        });
-    </script>
+    <script src="{{ site.baseurl }}/js/index.js"></script>
 
 </body>
 </html>

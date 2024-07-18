@@ -14,11 +14,3 @@ search:    "exclude"
     {% include press_search.html %}
 
 </div>
-
-<script>
-    $("#search-box").on('keyup', function (e) {
-        if (e.keyCode == 13) { // Enter key
-            search('manual');
-        }
-    });
-</script>

@@ -1,29 +1,29 @@
 # NewPipe Website Generator
 
-Repo for the [NewPipe website](https://newpipe.schabi.org/), which includes the blog and the press kit.
+Repo for the static [NewPipe website](https://newpipe.net). The code for the blog commenting system [isso](https://posativ.org/isso) is located in [this repository](https://github.com/TeamNewPipe/isso).
 
-All sites are based on [Bootstrap](https://getbootstrap.com) 3.3.7 and [Jekyll](https://jekyllrb.com/).
+All sites are based on [Bootstrap](https://getbootstrap.com) 3.4.1 and [Jekyll](https://jekyllrb.com/).
 
 
 ## Development
 
 #### Installation
 Install Jekyll and Bundler gems through RubyGems:
-```
-~ $ gem install jekyll bundler
+``` sh
+gem install jekyll bundler
 ```
 
 Navigate to the root directory of this project, dev environment:
-```
+``` sh
 bundle install
 ```
 
 Navigate to this directory and build the site on the preview server:
-```
-~ $ jekyll serve
+``` sh
+bundle exec jekyll serve
 ```
 
-Run http://localhost:4000/blog or http://localhost:4000/press.
+Open http://localhost:4000 in your browser.
 
 #### General
 
@@ -62,7 +62,7 @@ Posts with the `pinned` category appear on the right sidebar as _Also interestin
 New categories can be implemented via an extra HTML page named `categoryName.html` and placed in `blog/`.
 The new page should look like this:
  
-```
+``` yml
 ---
 layout: blog_category
 title: categoryName
@@ -121,7 +121,7 @@ The variable `search` accepts following values which modify the position in the 
 
 #### FAQ & Tutorials
 
-FAQ and tutorials are located at https://newpipe.schabi.org/FAQ/ and https://newpipe.schabi.org/FAQ/tutorials/.
+FAQ and tutorials are located at https://newpipe.net/FAQ/ and https://newpipe.net/FAQ/tutorials/.
 
 Essentially FAQs and tutorials have the same structure: 
 Both are collections (`faq` and `tutorials`) and can have the same attributes which are defined via the YAML front matter.
@@ -150,9 +150,11 @@ Writing short FAQs is quite easy and there are only few things to consider.
 3. To insert images, use the `<img/>` tag inside of a `<figure>` tag. Additionally, each image needs a caption (`<figcaption>`).
 4. Please keep your sentences as shorts as possible. This makes it easier to follow you and your instructions.
 
+---
+
 #### Usage of Website API
 We have an API which provides data for running the website to not require visitors contacting other servers when visiting our website.
-You can find its source code [on GitHub](https://github.com/TeamNewPipe/web-api) and the served data [here](https://newpipe.schabi.org/api/data.json).
+You can find its source code [on GitHub](https://github.com/TeamNewPipe/web-api) and the served data [here](https://newpipe.net/api/data.json).
 If you want to use the API for other purposes than running or developing our website, please host it yourself.
 
 To use API data, you need to add the `data-newpipe-api` attribute to an HTML tag containing the JSON identifier of the value you want to access:
@@ -162,7 +164,7 @@ To use API data, you need to add the `data-newpipe-api` attribute to an HTML tag
 ```
 
 By default, the inner HTML of tags which have the `data-newpipe-api` attribute will be replaced with the requested value. Nevertheless, you should put a value there to provide a fallback for the rare case, that our API failed to generate correct data. 
-It is also possible to not replace the HTML, but store the API data in a referred attribute by adding the `ata-newpipe-api-attribute` attribute:
+It is also possible to not replace the HTML, but store the API data in a referred attribute by adding the `data-newpipe-api-attribute` attribute:
 
 ``` HTML
 <a data-newpipe-api="flavors.fdroid.stable.apk" data-newpipe-api-attribute="href">download NewPipe</a>

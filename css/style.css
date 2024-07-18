@@ -1,6 +1,6 @@
 html,
 body {
-    min-height: 100%;
+    min-height: 100vh;
     font-family: 'Arial';
 }
 
@@ -130,8 +130,14 @@ body.modal-open {
     color: #cd201f;
 }
 
+.newpipe {
+    width: 160px;
+}
+
 .f-droid {
     width: 160px;
+	float: right;
+	margin-left: 10px;
 }
 
 a:hover,
@@ -448,6 +454,12 @@ strong.extra {
     font-size: 16px;
 }
 
+.tiles-container .tile.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 @media (max-width: 767px) {
     .tiles-container > .container-double > .row.is-flex > [class*='col-'] {
         width: 100%;
@@ -641,7 +653,7 @@ strong.extra {
 #page {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 100vh;
     background: #d0cdcd;
 }
 
@@ -697,4 +709,40 @@ strong.extra {
 
 .img-full-width.icon-image {
     width: 85%;
+}
+
+.newpipe-title {
+    font-weight: bold;
+}
+
+img.fdroid-logo {
+    display: inline-block;
+}
+
+img.fdroid-repo-qrcode {
+    background-color: #fff;
+}
+
+div.fdroid-col-right {
+    margin: auto;
+}
+
+div.fdroid-col-right .break-line {
+    word-wrap: break-word;
+    word-wrap: anywhere;
+    line-break: anywhere;
+}
+
+#f-droid-repo-qr-code {
+    display: inline-block;
+}
+
+#no-search-results,
+#no-search-results p {
+    text-align: center;
+}
+
+.break-line {
+    word-wrap: anywhere;
+    line-break: anywhere;
 }

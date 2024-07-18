@@ -14,6 +14,7 @@ bodyID: "blog-post"
             </time>
             {% if page.author %}
             by <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+            &ndash; {% include reading-time.html %}
         {% endif %}</p>
     </header>
 
@@ -23,8 +24,10 @@ bodyID: "blog-post"
             <div class="col-md-3 col-img">
                 {% assign image = site.data.images[page.image] %}
                 <img src="/img/{{ image.url }}" class="img-responsive postImg" alt="{% if image.name %}{{ image.name }}{% else %}post image{% endif %}" />
-                By <a href="{{ image.origin }}">{{ image.author }}</a>
+                {% if image.attributeAuthor %}
+                Picture: <a href="{{ image.origin }}">{{ image.author }}</a>
                 {% if image.license %} under {{ image.license }}{% endif %}
+                {% endif %}
             </div>
             <div class="col-md-9">
                 {{ content }}
