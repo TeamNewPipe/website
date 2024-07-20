@@ -8,14 +8,16 @@ ruby RUBY_VERSION
 #     bundle exec jekyll serve
 #
 
-gem "jekyll", "4.3.0"
+gem "jekyll", "4.3.3"
 
 # Fix development command "jekyll serve"
 # Can be removed when upgrading to Jekyll 4.3
 gem "webrick", "~> 1.8"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima", "~> 2.5", ">= 2.5.1"
+# 2.5 is the latest official release which was made in 2019.
+# However, it is incompatible with the modern SASS specifications which was solved on the master branch in 2022.
+gem "minima", "~> 3.0.0.dev", github: "jekyll/minima"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
