@@ -879,11 +879,6 @@ div.search-container input:focus {
     padding: 0 6px;
 }
 
-.isso-comment-footer > a {
-    position: relative;
-    top: .2em;
-}
-
 .isso-input-wrapper {
     display: inline-block;
     position: relative;
@@ -1034,6 +1029,15 @@ div.search-container input:focus {
     cursor: pointer;
     color: #CD201F;
     padding: 0 7px;
+}
+
+.isso-comment-footer > a {
+    position: relative;
+    top: .2em;
+}
+
+.isso-edit, .isso-delete {
+    margin-right: 0.5em;
 }
 
 #comments-info-modal .modal-footer span {
