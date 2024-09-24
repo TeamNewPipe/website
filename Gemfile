@@ -12,7 +12,7 @@ gem "jekyll", "4.2.2"
 
 # Fix development command "jekyll serve"
 # Can be removed when upgrading to Jekyll 4.3
-gem "webrick", "~> 1.8"
+gem "webrick", "~> 1.8", ">= 1.8.2"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5", ">= 2.5.1"
