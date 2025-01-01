@@ -1,5 +1,7 @@
 FROM jekyll/jekyll as builder
 
+LABEL org.opencontainers.image.source="https://github.com/TeamNewPipe/website"
+
 COPY Gemfile /srv/jekyll
 RUN bundle install
 
