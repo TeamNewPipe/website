@@ -204,11 +204,17 @@ main .row [class^="col"] {
     background-color: #D0CDCD;
 }
 
-img.cup-hot {
-    width: 1em;
-    vertical-align: 0;
+.people-large {
+    height: 1.4em;
+    width: 1.4em;
+    top: -2px;
+    position: relative;
 }
 
 .wrench-large {
+    font-size: 1.3em;
+}
+
+.donate-section-title {
     font-size: 18px;
 }
