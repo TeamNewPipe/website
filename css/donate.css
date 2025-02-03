@@ -58,7 +58,7 @@ main .row [class^="col"] {
 #donate {
     padding: 90px 0;
     color: white;
-    background: rgba(115, 115, 115, 0.88);
+    background: rgba(90, 90, 90, 0.9)
 }
 
 #donate h3 {
@@ -78,26 +78,37 @@ main .row [class^="col"] {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    padding: 0 15px;
+}
+
+#button-container > .row {
+    display: initial;
+    width: 100%;
 }
 
 #button-container > * {
     flex-grow: 0;
 }
 
-.button-wrapper {
-    flex-grow: 1;
-    margin-bottom: 30px;
-}
-
-#liberapay-donation {
-    text-align: right;
+#button-container .donate {
+    width: 100%;
 }
 
 /* hidden until we have the full info */
-#liberapay-donation span,
 #bank-transfer-donation {
-    display: none;
+    font-weight: inherit;
+    border: 3px solid white;
+    backdrop-filter: blur(10px);
+    background: rgba(3, 3, 3, 0.2);
+}
+
+#bank-transfer-donation h4 {
+    font-weight: bold;
+}
+
+#bank-transfer-donation td:first-child {
+    padding-right: 1rem;
 }
 
 #bank-transfer-donation pre {
@@ -142,6 +153,13 @@ main .row [class^="col"] {
         display: block;
         order: 3;
     }
+    #bank-transfer-donation table * {
+        text-align: left;
+    }
+    #bank-transfer-donation table {
+        position: relative;
+        margin: 0 auto;
+    }
 }
 
 #parallax-background {
@@ -175,15 +193,22 @@ main .row [class^="col"] {
 }
 
 .phone-background img {
-    max-width: 230px;
+    max-width: 200px;
     display: none;
     position: relative;
+    margin-top: 105px;
 }
 
 @media (min-width: 768px) {
     .phone-background img {
+        max-width: 230px;
         display: block;
-        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .phone-background img {
+        margin-top: 60px;
     }
 }
 
@@ -191,12 +216,6 @@ main .row [class^="col"] {
     .phone-background .row [class^="col"] {
         padding: 0;
         margin: 0;
-    }
-}
-
-@media (min-width: 992px) {
-    .phone-background img {
-        margin-top: 45px;
     }
 }
 
