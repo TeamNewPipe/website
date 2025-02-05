@@ -95,6 +95,10 @@ main .row [class^="col"] {
     width: 100%;
 }
 
+#button-container .donate.button-large {
+    text-align: center;
+}
+
 /* hidden until we have the full info */
 #bank-transfer-donation {
     font-weight: inherit;
@@ -107,7 +111,7 @@ main .row [class^="col"] {
     font-weight: bold;
 }
 
-#bank-transfer-donation td:first-child {
+#bank-transfer-donation th {
     padding-right: 1rem;
 }
 
