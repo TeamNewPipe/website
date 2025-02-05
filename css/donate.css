@@ -245,7 +245,7 @@ main .row [class^="col"] {
 .donate-action-subtitle {
     position: absolute;
     bottom: 3px;
-    font-size: 6pt;
+    font-size: 8pt;
     font-weight: normal;
     opacity: 0.9;
     left: 50%;
