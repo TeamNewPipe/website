@@ -1197,3 +1197,16 @@ figure.screenshot-list figcaption {
         display: flex;
     }
 }
+
+/*
+When pointing to a specific place in the page by adding the fragment to the url,
+e.g. #title-here, the navigation bar would be in the way without this fix.
+See https://stackoverflow.com/a/24298427.
+*/
+[id]:target::before {
+    content: '';
+    display: block;
+    height:      85px;
+    margin-top: -85px;
+    visibility: hidden;
+}
