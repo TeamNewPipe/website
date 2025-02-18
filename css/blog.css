@@ -1076,6 +1076,10 @@ figure figcaption {
     text-align: center;
 }
 
+figure.center {
+    text-align: center;
+}
+
 figure.center img {
     margin-left: auto;
     margin-right: auto;
@@ -1085,9 +1089,39 @@ figure.small img {
     max-width: 100%;
 }
 
+/*
+The "small" class is also provided in Bootstrap and sets the font-size to 85%.
+But here "small" is our tag which means small image, so we undo Bootstrap's change.
+*/
+figure.small {
+    font-size: 100%;
+}
+
+figure.right {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+figure.right img,
+figure.right video {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: min(100%, 200px);
+}
+
 @media (min-width: 768px) {
     figure.small img {
         max-width: 300px;
+    }
+
+    figure.right {
+        float: right;
+        max-width: 200px;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+        margin-left: 2em;
+        margin-right: 1em;
     }
 }
 
@@ -1138,4 +1172,28 @@ span.applepipe-voss {
 
 .fdroid-repo-qr-code {
     width: 250px;
+}
+
+figure.screenshot-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    justify-content: space-around;
+    gap: 0.5em;
+}
+
+figure.screenshot-list img {
+    width: 230px;
+}
+
+figure.screenshot-list figcaption {
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    figure.screenshot-list {
+        display: flex;
+    }
 }
