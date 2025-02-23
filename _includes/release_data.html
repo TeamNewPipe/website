@@ -10,15 +10,14 @@
 }}
 {%- capture releaseChangelog -%}
 <ul>
-    <li>Support reading comment replies</li>
-    <li>Added playlist descriptions</li>
-    <li>Re-order custom playlists</li>
-    <li>[YouTube] Fixed comments</li>
-    <li>[YouTube] Fixed access to some streams</li>
-    <li>Multiple player improvements</li>
-    <li>More improvements and fixes</li>
+    <li>[YouTube] Fix not loading any video information, fix HTTP 403 errors while playing videos and restore playback of some age-restricted videos</li>
+    <li>Fix caption sizes not being changed</li>
+    <li>Fix downloading info twice when opening a stream</li>
+    <li>[Soundcloud] Remove unplayable DRM-protected streams</li>
+    <li>Updated translations</li>
 </ul>
 {%- endcapture -%}
 
 {%- capture releasePostUrl -%}
+{{ site.baseurl }}/blog/pinned/announcement/newpipe-0.27.6-rewrite-team-states/
 {%- endcapture -%}
