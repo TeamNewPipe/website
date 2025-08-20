@@ -84,3 +84,10 @@ birthday-cake:
   origin: https://twitter.com/webalys
   license: CC BY 4.0
   attributeAuthor: true
+
+froscon:
+  url: photos/froscon_2025_stand.jpg
+  type: jpg
+  size: 500
+  author: Stypox
+  attributeAuthor: false
