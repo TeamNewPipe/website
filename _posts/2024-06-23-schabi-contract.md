@@ -17,7 +17,7 @@ For those of you who do not know, Schabi ([@theScrabi](https://github.com/theScr
 
 As you might know, we founded the e.V. primarily to be able to transparently handle the stream of donations coming from NewPipe (thanks a lot!). Moreover, the association also has the legal means to pay someone to work on the NewPipe project. Well, actually, the association's purpose is more general, and includes promoting and helping out any project related to free and open media streaming clients and platforms, not just NewPipe, but this is a story for another time.
 
-Ever since the e.V. was founded, we have been looking for ways to spend the money from donations in a way that would be beneficial for the NewPipe application, for free streaming projects, or for the community. For example, [we donate 600€/year to Weblate](https://newpipe-ev.de/posts/2024-04-22_weblate_donation.html), the free software service that hosts NewPipe translations.
+Ever since the e.V. was founded, we have been looking for ways to spend the money from donations in a way that would be beneficial for the NewPipe application, for free streaming projects, or for the community. For example, [we donate 600€/year to Weblate](https://newpipe-ev.de/blog/2024-04-22-weblate-donation/), the free software service that hosts NewPipe translations.
 
 However, we have not been able to find anyone who would do paid work on the app, since all of the current members of the team are too busy in their offline lives. This is also why the app has received very few updates in recent memory, and is one of the reasons why we want to pay someone in the first place: to have some consistent contributions.
 
