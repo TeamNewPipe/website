@@ -31,7 +31,7 @@ Profpatsch has been steadily working on rewriting the app alongside all the peop
 ## Looking forward
 There are two views on the future. The bright and the dark one.
 Let's start with the bright view, because why not:
-One day we will be done with the refactor, up to a point where NewPipe can rise out of the ashes once again, with a shiny new look and feel and new code, that should make new and exciting subsequent projects possible. I'm talking Kotlin everywhere, compose everywhere, and of course nice features without feature creep ;D.
+One day we will be done with the refactor, up to a point where NewPipe can rise out of the ashes once again, with a shiny new look and feel and new code, that should make new and exciting subsequent projects possible. I'm talking Kotlin everywhere, Compose everywhere, and of course nice features without feature creep ;D.
 Eventually we also want to talk to video creators about the issue that NewPipe reduces their income, and start talking about a world beyond YouTube and Google.
 
 Now to the topic no one wants to hear. The dark side:
