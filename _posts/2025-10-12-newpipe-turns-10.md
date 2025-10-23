@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Newpipe is turning 10 :O"
+title: "NewPipe is turning 10 :O"
 short: "10 year anniversary"
 date: 2025-10-21 13:37:00 + 01:00
 categories: [pinned, announcement]
