@@ -15,7 +15,7 @@ Coinciding with this blog posts, we released a new update to NewPipe, where we i
 
 This is not a fun blog post to write, believe me. Androids future is dear to our heart, and we believe that one of its main aspects was its openness, clearly separating it from Apple's iOS as the better choice for every tinkerer and developer. For the past few years Google has continuously taken steps to remove this openness, and now it hit us.
 
-To make a long story short: We will not enroll in this privacy violating program and give up the anonymity of our developers. We do not want to be at the mercy of Google to allow our app to work. And you should not be content with this restriction either. Follow the steps outlined at https://keepandroidopen.org/ and resist this further lock-down of your device.
+To make a long story short: We will not enroll in this privacy violating program and give up the anonymity of our developers. We do not want to be at the mercy of Google to allow our app to work. And you should not be content with this restriction either. Follow the steps outlined at [keepandroidopen.com](https://keepandroidopen.org/) and resist this further lock-down of your device.
 
 ## Wanna Contribute?
 
