@@ -120,7 +120,9 @@
     {% for stylesheet in include.extraCSS -%}
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/{{ stylesheet }}">
     {% endfor %}
+    <!-- temporary KeepAndroidOpen banner -->
 
 </head>
 <body{% if include.bodyID %} id="{{ include.bodyID }}"{% endif %}>
+<script src="https://keepandroidopen.org/banner.js"></script>
 {% if include.page == "False" %}{% else %}<div id="page">{% endif %}

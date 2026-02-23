@@ -746,3 +746,7 @@ div.fdroid-col-right .break-line {
     word-wrap: anywhere;
     line-break: anywhere;
 }
+
+.kao-banner {
+  z-index: 2000;
+}
