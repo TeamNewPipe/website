@@ -92,13 +92,6 @@ froscon:
   author: Stypox
   attributeAuthor: false
 
-froscon:
-  url: photos/froscon_2025_stand.jpg
-  type: jpg
-  size: 500
-  author: Stypox
-  attributeAuthor: false
-
 altered_deal:
   url: altered-deal.png
   type: jpg

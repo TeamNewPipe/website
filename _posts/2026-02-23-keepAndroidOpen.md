@@ -13,9 +13,9 @@ As you have no doubt noticed, we have a banner with an ominous countdown now pro
  <!-- more -->
 Coinciding with this blog posts, we released a new update to NewPipe, where we introduced a pop up also notifying users there that they will need to take steps in order to keep using NewPipe.
 
-This is not a fun blog post to write, believe me. Androids future is dear to our heart, and we believe that one of its main aspects was its openness, clearly separating it from Apple's iOS as the better choice for every tinkerer and developer. For the past few years Google has continuously taken steps to remove this openness, and now it hit us.
+This is not a fun blog post to write, believe me. Androids future is dear to our heart, and we believe that one of its main aspects was its openness, clearly separating it from Apple's iOS as the better choice for every tinkerer and developer. For the past few years Google has continuously taken steps to remove this openness, and now it hit us. Google plans to force developers to become registered developers and submit their personal data during the registration process. By doing so, Google does no only collect data, but more importantly can decide who is allowed to create and publish apps for "registered" devices or not.
 
-To make a long story short: We will not enroll in this privacy violating program and give up the anonymity of our developers. We do not want to be at the mercy of Google to allow our app to work. And you should not be content with this restriction either. Follow the steps outlined at [keepandroidopen.com](https://keepandroidopen.org/) and resist this further lock-down of your device.
+We will not enroll in this privacy violating program and give up the anonymity of our developers. We do not want to be at the mercy of Google to allow our app to work. And you should not be content with this restriction either. Follow the steps outlined at [keepandroidopen.com](https://keepandroidopen.org/) and resist this further lock-down of your device.
 
 ## Wanna Contribute?
 
