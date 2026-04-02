@@ -98,4 +98,7 @@ altered_deal:
   size: 500
   author: marcprux
   attributeAuthor: false
-  
+
+android-bot:
+  url: android-bot.png
+  type: png
