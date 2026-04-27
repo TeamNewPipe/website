@@ -109,7 +109,16 @@ main .row [class^="col"] {
 
 #bank-transfer-donation h4 {
     font-weight: bold;
+    margin-bottom: 0;
 }
+
+#bank-transfer-donation .subtitle {
+    font-size: 8pt;
+    font-weight: normal;
+    opacity: 0.9;
+    margin-bottom: 10px;
+}
+
 
 #bank-transfer-donation th {
     padding-right: 1rem;
