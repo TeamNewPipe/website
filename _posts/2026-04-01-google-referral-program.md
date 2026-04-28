@@ -60,7 +60,7 @@ As a developer, [click here](https://google-referral.newpipe-ev.de) to claim you
 We hope for other projects such as [F-Droid](https://f-droid.org) to follow our example and sign up for this referral program!
 With the earned commissions, development work to fight Google and become more independent should be much easier to fund.
 
-Please feel free to reach out to our head of acting deputy press secretary, Mr. Torsten Sträter, for more information on the exact conditions. Call in under +49 163 1737743 (available Sunday 11-11:15am) or text him on WhatsApp´.
+Please feel free to reach out to our head of acting deputy press secretary, Mr. Torsten Sträter, for more information on the exact conditions. Call in under +49 163 1737743 (available Sunday 11-11:15am) or text him on WhatsApp.
 
 
 ## References
