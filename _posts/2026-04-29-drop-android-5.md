@@ -25,7 +25,7 @@ Android versions are identified by SDK API levels inside of an app's code. API 2
 
 Google's [Jetpack/AndroidX libraries](https://developer.android.com/jetpack/androidx/explorer) have been [requiring API 23](https://developer.android.com/jetpack/androidx/versions) (Android 6) since June 2025. For roughly one year the NewPipe team decided to keep using old versions of those libraries, but this stance has become increasingly problematic as those versions miss important fixes and useful features.
 
-As shown in [these charts](https://github.com/TeamNewPipe/NewPipe/issues/13438), less than 1% of Android users are still on Android 5. For reference, Google is only providing security updates for Android 14+, and Android 5 last received a security update in 2018 (source).
+As shown in [these charts](https://github.com/TeamNewPipe/NewPipe/issues/13438), less than 1% of Android users are still on Android 5. For reference, Google is only providing security updates for Android 14+, and Android 5 last received a security update in 2018 ([source](https://en.wikipedia.org/wiki/Android_version_history)).
 
 Last time we bumped `minSdk` was in 2022, when we raised the minimum from Android 4.4 to Android 5. You can read more about that [here](https://github.com/TeamNewPipe/NewPipe/issues/7602). Back then the motivation was that, due to the heavy Android 5 API changes, supporting both 4.4 and 5+ required a lot of additional checks that often led to obscure bugs and developer frustruation. Although those motivations would also partially hold for the current case, we would have probabably postponed the bumping for a couple more years if it wasn't for libraries becoming incompatible.
 
