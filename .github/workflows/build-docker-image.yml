@@ -49,4 +49,4 @@ jobs:
           UPDATE_URL: ${{ secrets.UPDATE_URL }}
           UPDATE_TOKEN: ${{ secrets.UPDATE_TOKEN }}
         run: |
-          curl "$UPDATE_URL" -H "Authorization: Bearer ${UPDATE_TOKEN}"
+          curl -X POST "$UPDATE_URL" -H "Authorization: Bearer ${UPDATE_TOKEN}"
