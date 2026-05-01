@@ -5,7 +5,7 @@ short: "Google Developer Discount Program"
 date: 2026-04-01 00:00:00 + 01:00
 categories: [pinned, announcement]
 author: <a href="https://github.com/TheAssassin">@TheAssassin</a>
-image: 2023_Android_Bot
+image: android-bot
 excerpt_separator: <!-- more -->
 ---
 
