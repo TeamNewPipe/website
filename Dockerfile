@@ -1,4 +1,4 @@
-FROM jekyll/jekyll as builder
+FROM jekyll/jekyll AS builder
 
 LABEL org.opencontainers.image.source="https://github.com/TeamNewPipe/website"
 
