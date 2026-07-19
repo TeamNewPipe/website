@@ -1,17 +1,18 @@
-FROM jekyll/jekyll:4.4.1 AS builder
+FROM ruby:3.2.11 AS builder
 
 LABEL org.opencontainers.image.source="https://github.com/TeamNewPipe/website"
 
-COPY Gemfile /srv/jekyll
-RUN bundle install
+# make debugging easier
+SHELL ["/bin/bash", "-xc"]
 
-COPY Gemfile.lock /srv/jekyll
-RUN bash -xc "chown jekyll: Gemfile.lock && \
-    cd /srv/jekyll && \
-    gem install bundler && \
-    bundle update"
+RUN mkdir /project/
+COPY Gemfile Gemfile.lock /project/
 
-WORKDIR /srv/jekyll
+WORKDIR /project/
+
+# run bundle lock to rewrite the Lockfile and therefore ignore version differences of bundler and the lockfile without updating dependencies
+RUN bundle lock && \
+    bundle install
 
 # define args and env vars before copying content to speed up subsequent builds, as they hardly ever change
 ARG ISSO_ADDRESS
@@ -23,14 +24,12 @@ ENV JEKYLL_ENV=production
 ENV TZ=Europe/Berlin
 
 # copy data
-COPY . /srv/jekyll/
+COPY . /project/
 
-RUN bash -xc "chown -R jekyll: /srv/jekyll && \
-    bundle update jekyll && \
-    cd /srv/jekyll && \
-    jekyll clean && \
-    jekyll build && \
-    mv _site/ /data"
+RUN bundle exec jekyll clean && \
+    bundle exec jekyll build && \
+    mv _site/ /data
+
 
 FROM nginx:alpine
 
