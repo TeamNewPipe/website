@@ -69,7 +69,7 @@ GEM
     terminal-table (2.0.0)
       unicode-display_width (~> 1.1, >= 1.1.1)
     unicode-display_width (1.8.0)
-    webrick (1.8.2)
+    webrick (1.9.2)
 
 PLATFORMS
   ruby
@@ -80,7 +80,7 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-redirect-from
   minima (~> 2.5)
-  webrick (~> 1.8, >= 1.8.2)
+  webrick (~> 1.9)
 
 RUBY VERSION
    ruby 2.7.8p225
