@@ -7,6 +7,11 @@ layout: null
 <title>NewPipe Blog</title>
 <description>The latest blog post</description>
 <link>{{ site.url }}/</link>
+<image>
+<url>{{ site.url }}/img/logo_app_400.png</url>
+<title>NewPipe Blog</title>
+<link>{{ site.url }}/</link>
+</image>
 {%- for post in site.posts limit: 1 %}{% unless post.draft %} 
 <item>
 <title>{{ post.title | xml_escape }}</title>

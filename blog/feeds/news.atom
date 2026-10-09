@@ -3,7 +3,6 @@ layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
     <title>NewPipe Blog</title>
     <link rel="self" href="{{ page.url | prepend: site.url }}"/>
     {%- for post in site.posts limit: 1 %}{% unless post.draft %}

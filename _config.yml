@@ -56,3 +56,7 @@ page_gen:
       template: blog_category
       name: category
       dir: blog
+
+feed:
+  icon: /img/logo_app_400.png
+  logo: /img/logo_400.png
