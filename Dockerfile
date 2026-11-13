@@ -1,4 +1,4 @@
-FROM ruby:4.0.8 AS builder
+FROM ruby:4.0.9 AS builder
 
 LABEL org.opencontainers.image.source="https://github.com/TeamNewPipe/website"
 
